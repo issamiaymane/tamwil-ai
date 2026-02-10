@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "nom": "Karim Benali",
+    "type": "business_angel",
+    "secteurs_preferes": ["fintech", "SaaS", "e-commerce"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 20000, "max_eur": 100000 },
+    "zone_geographique": ["Maroc", "MENA"],
+    "criteres_cles": ["Équipe technique solide", "Traction prouvée", "MRR minimum 5K€"],
+    "description": "Ancien directeur général d'une banque marocaine, Karim Benali investit dans les startups fintech et SaaS à fort potentiel de croissance au Maroc et dans la région MENA.",
+    "contact": {
+      "email": "karim.benali@kb-invest.ma",
+      "site_web": "https://www.kb-invest.ma"
+    }
+  },
+  {
+    "id": 2,
+    "nom": "Nadia El Fassi",
+    "type": "business_angel",
+    "secteurs_preferes": ["healthtech", "biotech", "IA"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 15000, "max_eur": 80000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["Impact social mesurable", "Brevet ou PI", "Product-market fit"],
+    "description": "Pharmacienne de formation et serial entrepreneur, Nadia El Fassi soutient les innovations dans la santé digitale et la biotechnologie en Afrique.",
+    "contact": {
+      "email": "nadia@elfassi-angels.com",
+      "site_web": "https://www.elfassi-angels.com"
+    }
+  },
+  {
+    "id": 3,
+    "nom": "Youssef Tazi",
+    "type": "business_angel",
+    "secteurs_preferes": ["e-commerce", "marketplace", "logistique"],
+    "stade_investissement": ["seed"],
+    "ticket_moyen": { "min_eur": 30000, "max_eur": 150000 },
+    "zone_geographique": ["Maroc"],
+    "criteres_cles": ["Traction prouvée", "MRR minimum 10K€", "Scalabilité démontrée"],
+    "description": "Fondateur de plusieurs plateformes e-commerce au Maroc, Youssef Tazi accompagne les jeunes pousses du commerce en ligne avec du capital et du mentorat stratégique.",
+    "contact": {
+      "email": "youssef@tazi-capital.ma",
+      "site_web": "https://www.tazi-capital.ma"
+    }
+  },
+  {
+    "id": 4,
+    "nom": "Fatima-Zahra Amrani",
+    "type": "business_angel",
+    "secteurs_preferes": ["edtech", "SaaS"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 10000, "max_eur": 60000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["Impact social mesurable", "Équipe fondatrice complémentaire", "Modèle freemium validé"],
+    "description": "Passionnée d'éducation et ancienne consultante chez un grand cabinet, Fatima-Zahra Amrani investit dans les solutions edtech accessibles pour le marché africain.",
+    "contact": {
+      "email": "fz.amrani@amrani-ventures.com",
+      "site_web": "https://www.amrani-ventures.com"
+    }
+  },
+  {
+    "id": 5,
+    "nom": "Jean-Pierre Dumont",
+    "type": "business_angel",
+    "secteurs_preferes": ["fintech", "cybersecurite", "IA"],
+    "stade_investissement": ["seed"],
+    "ticket_moyen": { "min_eur": 50000, "max_eur": 200000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Équipe technique solide", "Technologie propriétaire", "Brevet ou PI"],
+    "description": "Ancien CTO d'un groupe bancaire français, Jean-Pierre Dumont mise sur les startups deeptech dans la cybersécurité et l'intelligence artificielle en Europe.",
+    "contact": {
+      "email": "jp.dumont@dumont-angels.fr",
+      "site_web": "https://www.dumont-angels.fr"
+    }
+  },
+  {
+    "id": 6,
+    "nom": "Rachid Bennani",
+    "type": "business_angel",
+    "secteurs_preferes": ["agritech", "cleantech", "IoT"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 25000, "max_eur": 120000 },
+    "zone_geographique": ["Maroc", "MENA"],
+    "criteres_cles": ["Impact environnemental positif", "Prototype fonctionnel", "Product-market fit"],
+    "description": "Ingénieur agronome et entrepreneur agricole, Rachid Bennani finance les innovations agritech et cleantech adaptées au contexte nord-africain.",
+    "contact": {
+      "email": "rachid@bennani-invest.ma",
+      "site_web": "https://www.bennani-invest.ma"
+    }
+  },
+  {
+    "id": 7,
+    "nom": "Sophie Lefèvre",
+    "type": "business_angel",
+    "secteurs_preferes": ["SaaS", "marketplace", "proptech"],
+    "stade_investissement": ["seed"],
+    "ticket_moyen": { "min_eur": 40000, "max_eur": 180000 },
+    "zone_geographique": ["France"],
+    "criteres_cles": ["MRR minimum 10K€", "Croissance mensuelle > 15%", "CAC/LTV favorable"],
+    "description": "Ancienne directrice produit chez un leader français du SaaS, Sophie Lefèvre accompagne les fondateurs B2B sur les sujets de go-to-market et de pricing.",
+    "contact": {
+      "email": "sophie@slefevre-angels.fr",
+      "site_web": "https://www.slefevre-angels.fr"
+    }
+  },
+  {
+    "id": 8,
+    "nom": "Omar Idrissi",
+    "type": "business_angel",
+    "secteurs_preferes": ["fintech", "e-commerce", "logistique"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 15000, "max_eur": 90000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["Connaissance du marché local", "Équipe fondatrice complémentaire", "Traction prouvée"],
+    "description": "Entrepreneur serial dans le commerce et la logistique au Maroc, Omar Idrissi investit dans les startups qui résolvent des problèmes concrets du dernier kilomètre en Afrique.",
+    "contact": {
+      "email": "omar@idrissi-ba.com",
+      "site_web": "https://www.idrissi-ba.com"
+    }
+  },
+  {
+    "id": 9,
+    "nom": "Marie-Claire Dupuis",
+    "type": "business_angel",
+    "secteurs_preferes": ["healthtech", "IA", "deeptech"],
+    "stade_investissement": ["seed"],
+    "ticket_moyen": { "min_eur": 30000, "max_eur": 150000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Brevet ou PI", "Validation clinique ou scientifique", "Équipe technique solide"],
+    "description": "Médecin et investisseuse spécialisée dans la santé numérique, Marie-Claire Dupuis cible les solutions d'IA appliquées au diagnostic médical et à la télémédecine.",
+    "contact": {
+      "email": "mc.dupuis@dupuis-health-angels.fr",
+      "site_web": "https://www.dupuis-health-angels.fr"
+    }
+  },
+  {
+    "id": 10,
+    "nom": "Hassan Mouline",
+    "type": "business_angel",
+    "secteurs_preferes": ["proptech", "cleantech", "IoT"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 20000, "max_eur": 100000 },
+    "zone_geographique": ["Maroc"],
+    "criteres_cles": ["Prototype fonctionnel", "Marché adressable significatif", "Product-market fit"],
+    "description": "Promoteur immobilier reconverti en investisseur tech, Hassan Mouline s'intéresse aux solutions proptech et smart building pour le marché marocain.",
+    "contact": {
+      "email": "hassan@mouline-angels.ma",
+      "site_web": "https://www.mouline-angels.ma"
+    }
+  },
+  {
+    "id": 11,
+    "nom": "Leila Chraibi",
+    "type": "business_angel",
+    "secteurs_preferes": ["edtech", "healthtech", "marketplace"],
+    "stade_investissement": ["pré-seed"],
+    "ticket_moyen": { "min_eur": 10000, "max_eur": 50000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["Impact social mesurable", "Équipe fondatrice complémentaire", "Vision claire à 5 ans"],
+    "description": "Engagée dans l'entrepreneuriat social, Leila Chraibi soutient les projets à impact dans l'éducation et la santé, en particulier ceux portés par des femmes fondatrices.",
+    "contact": {
+      "email": "leila@chraibi-impact.com",
+      "site_web": "https://www.chraibi-impact.com"
+    }
+  },
+  {
+    "id": 12,
+    "nom": "Philippe Renard",
+    "type": "business_angel",
+    "secteurs_preferes": ["cybersecurite", "SaaS", "deeptech"],
+    "stade_investissement": ["seed"],
+    "ticket_moyen": { "min_eur": 50000, "max_eur": 200000 },
+    "zone_geographique": ["France", "Global"],
+    "criteres_cles": ["Technologie propriétaire", "Brevet ou PI", "Marché adressable > 1Md€"],
+    "description": "Expert en cybersécurité et ancien dirigeant d'un éditeur de logiciels, Philippe Renard investit dans les startups deeptech françaises à ambition internationale.",
+    "contact": {
+      "email": "philippe@renard-tech-angels.fr",
+      "site_web": "https://www.renard-tech-angels.fr"
+    }
+  },
+  {
+    "id": 13,
+    "nom": "Atlas Ventures",
+    "type": "vc",
+    "secteurs_preferes": ["fintech", "e-commerce", "SaaS", "logistique"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 300000, "max_eur": 2000000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["MRR minimum 10K€", "Traction prouvée", "Product-market fit", "Équipe technique solide"],
+    "description": "Fonds de capital-risque basé à Casablanca, Atlas Ventures est le premier fonds dédié aux startups technologiques marocaines et africaines en phase d'amorçage et de série A.",
+    "contact": {
+      "email": "deals@atlas-ventures.ma",
+      "site_web": "https://www.atlas-ventures.ma"
+    }
+  },
+  {
+    "id": 14,
+    "nom": "Meridian Capital",
+    "type": "vc",
+    "secteurs_preferes": ["SaaS", "IA", "cybersecurite", "deeptech"],
+    "stade_investissement": ["seed", "série A", "série B"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 5000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["ARR minimum 500K€", "Croissance annuelle > 100%", "Équipe technique solide", "Scalabilité démontrée"],
+    "description": "Fonds parisien spécialisé dans les technologies B2B, Meridian Capital accompagne les startups SaaS et deeptech de la série seed à la série B sur le marché européen.",
+    "contact": {
+      "email": "contact@meridian-capital.fr",
+      "site_web": "https://www.meridian-capital.fr"
+    }
+  },
+  {
+    "id": 15,
+    "nom": "Oasis Fund",
+    "type": "vc",
+    "secteurs_preferes": ["fintech", "agritech", "cleantech", "healthtech"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 200000, "max_eur": 1500000 },
+    "zone_geographique": ["MENA", "Afrique"],
+    "criteres_cles": ["Impact social mesurable", "Product-market fit", "Connaissance du marché local", "Traction prouvée"],
+    "description": "Basé à Dubaï avec un bureau à Casablanca, Oasis Fund investit dans les startups à impact qui répondent aux défis spécifiques de la région MENA et du continent africain.",
+    "contact": {
+      "email": "submit@oasis-fund.com",
+      "site_web": "https://www.oasis-fund.com"
+    }
+  },
+  {
+    "id": 16,
+    "nom": "Hexagone Partners",
+    "type": "vc",
+    "secteurs_preferes": ["SaaS", "marketplace", "e-commerce", "proptech"],
+    "stade_investissement": ["série A", "série B"],
+    "ticket_moyen": { "min_eur": 1000000, "max_eur": 8000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["ARR minimum 1M€", "Croissance annuelle > 80%", "Rentabilité unitaire prouvée", "Expansion internationale en cours"],
+    "description": "Hexagone Partners est un fonds de growth stage basé à Paris, ciblant les leaders émergents du numérique en France et en Europe avec des tickets de série A et B.",
+    "contact": {
+      "email": "pipeline@hexagone-partners.fr",
+      "site_web": "https://www.hexagone-partners.fr"
+    }
+  },
+  {
+    "id": 17,
+    "nom": "Sahara Capital Partners",
+    "type": "vc",
+    "secteurs_preferes": ["fintech", "e-commerce", "logistique", "edtech"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 200000, "max_eur": 800000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["Équipe fondatrice complémentaire", "Prototype fonctionnel", "Marché adressable significatif"],
+    "description": "Fonds early-stage basé à Casablanca, Sahara Capital Partners soutient les entrepreneurs africains dès les premiers stades avec du capital patient et un accompagnement opérationnel.",
+    "contact": {
+      "email": "invest@sahara-capital.ma",
+      "site_web": "https://www.sahara-capital.ma"
+    }
+  },
+  {
+    "id": 18,
+    "nom": "NovaTech Ventures",
+    "type": "vc",
+    "secteurs_preferes": ["deeptech", "IA", "biotech", "cybersecurite"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 3000000 },
+    "zone_geographique": ["France", "Europe", "Global"],
+    "criteres_cles": ["Brevet ou PI", "Équipe technique solide", "Technologie propriétaire", "Publication scientifique"],
+    "description": "NovaTech Ventures est un fonds deeptech européen qui investit dans les technologies de rupture issues de laboratoires de recherche, avec un focus sur l'IA et la cybersécurité.",
+    "contact": {
+      "email": "proposals@novatech-ventures.eu",
+      "site_web": "https://www.novatech-ventures.eu"
+    }
+  },
+  {
+    "id": 19,
+    "nom": "Zenith Growth Fund",
+    "type": "vc",
+    "secteurs_preferes": ["SaaS", "fintech", "marketplace"],
+    "stade_investissement": ["série A", "série B", "série C+"],
+    "ticket_moyen": { "min_eur": 2000000, "max_eur": 10000000 },
+    "zone_geographique": ["Europe", "Global"],
+    "criteres_cles": ["ARR minimum 2M€", "Expansion multi-pays", "Marge brute > 70%", "Net revenue retention > 120%"],
+    "description": "Fonds de croissance paneuropéen, Zenith Growth Fund cible les scale-ups SaaS et fintech avec une forte traction commerciale et une ambition de leadership continental.",
+    "contact": {
+      "email": "growth@zenith-fund.com",
+      "site_web": "https://www.zenith-fund.com"
+    }
+  },
+  {
+    "id": 20,
+    "nom": "Casablanca Seed Club",
+    "type": "vc",
+    "secteurs_preferes": ["fintech", "healthtech", "edtech", "e-commerce", "SaaS"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 200000, "max_eur": 600000 },
+    "zone_geographique": ["Maroc"],
+    "criteres_cles": ["Équipe fondatrice complémentaire", "Product-market fit", "Connaissance du marché local"],
+    "description": "Premier syndicat d'investissement en amorçage au Maroc, le Casablanca Seed Club regroupe 30 investisseurs pour financer les meilleures startups tech du royaume.",
+    "contact": {
+      "email": "dossiers@casablanca-seedclub.ma",
+      "site_web": "https://www.casablanca-seedclub.ma"
+    }
+  },
+  {
+    "id": 21,
+    "nom": "Boréal Investissement",
+    "type": "vc",
+    "secteurs_preferes": ["cleantech", "agritech", "IoT", "deeptech"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 400000, "max_eur": 2500000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Impact environnemental positif", "Technologie propriétaire", "Prototype fonctionnel", "Brevet ou PI"],
+    "description": "Fonds à impact climatique basé à Lyon, Boréal Investissement finance les innovations technologiques qui contribuent à la transition écologique et énergétique en Europe.",
+    "contact": {
+      "email": "impact@boreal-invest.fr",
+      "site_web": "https://www.boreal-invest.fr"
+    }
+  },
+  {
+    "id": 22,
+    "nom": "Ksar Ventures",
+    "type": "vc",
+    "secteurs_preferes": ["fintech", "SaaS", "marketplace", "logistique"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 300000, "max_eur": 1800000 },
+    "zone_geographique": ["Maroc", "MENA", "Afrique"],
+    "criteres_cles": ["MRR minimum 10K€", "Traction prouvée", "Scalabilité démontrée", "Équipe technique solide"],
+    "description": "Fonds régional basé à Rabat, Ksar Ventures investit dans les champions technologiques émergents du Maroc et de l'Afrique francophone avec un accompagnement de proximité.",
+    "contact": {
+      "email": "pitch@ksar-ventures.ma",
+      "site_web": "https://www.ksar-ventures.ma"
+    }
+  },
+  {
+    "id": 23,
+    "nom": "Lumos Capital",
+    "type": "vc",
+    "secteurs_preferes": ["IA", "SaaS", "cybersecurite"],
+    "stade_investissement": ["série A", "série B"],
+    "ticket_moyen": { "min_eur": 1500000, "max_eur": 7000000 },
+    "zone_geographique": ["France", "Europe", "Global"],
+    "criteres_cles": ["ARR minimum 1M€", "Net revenue retention > 110%", "Marge brute > 65%", "Expansion internationale en cours"],
+    "description": "Fonds franco-allemand spécialisé dans l'intelligence artificielle appliquée, Lumos Capital cible les startups B2B en forte croissance avec un avantage technologique défendable.",
+    "contact": {
+      "email": "team@lumos-capital.eu",
+      "site_web": "https://www.lumos-capital.eu"
+    }
+  },
+  {
+    "id": 24,
+    "nom": "Tanit Partners",
+    "type": "vc",
+    "secteurs_preferes": ["fintech", "healthtech", "edtech", "agritech"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 250000, "max_eur": 1500000 },
+    "zone_geographique": ["MENA", "Afrique"],
+    "criteres_cles": ["Impact social mesurable", "Traction prouvée", "Product-market fit", "Connaissance du marché local"],
+    "description": "Basé à Tunis avec des opérations à Casablanca et Abidjan, Tanit Partners est un fonds panafricain qui investit dans les solutions technologiques à fort impact social.",
+    "contact": {
+      "email": "apply@tanit-partners.com",
+      "site_web": "https://www.tanit-partners.com"
+    }
+  },
+  {
+    "id": 25,
+    "nom": "Sequoia Francophone Fund",
+    "type": "vc",
+    "secteurs_preferes": ["SaaS", "fintech", "e-commerce", "IA"],
+    "stade_investissement": ["série A", "série B", "série C+"],
+    "ticket_moyen": { "min_eur": 3000000, "max_eur": 10000000 },
+    "zone_geographique": ["France", "Europe", "Global"],
+    "criteres_cles": ["ARR minimum 3M€", "Croissance annuelle > 100%", "Expansion multi-pays", "Marché adressable > 5Md€"],
+    "description": "Fonds de late-stage basé à Paris et Londres, Sequoia Francophone Fund investit dans les futures licornes européennes et accompagne leur expansion mondiale.",
+    "contact": {
+      "email": "opportunities@sequoia-francophone.com",
+      "site_web": "https://www.sequoia-francophone.com"
+    }
+  },
+  {
+    "id": 26,
+    "nom": "Riviera Ventures",
+    "type": "vc",
+    "secteurs_preferes": ["proptech", "cleantech", "IoT", "marketplace"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 300000, "max_eur": 2000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Product-market fit", "Scalabilité démontrée", "Équipe fondatrice complémentaire", "Modèle récurrent"],
+    "description": "Fonds basé à Nice spécialisé dans la proptech et les smart cities, Riviera Ventures investit dans les startups qui transforment l'immobilier et l'urbanisme en Europe.",
+    "contact": {
+      "email": "hello@riviera-ventures.fr",
+      "site_web": "https://www.riviera-ventures.fr"
+    }
+  },
+  {
+    "id": 27,
+    "nom": "Nouvel Horizon Ventures",
+    "type": "vc",
+    "secteurs_preferes": ["biotech", "healthtech", "deeptech"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 3000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Validation clinique ou scientifique", "Brevet ou PI", "Équipe scientifique de renom", "Publication scientifique"],
+    "description": "Fonds de venture capital dédié aux sciences de la vie et à la santé, Nouvel Horizon Ventures finance les innovations biotech et medtech du stade seed à la série A en Europe.",
+    "contact": {
+      "email": "sciences@nouvel-horizon.fr",
+      "site_web": "https://www.nouvel-horizon.fr"
+    }
+  },
+  {
+    "id": 28,
+    "nom": "MarocTech Corporate Fund",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["fintech", "cybersecurite", "IA", "SaaS"],
+    "stade_investissement": ["seed", "série A", "série B"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 3000000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["Synergie avec l'écosystème bancaire", "Technologie propriétaire", "Traction prouvée", "Conformité réglementaire"],
+    "description": "Bras d'investissement du groupe bancaire fictif Banque Royale du Maghreb, MarocTech Corporate Fund investit dans les startups fintech et cybersécurité en Afrique.",
+    "contact": {
+      "email": "ventures@maroctech-fund.ma",
+      "site_web": "https://www.maroctech-fund.ma"
+    }
+  },
+  {
+    "id": 29,
+    "nom": "OCP Innovation Ventures",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["agritech", "cleantech", "IoT", "deeptech"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 2500000 },
+    "zone_geographique": ["Maroc", "Afrique", "Global"],
+    "criteres_cles": ["Synergie avec l'agriculture et les engrais", "Impact environnemental positif", "Technologie propriétaire", "Scalabilité démontrée"],
+    "description": "Fonds corporate du groupe fictif PhosMaroc Industries, OCP Innovation Ventures finance les innovations agritech et cleantech qui transforment l'agriculture durable en Afrique.",
+    "contact": {
+      "email": "innovation@ocp-ventures.ma",
+      "site_web": "https://www.ocp-ventures.ma"
+    }
+  },
+  {
+    "id": 30,
+    "nom": "TélécomPlus Ventures",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["IoT", "cybersecurite", "IA", "SaaS"],
+    "stade_investissement": ["seed", "série A", "série B"],
+    "ticket_moyen": { "min_eur": 700000, "max_eur": 4000000 },
+    "zone_geographique": ["Maroc", "MENA", "Afrique"],
+    "criteres_cles": ["Synergie avec les télécommunications", "Technologie propriétaire", "Scalabilité démontrée", "Base utilisateurs significative"],
+    "description": "Véhicule d'investissement du groupe télécom fictif TélécomPlus, ce fonds cible les startups innovantes dans l'IoT et la connectivité pour le marché MENA et africain.",
+    "contact": {
+      "email": "startups@telecomplus-ventures.ma",
+      "site_web": "https://www.telecomplus-ventures.ma"
+    }
+  },
+  {
+    "id": 31,
+    "nom": "Énergie Nouvelle Corporate Fund",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["cleantech", "IoT", "deeptech"],
+    "stade_investissement": ["série A", "série B"],
+    "ticket_moyen": { "min_eur": 1000000, "max_eur": 5000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Technologie propriétaire", "Impact environnemental positif", "Brevet ou PI", "Pilote industriel validé"],
+    "description": "Fonds corporate du groupe énergétique fictif Énergie Nouvelle SA, dédié aux startups cleantech et aux technologies de décarbonation industrielle en Europe.",
+    "contact": {
+      "email": "innovation@energienouvelle-fund.fr",
+      "site_web": "https://www.energienouvelle-fund.fr"
+    }
+  },
+  {
+    "id": 32,
+    "nom": "Galerie Santé Ventures",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["healthtech", "biotech", "IA"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 800000, "max_eur": 4000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Validation clinique ou scientifique", "Conformité réglementaire", "Synergie avec la distribution pharmaceutique", "Brevet ou PI"],
+    "description": "Bras d'investissement du groupe pharmaceutique fictif Galerie Santé, ce fonds soutient les innovations healthtech et biotech à fort potentiel clinique en Europe.",
+    "contact": {
+      "email": "ventures@galerie-sante.fr",
+      "site_web": "https://www.galerie-sante-ventures.fr"
+    }
+  },
+  {
+    "id": 33,
+    "nom": "DistribMaroc Digital Fund",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["e-commerce", "logistique", "marketplace", "SaaS"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 2000000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["Synergie avec la grande distribution", "Traction prouvée", "Modèle B2B2C", "Connaissance du marché local"],
+    "description": "Fonds d'innovation du groupe de grande distribution fictif DistribMaroc, investissant dans les startups qui digitalisent la chaîne de valeur du retail en Afrique.",
+    "contact": {
+      "email": "digital@distribmaroc-fund.ma",
+      "site_web": "https://www.distribmaroc-fund.ma"
+    }
+  },
+  {
+    "id": 34,
+    "nom": "AutoRoute Invest",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["logistique", "IoT", "IA", "proptech"],
+    "stade_investissement": ["série A", "série B"],
+    "ticket_moyen": { "min_eur": 1000000, "max_eur": 5000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Synergie avec les infrastructures de transport", "Technologie propriétaire", "Pilote industriel validé", "Scalabilité démontrée"],
+    "description": "Véhicule d'investissement du groupe fictif d'infrastructures AutoRoute SA, ciblant les startups de mobilité intelligente et de logistique connectée en Europe.",
+    "contact": {
+      "email": "ventures@autoroute-invest.fr",
+      "site_web": "https://www.autoroute-invest.fr"
+    }
+  },
+  {
+    "id": 35,
+    "nom": "Assurancia Ventures",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["fintech", "healthtech", "IA", "cybersecurite"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 600000, "max_eur": 3000000 },
+    "zone_geographique": ["France", "MENA"],
+    "criteres_cles": ["Synergie avec l'assurance", "Conformité réglementaire", "Traction prouvée", "Technologie propriétaire"],
+    "description": "Fonds corporate du groupe d'assurances fictif Assurancia, finançant les startups insurtech et les solutions de gestion des risques en France et dans la région MENA.",
+    "contact": {
+      "email": "insurtech@assurancia-ventures.com",
+      "site_web": "https://www.assurancia-ventures.com"
+    }
+  },
+  {
+    "id": 36,
+    "nom": "AgroTech Corporate Fund",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["agritech", "biotech", "cleantech", "IoT"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 2500000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["Synergie avec l'agroalimentaire", "Impact environnemental positif", "Prototype fonctionnel", "Validation terrain"],
+    "description": "Bras d'investissement du groupe agroalimentaire fictif Atlas Agro, ce fonds accompagne les startups qui innovent dans l'agriculture de précision et la chaîne alimentaire en Afrique.",
+    "contact": {
+      "email": "innovation@agrotech-fund.ma",
+      "site_web": "https://www.agrotech-fund.ma"
+    }
+  },
+  {
+    "id": 37,
+    "nom": "LabelFinance Corporate Ventures",
+    "type": "fonds_corporate",
+    "secteurs_preferes": ["fintech", "IA", "cybersecurite", "SaaS"],
+    "stade_investissement": ["série A", "série B"],
+    "ticket_moyen": { "min_eur": 1000000, "max_eur": 5000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Synergie avec les services financiers", "Conformité réglementaire", "ARR minimum 500K€", "Technologie propriétaire"],
+    "description": "Fonds d'investissement stratégique de la banque fictive LabelFinance, ciblant les fintech européennes innovantes dans le paiement, la conformité et la gestion des risques.",
+    "contact": {
+      "email": "fintech@labelfinance-ventures.fr",
+      "site_web": "https://www.labelfinance-ventures.fr"
+    }
+  },
+  {
+    "id": 38,
+    "nom": "WeFund Maroc",
+    "type": "crowdfunding",
+    "secteurs_preferes": ["e-commerce", "edtech", "healthtech", "agritech", "cleantech"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 10000, "max_eur": 300000 },
+    "zone_geographique": ["Maroc"],
+    "criteres_cles": ["Projet à impact social ou environnemental", "Communauté engagée", "Vidéo de présentation convaincante", "Prototype fonctionnel"],
+    "description": "Première plateforme de financement participatif au Maroc, WeFund Maroc permet aux startups marocaines de lever des fonds auprès de la communauté locale et de la diaspora.",
+    "contact": {
+      "email": "projets@wefund-maroc.ma",
+      "site_web": "https://www.wefund-maroc.ma"
+    }
+  },
+  {
+    "id": 39,
+    "nom": "CoFundr",
+    "type": "crowdfunding",
+    "secteurs_preferes": ["SaaS", "marketplace", "e-commerce", "fintech"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 50000, "max_eur": 500000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Traction prouvée", "Communauté engagée", "Pitch vidéo de qualité", "MRR minimum 3K€"],
+    "description": "Plateforme française d'equity crowdfunding spécialisée dans les startups tech, CoFundr a financé plus de 200 projets innovants depuis sa création.",
+    "contact": {
+      "email": "startups@cofundr.fr",
+      "site_web": "https://www.cofundr.fr"
+    }
+  },
+  {
+    "id": 40,
+    "nom": "Afrik'Invest Crowd",
+    "type": "crowdfunding",
+    "secteurs_preferes": ["agritech", "cleantech", "edtech", "healthtech", "fintech"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 10000, "max_eur": 200000 },
+    "zone_geographique": ["Afrique", "MENA"],
+    "criteres_cles": ["Impact social mesurable", "Ancrage local fort", "Équipe fondatrice complémentaire", "Projet à impact communautaire"],
+    "description": "Plateforme panafricaine de crowdfunding dédiée aux startups à impact, Afrik'Invest Crowd connecte les entrepreneurs africains avec des investisseurs du continent et de la diaspora.",
+    "contact": {
+      "email": "hello@afrikinvest-crowd.com",
+      "site_web": "https://www.afrikinvest-crowd.com"
+    }
+  },
+  {
+    "id": 41,
+    "nom": "SeedSquare",
+    "type": "crowdfunding",
+    "secteurs_preferes": ["deeptech", "biotech", "IA", "cleantech"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 30000, "max_eur": 400000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Innovation technologique démontrée", "Brevet ou PI", "Équipe technique solide", "Communauté engagée"],
+    "description": "Plateforme d'investissement participatif spécialisée dans les startups deeptech et scientifiques, SeedSquare démocratise l'accès au capital-risque technologique en Europe.",
+    "contact": {
+      "email": "innovation@seedsquare.eu",
+      "site_web": "https://www.seedsquare.eu"
+    }
+  },
+  {
+    "id": 42,
+    "nom": "DabaFund",
+    "type": "crowdfunding",
+    "secteurs_preferes": ["e-commerce", "marketplace", "logistique", "SaaS"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 15000, "max_eur": 250000 },
+    "zone_geographique": ["Maroc", "Afrique"],
+    "criteres_cles": ["Connaissance du marché local", "Traction prouvée", "Vidéo de présentation convaincante", "Modèle économique clair"],
+    "description": "Plateforme marocaine de financement participatif en equity, DabaFund permet aux citoyens d'investir dans les startups tech les plus prometteuses du Maroc et d'Afrique.",
+    "contact": {
+      "email": "contact@dabafund.ma",
+      "site_web": "https://www.dabafund.ma"
+    }
+  },
+  {
+    "id": 43,
+    "nom": "ImpactCrowd",
+    "type": "crowdfunding",
+    "secteurs_preferes": ["cleantech", "agritech", "healthtech", "edtech"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 20000, "max_eur": 350000 },
+    "zone_geographique": ["France", "Global"],
+    "criteres_cles": ["Impact social ou environnemental mesurable", "Objectifs de développement durable alignés", "Communauté engagée", "Transparence financière"],
+    "description": "Plateforme de crowdfunding à impact basée à Paris, ImpactCrowd finance exclusivement les startups qui contribuent aux Objectifs de Développement Durable des Nations Unies.",
+    "contact": {
+      "email": "impact@impactcrowd.fr",
+      "site_web": "https://www.impactcrowd.fr"
+    }
+  },
+  {
+    "id": 44,
+    "nom": "TechCrowd MENA",
+    "type": "crowdfunding",
+    "secteurs_preferes": ["fintech", "SaaS", "cybersecurite", "IA"],
+    "stade_investissement": ["seed"],
+    "ticket_moyen": { "min_eur": 25000, "max_eur": 500000 },
+    "zone_geographique": ["MENA"],
+    "criteres_cles": ["Traction prouvée", "Produit lancé sur le marché", "Équipe technique solide", "Pitch vidéo de qualité"],
+    "description": "Plateforme régionale d'equity crowdfunding pour les startups tech de la région MENA, TechCrowd connecte les fondateurs avec un réseau de plus de 5 000 investisseurs qualifiés.",
+    "contact": {
+      "email": "apply@techcrowd-mena.com",
+      "site_web": "https://www.techcrowd-mena.com"
+    }
+  },
+  {
+    "id": 45,
+    "nom": "FundMyStartup",
+    "type": "crowdfunding",
+    "secteurs_preferes": ["marketplace", "e-commerce", "proptech", "IoT"],
+    "stade_investissement": ["pré-seed", "seed"],
+    "ticket_moyen": { "min_eur": 10000, "max_eur": 200000 },
+    "zone_geographique": ["France"],
+    "criteres_cles": ["Produit lancé sur le marché", "Communauté engagée", "Vidéo de présentation convaincante", "Premiers revenus"],
+    "description": "Plateforme française de crowdfunding equity grand public, FundMyStartup rend l'investissement startup accessible dès 100 euros avec une expérience utilisateur simplifiée.",
+    "contact": {
+      "email": "bonjour@fundmystartup.fr",
+      "site_web": "https://www.fundmystartup.fr"
+    }
+  },
+  {
+    "id": 46,
+    "nom": "Famille Alaoui Patrimoine",
+    "type": "family_office",
+    "secteurs_preferes": ["fintech", "proptech", "e-commerce", "SaaS"],
+    "stade_investissement": ["seed", "série A", "série B"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 5000000 },
+    "zone_geographique": ["Maroc", "MENA", "Afrique"],
+    "criteres_cles": ["Rentabilité prouvée", "Équipe fondatrice complémentaire", "Scalabilité démontrée", "Gouvernance solide"],
+    "description": "Family office d'une grande famille d'industriels marocains, Famille Alaoui Patrimoine diversifie ses investissements dans les startups tech à forte croissance au Maroc et en Afrique.",
+    "contact": {
+      "email": "investissement@alaoui-patrimoine.ma",
+      "site_web": "https://www.alaoui-patrimoine.ma"
+    }
+  },
+  {
+    "id": 47,
+    "nom": "Maison Leclerc Investissement",
+    "type": "family_office",
+    "secteurs_preferes": ["healthtech", "biotech", "deeptech", "cleantech"],
+    "stade_investissement": ["série A", "série B", "série C+"],
+    "ticket_moyen": { "min_eur": 1000000, "max_eur": 10000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Brevet ou PI", "ARR minimum 1M€", "Équipe scientifique de renom", "Potentiel de leadership européen"],
+    "description": "Family office d'une famille française historique de l'industrie pharmaceutique, Maison Leclerc Investissement finance les innovations de rupture dans la santé et les sciences.",
+    "contact": {
+      "email": "sciences@leclerc-investissement.fr",
+      "site_web": "https://www.leclerc-investissement.fr"
+    }
+  },
+  {
+    "id": 48,
+    "nom": "Groupe Benjelloun Capital",
+    "type": "family_office",
+    "secteurs_preferes": ["fintech", "logistique", "e-commerce", "marketplace"],
+    "stade_investissement": ["série A", "série B"],
+    "ticket_moyen": { "min_eur": 800000, "max_eur": 6000000 },
+    "zone_geographique": ["Maroc", "Afrique", "Global"],
+    "criteres_cles": ["Croissance annuelle > 50%", "Rentabilité unitaire prouvée", "Gouvernance solide", "Expansion internationale en cours"],
+    "description": "Bureau familial du groupe fictif Benjelloun, acteur majeur de la distribution au Maroc, investissant dans la digitalisation du commerce et de la logistique en Afrique.",
+    "contact": {
+      "email": "capital@benjelloun-group.ma",
+      "site_web": "https://www.benjelloun-capital.ma"
+    }
+  },
+  {
+    "id": 49,
+    "nom": "Héritage Montfort",
+    "type": "family_office",
+    "secteurs_preferes": ["SaaS", "IA", "cybersecurite", "proptech"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 3000000 },
+    "zone_geographique": ["France", "Europe"],
+    "criteres_cles": ["Équipe technique solide", "MRR minimum 20K€", "Modèle récurrent", "Marché adressable significatif"],
+    "description": "Family office de la famille Montfort, entrepreneurs dans l'immobilier et la technologie depuis trois générations, investissant dans les startups SaaS et proptech européennes.",
+    "contact": {
+      "email": "ventures@heritage-montfort.fr",
+      "site_web": "https://www.heritage-montfort.fr"
+    }
+  },
+  {
+    "id": 50,
+    "nom": "Fondation Kettani Invest",
+    "type": "family_office",
+    "secteurs_preferes": ["edtech", "healthtech", "agritech", "cleantech"],
+    "stade_investissement": ["seed", "série A"],
+    "ticket_moyen": { "min_eur": 500000, "max_eur": 4000000 },
+    "zone_geographique": ["Maroc", "MENA", "Afrique"],
+    "criteres_cles": ["Impact social mesurable", "Product-market fit", "Équipe fondatrice complémentaire", "Vision claire à 5 ans"],
+    "description": "Véhicule d'investissement à impact de la famille Kettani, combinant rendement financier et impact social dans les domaines de l'éducation, la santé et l'agriculture durable au Maroc et en Afrique.",
+    "contact": {
+      "email": "impact@kettani-invest.ma",
+      "site_web": "https://www.kettani-invest.ma"
+    }
+  }
+]

@@ -1,0 +1,1019 @@
+{
+  "metadata": {
+    "description": "Programmes de subventions et aides pour startups",
+    "version": "1.0",
+    "derniere_mise_a_jour": "2025-01-15",
+    "avertissement": "Ces données sont fictives et fournies à titre indicatif. Vérifiez toujours les informations officielles."
+  },
+  "programmes": [
+    {
+      "id": 1,
+      "nom": "Innov'Invest Fund",
+      "pays": "Maroc",
+      "organisme": "Caisse Centrale de Garantie (CCG)",
+      "type_aide": "subvention",
+      "description": "Fonds de co-investissement dédié aux startups innovantes en phase d'amorçage et de démarrage. Le programme vise à combler le déficit de financement en phase précoce en co-investissant aux côtés de fonds de capital-risque agréés. L'objectif est de stimuler l'écosystème de l'innovation au Maroc en réduisant le risque pour les investisseurs privés et en facilitant l'accès au capital pour les jeunes entreprises technologiques.",
+      "montant": {
+        "min_eur": 10000,
+        "max_eur": 500000
+      },
+      "pourcentage_financement": "Jusqu'à 50% du tour de financement en co-investissement avec un fonds agréé",
+      "criteres_eligibilite": [
+        "Startup innovante de moins de 7 ans",
+        "Siège social au Maroc",
+        "Avoir obtenu un engagement d'investissement d'un fonds de capital-risque partenaire",
+        "Projet à fort potentiel de croissance et de création d'emplois",
+        "Disposer d'un prototype fonctionnel ou d'une première traction commerciale"
+      ],
+      "stades_cibles": ["pré-seed", "seed", "série A"],
+      "secteurs_prioritaires": ["fintech", "healthtech", "edtech", "agritech", "industrie 4.0"],
+      "deadline_type": "permanente",
+      "duree_traitement": "2-4 mois",
+      "documents_requis": [
+        "Business plan détaillé sur 5 ans",
+        "Pitch deck",
+        "États financiers certifiés (si existants)",
+        "Lettre d'intention du fonds co-investisseur",
+        "CV des fondateurs",
+        "Statuts juridiques de la société",
+        "Description technique du produit ou service innovant"
+      ],
+      "lien": "https://www.innovinvest-fictif.ma/programme"
+    },
+    {
+      "id": 2,
+      "nom": "Start-TPE Digital",
+      "pays": "Maroc",
+      "organisme": "Maroc PME",
+      "type_aide": "subvention",
+      "description": "Programme d'aide à la digitalisation des très petites entreprises et startups marocaines. Ce dispositif finance l'acquisition d'outils numériques, le développement de sites web marchands, l'intégration de solutions de gestion (ERP, CRM) et la formation du personnel aux compétences digitales. L'objectif est d'accélérer la transformation numérique du tissu économique marocain.",
+      "montant": {
+        "min_eur": 1000,
+        "max_eur": 20000
+      },
+      "pourcentage_financement": "Jusqu'à 70% des dépenses éligibles liées à la digitalisation",
+      "criteres_eligibilite": [
+        "TPE ou startup marocaine avec un chiffre d'affaires inférieur à 10 millions MAD",
+        "Être inscrite au registre du commerce depuis au moins 6 mois",
+        "Avoir un projet de digitalisation clairement défini",
+        "Employer moins de 20 salariés",
+        "Ne pas avoir bénéficié d'un programme similaire dans les 3 dernières années"
+      ],
+      "stades_cibles": ["seed", "early-stage"],
+      "secteurs_prioritaires": ["commerce", "artisanat", "services", "tourisme", "agroalimentaire"],
+      "deadline_type": "permanente",
+      "duree_traitement": "1-2 mois",
+      "documents_requis": [
+        "Formulaire de demande rempli",
+        "Copie du registre de commerce",
+        "Devis des prestataires numériques sélectionnés",
+        "Attestation fiscale en règle",
+        "Relevé bancaire des 3 derniers mois",
+        "Description du projet de digitalisation"
+      ],
+      "lien": "https://www.marocpme-fictif.ma/start-tpe-digital"
+    },
+    {
+      "id": 3,
+      "nom": "Programme Tatwir",
+      "pays": "Maroc",
+      "organisme": "Agence Nationale pour la Promotion de la PME (ANPME)",
+      "type_aide": "subvention",
+      "description": "Programme de soutien à la compétitivité des PME et startups marocaines à travers le financement d'actions de conseil stratégique, de mise à niveau organisationnelle et d'amélioration des processus. Tatwir accompagne les entreprises dans leur structuration interne, l'optimisation de leur chaîne de valeur et le renforcement de leur positionnement sur les marchés nationaux et internationaux.",
+      "montant": {
+        "min_eur": 5000,
+        "max_eur": 50000
+      },
+      "pourcentage_financement": "Jusqu'à 60% des frais de conseil et de mise à niveau",
+      "criteres_eligibilite": [
+        "PME ou startup marocaine de moins de 10 ans",
+        "Chiffre d'affaires compris entre 1 et 50 millions MAD",
+        "Disposer d'un diagnostic stratégique préalable",
+        "S'engager à mettre en œuvre les recommandations issues de l'accompagnement",
+        "Être en conformité fiscale et sociale"
+      ],
+      "stades_cibles": ["early-stage", "growth"],
+      "secteurs_prioritaires": ["industrie", "agroalimentaire", "textile", "TIC", "offshoring"],
+      "deadline_type": "semestrielle",
+      "duree_traitement": "2-3 mois",
+      "documents_requis": [
+        "Dossier de candidature complet",
+        "Business plan ou plan de développement",
+        "États financiers des 2 derniers exercices",
+        "Diagnostic stratégique ou de mise à niveau",
+        "Organigramme de l'entreprise",
+        "Attestation CNSS et attestation fiscale"
+      ],
+      "lien": "https://www.anpme-fictif.ma/tatwir"
+    },
+    {
+      "id": 4,
+      "nom": "Fonds d'Appui Fintech Maroc",
+      "pays": "Maroc",
+      "organisme": "Bank Al-Maghrib",
+      "type_aide": "accompagnement",
+      "description": "Programme de soutien dédié aux startups fintech opérant dans le cadre du sandbox réglementaire de Bank Al-Maghrib. Ce fonds offre un accompagnement technique, réglementaire et financier aux jeunes entreprises développant des solutions innovantes dans les domaines du paiement mobile, de l'inclusion financière, de l'assurtech, de la blockchain appliquée aux services financiers et de l'open banking.",
+      "montant": {
+        "min_eur": 5000,
+        "max_eur": 100000
+      },
+      "pourcentage_financement": "Jusqu'à 80% des coûts d'expérimentation dans le sandbox réglementaire",
+      "criteres_eligibilite": [
+        "Startup fintech enregistrée au Maroc",
+        "Avoir été admise dans le sandbox réglementaire de Bank Al-Maghrib",
+        "Proposer une solution innovante dans les services financiers",
+        "Disposer d'une équipe technique qualifiée",
+        "Respecter les exigences de conformité et de protection des données"
+      ],
+      "stades_cibles": ["pré-seed", "seed"],
+      "secteurs_prioritaires": ["fintech", "assurtech", "regtech", "paiement mobile", "inclusion financière"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "3-4 mois",
+      "documents_requis": [
+        "Dossier de candidature au sandbox réglementaire",
+        "Description technique détaillée de la solution",
+        "Analyse des risques et plan de conformité",
+        "Business model et projections financières",
+        "CV de l'équipe fondatrice et technique",
+        "Preuve de concept ou prototype"
+      ],
+      "lien": "https://www.bkam-fintech-fictif.ma/fonds-appui"
+    },
+    {
+      "id": 5,
+      "nom": "CRI Boost Régional",
+      "pays": "Maroc",
+      "organisme": "Centres Régionaux d'Investissement (CRI)",
+      "type_aide": "subvention",
+      "description": "Programme de soutien régional aux startups et projets entrepreneuriaux innovants, piloté par les Centres Régionaux d'Investissement. CRI Boost Régional vise à favoriser le développement économique territorial en finançant des projets créateurs d'emplois dans les régions du Maroc. Le programme offre un accompagnement de proximité et un accès facilité aux subventions régionales.",
+      "montant": {
+        "min_eur": 3000,
+        "max_eur": 30000
+      },
+      "pourcentage_financement": "Jusqu'à 40% du coût total du projet",
+      "criteres_eligibilite": [
+        "Startup ou porteur de projet basé dans la région concernée",
+        "Projet créant au minimum 3 emplois directs",
+        "Apport personnel d'au moins 20% du montant total du projet",
+        "Projet aligné avec les priorités économiques de la région",
+        "Âge du porteur de projet entre 18 et 45 ans"
+      ],
+      "stades_cibles": ["pré-seed", "seed"],
+      "secteurs_prioritaires": ["tourisme", "artisanat", "agriculture", "services numériques", "économie sociale et solidaire"],
+      "deadline_type": "trimestrielle",
+      "duree_traitement": "1-2 mois",
+      "documents_requis": [
+        "Formulaire de candidature régional",
+        "Étude de faisabilité du projet",
+        "Justificatif de domicile dans la région",
+        "Copie de la CIN",
+        "Devis des investissements prévus",
+        "Plan d'affaires simplifié"
+      ],
+      "lien": "https://www.cri-boost-fictif.ma/programme-regional"
+    },
+    {
+      "id": 6,
+      "nom": "Programme Forsa Startup",
+      "pays": "Maroc",
+      "organisme": "Ministère de l'Inclusion Économique et de l'Emploi",
+      "type_aide": "prêt_honneur",
+      "description": "Programme national d'aide à l'entrepreneuriat des jeunes, inspiré du dispositif Forsa. Ce programme offre des prêts d'honneur à taux zéro accompagnés d'un parcours de formation et de mentorat pour les jeunes porteurs de projets innovants. L'objectif est de lutter contre le chômage des jeunes diplômés en les accompagnant dans la création de leur startup.",
+      "montant": {
+        "min_eur": 2000,
+        "max_eur": 10000
+      },
+      "pourcentage_financement": "Prêt d'honneur couvrant jusqu'à 100% du besoin de démarrage, remboursable sur 6 ans avec 2 ans de grâce",
+      "criteres_eligibilite": [
+        "Jeune marocain âgé de 18 à 35 ans",
+        "Diplômé de l'enseignement supérieur ou de la formation professionnelle",
+        "Porteur d'un projet de création d'entreprise innovante",
+        "Ne pas être salarié au moment de la candidature",
+        "Avoir validé le parcours de formation entrepreneuriale du programme"
+      ],
+      "stades_cibles": ["pré-seed"],
+      "secteurs_prioritaires": ["tous secteurs", "numérique", "économie verte", "économie sociale"],
+      "deadline_type": "permanente",
+      "duree_traitement": "1-3 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne",
+        "Copie de la CIN",
+        "Copie du diplôme",
+        "Business plan du projet",
+        "Attestation de suivi de la formation Forsa",
+        "Attestation de non-emploi"
+      ],
+      "lien": "https://www.forsa-startup-fictif.ma/candidature"
+    },
+    {
+      "id": 7,
+      "nom": "Green Innovation Fund Morocco",
+      "pays": "Maroc",
+      "organisme": "Ministère de la Transition Énergétique et du Développement Durable",
+      "type_aide": "subvention",
+      "description": "Fonds dédié au financement des startups marocaines développant des solutions innovantes dans les domaines de l'énergie renouvelable, de l'efficacité énergétique, de la gestion des déchets, de l'économie circulaire et de l'adaptation au changement climatique. Ce programme s'inscrit dans la stratégie nationale de développement durable et vise à faire du Maroc un hub régional de la cleantech.",
+      "montant": {
+        "min_eur": 15000,
+        "max_eur": 200000
+      },
+      "pourcentage_financement": "Jusqu'à 70% des dépenses de R&D et de prototypage liées aux technologies vertes",
+      "criteres_eligibilite": [
+        "Startup marocaine de moins de 8 ans",
+        "Projet à impact environnemental mesurable et positif",
+        "Solution technologique innovante dans le domaine du développement durable",
+        "Disposer d'une équipe technique compétente dans le domaine ciblé",
+        "Engagement à mesurer et rapporter l'impact environnemental du projet"
+      ],
+      "stades_cibles": ["seed", "early-stage"],
+      "secteurs_prioritaires": ["cleantech", "énergie renouvelable", "gestion des déchets", "économie circulaire", "mobilité durable", "agriculture durable"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "3-5 mois",
+      "documents_requis": [
+        "Dossier technique détaillé du projet",
+        "Étude d'impact environnemental préliminaire",
+        "Business plan intégrant les objectifs de développement durable",
+        "CV de l'équipe technique",
+        "Lettres de soutien de partenaires industriels ou académiques",
+        "Budget prévisionnel détaillé",
+        "Attestation de conformité réglementaire environnementale"
+      ],
+      "lien": "https://www.green-innovation-fictif.ma/fonds"
+    },
+    {
+      "id": 8,
+      "nom": "Fonds Hassan II pour l'Innovation Industrielle",
+      "pays": "Maroc",
+      "organisme": "Fonds Hassan II pour le Développement Économique et Social",
+      "type_aide": "avance_remboursable",
+      "description": "Programme de soutien à la recherche et développement industrielle pour les startups et PME innovantes du secteur manufacturier et technologique. Le fonds finance des projets de R&D appliquée visant à développer de nouveaux produits, procédés ou services industriels à forte valeur ajoutée. Les avances sont remboursables uniquement en cas de succès commercial du projet.",
+      "montant": {
+        "min_eur": 25000,
+        "max_eur": 300000
+      },
+      "pourcentage_financement": "Jusqu'à 50% des dépenses de R&D industrielle, avance remboursable sur 5 ans en cas de succès",
+      "criteres_eligibilite": [
+        "Startup ou PME industrielle marocaine",
+        "Projet de R&D visant un nouveau produit ou procédé industriel",
+        "Partenariat avec un laboratoire de recherche ou une université marocaine souhaité",
+        "Capacité financière à couvrir au moins 50% du budget du projet",
+        "Engagement de créer au minimum 5 emplois qualifiés"
+      ],
+      "stades_cibles": ["early-stage", "growth"],
+      "secteurs_prioritaires": ["industrie 4.0", "aéronautique", "automobile", "électronique", "matériaux avancés", "biotechnologie industrielle"],
+      "deadline_type": "semestrielle",
+      "duree_traitement": "4-6 mois",
+      "documents_requis": [
+        "Dossier de candidature technique et financier",
+        "Description détaillée du projet de R&D",
+        "Plan d'industrialisation et de commercialisation",
+        "Convention de partenariat avec un centre de recherche (le cas échéant)",
+        "États financiers des 3 derniers exercices",
+        "Preuves de propriété intellectuelle existante ou envisagée",
+        "Étude de marché pour le produit ou procédé visé"
+      ],
+      "lien": "https://www.fonds-hassan2-fictif.ma/innovation"
+    },
+    {
+      "id": 9,
+      "nom": "Startup Maroc Act",
+      "pays": "Maroc",
+      "organisme": "Agence de Développement du Digital (ADD)",
+      "type_aide": "exoneration_fiscale",
+      "description": "Dispositif législatif offrant un statut fiscal et juridique avantageux aux startups labellisées au Maroc. Les entreprises obtenant le label 'Startup Maroc Act' bénéficient d'exonérations fiscales, d'un accès facilité aux marchés publics, de procédures administratives simplifiées et d'un cadre réglementaire adapté à l'innovation. Ce programme vise à positionner le Maroc comme un hub startup de référence en Afrique.",
+      "montant": {
+        "min_eur": 0,
+        "max_eur": 0
+      },
+      "pourcentage_financement": "Exonération de l'IS pendant 5 ans, réduction de 50% de la TVA sur les achats de matériel technologique, accès à 20% des marchés publics réservés",
+      "criteres_eligibilite": [
+        "Entreprise marocaine de moins de 8 ans",
+        "Caractère innovant du produit, service ou modèle d'affaires",
+        "Potentiel de croissance forte et de scalabilité",
+        "Dépenses de R&D représentant au moins 15% du chiffre d'affaires",
+        "Validation par un comité de labellisation composé d'experts"
+      ],
+      "stades_cibles": ["pré-seed", "seed", "early-stage", "growth"],
+      "secteurs_prioritaires": ["tous secteurs innovants", "numérique", "deeptech", "biotech", "fintech"],
+      "deadline_type": "permanente",
+      "duree_traitement": "1-2 mois",
+      "documents_requis": [
+        "Formulaire de demande de labellisation",
+        "Description de l'innovation et de son caractère différenciant",
+        "Business plan ou pitch deck",
+        "Statuts de la société",
+        "Attestation de dépenses de R&D",
+        "Preuve d'activité innovante (brevets, prototypes, publications)"
+      ],
+      "lien": "https://www.startup-maroc-act-fictif.ma/labellisation"
+    },
+    {
+      "id": 10,
+      "nom": "CNRST Research-to-Market",
+      "pays": "Maroc",
+      "organisme": "Centre National pour la Recherche Scientifique et Technique (CNRST)",
+      "type_aide": "subvention",
+      "description": "Programme de transfert technologique facilitant la transformation des résultats de la recherche académique en produits et services commercialisables. CNRST Research-to-Market soutient les chercheurs et doctorants souhaitant créer une startup issue d'un laboratoire de recherche marocain. Le programme finance la maturation technologique, le prototypage, la preuve de concept et les premières étapes de commercialisation.",
+      "montant": {
+        "min_eur": 8000,
+        "max_eur": 80000
+      },
+      "pourcentage_financement": "Jusqu'à 90% des coûts de maturation technologique et de prototypage",
+      "criteres_eligibilite": [
+        "Chercheur, doctorant ou post-doctorant affilié à une institution de recherche marocaine",
+        "Projet basé sur des résultats de recherche publiés ou brevetés",
+        "Engagement à créer une startup dans les 18 mois suivant l'obtention de la subvention",
+        "Accord de l'institution de recherche d'origine sur le transfert technologique",
+        "Potentiel commercial démontré par une étude de marché préliminaire"
+      ],
+      "stades_cibles": ["pré-seed"],
+      "secteurs_prioritaires": ["deeptech", "biotech", "medtech", "matériaux", "intelligence artificielle", "cybersécurité"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "3-4 mois",
+      "documents_requis": [
+        "Dossier de candidature scientifique et technique",
+        "Publications ou brevets associés aux résultats de recherche",
+        "Plan de maturation technologique",
+        "Étude de marché préliminaire",
+        "Lettre de soutien du directeur de laboratoire",
+        "Accord de l'institution sur les droits de propriété intellectuelle",
+        "CV détaillé du porteur de projet"
+      ],
+      "lien": "https://www.cnrst-fictif.ma/research-to-market"
+    },
+    {
+      "id": 11,
+      "nom": "BPI Création",
+      "pays": "France",
+      "organisme": "Bpifrance",
+      "type_aide": "subvention",
+      "description": "Aide à la création d'entreprises innovantes proposée par Bpifrance. Ce programme soutient les porteurs de projets innovants en phase de création ou de premier développement en finançant les dépenses liées à la validation du concept, au développement du produit minimum viable et aux premières actions commerciales. L'aide est attribuée sous forme de subvention non remboursable après évaluation par un comité d'experts.",
+      "montant": {
+        "min_eur": 10000,
+        "max_eur": 90000
+      },
+      "pourcentage_financement": "Jusqu'à 70% des dépenses éligibles de création et de développement initial",
+      "criteres_eligibilite": [
+        "Entreprise innovante immatriculée en France depuis moins de 3 ans",
+        "Projet présentant un caractère innovant technologique ou d'usage",
+        "Porteur de projet à temps plein dans l'entreprise",
+        "Ne pas avoir déjà bénéficié d'une aide BPI Création",
+        "Présenter un modèle économique viable et un marché adressable significatif"
+      ],
+      "stades_cibles": ["pré-seed", "seed"],
+      "secteurs_prioritaires": ["deeptech", "numérique", "biotech", "medtech", "cleantech", "industrie"],
+      "deadline_type": "permanente",
+      "duree_traitement": "2-3 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne sur le portail Bpifrance",
+        "Business plan détaillé",
+        "Pitch deck du projet",
+        "CV des fondateurs",
+        "Prévisions financières sur 3 ans",
+        "Extrait Kbis de moins de 3 mois",
+        "Description technique de l'innovation"
+      ],
+      "lien": "https://www.bpifrance-fictif.fr/aide-creation"
+    },
+    {
+      "id": 12,
+      "nom": "French Tech Tremplin",
+      "pays": "France",
+      "organisme": "Mission French Tech",
+      "type_aide": "subvention",
+      "description": "Programme d'accompagnement et de financement visant à promouvoir la diversité et l'inclusion dans l'écosystème French Tech. French Tech Tremplin soutient les entrepreneurs issus de milieux sous-représentés dans la tech (quartiers prioritaires, zones rurales, personnes en situation de handicap, réfugiés) en leur offrant une bourse, un mentorat personnalisé et un accès à l'écosystème French Tech.",
+      "montant": {
+        "min_eur": 20000,
+        "max_eur": 42000
+      },
+      "pourcentage_financement": "Bourse forfaitaire de 20 000 EUR (phase Prépa) à 42 000 EUR (phase Émergence) non remboursable",
+      "criteres_eligibilite": [
+        "Porteur de projet résidant en France",
+        "Être issu d'un quartier prioritaire de la politique de la ville, d'une zone rurale, être réfugié ou en situation de handicap",
+        "Avoir un projet entrepreneurial innovant dans le numérique",
+        "S'engager à suivre le parcours d'accompagnement complet (6 à 12 mois)",
+        "Ne pas avoir déjà créé une entreprise ayant levé plus de 100 000 EUR"
+      ],
+      "stades_cibles": ["pré-seed"],
+      "secteurs_prioritaires": ["numérique", "impact social", "tous secteurs tech"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "2-4 mois",
+      "documents_requis": [
+        "Dossier de candidature en ligne",
+        "Lettre de motivation détaillant le parcours personnel",
+        "Description du projet entrepreneurial",
+        "Justificatif d'éligibilité (attestation QPV, statut réfugié, RQTH, etc.)",
+        "CV du porteur de projet",
+        "Vidéo de présentation du projet (3 minutes)"
+      ],
+      "lien": "https://www.frenchtech-tremplin-fictif.fr/candidature"
+    },
+    {
+      "id": 13,
+      "nom": "Bourse French Tech Émergence",
+      "pays": "France",
+      "organisme": "Bpifrance / Mission French Tech",
+      "type_aide": "subvention",
+      "description": "Bourse destinée aux entrepreneurs innovants en phase de création ou de faisabilité. Ce programme finance les travaux de maturation d'un projet technologique innovant : études de faisabilité, recherche de partenaires, validation du marché et construction de l'équipe fondatrice. La bourse vise à réduire le risque initial et à faciliter le passage de l'idée au projet structuré.",
+      "montant": {
+        "min_eur": 5000,
+        "max_eur": 30000
+      },
+      "pourcentage_financement": "Bourse forfaitaire couvrant les frais de maturation du projet pendant 12 mois maximum",
+      "criteres_eligibilite": [
+        "Porteur de projet individuel ou équipe de co-fondateurs résidant en France",
+        "Projet innovant à composante technologique",
+        "Être en phase de faisabilité ou de création (entreprise non encore immatriculée ou immatriculée depuis moins de 12 mois)",
+        "Engagement à se consacrer au projet à temps plein",
+        "Projet n'ayant pas encore réalisé de chiffre d'affaires significatif"
+      ],
+      "stades_cibles": ["pré-seed"],
+      "secteurs_prioritaires": ["numérique", "deeptech", "sciences de la vie", "énergie", "mobilité"],
+      "deadline_type": "semestrielle",
+      "duree_traitement": "1-2 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne",
+        "Note de synthèse du projet (5 pages maximum)",
+        "CV des porteurs de projet",
+        "Budget prévisionnel de la phase de maturation",
+        "Lettre d'intention de partenaires potentiels (facultatif)",
+        "Justificatif de domicile en France"
+      ],
+      "lien": "https://www.bourse-frenchtech-fictif.fr/emergence"
+    },
+    {
+      "id": 14,
+      "nom": "Statut Jeune Entreprise Innovante (JEI)",
+      "pays": "France",
+      "organisme": "Direction Générale des Finances Publiques (DGFiP)",
+      "type_aide": "exoneration_fiscale",
+      "description": "Dispositif fiscal offrant des avantages significatifs aux jeunes entreprises réalisant des dépenses de recherche et développement. Le statut JEI permet de bénéficier d'exonérations de charges sociales sur les salaires des personnels affectés à la R&D, d'une exonération d'impôt sur les bénéfices pendant les premières années, ainsi que d'une exonération de contribution économique territoriale et de taxe foncière sur décision des collectivités.",
+      "montant": {
+        "min_eur": 0,
+        "max_eur": 0
+      },
+      "pourcentage_financement": "Exonération totale d'IS la 1ère année bénéficiaire, 50% la 2ème année. Exonération de charges sociales patronales sur les salaires R&D (plafonnée à 231 840 EUR par an et par établissement)",
+      "criteres_eligibilite": [
+        "Entreprise de moins de 8 ans",
+        "PME au sens européen (moins de 250 salariés, CA < 50 M EUR)",
+        "Dépenses de R&D représentant au moins 15% des charges fiscalement déductibles",
+        "Capital détenu à 50% minimum par des personnes physiques ou des entités éligibles",
+        "Ne pas avoir été créée dans le cadre d'une restructuration ou extension d'activité"
+      ],
+      "stades_cibles": ["seed", "early-stage", "growth"],
+      "secteurs_prioritaires": ["tous secteurs réalisant de la R&D"],
+      "deadline_type": "permanente",
+      "duree_traitement": "Immédiat (déclaratif avec contrôle a posteriori)",
+      "documents_requis": [
+        "Déclaration fiscale annuelle avec mention du statut JEI",
+        "Descriptif des projets de R&D éligibles",
+        "État détaillé des dépenses de R&D",
+        "Attestation de l'expert-comptable",
+        "Liste des salariés affectés à la R&D avec leur temps de travail",
+        "Demande de rescrit fiscal (recommandé mais facultatif)"
+      ],
+      "lien": "https://www.jei-status-fictif.fr/dispositif"
+    },
+    {
+      "id": 15,
+      "nom": "Crédit d'Impôt Recherche Innovation (CIR-CII)",
+      "pays": "France",
+      "organisme": "Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation",
+      "type_aide": "exoneration_fiscale",
+      "description": "Dispositif fiscal permettant aux entreprises de déduire une partie significative de leurs dépenses de recherche et développement de leur impôt sur les sociétés. Le CIR couvre les dépenses de recherche fondamentale et appliquée, tandis que le CII (Crédit d'Impôt Innovation) s'adresse spécifiquement aux PME pour leurs dépenses d'innovation. Ce mécanisme constitue l'un des dispositifs de soutien à l'innovation les plus avantageux d'Europe.",
+      "montant": {
+        "min_eur": 5000,
+        "max_eur": 2000000
+      },
+      "pourcentage_financement": "CIR : 30% des dépenses de R&D (jusqu'à 100 M EUR), 5% au-delà. CII : 20% des dépenses d'innovation plafonnées à 400 000 EUR par an",
+      "criteres_eligibilite": [
+        "Entreprise soumise à l'impôt sur les sociétés ou à l'impôt sur le revenu",
+        "Réaliser des dépenses de R&D ou d'innovation éligibles",
+        "Activités de recherche répondant aux critères de nouveauté, créativité et incertitude scientifique ou technique",
+        "Pour le CII : être une PME au sens européen",
+        "Tenir une comptabilité permettant d'isoler les dépenses de R&D"
+      ],
+      "stades_cibles": ["seed", "early-stage", "growth", "scale-up"],
+      "secteurs_prioritaires": ["tous secteurs réalisant de la R&D ou de l'innovation"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "Immédiat (déclaratif), remboursement sous 3-6 mois pour les PME",
+      "documents_requis": [
+        "Formulaire Cerfa 2069-A (déclaration CIR)",
+        "Dossier technique décrivant les travaux de R&D éligibles",
+        "État des dépenses de R&D par projet",
+        "Attestations des organismes publics de recherche partenaires",
+        "Contrats de sous-traitance R&D agréés",
+        "Liasse fiscale annuelle"
+      ],
+      "lien": "https://www.cir-innovation-fictif.fr/declaration"
+    },
+    {
+      "id": 16,
+      "nom": "PIA DeepTech",
+      "pays": "France",
+      "organisme": "Secrétariat Général pour l'Investissement (SGPI) / Bpifrance",
+      "type_aide": "subvention",
+      "description": "Volet du Programme d'Investissements d'Avenir dédié au financement des startups deeptech issues de la recherche académique française. Ce programme soutient les projets à fort contenu scientifique et technologique nécessitant des cycles de développement longs. Il finance les phases de maturation, de preuve de concept, de prototypage industriel et de premières validations cliniques pour les startups développant des technologies de rupture.",
+      "montant": {
+        "min_eur": 50000,
+        "max_eur": 500000
+      },
+      "pourcentage_financement": "Jusqu'à 60% des dépenses de R&D éligibles sous forme de subvention, complément possible en avance remboursable",
+      "criteres_eligibilite": [
+        "Startup deeptech de moins de 5 ans, issue d'un laboratoire de recherche français ou développant une technologie de rupture",
+        "Technologie à barrière à l'entrée scientifique significative",
+        "Partenariat avec un organisme de recherche public (CNRS, INRIA, CEA, INSERM, etc.)",
+        "Équipe fondatrice incluant au moins un profil scientifique de haut niveau",
+        "Plan de développement technologique sur 3-5 ans"
+      ],
+      "stades_cibles": ["pré-seed", "seed", "early-stage"],
+      "secteurs_prioritaires": ["deeptech", "quantique", "intelligence artificielle", "biotechnologie", "nouveaux matériaux", "spatial", "cybersécurité"],
+      "deadline_type": "permanente",
+      "duree_traitement": "3-5 mois",
+      "documents_requis": [
+        "Dossier de candidature complet sur le portail Bpifrance",
+        "Description scientifique et technique du projet",
+        "Lettre de soutien du laboratoire d'origine",
+        "Plan de propriété intellectuelle",
+        "Business plan sur 5 ans avec jalons technologiques",
+        "CV scientifiques des fondateurs",
+        "Budget détaillé du projet de R&D",
+        "Accord de licence ou de transfert de technologie"
+      ],
+      "lien": "https://www.pia-deeptech-fictif.fr/candidature"
+    },
+    {
+      "id": 17,
+      "nom": "Prêt d'Honneur Réseau Entreprendre",
+      "pays": "France",
+      "organisme": "Réseau Entreprendre",
+      "type_aide": "prêt_honneur",
+      "description": "Prêt d'honneur à taux zéro et sans garantie personnelle, accordé par le Réseau Entreprendre aux créateurs et repreneurs d'entreprises innovantes. Ce prêt est systématiquement accompagné d'un mentorat par un chef d'entreprise expérimenté pendant 2 à 3 ans. L'effet de levier du prêt d'honneur permet de mobiliser en moyenne 8 fois le montant auprès des banques partenaires.",
+      "montant": {
+        "min_eur": 15000,
+        "max_eur": 90000
+      },
+      "pourcentage_financement": "Prêt d'honneur à taux zéro, remboursable sur 5 ans avec un différé de remboursement de 12 à 24 mois",
+      "criteres_eligibilite": [
+        "Porteur de projet de création ou reprise d'entreprise en France",
+        "Projet créant au minimum 5 emplois en 3 ans",
+        "Ambition de croissance forte et pérenne",
+        "Accepter d'être accompagné par un mentor du réseau pendant 2 à 3 ans",
+        "Présenter le projet devant un comité de sélection composé de chefs d'entreprise"
+      ],
+      "stades_cibles": ["pré-seed", "seed"],
+      "secteurs_prioritaires": ["tous secteurs à potentiel de croissance"],
+      "deadline_type": "permanente",
+      "duree_traitement": "1-2 mois",
+      "documents_requis": [
+        "Dossier de candidature auprès de l'antenne locale",
+        "Business plan avec projections financières",
+        "CV du porteur de projet",
+        "Plan de financement global",
+        "Prévisions de création d'emplois",
+        "Lettre de motivation entrepreneuriale"
+      ],
+      "lien": "https://www.reseau-entreprendre-fictif.fr/pret-honneur"
+    },
+    {
+      "id": 18,
+      "nom": "BPI Garantie Innovation",
+      "pays": "France",
+      "organisme": "Bpifrance",
+      "type_aide": "garantie",
+      "description": "Programme de garantie de prêts bancaires destiné aux startups et entreprises innovantes. Bpifrance se porte garante d'une partie significative des emprunts contractés auprès des banques partenaires, réduisant ainsi le risque pour les établissements de crédit et facilitant l'accès au financement bancaire pour les entreprises innovantes qui ne disposent pas de garanties suffisantes.",
+      "montant": {
+        "min_eur": 10000,
+        "max_eur": 1500000
+      },
+      "pourcentage_financement": "Garantie couvrant 40% à 70% du montant du prêt bancaire, selon le profil de risque et le stade de développement",
+      "criteres_eligibilite": [
+        "Startup ou PME innovante immatriculée en France",
+        "Avoir un projet de développement nécessitant un financement bancaire",
+        "Être en mesure de rembourser le prêt selon les échéances prévues",
+        "Présenter un dossier de financement auprès d'une banque partenaire",
+        "Activité innovante ou en forte croissance"
+      ],
+      "stades_cibles": ["seed", "early-stage", "growth"],
+      "secteurs_prioritaires": ["tous secteurs innovants"],
+      "deadline_type": "permanente",
+      "duree_traitement": "2-4 semaines",
+      "documents_requis": [
+        "Demande de garantie via la banque partenaire",
+        "Business plan actualisé",
+        "États financiers des derniers exercices",
+        "Plan de financement du projet",
+        "Description du projet nécessitant le financement",
+        "Extrait Kbis récent"
+      ],
+      "lien": "https://www.bpifrance-garantie-fictif.fr/innovation"
+    },
+    {
+      "id": 19,
+      "nom": "French Tech Visa & Support",
+      "pays": "France",
+      "organisme": "Mission French Tech / Ministère de l'Intérieur",
+      "type_aide": "accompagnement",
+      "description": "Programme facilitant l'accueil et l'installation en France de talents tech internationaux : fondateurs de startups, employés de startups en forte croissance et investisseurs tech. Le programme offre une procédure simplifiée et accélérée d'obtention du titre de séjour 'Passeport Talent', un accompagnement administratif complet (banque, logement, scolarité) et un accès privilégié à l'écosystème French Tech.",
+      "montant": {
+        "min_eur": 0,
+        "max_eur": 15000
+      },
+      "pourcentage_financement": "Prise en charge des frais administratifs et aide à l'installation pouvant aller jusqu'à 15 000 EUR",
+      "criteres_eligibilite": [
+        "Fondateur de startup internationale souhaitant s'implanter en France",
+        "Ou employé recruté par une startup French Tech labellisée",
+        "Ou investisseur tech souhaitant investir en France",
+        "Projet entrepreneurial ou poste dans une entreprise éligible",
+        "Engagement à s'installer en France pour une durée minimale de 12 mois"
+      ],
+      "stades_cibles": ["seed", "early-stage", "growth", "scale-up"],
+      "secteurs_prioritaires": ["tous secteurs tech"],
+      "deadline_type": "permanente",
+      "duree_traitement": "2-6 semaines",
+      "documents_requis": [
+        "Formulaire de candidature French Tech Visa en ligne",
+        "Passeport en cours de validité",
+        "Justificatif du projet entrepreneurial ou contrat de travail",
+        "CV détaillé",
+        "Preuve de ressources financières suffisantes",
+        "Lettre de recommandation d'un incubateur ou investisseur French Tech (pour les fondateurs)"
+      ],
+      "lien": "https://www.frenchtech-visa-fictif.fr/apply"
+    },
+    {
+      "id": 20,
+      "nom": "Concours i-Nov Innovation",
+      "pays": "France",
+      "organisme": "Bpifrance / ADEME",
+      "type_aide": "subvention",
+      "description": "Concours national de l'innovation soutenant les projets innovants à fort potentiel de marché portés par des startups et PME. Le concours i-Nov finance des projets de R&D ambitieux dans des domaines stratégiques définis par l'État. Les lauréats bénéficient d'un financement significatif combinant subventions et avances remboursables, ainsi que d'une visibilité nationale et d'un accès à un réseau d'experts.",
+      "montant": {
+        "min_eur": 100000,
+        "max_eur": 2300000
+      },
+      "pourcentage_financement": "Jusqu'à 45% des dépenses éligibles pour les PME (subvention + avance remboursable), jusqu'à 65% pour les projets collaboratifs",
+      "criteres_eligibilite": [
+        "Startup ou PME de droit français",
+        "Projet de R&D innovant répondant aux thématiques prioritaires de l'appel",
+        "Assiette de dépenses éligibles comprise entre 600 000 et 5 000 000 EUR",
+        "Durée du projet entre 12 et 36 mois",
+        "Caractère innovant et potentiel de marché démontrés"
+      ],
+      "stades_cibles": ["early-stage", "growth"],
+      "secteurs_prioritaires": ["transition écologique", "santé", "numérique", "alimentation durable", "cybersécurité", "spatial", "quantique"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "4-6 mois",
+      "documents_requis": [
+        "Dossier de candidature complet déposé sur le portail Bpifrance",
+        "Description technique et scientifique du projet",
+        "Plan d'affaires et étude de marché",
+        "Budget prévisionnel détaillé du projet",
+        "Lettres d'intention de clients ou partenaires",
+        "CV de l'équipe projet",
+        "Stratégie de propriété intellectuelle",
+        "Analyse de l'état de l'art"
+      ],
+      "lien": "https://www.concours-inov-fictif.fr/appel"
+    },
+    {
+      "id": 21,
+      "nom": "AfricInvest Programme Amorçage",
+      "pays": "Pan-Africain",
+      "organisme": "AfricInvest Group",
+      "type_aide": "subvention",
+      "description": "Programme de financement en amorçage dédié aux startups technologiques africaines à fort potentiel de croissance. AfricInvest Programme Amorçage combine un ticket d'investissement avec un accompagnement stratégique intensif, un accès à un réseau de mentors panafricain et des opportunités de co-investissement avec des fonds internationaux. Le programme cible les startups capables de devenir des champions continentaux.",
+      "montant": {
+        "min_eur": 20000,
+        "max_eur": 250000
+      },
+      "pourcentage_financement": "Investissement en capital couvrant jusqu'à 30% du besoin de financement, complété par un accompagnement valorisé à 50 000 EUR",
+      "criteres_eligibilite": [
+        "Startup technologique opérant dans au moins un pays africain",
+        "Avoir démontré une traction initiale (utilisateurs, revenus, partenariats)",
+        "Équipe fondatrice engagée à temps plein avec des compétences complémentaires",
+        "Modèle d'affaires scalable à l'échelle du continent africain",
+        "Être en capacité de lever un tour de financement complémentaire dans les 18 mois"
+      ],
+      "stades_cibles": ["seed", "early-stage"],
+      "secteurs_prioritaires": ["fintech", "agritech", "healthtech", "edtech", "logistique", "e-commerce"],
+      "deadline_type": "semestrielle",
+      "duree_traitement": "2-4 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne",
+        "Pitch deck de 15 slides maximum",
+        "Projections financières sur 3 ans",
+        "Métriques de traction (KPI clés)",
+        "CV des fondateurs",
+        "Cap table actuelle",
+        "Vidéo de démonstration du produit"
+      ],
+      "lien": "https://www.africinvest-seed-fictif.com/apply"
+    },
+    {
+      "id": 22,
+      "nom": "MENA Innovation Challenge",
+      "pays": "Région MENA",
+      "organisme": "MENA Innovation Hub",
+      "type_aide": "subvention",
+      "description": "Concours d'innovation ouvert aux startups de la région Moyen-Orient et Afrique du Nord. Le MENA Innovation Challenge récompense les solutions technologiques les plus prometteuses répondant aux défis spécifiques de la région : accès à l'eau, énergie, éducation, inclusion financière et transformation numérique des secteurs traditionnels. Les lauréats reçoivent des prix en numéraire, un mentorat et un accès à des marchés régionaux.",
+      "montant": {
+        "min_eur": 10000,
+        "max_eur": 150000
+      },
+      "pourcentage_financement": "Prix en numéraire non remboursable, de 10 000 EUR à 150 000 EUR selon la catégorie",
+      "criteres_eligibilite": [
+        "Startup fondée et opérant dans un pays de la région MENA",
+        "Solution innovante répondant à un défi majeur de la région",
+        "Prototype fonctionnel ou produit déjà sur le marché",
+        "Équipe de minimum 2 cofondateurs",
+        "Engagement à utiliser le prix pour développer l'activité dans la région MENA"
+      ],
+      "stades_cibles": ["seed", "early-stage"],
+      "secteurs_prioritaires": ["watertech", "énergie", "edtech", "fintech", "agritech", "smart cities"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "3-5 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne (anglais ou arabe)",
+        "Pitch deck",
+        "Vidéo de présentation (5 minutes maximum)",
+        "Preuve de concept ou démonstration du produit",
+        "Preuves de traction ou d'impact",
+        "Lettres de recommandation de partenaires régionaux"
+      ],
+      "lien": "https://www.mena-innovation-challenge-fictif.com/apply"
+    },
+    {
+      "id": 23,
+      "nom": "EU Horizon Startup Accelerator",
+      "pays": "Union Européenne",
+      "organisme": "European Innovation Council (EIC)",
+      "type_aide": "subvention",
+      "description": "Programme phare de l'Union Européenne pour le financement des startups et PME développant des innovations de rupture. L'EIC Accelerator offre un financement mixte combinant une subvention non dilutive et un investissement en fonds propres pour accompagner les startups européennes dans le passage à l'échelle de technologies disruptives. Ce programme est l'un des plus compétitifs et des plus généreux au monde.",
+      "montant": {
+        "min_eur": 500000,
+        "max_eur": 2500000
+      },
+      "pourcentage_financement": "Subvention jusqu'à 2,5 M EUR pour la composante innovation, investissement en fonds propres jusqu'à 15 M EUR complémentaire",
+      "criteres_eligibilite": [
+        "Startup ou PME établie dans un État membre de l'UE ou un pays associé à Horizon Europe",
+        "Innovation de rupture à fort potentiel de marché européen et mondial",
+        "Technologie ayant atteint un niveau de maturité TRL 5-8",
+        "Incapacité à être financée uniquement par le marché (market failure)",
+        "Ambition de devenir un leader européen dans son domaine"
+      ],
+      "stades_cibles": ["early-stage", "growth"],
+      "secteurs_prioritaires": ["deeptech", "greentech", "healthtech", "numérique", "spatial", "quantique", "biotechnologie"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "4-8 mois",
+      "documents_requis": [
+        "Candidature en ligne via le portail EU Funding & Tenders",
+        "Pitch deck (10 slides)",
+        "Description technique du projet (30 pages maximum)",
+        "Business plan et stratégie de mise sur le marché",
+        "Vidéo de pitch (3 minutes)",
+        "Annexes financières et plan de financement",
+        "Preuve de propriété intellectuelle",
+        "Lettres d'intention de clients pilotes"
+      ],
+      "lien": "https://www.eic-accelerator-fictif.europa.eu/apply"
+    },
+    {
+      "id": 24,
+      "nom": "Tony Elumelu Foundation Entrepreneurship Programme",
+      "pays": "Afrique (54 pays)",
+      "organisme": "Tony Elumelu Foundation (TEF)",
+      "type_aide": "subvention",
+      "description": "Programme phare d'entrepreneuriat africain offrant un financement non remboursable, une formation en ligne de 12 semaines, un mentorat personnalisé et un accès à un réseau de plus de 15 000 alumni entrepreneurs à travers l'Afrique. La fondation cible les entrepreneurs africains porteurs d'idées à fort impact social et économique, avec une attention particulière aux femmes et aux jeunes.",
+      "montant": {
+        "min_eur": 4500,
+        "max_eur": 4500
+      },
+      "pourcentage_financement": "Capital d'amorçage de 5 000 USD (environ 4 500 EUR) non remboursable par entrepreneur sélectionné",
+      "criteres_eligibilite": [
+        "Être un citoyen africain ou résident permanent d'un pays africain",
+        "Avoir une idée d'entreprise ou une entreprise existante de moins de 3 ans",
+        "Être âgé d'au moins 18 ans",
+        "N'avoir pas été bénéficiaire du programme auparavant",
+        "Engagement à suivre l'intégralité du programme de formation de 12 semaines"
+      ],
+      "stades_cibles": ["pré-seed", "seed"],
+      "secteurs_prioritaires": ["tous secteurs", "agriculture", "technologie", "santé", "éducation", "énergie"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "3-6 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne (anglais ou français)",
+        "Description du projet entrepreneurial",
+        "Plan d'affaires simplifié",
+        "Pièce d'identité prouvant la nationalité africaine",
+        "Vidéo de motivation (facultatif mais recommandé)"
+      ],
+      "lien": "https://www.tonyelumelufoundation-fictif.org/apply"
+    },
+    {
+      "id": 25,
+      "nom": "World Bank SME Innovation Facility",
+      "pays": "Global (pays en développement)",
+      "organisme": "Groupe de la Banque Mondiale / IFC",
+      "type_aide": "subvention",
+      "description": "Facilité mondiale d'innovation de la Banque Mondiale destinée à soutenir les PME et startups innovantes dans les pays en développement. Ce programme finance des projets pilotes technologiques ayant un impact mesurable sur le développement économique et social. La facilité couvre les coûts de R&D, de prototypage, de validation de marché et de déploiement initial dans les marchés émergents.",
+      "montant": {
+        "min_eur": 25000,
+        "max_eur": 450000
+      },
+      "pourcentage_financement": "Subvention couvrant jusqu'à 80% des coûts du projet pilote, avec contrepartie locale de 20% minimum",
+      "criteres_eligibilite": [
+        "Startup ou PME opérant dans un pays éligible à l'aide de la Banque Mondiale",
+        "Solution innovante répondant à un défi de développement identifié",
+        "Impact social ou environnemental mesurable et significatif",
+        "Capacité technique et managériale démontrée",
+        "Potentiel de réplication dans d'autres pays en développement"
+      ],
+      "stades_cibles": ["seed", "early-stage", "growth"],
+      "secteurs_prioritaires": ["inclusion financière", "agriculture", "éducation", "santé", "énergie propre", "connectivité numérique"],
+      "deadline_type": "trimestrielle",
+      "duree_traitement": "4-6 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne (anglais ou français)",
+        "Description technique du projet et de l'innovation",
+        "Étude d'impact social ou environnemental préliminaire",
+        "Budget détaillé avec sources de co-financement",
+        "CV de l'équipe de gestion",
+        "Lettres de soutien d'institutions locales",
+        "Plan de déploiement et de mise à l'échelle",
+        "Indicateurs de performance et cadre de suivi-évaluation"
+      ],
+      "lien": "https://www.worldbank-sme-facility-fictif.org/apply"
+    },
+    {
+      "id": 26,
+      "nom": "BAD Boost Entrepreneuriat Jeunesse Africaine",
+      "pays": "Afrique (pays membres de la BAD)",
+      "organisme": "Banque Africaine de Développement (BAD)",
+      "type_aide": "subvention",
+      "description": "Initiative de la Banque Africaine de Développement visant à soutenir l'entrepreneuriat des jeunes africains à travers le financement de startups innovantes, la formation aux compétences entrepreneuriales et l'accès au mentorat. Le programme s'inscrit dans la stratégie 'Jobs for Youth in Africa' de la BAD et cible les jeunes entrepreneurs âgés de 18 à 35 ans porteurs de projets à fort potentiel de création d'emplois.",
+      "montant": {
+        "min_eur": 15000,
+        "max_eur": 200000
+      },
+      "pourcentage_financement": "Subvention couvrant jusqu'à 75% des coûts de démarrage et de développement initial",
+      "criteres_eligibilite": [
+        "Jeune entrepreneur africain âgé de 18 à 35 ans",
+        "Projet de startup dans un pays membre de la BAD",
+        "Potentiel de création d'au moins 10 emplois directs dans les 3 ans",
+        "Modèle d'affaires innovant et viable",
+        "Engagement à participer au programme de formation et de mentorat associé"
+      ],
+      "stades_cibles": ["pré-seed", "seed", "early-stage"],
+      "secteurs_prioritaires": ["agritech", "énergie renouvelable", "TIC", "industrie créative", "économie circulaire"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "3-5 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne",
+        "Business plan détaillé",
+        "Preuves de nationalité d'un pays membre de la BAD",
+        "CV des fondateurs",
+        "Étude de marché préliminaire",
+        "Plan de création d'emplois",
+        "Lettres de recommandation de mentors ou de partenaires locaux"
+      ],
+      "lien": "https://www.afdb-youth-entrepreneurship-fictif.org/apply"
+    },
+    {
+      "id": 27,
+      "nom": "IsDB Transform Fund - Technologies Émergentes",
+      "pays": "Pays membres de l'OCI",
+      "organisme": "Banque Islamique de Développement (IsDB)",
+      "type_aide": "avance_remboursable",
+      "description": "Fonds de la Banque Islamique de Développement dédié au soutien des startups technologiques dans les pays membres de l'Organisation de la Coopération Islamique. Le programme finance le développement de solutions technologiques innovantes conformes aux principes de la finance islamique, avec un focus particulier sur l'intelligence artificielle, la blockchain, l'IoT et les technologies spatiales appliquées au développement.",
+      "montant": {
+        "min_eur": 30000,
+        "max_eur": 350000
+      },
+      "pourcentage_financement": "Avance remboursable à taux zéro couvrant jusqu'à 60% du projet, conforme aux principes de la finance islamique (mode mourabaha ou moucharaka)",
+      "criteres_eligibilite": [
+        "Startup technologique établie dans un pays membre de l'OCI",
+        "Solution technologique innovante à impact social mesurable",
+        "Conformité du modèle financier avec les principes de la finance islamique",
+        "Équipe technique qualifiée et engagée",
+        "Potentiel de déploiement dans plusieurs pays membres de l'OCI"
+      ],
+      "stades_cibles": ["seed", "early-stage"],
+      "secteurs_prioritaires": ["intelligence artificielle", "blockchain", "IoT", "spatial", "edtech", "healthtech", "fintech islamique"],
+      "deadline_type": "semestrielle",
+      "duree_traitement": "4-6 mois",
+      "documents_requis": [
+        "Formulaire de candidature (anglais, arabe ou français)",
+        "Plan d'affaires conforme aux principes de la finance islamique",
+        "Description technique de l'innovation",
+        "Étude d'impact social",
+        "Preuves d'enregistrement dans un pays membre de l'OCI",
+        "CV de l'équipe fondatrice",
+        "Analyse de marché dans les pays cibles de l'OCI"
+      ],
+      "lien": "https://www.isdb-transform-fund-fictif.org/apply"
+    },
+    {
+      "id": 28,
+      "nom": "GIZ Digital Africa Innovation Fund",
+      "pays": "Afrique subsaharienne et Afrique du Nord",
+      "organisme": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit)",
+      "type_aide": "subvention",
+      "description": "Programme de coopération allemande pour le développement soutenant l'innovation numérique en Afrique. Le fonds finance les startups africaines développant des solutions digitales dans les domaines de la gouvernance, de l'agriculture, de la santé, de l'éducation et de l'emploi des jeunes. Le programme offre également un accès à l'expertise technique allemande, un mentorat par des entreprises partenaires du secteur privé allemand et des opportunités de partenariat Europe-Afrique.",
+      "montant": {
+        "min_eur": 10000,
+        "max_eur": 180000
+      },
+      "pourcentage_financement": "Subvention couvrant jusqu'à 50% des coûts du projet, avec co-financement obligatoire du secteur privé à hauteur de 50%",
+      "criteres_eligibilite": [
+        "Startup numérique opérant en Afrique subsaharienne ou en Afrique du Nord",
+        "Solution digitale répondant à un défi de développement identifié",
+        "Partenariat avec une entreprise ou institution du secteur privé (co-financement)",
+        "Équipe locale avec une connaissance approfondie du contexte africain",
+        "Engagement à mesurer et rapporter les indicateurs d'impact"
+      ],
+      "stades_cibles": ["seed", "early-stage", "growth"],
+      "secteurs_prioritaires": ["govtech", "agritech", "healthtech", "edtech", "emploi des jeunes", "inclusion financière"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "3-4 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne (anglais, français ou allemand)",
+        "Description du projet et de l'innovation digitale",
+        "Lettre d'engagement du partenaire de co-financement",
+        "Budget détaillé avec plan de co-financement",
+        "Indicateurs d'impact et cadre logique du projet",
+        "CV des membres clés de l'équipe",
+        "Preuves de traction ou résultats pilotes"
+      ],
+      "lien": "https://www.giz-digital-africa-fictif.de/innovation-fund"
+    },
+    {
+      "id": 29,
+      "nom": "USAID Startup Accelerator Programme - Afrique et MENA",
+      "pays": "Afrique et région MENA",
+      "organisme": "USAID (United States Agency for International Development)",
+      "type_aide": "accompagnement",
+      "description": "Programme d'accélération de l'USAID soutenant les startups innovantes en Afrique et dans la région MENA. Ce programme offre un financement d'amorçage, un accompagnement intensif de 6 mois, un accès au marché américain, du mentorat par des entrepreneurs et investisseurs de la Silicon Valley, et des opportunités de partenariat avec des entreprises américaines opérant dans la région. L'objectif est de favoriser le développement économique à travers l'entrepreneuriat technologique.",
+      "montant": {
+        "min_eur": 20000,
+        "max_eur": 130000
+      },
+      "pourcentage_financement": "Subvention non remboursable de 20 000 à 130 000 EUR, accompagnement valorisé à 75 000 EUR supplémentaires",
+      "criteres_eligibilite": [
+        "Startup opérant en Afrique ou dans la région MENA",
+        "Solution technologique innovante avec un impact social ou économique démontrable",
+        "Avoir dépassé le stade du prototype avec des premiers utilisateurs ou clients",
+        "Engagement des fondateurs à temps plein dans la startup",
+        "Capacité à participer au programme d'accélération de 6 mois (présentiel et en ligne)"
+      ],
+      "stades_cibles": ["seed", "early-stage"],
+      "secteurs_prioritaires": ["fintech", "healthtech", "agritech", "éducation", "énergie", "commerce", "logistique"],
+      "deadline_type": "annuelle",
+      "duree_traitement": "2-4 mois",
+      "documents_requis": [
+        "Formulaire de candidature en ligne (anglais)",
+        "Pitch deck de 12 slides maximum",
+        "Vidéo de présentation des fondateurs (3 minutes)",
+        "Métriques clés (utilisateurs, revenus, croissance)",
+        "CV des co-fondateurs",
+        "Preuve d'enregistrement légal de la startup",
+        "Références de clients ou partenaires"
+      ],
+      "lien": "https://www.usaid-startup-accelerator-fictif.gov/africa-mena"
+    },
+    {
+      "id": 30,
+      "nom": "Mastercard Foundation Fonds pour l'Innovation Africaine",
+      "pays": "Afrique (tous pays)",
+      "organisme": "Mastercard Foundation",
+      "type_aide": "subvention",
+      "description": "Fonds de la Mastercard Foundation dédié au financement des startups et entreprises sociales africaines qui créent des opportunités d'emploi dignes et productives pour les jeunes du continent. Le programme offre un financement patient, un accompagnement sur mesure, un accès à un réseau panafricain de partenaires et des opportunités de passage à l'échelle. La fondation privilégie les modèles d'affaires ayant un impact significatif sur l'emploi des jeunes et l'inclusion financière.",
+      "montant": {
+        "min_eur": 40000,
+        "max_eur": 500000
+      },
+      "pourcentage_financement": "Subvention non remboursable couvrant jusqu'à 90% du budget du projet, avec engagement de pérennité financière à terme",
+      "criteres_eligibilite": [
+        "Startup ou entreprise sociale opérant en Afrique",
+        "Impact démontré ou projeté sur la création d'emplois pour les jeunes africains (18-35 ans)",
+        "Modèle d'affaires viable avec un chemin vers la rentabilité",
+        "Engagement envers l'inclusion des femmes et des populations marginalisées",
+        "Capacité à mesurer et rapporter l'impact social de manière rigoureuse"
+      ],
+      "stades_cibles": ["seed", "early-stage", "growth"],
+      "secteurs_prioritaires": ["emploi des jeunes", "inclusion financière", "agritech", "edtech", "formation professionnelle", "économie numérique"],
+      "deadline_type": "semestrielle",
+      "duree_traitement": "4-6 mois",
+      "documents_requis": [
+        "Formulaire de candidature complet (anglais ou français)",
+        "Plan d'affaires avec projections de création d'emplois",
+        "Théorie du changement et cadre d'impact",
+        "États financiers ou projections financières",
+        "CV de l'équipe dirigeante",
+        "Preuves d'impact existant (témoignages, données, études de cas)",
+        "Stratégie de pérennité financière post-subvention",
+        "Politique d'inclusion et de genre de l'entreprise"
+      ],
+      "lien": "https://www.mastercardfdn-innovation-fictif.org/apply"
+    }
+  ]
+}

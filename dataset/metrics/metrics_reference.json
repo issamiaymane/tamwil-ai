@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "description": "Référentiel des KPIs et métriques clés pour startups",
+    "version": "1.0",
+    "derniere_mise_a_jour": "2025-01-15"
+  },
+  "kpis": [
+    {
+      "id": "mrr",
+      "nom": "MRR",
+      "nom_complet": "Monthly Recurring Revenue",
+      "categorie": "revenus",
+      "definition": "Le MRR représente le revenu récurrent mensuel généré par l'ensemble des abonnements actifs. C'est l'indicateur fondamental pour toute entreprise fonctionnant sur un modèle d'abonnement. Il permet de mesurer la prévisibilité et la stabilité des revenus, en excluant les paiements ponctuels ou non récurrents. Le MRR se décompose en plusieurs composantes : nouveau MRR (nouveaux clients), MRR d'expansion (upsell/cross-sell), MRR de contraction (downgrade) et MRR churné (clients perdus).",
+      "formule": "MRR = Somme des revenus récurrents mensuels de tous les abonnés actifs",
+      "formule_mathematique": "MRR = Σ(revenu_mensuel_client_i) pour i = 1 à n",
+      "unite": "€",
+      "frequence_mesure": "Mensuelle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">5K€", "moyen": "1K€-5K€", "faible": "<1K€" },
+          "seed": { "bon": ">30K€", "moyen": "10K€-30K€", "faible": "<10K€" },
+          "serie_a": { "bon": ">100K€", "moyen": "50K€-100K€", "faible": "<50K€" },
+          "serie_b": { "bon": ">500K€", "moyen": "200K€-500K€", "faible": "<200K€" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">3K€", "moyen": "500€-3K€", "faible": "<500€" },
+          "seed": { "bon": ">20K€", "moyen": "5K€-20K€", "faible": "<5K€" },
+          "serie_a": { "bon": ">80K€", "moyen": "30K€-80K€", "faible": "<30K€" },
+          "serie_b": { "bon": ">400K€", "moyen": "150K€-400K€", "faible": "<150K€" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">4K€", "moyen": "1K€-4K€", "faible": "<1K€" },
+          "seed": { "bon": ">25K€", "moyen": "8K€-25K€", "faible": "<8K€" },
+          "serie_a": { "bon": ">90K€", "moyen": "40K€-90K€", "faible": "<40K€" },
+          "serie_b": { "bon": ">450K€", "moyen": "180K€-450K€", "faible": "<180K€" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Croissance MoM > 15%",
+        "orange": "Croissance MoM entre 5% et 15%",
+        "rouge": "Croissance MoM < 5% ou décroissance"
+      },
+      "conseils": "Pour améliorer le MRR : 1) Concentrez-vous sur l'acquisition de clients à forte valeur plutôt que sur le volume. 2) Mettez en place des stratégies d'upsell et de cross-sell pour augmenter le MRR d'expansion. 3) Réduisez le churn en améliorant l'onboarding et le support client. 4) Envisagez une tarification basée sur la valeur plutôt que sur les fonctionnalités. 5) Analysez les cohortes pour identifier les segments les plus rentables.",
+      "kpis_lies": ["ARR", "Net MRR Growth", "Churn Rate", "ARPU"]
+    },
+    {
+      "id": "arr",
+      "nom": "ARR",
+      "nom_complet": "Annual Recurring Revenue",
+      "categorie": "revenus",
+      "definition": "L'ARR représente le revenu récurrent annualisé. Il s'obtient en multipliant le MRR par 12. C'est la métrique de référence utilisée par les investisseurs pour évaluer la taille et la trajectoire d'une entreprise SaaS. L'ARR est particulièrement pertinent pour les entreprises dont les contrats sont annuels ou pluriannuels. Il offre une vision plus stable que le MRR car il lisse les variations saisonnières.",
+      "formule": "ARR = MRR × 12",
+      "formule_mathematique": "ARR = MRR × 12 = 12 × Σ(revenu_mensuel_client_i)",
+      "unite": "€",
+      "frequence_mesure": "Mensuelle ou trimestrielle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">60K€", "moyen": "12K€-60K€", "faible": "<12K€" },
+          "seed": { "bon": ">360K€", "moyen": "120K€-360K€", "faible": "<120K€" },
+          "serie_a": { "bon": ">1.2M€", "moyen": "600K€-1.2M€", "faible": "<600K€" },
+          "serie_b": { "bon": ">6M€", "moyen": "2.4M€-6M€", "faible": "<2.4M€" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">36K€", "moyen": "6K€-36K€", "faible": "<6K€" },
+          "seed": { "bon": ">240K€", "moyen": "60K€-240K€", "faible": "<60K€" },
+          "serie_a": { "bon": ">960K€", "moyen": "360K€-960K€", "faible": "<360K€" },
+          "serie_b": { "bon": ">4.8M€", "moyen": "1.8M€-4.8M€", "faible": "<1.8M€" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">48K€", "moyen": "12K€-48K€", "faible": "<12K€" },
+          "seed": { "bon": ">300K€", "moyen": "96K€-300K€", "faible": "<96K€" },
+          "serie_a": { "bon": ">1.08M€", "moyen": "480K€-1.08M€", "faible": "<480K€" },
+          "serie_b": { "bon": ">5.4M€", "moyen": "2.16M€-5.4M€", "faible": "<2.16M€" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Croissance annuelle > 100% (tripler est l'objectif idéal en early stage)",
+        "orange": "Croissance annuelle entre 50% et 100%",
+        "rouge": "Croissance annuelle < 50%"
+      },
+      "conseils": "Pour améliorer l'ARR : 1) Privilégiez les contrats annuels avec une remise par rapport au paiement mensuel (typiquement 15-20% de réduction). 2) Mettez en place un processus de renouvellement proactif 90 jours avant l'échéance. 3) Identifiez les opportunités d'expansion dans la base de clients existante. 4) Développez des fonctionnalités premium pour justifier des plans supérieurs. 5) Visez le « Triple Triple Double Double » en early stage.",
+      "kpis_lies": ["MRR", "Net Revenue Retention", "Churn Rate"]
+    },
+    {
+      "id": "cac",
+      "nom": "CAC",
+      "nom_complet": "Customer Acquisition Cost",
+      "categorie": "efficacite",
+      "definition": "Le CAC mesure le coût total moyen pour acquérir un nouveau client. Il inclut l'ensemble des dépenses de marketing et de vente (salaires des équipes commerciales, publicité, outils marketing, événements, etc.) divisé par le nombre de nouveaux clients acquis sur la même période. Un CAC maîtrisé est essentiel pour la viabilité économique du modèle. Il doit être analysé en relation avec la LTV pour s'assurer que chaque client acquis génère un retour positif.",
+      "formule": "CAC = (Dépenses marketing + Dépenses commerciales) / Nombre de nouveaux clients acquis",
+      "formule_mathematique": "CAC = (C_marketing + C_ventes) / N_nouveaux_clients",
+      "unite": "€",
+      "frequence_mesure": "Mensuelle ou trimestrielle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": "<50€", "moyen": "50€-200€", "faible": ">200€" },
+          "seed": { "bon": "<150€", "moyen": "150€-500€", "faible": ">500€" },
+          "serie_a": { "bon": "<500€", "moyen": "500€-1500€", "faible": ">1500€" },
+          "serie_b": { "bon": "<1000€", "moyen": "1000€-3000€", "faible": ">3000€" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": "<10€", "moyen": "10€-30€", "faible": ">30€" },
+          "seed": { "bon": "<25€", "moyen": "25€-60€", "faible": ">60€" },
+          "serie_a": { "bon": "<50€", "moyen": "50€-120€", "faible": ">120€" },
+          "serie_b": { "bon": "<80€", "moyen": "80€-200€", "faible": ">200€" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": "<20€", "moyen": "20€-80€", "faible": ">80€" },
+          "seed": { "bon": "<60€", "moyen": "60€-200€", "faible": ">200€" },
+          "serie_a": { "bon": "<200€", "moyen": "200€-600€", "faible": ">600€" },
+          "serie_b": { "bon": "<400€", "moyen": "400€-1000€", "faible": ">1000€" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": "<30€", "moyen": "30€-100€", "faible": ">100€" },
+          "seed": { "bon": "<100€", "moyen": "100€-350€", "faible": ">350€" },
+          "serie_a": { "bon": "<350€", "moyen": "350€-1000€", "faible": ">1000€" },
+          "serie_b": { "bon": "<700€", "moyen": "700€-2000€", "faible": ">2000€" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "CAC en baisse trimestre après trimestre avec volume d'acquisition stable ou croissant",
+        "orange": "CAC stable mais ratio LTV/CAC entre 2x et 3x",
+        "rouge": "CAC en hausse ou ratio LTV/CAC < 2x"
+      },
+      "conseils": "Pour réduire le CAC : 1) Investissez dans le marketing de contenu et le SEO pour créer des canaux d'acquisition organiques. 2) Optimisez le funnel de conversion à chaque étape (landing pages, onboarding, démos). 3) Développez un programme de parrainage pour tirer parti du bouche-à-oreille. 4) Segmentez vos canaux d'acquisition et éliminez ceux dont le CAC est trop élevé. 5) Améliorez la qualification des leads pour concentrer les efforts commerciaux sur les prospects à fort potentiel.",
+      "kpis_lies": ["LTV", "Ratio LTV/CAC", "Payback Period", "Taux de conversion"]
+    },
+    {
+      "id": "ltv",
+      "nom": "LTV",
+      "nom_complet": "Customer Lifetime Value",
+      "categorie": "revenus",
+      "definition": "La LTV (ou CLV - Customer Lifetime Value) représente la valeur totale du revenu qu'un client génère en moyenne sur toute la durée de sa relation avec l'entreprise. C'est une métrique prédictive qui estime le revenu futur attendu d'un client. Elle prend en compte le revenu moyen par client, la marge brute et la durée de vie moyenne du client (inversement liée au taux de churn). La LTV est cruciale pour déterminer combien investir dans l'acquisition de nouveaux clients.",
+      "formule": "LTV = ARPU × Marge brute × Durée de vie moyenne du client (en mois)",
+      "formule_mathematique": "LTV = (ARPU × Marge_brute) / Taux_churn_mensuel",
+      "unite": "€",
+      "frequence_mesure": "Trimestrielle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">500€", "moyen": "150€-500€", "faible": "<150€" },
+          "seed": { "bon": ">2000€", "moyen": "800€-2000€", "faible": "<800€" },
+          "serie_a": { "bon": ">8000€", "moyen": "3000€-8000€", "faible": "<3000€" },
+          "serie_b": { "bon": ">20000€", "moyen": "8000€-20000€", "faible": "<8000€" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">80€", "moyen": "30€-80€", "faible": "<30€" },
+          "seed": { "bon": ">200€", "moyen": "80€-200€", "faible": "<80€" },
+          "serie_a": { "bon": ">500€", "moyen": "200€-500€", "faible": "<200€" },
+          "serie_b": { "bon": ">1200€", "moyen": "500€-1200€", "faible": "<500€" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">120€", "moyen": "40€-120€", "faible": "<40€" },
+          "seed": { "bon": ">400€", "moyen": "120€-400€", "faible": "<120€" },
+          "serie_a": { "bon": ">1500€", "moyen": "500€-1500€", "faible": "<500€" },
+          "serie_b": { "bon": ">5000€", "moyen": "1500€-5000€", "faible": "<1500€" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": ">300€", "moyen": "100€-300€", "faible": "<100€" },
+          "seed": { "bon": ">1200€", "moyen": "400€-1200€", "faible": "<400€" },
+          "serie_a": { "bon": ">5000€", "moyen": "2000€-5000€", "faible": "<2000€" },
+          "serie_b": { "bon": ">15000€", "moyen": "5000€-15000€", "faible": "<5000€" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "LTV en croissance et ratio LTV/CAC > 3x",
+        "orange": "LTV stable avec ratio LTV/CAC entre 2x et 3x",
+        "rouge": "LTV en décroissance ou ratio LTV/CAC < 2x"
+      },
+      "conseils": "Pour augmenter la LTV : 1) Réduisez le churn en investissant dans le Customer Success et l'engagement client. 2) Augmentez l'ARPU grâce à des stratégies d'upsell et de cross-sell pertinentes. 3) Améliorez la marge brute en optimisant les coûts de service. 4) Créez des programmes de fidélité et d'engagement à long terme. 5) Personnalisez l'expérience client pour augmenter la satisfaction et la rétention.",
+      "kpis_lies": ["CAC", "Ratio LTV/CAC", "Churn Rate", "ARPU"]
+    },
+    {
+      "id": "ratio_ltv_cac",
+      "nom": "Ratio LTV/CAC",
+      "nom_complet": "Ratio Lifetime Value sur Customer Acquisition Cost",
+      "categorie": "efficacite",
+      "definition": "Le ratio LTV/CAC mesure l'efficacité de l'investissement en acquisition client. Il compare la valeur totale générée par un client sur sa durée de vie au coût pour l'acquérir. C'est l'un des indicateurs les plus scrutés par les investisseurs car il reflète directement la viabilité et la scalabilité du modèle économique. Un ratio inférieur à 1x signifie que l'entreprise perd de l'argent sur chaque client acquis. Un ratio supérieur à 5x peut indiquer un sous-investissement en acquisition.",
+      "formule": "Ratio LTV/CAC = LTV / CAC",
+      "formule_mathematique": "Ratio = LTV / CAC = (ARPU × Marge_brute / Taux_churn) / ((C_marketing + C_ventes) / N_nouveaux_clients)",
+      "unite": "x (multiple)",
+      "frequence_mesure": "Trimestrielle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">3x", "moyen": "2x-3x", "faible": "<2x" },
+          "seed": { "bon": ">3x", "moyen": "2x-3x", "faible": "<2x" },
+          "serie_a": { "bon": ">3.5x", "moyen": "2.5x-3.5x", "faible": "<2.5x" },
+          "serie_b": { "bon": ">4x", "moyen": "3x-4x", "faible": "<3x" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">2.5x", "moyen": "1.5x-2.5x", "faible": "<1.5x" },
+          "seed": { "bon": ">3x", "moyen": "2x-3x", "faible": "<2x" },
+          "serie_a": { "bon": ">3x", "moyen": "2x-3x", "faible": "<2x" },
+          "serie_b": { "bon": ">3.5x", "moyen": "2.5x-3.5x", "faible": "<2.5x" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">2.5x", "moyen": "1.5x-2.5x", "faible": "<1.5x" },
+          "seed": { "bon": ">3x", "moyen": "2x-3x", "faible": "<2x" },
+          "serie_a": { "bon": ">3.5x", "moyen": "2.5x-3.5x", "faible": "<2.5x" },
+          "serie_b": { "bon": ">4x", "moyen": "3x-4x", "faible": "<3x" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": ">3x", "moyen": "2x-3x", "faible": "<2x" },
+          "seed": { "bon": ">3.5x", "moyen": "2.5x-3.5x", "faible": "<2.5x" },
+          "serie_a": { "bon": ">4x", "moyen": "3x-4x", "faible": "<3x" },
+          "serie_b": { "bon": ">4.5x", "moyen": "3.5x-4.5x", "faible": "<3.5x" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Ratio > 3x avec CAC payback < 18 mois",
+        "orange": "Ratio entre 2x et 3x",
+        "rouge": "Ratio < 2x ou en décroissance constante"
+      },
+      "conseils": "Pour améliorer le ratio LTV/CAC : 1) Travaillez simultanément sur l'augmentation de la LTV (rétention, upsell) et la réduction du CAC (optimisation des canaux). 2) Un ratio > 5x peut signifier que vous sous-investissez en croissance : envisagez d'augmenter les dépenses d'acquisition. 3) Segmentez par cohorte et par canal pour identifier les segments les plus rentables. 4) Attention au ratio « blended » qui peut masquer des canaux non rentables. 5) Visez un ratio de 3x à 5x comme zone optimale.",
+      "kpis_lies": ["LTV", "CAC", "Payback Period", "Churn Rate"]
+    },
+    {
+      "id": "churn_rate",
+      "nom": "Churn Rate",
+      "nom_complet": "Taux d'attrition client",
+      "categorie": "engagement",
+      "definition": "Le taux de churn (ou taux d'attrition) mesure le pourcentage de clients qui cessent d'utiliser le produit ou résilient leur abonnement sur une période donnée. On distingue le churn brut (nombre de clients perdus) du churn net (qui prend en compte l'expansion des clients restants). Le churn en revenu (revenue churn) mesure la perte de revenus plutôt que le nombre de clients. Un taux de churn élevé est le signe d'un problème fondamental de product-market fit ou de satisfaction client.",
+      "formule": "Churn Rate = (Nombre de clients perdus sur la période / Nombre de clients en début de période) × 100",
+      "formule_mathematique": "Churn_mensuel = (N_clients_perdus / N_clients_début_mois) × 100",
+      "unite": "%",
+      "frequence_mesure": "Mensuelle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": "<5%/mois", "moyen": "5%-10%/mois", "faible": ">10%/mois" },
+          "seed": { "bon": "<4%/mois", "moyen": "4%-8%/mois", "faible": ">8%/mois" },
+          "serie_a": { "bon": "<3%/mois", "moyen": "3%-6%/mois", "faible": ">6%/mois" },
+          "serie_b": { "bon": "<2%/mois", "moyen": "2%-4%/mois", "faible": ">4%/mois" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": "<8%/mois", "moyen": "8%-15%/mois", "faible": ">15%/mois" },
+          "seed": { "bon": "<6%/mois", "moyen": "6%-12%/mois", "faible": ">12%/mois" },
+          "serie_a": { "bon": "<5%/mois", "moyen": "5%-10%/mois", "faible": ">10%/mois" },
+          "serie_b": { "bon": "<4%/mois", "moyen": "4%-8%/mois", "faible": ">8%/mois" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": "<6%/mois", "moyen": "6%-12%/mois", "faible": ">12%/mois" },
+          "seed": { "bon": "<5%/mois", "moyen": "5%-10%/mois", "faible": ">10%/mois" },
+          "serie_a": { "bon": "<4%/mois", "moyen": "4%-7%/mois", "faible": ">7%/mois" },
+          "serie_b": { "bon": "<3%/mois", "moyen": "3%-5%/mois", "faible": ">5%/mois" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": "<4%/mois", "moyen": "4%-8%/mois", "faible": ">8%/mois" },
+          "seed": { "bon": "<3%/mois", "moyen": "3%-6%/mois", "faible": ">6%/mois" },
+          "serie_a": { "bon": "<2.5%/mois", "moyen": "2.5%-5%/mois", "faible": ">5%/mois" },
+          "serie_b": { "bon": "<2%/mois", "moyen": "2%-3.5%/mois", "faible": ">3.5%/mois" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Churn mensuel < 3% (annuel < 30%) et en tendance baissière",
+        "orange": "Churn mensuel entre 3% et 7%",
+        "rouge": "Churn mensuel > 7% ou en tendance haussière sur 3 mois consécutifs"
+      },
+      "conseils": "Pour réduire le churn : 1) Investissez massivement dans l'onboarding : les 30 premiers jours sont critiques pour la rétention. 2) Mettez en place un système d'alerte précoce basé sur les signaux d'usage (baisse d'activité, non-utilisation de fonctionnalités clés). 3) Créez une équipe Customer Success dédiée aux comptes à risque. 4) Analysez les raisons de départ via des entretiens de sortie systématiques. 5) Développez des fonctionnalités qui augmentent les coûts de changement (intégrations, données historiques, workflows personnalisés).",
+      "kpis_lies": ["MRR", "LTV", "NPS", "DAU/MAU"]
+    },
+    {
+      "id": "burn_rate",
+      "nom": "Burn Rate",
+      "nom_complet": "Taux de combustion de trésorerie",
+      "categorie": "rentabilite",
+      "definition": "Le burn rate représente le rythme auquel une startup consomme sa trésorerie disponible chaque mois. On distingue le burn rate brut (total des dépenses mensuelles) du burn rate net (dépenses mensuelles moins les revenus mensuels). C'est un indicateur vital pour la survie de l'entreprise car il détermine directement le runway (la durée pendant laquelle l'entreprise peut continuer à opérer avant d'être à court de liquidités). Le burn rate doit être calibré en fonction de la croissance générée.",
+      "formule": "Burn Rate Net = Dépenses mensuelles totales - Revenus mensuels",
+      "formule_mathematique": "Burn_net = C_total_mensuel - R_total_mensuel",
+      "unite": "€/mois",
+      "frequence_mesure": "Mensuelle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": "<15K€/mois", "moyen": "15K€-30K€/mois", "faible": ">30K€/mois" },
+          "seed": { "bon": "<50K€/mois", "moyen": "50K€-100K€/mois", "faible": ">100K€/mois" },
+          "serie_a": { "bon": "<150K€/mois", "moyen": "150K€-300K€/mois", "faible": ">300K€/mois" },
+          "serie_b": { "bon": "<400K€/mois", "moyen": "400K€-800K€/mois", "faible": ">800K€/mois" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": "<10K€/mois", "moyen": "10K€-25K€/mois", "faible": ">25K€/mois" },
+          "seed": { "bon": "<40K€/mois", "moyen": "40K€-80K€/mois", "faible": ">80K€/mois" },
+          "serie_a": { "bon": "<120K€/mois", "moyen": "120K€-250K€/mois", "faible": ">250K€/mois" },
+          "serie_b": { "bon": "<350K€/mois", "moyen": "350K€-700K€/mois", "faible": ">700K€/mois" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": "<12K€/mois", "moyen": "12K€-28K€/mois", "faible": ">28K€/mois" },
+          "seed": { "bon": "<45K€/mois", "moyen": "45K€-90K€/mois", "faible": ">90K€/mois" },
+          "serie_a": { "bon": "<130K€/mois", "moyen": "130K€-280K€/mois", "faible": ">280K€/mois" },
+          "serie_b": { "bon": "<380K€/mois", "moyen": "380K€-750K€/mois", "faible": ">750K€/mois" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Burn rate en diminution avec croissance des revenus maintenue, runway > 18 mois",
+        "orange": "Burn rate stable mais runway entre 12 et 18 mois",
+        "rouge": "Burn rate en augmentation sans croissance proportionnelle des revenus, ou runway < 12 mois"
+      },
+      "conseils": "Pour optimiser le burn rate : 1) Établissez un budget mensuel strict et suivez-le de près avec des revues hebdomadaires. 2) Priorisez les dépenses qui génèrent directement de la croissance (product development, acquisition). 3) Négociez des paiements annuels avec vos fournisseurs pour obtenir des remises. 4) Évitez les recrutements prématurés : embauchez uniquement quand la charge de travail le justifie clairement. 5) Externalisez les fonctions non critiques pour garder de la flexibilité. 6) Visez un ratio de burn rate / new ARR net inférieur à 1.5x.",
+      "kpis_lies": ["Runway", "Gross Margin", "Net Margin", "MRR"]
+    },
+    {
+      "id": "runway",
+      "nom": "Runway",
+      "nom_complet": "Piste de trésorerie",
+      "categorie": "rentabilite",
+      "definition": "Le runway représente le nombre de mois pendant lesquels une startup peut continuer à fonctionner avec sa trésorerie actuelle et son rythme de dépenses actuel (burn rate). C'est l'indicateur de survie par excellence. Il doit être constamment surveillé et il est recommandé de commencer une levée de fonds quand le runway descend en dessous de 6-9 mois, sachant qu'un processus de levée prend en moyenne 3 à 6 mois. Le runway peut être calculé de manière statique (burn rate constant) ou dynamique (en projetant l'évolution du burn rate).",
+      "formule": "Runway = Trésorerie disponible / Burn Rate mensuel net",
+      "formule_mathematique": "Runway_mois = Trésorerie / Burn_net_mensuel",
+      "unite": "mois",
+      "frequence_mesure": "Mensuelle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">18 mois", "moyen": "12-18 mois", "faible": "<12 mois" },
+          "seed": { "bon": ">18 mois", "moyen": "12-18 mois", "faible": "<12 mois" },
+          "serie_a": { "bon": ">24 mois", "moyen": "15-24 mois", "faible": "<15 mois" },
+          "serie_b": { "bon": ">24 mois", "moyen": "18-24 mois", "faible": "<18 mois" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">15 mois", "moyen": "10-15 mois", "faible": "<10 mois" },
+          "seed": { "bon": ">18 mois", "moyen": "12-18 mois", "faible": "<12 mois" },
+          "serie_a": { "bon": ">20 mois", "moyen": "14-20 mois", "faible": "<14 mois" },
+          "serie_b": { "bon": ">24 mois", "moyen": "18-24 mois", "faible": "<18 mois" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">18 mois", "moyen": "12-18 mois", "faible": "<12 mois" },
+          "seed": { "bon": ">18 mois", "moyen": "12-18 mois", "faible": "<12 mois" },
+          "serie_a": { "bon": ">24 mois", "moyen": "15-24 mois", "faible": "<15 mois" },
+          "serie_b": { "bon": ">24 mois", "moyen": "18-24 mois", "faible": "<18 mois" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Runway > 18 mois",
+        "orange": "Runway entre 9 et 18 mois — commencer à préparer la prochaine levée",
+        "rouge": "Runway < 9 mois — urgence de financement, initier immédiatement un processus de levée ou de bridge"
+      },
+      "conseils": "Pour étendre le runway : 1) Réduisez le burn rate en éliminant les dépenses non essentielles. 2) Accélérez les revenus : raccourcissez le cycle de vente et augmentez les taux de conversion. 3) Envisagez un bridge round si vous êtes proche d'atteindre des milestones importants. 4) Négociez des conditions de paiement différé avec vos fournisseurs. 5) Explorez les aides publiques et les subventions (BPI, CIR, JEI en France). 6) Commencez vos discussions de levée au moins 6 mois avant d'en avoir besoin. 7) Préparez un plan B en cas d'échec de la levée (profitabilité, acqui-hire, pivot).",
+      "kpis_lies": ["Burn Rate", "MRR", "Gross Margin"]
+    },
+    {
+      "id": "gross_margin",
+      "nom": "Gross Margin",
+      "nom_complet": "Marge brute",
+      "categorie": "rentabilite",
+      "definition": "La marge brute mesure le pourcentage de revenus restant après déduction des coûts directs de production ou de livraison du service (COGS - Cost of Goods Sold). Pour un SaaS, les COGS incluent typiquement les coûts d'hébergement, les licences de logiciels tiers, le support technique direct et les coûts d'onboarding. Une marge brute élevée est caractéristique des modèles logiciels et est un prérequis pour la scalabilité. Les investisseurs considèrent généralement qu'une marge brute de 70%+ est nécessaire pour un SaaS attractif.",
+      "formule": "Marge brute = ((Revenus - Coûts directs) / Revenus) × 100",
+      "formule_mathematique": "Marge_brute_% = ((R_total - COGS) / R_total) × 100",
+      "unite": "%",
+      "frequence_mesure": "Mensuelle ou trimestrielle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">70%", "moyen": "50%-70%", "faible": "<50%" },
+          "seed": { "bon": ">75%", "moyen": "60%-75%", "faible": "<60%" },
+          "serie_a": { "bon": ">80%", "moyen": "65%-80%", "faible": "<65%" },
+          "serie_b": { "bon": ">80%", "moyen": "70%-80%", "faible": "<70%" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">40%", "moyen": "25%-40%", "faible": "<25%" },
+          "seed": { "bon": ">45%", "moyen": "30%-45%", "faible": "<30%" },
+          "serie_a": { "bon": ">50%", "moyen": "35%-50%", "faible": "<35%" },
+          "serie_b": { "bon": ">55%", "moyen": "40%-55%", "faible": "<40%" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">60%", "moyen": "40%-60%", "faible": "<40%" },
+          "seed": { "bon": ">65%", "moyen": "45%-65%", "faible": "<45%" },
+          "serie_a": { "bon": ">70%", "moyen": "50%-70%", "faible": "<50%" },
+          "serie_b": { "bon": ">75%", "moyen": "55%-75%", "faible": "<55%" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": ">55%", "moyen": "35%-55%", "faible": "<35%" },
+          "seed": { "bon": ">60%", "moyen": "40%-60%", "faible": "<40%" },
+          "serie_a": { "bon": ">65%", "moyen": "50%-65%", "faible": "<50%" },
+          "serie_b": { "bon": ">70%", "moyen": "55%-70%", "faible": "<55%" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Marge brute > 70% et stable ou en amélioration",
+        "orange": "Marge brute entre 50% et 70%",
+        "rouge": "Marge brute < 50% ou en détérioration sur 2 trimestres consécutifs"
+      },
+      "conseils": "Pour améliorer la marge brute : 1) Optimisez les coûts d'infrastructure cloud (instances réservées, auto-scaling, multi-cloud). 2) Automatisez le support technique et l'onboarding pour réduire les coûts humains directs. 3) Renégociez les contrats fournisseurs à mesure que vos volumes augmentent. 4) Investissez dans la performance technique pour réduire les coûts d'hébergement par utilisateur. 5) Si vous avez une composante service, envisagez de la productiser progressivement.",
+      "kpis_lies": ["Net Margin", "Burn Rate", "LTV", "Rule of 40"]
+    },
+    {
+      "id": "net_margin",
+      "nom": "Net Margin",
+      "nom_complet": "Marge nette",
+      "categorie": "rentabilite",
+      "definition": "La marge nette représente le pourcentage de revenus restant après déduction de l'ensemble des charges de l'entreprise : coûts directs (COGS), charges opérationnelles (salaires, marketing, R&D, loyers, frais administratifs), amortissements, charges financières et impôts. C'est l'indicateur ultime de rentabilité. Pour les startups en phase de croissance, la marge nette est souvent négative car elles investissent massivement pour capturer des parts de marché. L'objectif est de démontrer une trajectoire vers la profitabilité.",
+      "formule": "Marge nette = (Bénéfice net / Revenus totaux) × 100",
+      "formule_mathematique": "Marge_nette_% = (R_total - COGS - OPEX - Amortissements - Charges_fin - Impôts) / R_total × 100",
+      "unite": "%",
+      "frequence_mesure": "Mensuelle ou trimestrielle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">-50%", "moyen": "-50% à -100%", "faible": "<-100%" },
+          "seed": { "bon": ">-30%", "moyen": "-30% à -70%", "faible": "<-70%" },
+          "serie_a": { "bon": ">-15%", "moyen": "-15% à -40%", "faible": "<-40%" },
+          "serie_b": { "bon": ">0%", "moyen": "-15% à 0%", "faible": "<-15%" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">-30%", "moyen": "-30% à -60%", "faible": "<-60%" },
+          "seed": { "bon": ">-15%", "moyen": "-15% à -40%", "faible": "<-40%" },
+          "serie_a": { "bon": ">-5%", "moyen": "-5% à -20%", "faible": "<-20%" },
+          "serie_b": { "bon": ">5%", "moyen": "0% à 5%", "faible": "<0%" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">-40%", "moyen": "-40% à -80%", "faible": "<-80%" },
+          "seed": { "bon": ">-20%", "moyen": "-20% à -50%", "faible": "<-50%" },
+          "serie_a": { "bon": ">-10%", "moyen": "-10% à -30%", "faible": "<-30%" },
+          "serie_b": { "bon": ">0%", "moyen": "-10% à 0%", "faible": "<-10%" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": ">-40%", "moyen": "-40% à -80%", "faible": "<-80%" },
+          "seed": { "bon": ">-25%", "moyen": "-25% à -50%", "faible": "<-50%" },
+          "serie_a": { "bon": ">-10%", "moyen": "-10% à -30%", "faible": "<-30%" },
+          "serie_b": { "bon": ">0%", "moyen": "-10% à 0%", "faible": "<-10%" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Marge nette en amélioration constante, trajectoire vers la profitabilité claire",
+        "orange": "Marge nette stable mais négative, pas de détérioration",
+        "rouge": "Marge nette en détérioration sans accélération de la croissance pour la justifier"
+      },
+      "conseils": "Pour améliorer la marge nette : 1) Optimisez chaque poste de dépense en commençant par les plus importants (salaires, marketing, infrastructure). 2) Augmentez la marge brute en réduisant les COGS. 3) Automatisez les processus internes pour gagner en efficacité opérationnelle. 4) Concentrez les dépenses marketing sur les canaux avec le meilleur ROI. 5) Évitez de recruter trop vite : chaque embauche doit être justifiée par un besoin critique. 6) Explorez les crédits d'impôt (CIR, statut JEI) pour réduire la charge fiscale.",
+      "kpis_lies": ["Gross Margin", "Burn Rate", "ARPU", "Rule of 40"]
+    },
+    {
+      "id": "nps",
+      "nom": "NPS",
+      "nom_complet": "Net Promoter Score",
+      "categorie": "engagement",
+      "definition": "Le NPS mesure la satisfaction et la fidélité des clients en leur posant une question simple : « Sur une échelle de 0 à 10, quelle est la probabilité que vous recommandiez notre produit/service à un collègue ou ami ? ». Les répondants sont classés en trois catégories : Promoteurs (9-10), Passifs (7-8) et Détracteurs (0-6). Le NPS est calculé en soustrayant le pourcentage de détracteurs du pourcentage de promoteurs. C'est un indicateur prédictif du churn et de la croissance organique par le bouche-à-oreille.",
+      "formule": "NPS = % de Promoteurs - % de Détracteurs",
+      "formule_mathematique": "NPS = (N_promoteurs / N_répondants × 100) - (N_détracteurs / N_répondants × 100)",
+      "unite": "score (-100 à +100)",
+      "frequence_mesure": "Trimestrielle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">30", "moyen": "10-30", "faible": "<10" },
+          "seed": { "bon": ">40", "moyen": "20-40", "faible": "<20" },
+          "serie_a": { "bon": ">50", "moyen": "30-50", "faible": "<30" },
+          "serie_b": { "bon": ">60", "moyen": "40-60", "faible": "<40" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">25", "moyen": "5-25", "faible": "<5" },
+          "seed": { "bon": ">35", "moyen": "15-35", "faible": "<15" },
+          "serie_a": { "bon": ">45", "moyen": "25-45", "faible": "<25" },
+          "serie_b": { "bon": ">55", "moyen": "35-55", "faible": "<35" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">25", "moyen": "5-25", "faible": "<5" },
+          "seed": { "bon": ">35", "moyen": "15-35", "faible": "<15" },
+          "serie_a": { "bon": ">45", "moyen": "25-45", "faible": "<25" },
+          "serie_b": { "bon": ">55", "moyen": "35-55", "faible": "<35" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": ">30", "moyen": "10-30", "faible": "<10" },
+          "seed": { "bon": ">40", "moyen": "20-40", "faible": "<20" },
+          "serie_a": { "bon": ">50", "moyen": "30-50", "faible": "<30" },
+          "serie_b": { "bon": ">60", "moyen": "40-60", "faible": "<40" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "NPS > 50 avec taux de réponse > 30%",
+        "orange": "NPS entre 20 et 50",
+        "rouge": "NPS < 20 ou en baisse de plus de 10 points sur un trimestre"
+      },
+      "conseils": "Pour améliorer le NPS : 1) Analysez en détail les commentaires qualitatifs des détracteurs pour identifier les irritants. 2) Mettez en place des boucles de feedback rapides : contactez les détracteurs dans les 48h. 3) Créez un programme d'ambassadeurs pour capitaliser sur vos promoteurs. 4) Assurez un taux de réponse suffisant (>30%) pour que le score soit statistiquement significatif. 5) Segmentez le NPS par persona, par ancienneté et par plan pour identifier des patterns. 6) Envoyez le NPS à des moments clés du parcours client (après onboarding, après support, à la date anniversaire).",
+      "kpis_lies": ["Churn Rate", "LTV", "DAU/MAU"]
+    },
+    {
+      "id": "dau_mau",
+      "nom": "DAU/MAU",
+      "nom_complet": "Ratio d'engagement (Daily Active Users / Monthly Active Users)",
+      "categorie": "engagement",
+      "definition": "Le ratio DAU/MAU mesure le pourcentage d'utilisateurs actifs mensuels qui reviennent quotidiennement. C'est un indicateur clé de l'engagement et de la « stickiness » (adhérence) du produit. Un ratio élevé signifie que les utilisateurs reviennent fréquemment, ce qui est corrélé à une meilleure rétention et une plus forte monétisation. Un ratio de 50%+ est considéré comme excellent et est caractéristique des produits de type « habitude quotidienne ». Ce ratio est particulièrement pertinent pour les applications B2C et les outils B2B à usage fréquent.",
+      "formule": "DAU/MAU = (Nombre d'utilisateurs actifs quotidiens / Nombre d'utilisateurs actifs mensuels) × 100",
+      "formule_mathematique": "DAU/MAU = (DAU / MAU) × 100",
+      "unite": "%",
+      "frequence_mesure": "Quotidienne (moyenne mensuelle)",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">30%", "moyen": "15%-30%", "faible": "<15%" },
+          "seed": { "bon": ">35%", "moyen": "20%-35%", "faible": "<20%" },
+          "serie_a": { "bon": ">40%", "moyen": "25%-40%", "faible": "<25%" },
+          "serie_b": { "bon": ">45%", "moyen": "30%-45%", "faible": "<30%" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">10%", "moyen": "5%-10%", "faible": "<5%" },
+          "seed": { "bon": ">15%", "moyen": "8%-15%", "faible": "<8%" },
+          "serie_a": { "bon": ">20%", "moyen": "10%-20%", "faible": "<10%" },
+          "serie_b": { "bon": ">25%", "moyen": "15%-25%", "faible": "<15%" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">15%", "moyen": "8%-15%", "faible": "<8%" },
+          "seed": { "bon": ">20%", "moyen": "10%-20%", "faible": "<10%" },
+          "serie_a": { "bon": ">25%", "moyen": "15%-25%", "faible": "<15%" },
+          "serie_b": { "bon": ">30%", "moyen": "20%-30%", "faible": "<20%" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": ">20%", "moyen": "10%-20%", "faible": "<10%" },
+          "seed": { "bon": ">25%", "moyen": "15%-25%", "faible": "<15%" },
+          "serie_a": { "bon": ">30%", "moyen": "20%-30%", "faible": "<20%" },
+          "serie_b": { "bon": ">35%", "moyen": "25%-35%", "faible": "<25%" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "DAU/MAU > 30% et stable ou en croissance",
+        "orange": "DAU/MAU entre 15% et 30%",
+        "rouge": "DAU/MAU < 15% ou en baisse sur 4 semaines consécutives"
+      },
+      "conseils": "Pour améliorer le ratio DAU/MAU : 1) Identifiez et renforcez les cas d'usage quotidiens (daily habits) de votre produit. 2) Mettez en place des notifications intelligentes et personnalisées pour ramener les utilisateurs (sans être intrusif). 3) Créez des boucles d'engagement (contenu renouvelé, flux d'activité social, gamification). 4) Analysez le parcours des utilisateurs les plus engagés pour répliquer leurs comportements. 5) Développez des intégrations avec les outils que vos utilisateurs utilisent quotidiennement (Slack, email, calendrier). 6) Ajoutez des fonctionnalités de collaboration pour créer un effet de réseau interne.",
+      "kpis_lies": ["Churn Rate", "NPS", "LTV", "Taux de conversion"]
+    },
+    {
+      "id": "taux_conversion",
+      "nom": "Taux de conversion",
+      "nom_complet": "Taux de conversion",
+      "categorie": "efficacite",
+      "definition": "Le taux de conversion mesure le pourcentage d'utilisateurs ou de visiteurs qui accomplissent une action souhaitée (inscription, achat, passage à un plan payant, etc.). Il existe plusieurs niveaux de conversion dans un funnel : visiteur vers lead, lead vers essai gratuit, essai gratuit vers client payant, client vers upsell. Chaque étape du funnel a son propre taux de conversion. C'est un indicateur clé de l'efficacité du produit, de l'UX et du processus de vente. L'optimisation du taux de conversion (CRO) est l'un des leviers les plus puissants pour améliorer le CAC.",
+      "formule": "Taux de conversion = (Nombre de conversions / Nombre total de visiteurs ou utilisateurs) × 100",
+      "formule_mathematique": "Taux_conversion = (N_conversions / N_total) × 100",
+      "unite": "%",
+      "frequence_mesure": "Hebdomadaire ou mensuelle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">5% (visiteur→trial)", "moyen": "2%-5%", "faible": "<2%" },
+          "seed": { "bon": ">7% (visiteur→trial), >25% (trial→payant)", "moyen": "3%-7%, 15%-25%", "faible": "<3%, <15%" },
+          "serie_a": { "bon": ">10% (visiteur→trial), >30% (trial→payant)", "moyen": "5%-10%, 20%-30%", "faible": "<5%, <20%" },
+          "serie_b": { "bon": ">12% (visiteur→trial), >35% (trial→payant)", "moyen": "7%-12%, 25%-35%", "faible": "<7%, <25%" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">2% (visiteur→achat)", "moyen": "1%-2%", "faible": "<1%" },
+          "seed": { "bon": ">3%", "moyen": "1.5%-3%", "faible": "<1.5%" },
+          "serie_a": { "bon": ">4%", "moyen": "2%-4%", "faible": "<2%" },
+          "serie_b": { "bon": ">5%", "moyen": "3%-5%", "faible": "<3%" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">3% (visiteur→transaction)", "moyen": "1%-3%", "faible": "<1%" },
+          "seed": { "bon": ">4%", "moyen": "2%-4%", "faible": "<2%" },
+          "serie_a": { "bon": ">5%", "moyen": "3%-5%", "faible": "<3%" },
+          "serie_b": { "bon": ">7%", "moyen": "4%-7%", "faible": "<4%" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": ">4% (visiteur→inscription)", "moyen": "1.5%-4%", "faible": "<1.5%" },
+          "seed": { "bon": ">6%", "moyen": "3%-6%", "faible": "<3%" },
+          "serie_a": { "bon": ">8%", "moyen": "4%-8%", "faible": "<4%" },
+          "serie_b": { "bon": ">10%", "moyen": "6%-10%", "faible": "<6%" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Taux de conversion en hausse ou stable au-dessus du benchmark sectoriel",
+        "orange": "Taux de conversion stable mais en dessous du benchmark sectoriel",
+        "rouge": "Taux de conversion en baisse sur 4 semaines consécutives ou < 50% du benchmark"
+      },
+      "conseils": "Pour améliorer le taux de conversion : 1) Simplifiez le parcours utilisateur : réduisez le nombre d'étapes et de champs dans les formulaires. 2) Mettez en place des tests A/B systématiques sur les pages clés (landing pages, pricing, checkout). 3) Ajoutez des éléments de preuve sociale (témoignages, logos clients, études de cas). 4) Optimisez les temps de chargement : chaque seconde supplémentaire réduit la conversion de 7%. 5) Personnalisez l'expérience en fonction du segment et de la source d'acquisition. 6) Améliorez le copywriting avec des messages orientés bénéfices plutôt que fonctionnalités.",
+      "kpis_lies": ["CAC", "MRR", "DAU/MAU", "ARPU"]
+    },
+    {
+      "id": "arpu",
+      "nom": "ARPU",
+      "nom_complet": "Average Revenue Per User",
+      "categorie": "revenus",
+      "definition": "L'ARPU (revenu moyen par utilisateur) mesure le revenu moyen généré par chaque utilisateur ou compte client sur une période donnée (généralement mensuel). C'est un indicateur essentiel pour comprendre la monétisation du produit et la valeur individuelle de chaque client. L'ARPU peut être calculé sur l'ensemble de la base ou segmenté par cohorte, par plan, par secteur d'activité ou par taille d'entreprise. L'évolution de l'ARPU reflète la capacité de l'entreprise à capturer plus de valeur au fil du temps (pricing power, upsell, expansion).",
+      "formule": "ARPU = Revenu total mensuel / Nombre d'utilisateurs actifs (ou comptes payants)",
+      "formule_mathematique": "ARPU = R_total_mensuel / N_utilisateurs_actifs",
+      "unite": "€/utilisateur/mois",
+      "frequence_mesure": "Mensuelle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">50€/mois", "moyen": "20€-50€/mois", "faible": "<20€/mois" },
+          "seed": { "bon": ">80€/mois", "moyen": "30€-80€/mois", "faible": "<30€/mois" },
+          "serie_a": { "bon": ">150€/mois", "moyen": "50€-150€/mois", "faible": "<50€/mois" },
+          "serie_b": { "bon": ">300€/mois", "moyen": "100€-300€/mois", "faible": "<100€/mois" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">30€/mois", "moyen": "10€-30€/mois", "faible": "<10€/mois" },
+          "seed": { "bon": ">50€/mois", "moyen": "20€-50€/mois", "faible": "<20€/mois" },
+          "serie_a": { "bon": ">80€/mois", "moyen": "35€-80€/mois", "faible": "<35€/mois" },
+          "serie_b": { "bon": ">120€/mois", "moyen": "60€-120€/mois", "faible": "<60€/mois" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">15€/mois", "moyen": "5€-15€/mois", "faible": "<5€/mois" },
+          "seed": { "bon": ">30€/mois", "moyen": "10€-30€/mois", "faible": "<10€/mois" },
+          "serie_a": { "bon": ">60€/mois", "moyen": "25€-60€/mois", "faible": "<25€/mois" },
+          "serie_b": { "bon": ">100€/mois", "moyen": "50€-100€/mois", "faible": "<50€/mois" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": ">20€/mois", "moyen": "8€-20€/mois", "faible": "<8€/mois" },
+          "seed": { "bon": ">40€/mois", "moyen": "15€-40€/mois", "faible": "<15€/mois" },
+          "serie_a": { "bon": ">80€/mois", "moyen": "30€-80€/mois", "faible": "<30€/mois" },
+          "serie_b": { "bon": ">150€/mois", "moyen": "60€-150€/mois", "faible": "<60€/mois" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "ARPU en croissance > 5% par trimestre",
+        "orange": "ARPU stable (variation < 5%)",
+        "rouge": "ARPU en baisse ou croissance provenant uniquement de plans low-tier"
+      },
+      "conseils": "Pour augmenter l'ARPU : 1) Mettez en place une tarification basée sur la valeur (value-based pricing) plutôt que sur les coûts. 2) Créez des plans premium avec des fonctionnalités avancées justifiant un prix plus élevé. 3) Introduisez une composante de pricing à l'usage (usage-based pricing) pour capturer plus de valeur des gros utilisateurs. 4) Développez des fonctionnalités d'upsell naturelles (plus de sièges, plus de stockage, plus d'intégrations). 5) Révisez votre pricing régulièrement (au moins annuellement) en fonction de la valeur ajoutée. 6) Ciblez des segments de marché prêts à payer plus (entreprise vs PME).",
+      "kpis_lies": ["MRR", "LTV", "Taux de conversion", "Net Margin"]
+    },
+    {
+      "id": "payback_period",
+      "nom": "Payback Period",
+      "nom_complet": "Période de récupération du CAC",
+      "categorie": "efficacite",
+      "definition": "Le payback period (ou période de récupération du CAC) mesure le nombre de mois nécessaires pour récupérer le coût d'acquisition d'un client grâce aux revenus qu'il génère. C'est un indicateur critique de l'efficacité du capital et de la vitesse à laquelle l'entreprise peut réinvestir dans sa croissance. Un payback period court signifie que l'entreprise récupère rapidement son investissement d'acquisition et peut réallouer ces fonds vers de nouvelles acquisitions, créant un cercle vertueux de croissance.",
+      "formule": "Payback Period = CAC / (ARPU × Marge brute)",
+      "formule_mathematique": "Payback_mois = CAC / (ARPU_mensuel × Marge_brute_%)",
+      "unite": "mois",
+      "frequence_mesure": "Trimestrielle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": "<6 mois", "moyen": "6-12 mois", "faible": ">12 mois" },
+          "seed": { "bon": "<9 mois", "moyen": "9-15 mois", "faible": ">15 mois" },
+          "serie_a": { "bon": "<12 mois", "moyen": "12-18 mois", "faible": ">18 mois" },
+          "serie_b": { "bon": "<15 mois", "moyen": "15-24 mois", "faible": ">24 mois" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": "<2 mois", "moyen": "2-4 mois", "faible": ">4 mois" },
+          "seed": { "bon": "<3 mois", "moyen": "3-6 mois", "faible": ">6 mois" },
+          "serie_a": { "bon": "<4 mois", "moyen": "4-8 mois", "faible": ">8 mois" },
+          "serie_b": { "bon": "<6 mois", "moyen": "6-10 mois", "faible": ">10 mois" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": "<3 mois", "moyen": "3-6 mois", "faible": ">6 mois" },
+          "seed": { "bon": "<5 mois", "moyen": "5-9 mois", "faible": ">9 mois" },
+          "serie_a": { "bon": "<8 mois", "moyen": "8-14 mois", "faible": ">14 mois" },
+          "serie_b": { "bon": "<12 mois", "moyen": "12-18 mois", "faible": ">18 mois" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": "<4 mois", "moyen": "4-8 mois", "faible": ">8 mois" },
+          "seed": { "bon": "<6 mois", "moyen": "6-12 mois", "faible": ">12 mois" },
+          "serie_a": { "bon": "<10 mois", "moyen": "10-16 mois", "faible": ">16 mois" },
+          "serie_b": { "bon": "<14 mois", "moyen": "14-20 mois", "faible": ">20 mois" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Payback period < 12 mois et en diminution",
+        "orange": "Payback period entre 12 et 18 mois",
+        "rouge": "Payback period > 18 mois ou en augmentation sur 2 trimestres consécutifs"
+      },
+      "conseils": "Pour réduire le payback period : 1) Augmentez l'ARPU dès l'acquisition en améliorant le pricing et l'activation. 2) Réduisez le CAC via l'optimisation des canaux d'acquisition et l'amélioration de la conversion. 3) Améliorez la marge brute pour que chaque euro de revenu contribue davantage. 4) Facturez annuellement plutôt que mensuellement pour récupérer le CAC plus vite. 5) Accélérez le time-to-value : plus le client perçoit la valeur rapidement, plus il est susceptible de rester. 6) Mettez en place un processus d'onboarding qui pousse vers le plan optimal dès le début.",
+      "kpis_lies": ["CAC", "ARPU", "Gross Margin", "Ratio LTV/CAC"]
+    },
+    {
+      "id": "rule_of_40",
+      "nom": "Rule of 40",
+      "nom_complet": "Rule of 40 (Règle des 40)",
+      "categorie": "croissance",
+      "definition": "La Rule of 40 est un cadre d'évaluation popularisé par Brad Feld qui combine le taux de croissance des revenus et la marge de profitabilité (généralement la marge EBITDA ou la marge de free cash flow). La somme de ces deux métriques devrait idéalement dépasser 40%. Cette règle reconnaît le compromis fondamental entre croissance et rentabilité : une startup en hypercroissance peut se permettre des marges négatives, tandis qu'une entreprise plus mature doit compenser une croissance plus modérée par une meilleure profitabilité. C'est un indicateur de santé globale très utilisé par les investisseurs pour évaluer les entreprises SaaS.",
+      "formule": "Rule of 40 = Taux de croissance annuel des revenus (%) + Marge EBITDA (%)",
+      "formule_mathematique": "Rule_of_40 = Croissance_YoY_% + Marge_EBITDA_%",
+      "unite": "%",
+      "frequence_mesure": "Trimestrielle ou annuelle",
+      "benchmarks": {
+        "saas": {
+          "pre_seed": { "bon": ">60%", "moyen": "30%-60%", "faible": "<30%" },
+          "seed": { "bon": ">50%", "moyen": "25%-50%", "faible": "<25%" },
+          "serie_a": { "bon": ">45%", "moyen": "25%-45%", "faible": "<25%" },
+          "serie_b": { "bon": ">40%", "moyen": "25%-40%", "faible": "<25%" }
+        },
+        "e_commerce": {
+          "pre_seed": { "bon": ">50%", "moyen": "25%-50%", "faible": "<25%" },
+          "seed": { "bon": ">40%", "moyen": "20%-40%", "faible": "<20%" },
+          "serie_a": { "bon": ">35%", "moyen": "20%-35%", "faible": "<20%" },
+          "serie_b": { "bon": ">30%", "moyen": "20%-30%", "faible": "<20%" }
+        },
+        "marketplace": {
+          "pre_seed": { "bon": ">55%", "moyen": "30%-55%", "faible": "<30%" },
+          "seed": { "bon": ">45%", "moyen": "25%-45%", "faible": "<25%" },
+          "serie_a": { "bon": ">40%", "moyen": "25%-40%", "faible": "<25%" },
+          "serie_b": { "bon": ">40%", "moyen": "25%-40%", "faible": "<25%" }
+        },
+        "fintech": {
+          "pre_seed": { "bon": ">55%", "moyen": "30%-55%", "faible": "<30%" },
+          "seed": { "bon": ">45%", "moyen": "25%-45%", "faible": "<25%" },
+          "serie_a": { "bon": ">40%", "moyen": "25%-40%", "faible": "<25%" },
+          "serie_b": { "bon": ">40%", "moyen": "25%-40%", "faible": "<25%" }
+        }
+      },
+      "seuils_alerte": {
+        "vert": "Score Rule of 40 > 40% avec un bon équilibre croissance/rentabilité",
+        "orange": "Score entre 25% et 40%, trajectoire d'amélioration visible",
+        "rouge": "Score < 25% ou en détérioration sur 2 trimestres consécutifs"
+      },
+      "conseils": "Pour améliorer le score Rule of 40 : 1) Si la croissance ralentit, concentrez-vous sur l'amélioration de la rentabilité pour maintenir le score. 2) Si la marge est bonne mais la croissance faible, investissez dans l'acquisition pour accélérer. 3) Optimisez l'efficacité commerciale (magic number) pour obtenir plus de croissance par euro investi. 4) Réduisez le churn qui érode à la fois la croissance et la rentabilité. 5) Les entreprises au-dessus de 40% sont valorisées significativement plus haut (2x à 3x) que celles en dessous. 6) Utilisez cet indicateur dans vos board decks pour montrer la trajectoire de votre entreprise vers la durabilité financière.",
+      "kpis_lies": ["MRR", "ARR", "Gross Margin", "Net Margin", "Burn Rate"]
+    }
+  ]
+}
