@@ -1,752 +1,3756 @@
 [
   {
-    "id": 1,
-    "nom": "Karim Benali",
-    "type": "business_angel",
-    "secteurs_preferes": ["fintech", "SaaS", "e-commerce"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 20000, "max_eur": 100000 },
-    "zone_geographique": ["Maroc", "MENA"],
-    "criteres_cles": ["Équipe technique solide", "Traction prouvée", "MRR minimum 5K€"],
-    "description": "Ancien directeur général d'une banque marocaine, Karim Benali investit dans les startups fintech et SaaS à fort potentiel de croissance au Maroc et dans la région MENA.",
+    "id": "INV_001",
+    "name": "Atlas Innovation Capital",
+    "type": "VC",
+    "description": "Fonds de capital-risque marocain spécialisé dans les startups technologiques en phase d amorçage et de croissance. Investit dans le numérique, la fintech et le SaaS au Maroc et en Afrique du Nord. Accompagnement avec un réseau solide de mentors locaux.",
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "e-commerce",
+      "deeptech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 1000000,
+    "ticket_max": 15000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": 50000,
+      "traction_required": "Minimum 6 mois de traction commerciale avec croissance mensuelle de 15%",
+      "team_size_min": 3,
+      "must_have": [
+        "MVP validé",
+        "premiers clients payants",
+        "équipe complémentaire"
+      ],
+      "nice_to_have": [
+        "propriété intellectuelle",
+        "partenariats stratégiques"
+      ]
+    },
+    "portfolio_examples": [
+      "Plateforme de paiement mobile marocaine",
+      "Solution SaaS gestion PME africaines"
+    ],
     "contact": {
-      "email": "karim.benali@kb-invest.ma",
-      "site_web": "https://www.kb-invest.ma"
-    }
+      "website": "https://www.atlas-innovation-capital.ma",
+      "email": "contact@atlas-innovation-capital.ma",
+      "linkedin": "https://linkedin.com/company/atlas-innovation-capital"
+    },
+    "source_inspiration": "Azur Innovation Fund"
   },
   {
-    "id": 2,
-    "nom": "Nadia El Fassi",
-    "type": "business_angel",
-    "secteurs_preferes": ["healthtech", "biotech", "IA"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 15000, "max_eur": 80000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["Impact social mesurable", "Brevet ou PI", "Product-market fit"],
-    "description": "Pharmacienne de formation et serial entrepreneur, Nadia El Fassi soutient les innovations dans la santé digitale et la biotechnologie en Afrique.",
+    "id": "INV_002",
+    "name": "CDG Capital Ventures",
+    "type": "VC",
+    "description": "Bras d investissement en capital-risque adossé à un grand groupe institutionnel marocain. Cible les startups innovantes dans la transformation digitale et les infrastructures technologiques. Capacité importante pour accompagner jusqu à la série B.",
+    "sectors": [
+      "fintech",
+      "infrastructure",
+      "SaaS",
+      "cleantech",
+      "smart city"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 2000000,
+    "ticket_max": 50000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique du Nord",
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": 100000,
+      "traction_required": "Revenus récurrents démontrés et modèle validé sur le marché marocain ou africain",
+      "team_size_min": 5,
+      "must_have": [
+        "revenus significatifs",
+        "product-market fit",
+        "stratégie expansion"
+      ],
+      "nice_to_have": [
+        "présence multi-pays",
+        "équipe technique senior"
+      ]
+    },
+    "portfolio_examples": [
+      "Fintech services bancaires digitaux",
+      "Plateforme logistique urbaine"
+    ],
     "contact": {
-      "email": "nadia@elfassi-angels.com",
-      "site_web": "https://www.elfassi-angels.com"
-    }
+      "website": "https://www.cdg-capital-ventures.ma",
+      "email": "ventures@cdg-capital-ventures.ma",
+      "linkedin": "https://linkedin.com/company/cdg-capital-ventures"
+    },
+    "source_inspiration": "CDG Invest"
   },
   {
-    "id": 3,
-    "nom": "Youssef Tazi",
-    "type": "business_angel",
-    "secteurs_preferes": ["e-commerce", "marketplace", "logistique"],
-    "stade_investissement": ["seed"],
-    "ticket_moyen": { "min_eur": 30000, "max_eur": 150000 },
-    "zone_geographique": ["Maroc"],
-    "criteres_cles": ["Traction prouvée", "MRR minimum 10K€", "Scalabilité démontrée"],
-    "description": "Fondateur de plusieurs plateformes e-commerce au Maroc, Youssef Tazi accompagne les jeunes pousses du commerce en ligne avec du capital et du mentorat stratégique.",
+    "id": "INV_003",
+    "name": "Numérique Invest Maroc",
+    "type": "VC",
+    "description": "Fonds dédié aux startups du numérique au Maroc avec focus sur les solutions digitales pour le marché africain. Soutient les entrepreneurs développant des technologies à impact régional. Accompagnement stratégique sur 5 à 7 ans.",
+    "sectors": [
+      "SaaS",
+      "e-commerce",
+      "edtech",
+      "fintech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 10000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": 20000,
+      "traction_required": "Prototype fonctionnel avec premiers utilisateurs actifs",
+      "team_size_min": 2,
+      "must_have": [
+        "MVP",
+        "premiers utilisateurs",
+        "vision marché claire"
+      ],
+      "nice_to_have": [
+        "brevets",
+        "lettres intention clients"
+      ]
+    },
+    "portfolio_examples": [
+      "Solution e-learning marocaine",
+      "Marketplace B2B artisans"
+    ],
     "contact": {
-      "email": "youssef@tazi-capital.ma",
-      "site_web": "https://www.tazi-capital.ma"
-    }
+      "website": "https://www.numerique-invest.ma",
+      "email": "info@numerique-invest.ma",
+      "linkedin": "https://linkedin.com/company/numerique-invest-maroc"
+    },
+    "source_inspiration": "Maroc Numeric Fund"
   },
   {
-    "id": 4,
-    "nom": "Fatima-Zahra Amrani",
-    "type": "business_angel",
-    "secteurs_preferes": ["edtech", "SaaS"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 10000, "max_eur": 60000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["Impact social mesurable", "Équipe fondatrice complémentaire", "Modèle freemium validé"],
-    "description": "Passionnée d'éducation et ancienne consultante chez un grand cabinet, Fatima-Zahra Amrani investit dans les solutions edtech accessibles pour le marché africain.",
+    "id": "INV_004",
+    "name": "212 Capital Partners",
+    "type": "VC",
+    "description": "Fonds de venture capital fondé par des entrepreneurs marocains de la diaspora pour soutenir la nouvelle génération de fondateurs au Maroc. Investit dans des startups tech early-stage avec fort potentiel international. Réseau international de mentors.",
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "logistics",
+      "marketplace"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 5000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique du Nord",
+      "MENA"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Équipe fondatrice solide avec vision ambitieuse et premier prototype",
+      "team_size_min": 2,
+      "must_have": [
+        "MVP",
+        "équipe à temps plein"
+      ],
+      "nice_to_have": [
+        "expérience entrepreneuriale",
+        "réseau tech"
+      ]
+    },
+    "portfolio_examples": [
+      "Application livraison last-mile",
+      "Plateforme fintech transferts diaspora"
+    ],
     "contact": {
-      "email": "fz.amrani@amrani-ventures.com",
-      "site_web": "https://www.amrani-ventures.com"
-    }
+      "website": "https://www.212capitalpartners.com",
+      "email": "pitch@212capitalpartners.com",
+      "linkedin": "https://linkedin.com/company/212-capital-partners"
+    },
+    "source_inspiration": "212 Founders"
   },
   {
-    "id": 5,
-    "nom": "Jean-Pierre Dumont",
-    "type": "business_angel",
-    "secteurs_preferes": ["fintech", "cybersecurite", "IA"],
-    "stade_investissement": ["seed"],
-    "ticket_moyen": { "min_eur": 50000, "max_eur": 200000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Équipe technique solide", "Technologie propriétaire", "Brevet ou PI"],
-    "description": "Ancien CTO d'un groupe bancaire français, Jean-Pierre Dumont mise sur les startups deeptech dans la cybersécurité et l'intelligence artificielle en Europe.",
+    "id": "INV_005",
+    "name": "Horizons Ventures Maroc",
+    "type": "VC",
+    "description": "Fonds axé sur les startups à forte composante technologique et impact positif sur l écosystème africain. Technologies résolvant des problèmes structurels en Afrique. Du seed à la série A avec suivi actif.",
+    "sectors": [
+      "fintech",
+      "healthtech",
+      "agritech",
+      "edtech",
+      "logistics"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 1000000,
+    "ticket_max": 20000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": 80000,
+      "traction_required": "Croissance mensuelle de 10% sur 6 derniers mois avec marché adressable significatif",
+      "team_size_min": 4,
+      "must_have": [
+        "revenus",
+        "équipe technique forte",
+        "marché large"
+      ],
+      "nice_to_have": [
+        "impact social mesurable",
+        "expansion africaine"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup télémédecine Maroc",
+      "Plateforme agritech petits agriculteurs"
+    ],
     "contact": {
-      "email": "jp.dumont@dumont-angels.fr",
-      "site_web": "https://www.dumont-angels.fr"
-    }
+      "website": "https://www.horizons-ventures.ma",
+      "email": "deals@horizons-ventures.ma",
+      "linkedin": "https://linkedin.com/company/horizons-ventures-maroc"
+    },
+    "source_inspiration": "Outlierz Ventures"
   },
   {
-    "id": 6,
-    "nom": "Rachid Bennani",
-    "type": "business_angel",
-    "secteurs_preferes": ["agritech", "cleantech", "IoT"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 25000, "max_eur": 120000 },
-    "zone_geographique": ["Maroc", "MENA"],
-    "criteres_cles": ["Impact environnemental positif", "Prototype fonctionnel", "Product-market fit"],
-    "description": "Ingénieur agronome et entrepreneur agricole, Rachid Bennani finance les innovations agritech et cleantech adaptées au contexte nord-africain.",
+    "id": "INV_006",
+    "name": "Impact Invest Partners",
+    "type": "VC",
+    "description": "Fonds d investissement à impact social et environnemental basé à Casablanca. Combine rentabilité financière et impact positif mesurable. Accompagnement en structuration impact et métriques ESG.",
+    "sectors": [
+      "cleantech",
+      "agritech",
+      "healthtech",
+      "edtech",
+      "inclusion financière"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 1500000,
+    "ticket_max": 15000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": 30000,
+      "traction_required": "Impact social ou environnemental démontré avec indicateurs mesurables et modèle viable",
+      "team_size_min": 3,
+      "must_have": [
+        "impact mesurable",
+        "modèle viable",
+        "premiers clients"
+      ],
+      "nice_to_have": [
+        "certification B-Corp",
+        "partenariats ONG"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup recyclage économie circulaire",
+      "Plateforme micro-assurance"
+    ],
     "contact": {
-      "email": "rachid@bennani-invest.ma",
-      "site_web": "https://www.bennani-invest.ma"
-    }
+      "website": "https://www.impact-invest-partners.ma",
+      "email": "contact@impact-invest-partners.ma",
+      "linkedin": "https://linkedin.com/company/impact-invest-partners"
+    },
+    "source_inspiration": "Impact Partners"
   },
   {
-    "id": 7,
-    "nom": "Sophie Lefèvre",
-    "type": "business_angel",
-    "secteurs_preferes": ["SaaS", "marketplace", "proptech"],
-    "stade_investissement": ["seed"],
-    "ticket_moyen": { "min_eur": 40000, "max_eur": 180000 },
-    "zone_geographique": ["France"],
-    "criteres_cles": ["MRR minimum 10K€", "Croissance mensuelle > 15%", "CAC/LTV favorable"],
-    "description": "Ancienne directrice produit chez un leader français du SaaS, Sophie Lefèvre accompagne les fondateurs B2B sur les sujets de go-to-market et de pricing.",
+    "id": "INV_007",
+    "name": "Sherpa Ventures Casablanca",
+    "type": "VC",
+    "description": "Société de capital-risque marocaine accompagnant les startups tech dès les premières phases. Capital et accompagnement opérationnel intensif via operating partners expérimentés. Spécialisé B2B SaaS et marketplaces.",
+    "sectors": [
+      "SaaS",
+      "marketplace",
+      "fintech",
+      "logistics"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 8000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "MENA"
+    ],
+    "criteria": {
+      "mrr_minimum": 10000,
+      "traction_required": "Prototype validé par au moins 10 utilisateurs beta avec retours positifs",
+      "team_size_min": 2,
+      "must_have": [
+        "MVP fonctionnel",
+        "co-fondateurs complémentaires"
+      ],
+      "nice_to_have": [
+        "expérience secteur cible",
+        "premiers revenus"
+      ]
+    },
+    "portfolio_examples": [
+      "SaaS gestion flotte transport",
+      "Marketplace services professionnels"
+    ],
     "contact": {
-      "email": "sophie@slefevre-angels.fr",
-      "site_web": "https://www.slefevre-angels.fr"
-    }
+      "website": "https://www.sherpa-ventures-casa.ma",
+      "email": "startups@sherpa-ventures-casa.ma",
+      "linkedin": "https://linkedin.com/company/sherpa-ventures-casablanca"
+    },
+    "source_inspiration": "Sherpa Capital"
   },
   {
-    "id": 8,
-    "nom": "Omar Idrissi",
-    "type": "business_angel",
-    "secteurs_preferes": ["fintech", "e-commerce", "logistique"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 15000, "max_eur": 90000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["Connaissance du marché local", "Équipe fondatrice complémentaire", "Traction prouvée"],
-    "description": "Entrepreneur serial dans le commerce et la logistique au Maroc, Omar Idrissi investit dans les startups qui résolvent des problèmes concrets du dernier kilomètre en Afrique.",
+    "id": "INV_008",
+    "name": "University Ventures Lab",
+    "type": "VC",
+    "description": "Fonds adossé à une grande université marocaine pour startups deeptech et projets de recherche. Commercialisation de technologies développées en laboratoire. Réseau de chercheurs et experts techniques.",
+    "sectors": [
+      "deeptech",
+      "agritech",
+      "cleantech",
+      "biotech",
+      "IA"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 10000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Preuve de concept scientifique validée et potentiel de marché identifié",
+      "team_size_min": 2,
+      "must_have": [
+        "innovation technologique démontrée",
+        "expertise scientifique"
+      ],
+      "nice_to_have": [
+        "publications",
+        "brevets",
+        "partenariat recherche"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup biotechnologie agricole",
+      "Solution IA optimisation industrielle"
+    ],
     "contact": {
-      "email": "omar@idrissi-ba.com",
-      "site_web": "https://www.idrissi-ba.com"
-    }
+      "website": "https://www.university-ventures-lab.ma",
+      "email": "ventures@university-ventures-lab.ma",
+      "linkedin": "https://linkedin.com/company/university-ventures-lab"
+    },
+    "source_inspiration": "UM6P Ventures"
   },
   {
-    "id": 9,
-    "nom": "Marie-Claire Dupuis",
-    "type": "business_angel",
-    "secteurs_preferes": ["healthtech", "IA", "deeptech"],
-    "stade_investissement": ["seed"],
-    "ticket_moyen": { "min_eur": 30000, "max_eur": 150000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Brevet ou PI", "Validation clinique ou scientifique", "Équipe technique solide"],
-    "description": "Médecin et investisseuse spécialisée dans la santé numérique, Marie-Claire Dupuis cible les solutions d'IA appliquées au diagnostic médical et à la télémédecine.",
+    "id": "INV_009",
+    "name": "Atlas Angels Network",
+    "type": "Business Angel",
+    "description": "Réseau de business angels marocains composé de dirigeants et entrepreneurs expérimentés investissant collectivement. Expertise sectorielle et réseau professionnel en plus du capital. Sessions de pitch mensuelles à Casablanca.",
+    "sectors": [
+      "fintech",
+      "e-commerce",
+      "SaaS",
+      "foodtech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 100000,
+    "ticket_max": 1000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Idée validée avec prototype ou preuve de concept et fondateur engagé",
+      "team_size_min": 1,
+      "must_have": [
+        "prototype ou MVP",
+        "fondateur à temps plein"
+      ],
+      "nice_to_have": [
+        "premiers clients",
+        "connaissance marché local"
+      ]
+    },
+    "portfolio_examples": [
+      "App livraison repas",
+      "Solution comptabilité auto-entrepreneurs"
+    ],
     "contact": {
-      "email": "mc.dupuis@dupuis-health-angels.fr",
-      "site_web": "https://www.dupuis-health-angels.fr"
-    }
+      "website": "https://www.atlas-angels.ma",
+      "email": "pitch@atlas-angels.ma",
+      "linkedin": "https://linkedin.com/company/atlas-angels-network"
+    },
+    "source_inspiration": "Atlas Business Angels"
   },
   {
-    "id": 10,
-    "nom": "Hassan Mouline",
-    "type": "business_angel",
-    "secteurs_preferes": ["proptech", "cleantech", "IoT"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 20000, "max_eur": 100000 },
-    "zone_geographique": ["Maroc"],
-    "criteres_cles": ["Prototype fonctionnel", "Marché adressable significatif", "Product-market fit"],
-    "description": "Promoteur immobilier reconverti en investisseur tech, Hassan Mouline s'intéresse aux solutions proptech et smart building pour le marché marocain.",
+    "id": "INV_010",
+    "name": "Réseau Fondateurs Maroc",
+    "type": "Business Angel",
+    "description": "Association de chefs d entreprises marocains soutenant jeunes entrepreneurs par mentorat et investissement. Programme accompagnement 2 ans incluant coaching individuel et réseau de décideurs. Préférence innovation sociale.",
+    "sectors": [
+      "tous secteurs",
+      "innovation sociale",
+      "edtech",
+      "artisanat digital"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 1500000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Projet entrepreneurial structuré avec plan d affaires et motivation forte",
+      "team_size_min": 1,
+      "must_have": [
+        "business plan",
+        "engagement fondateur"
+      ],
+      "nice_to_have": [
+        "impact social",
+        "innovation modèle économique"
+      ]
+    },
+    "portfolio_examples": [
+      "Plateforme artisans-clients",
+      "Startup edtech formation professionnelle"
+    ],
     "contact": {
-      "email": "hassan@mouline-angels.ma",
-      "site_web": "https://www.mouline-angels.ma"
-    }
+      "website": "https://www.reseau-fondateurs.ma",
+      "email": "candidature@reseau-fondateurs.ma",
+      "linkedin": "https://linkedin.com/company/reseau-fondateurs-maroc"
+    },
+    "source_inspiration": "Réseau Entreprendre Maroc"
   },
   {
-    "id": 11,
-    "nom": "Leila Chraibi",
-    "type": "business_angel",
-    "secteurs_preferes": ["edtech", "healthtech", "marketplace"],
-    "stade_investissement": ["pré-seed"],
-    "ticket_moyen": { "min_eur": 10000, "max_eur": 50000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["Impact social mesurable", "Équipe fondatrice complémentaire", "Vision claire à 5 ans"],
-    "description": "Engagée dans l'entrepreneuriat social, Leila Chraibi soutient les projets à impact dans l'éducation et la santé, en particulier ceux portés par des femmes fondatrices.",
+    "id": "INV_011",
+    "name": "MBA Angels Casablanca",
+    "type": "Business Angel",
+    "description": "Club de business angels composé de diplômés MBA et cadres supérieurs marocains. Expertise en stratégie, finance et développement commercial. Événements trimestriels de networking.",
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "e-commerce",
+      "healthtech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 2000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": 10000,
+      "traction_required": "Premiers revenus ou engagement client fort avec équipe capable d exécuter",
+      "team_size_min": 2,
+      "must_have": [
+        "MVP lancé",
+        "premiers revenus ou LOI"
+      ],
+      "nice_to_have": [
+        "équipe tech/business",
+        "scalabilité"
+      ]
+    },
+    "portfolio_examples": [
+      "Néobanque TPE marocaines",
+      "Plateforme réservation santé"
+    ],
     "contact": {
-      "email": "leila@chraibi-impact.com",
-      "site_web": "https://www.chraibi-impact.com"
-    }
+      "website": "https://www.mba-angels-casa.ma",
+      "email": "invest@mba-angels-casa.ma",
+      "linkedin": "https://linkedin.com/company/mba-angels-casablanca"
+    },
+    "source_inspiration": "MBA Maroc"
   },
   {
-    "id": 12,
-    "nom": "Philippe Renard",
-    "type": "business_angel",
-    "secteurs_preferes": ["cybersecurite", "SaaS", "deeptech"],
-    "stade_investissement": ["seed"],
-    "ticket_moyen": { "min_eur": 50000, "max_eur": 200000 },
-    "zone_geographique": ["France", "Global"],
-    "criteres_cles": ["Technologie propriétaire", "Brevet ou PI", "Marché adressable > 1Md€"],
-    "description": "Expert en cybersécurité et ancien dirigeant d'un éditeur de logiciels, Philippe Renard investit dans les startups deeptech françaises à ambition internationale.",
+    "id": "INV_012",
+    "name": "Mehdi Alami (Angel Investor)",
+    "type": "Business Angel",
+    "description": "Entrepreneur serial et investisseur providentiel marocain ayant fondé et vendu plusieurs entreprises tech. Investit dans 3 à 5 startups par an en fintech et e-commerce. Mentorat actif et introductions VC internationaux.",
+    "sectors": [
+      "fintech",
+      "e-commerce",
+      "marketplace"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 100000,
+    "ticket_max": 500000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Fondateur avec vision claire et prototype démontrant la valeur ajoutée",
+      "team_size_min": 1,
+      "must_have": [
+        "prototype fonctionnel",
+        "vision marché"
+      ],
+      "nice_to_have": [
+        "expérience entrepreneuriale",
+        "connaissance fintech"
+      ]
+    },
+    "portfolio_examples": [
+      "Wallet mobile commerçants",
+      "Marketplace produits locaux premium"
+    ],
     "contact": {
-      "email": "philippe@renard-tech-angels.fr",
-      "site_web": "https://www.renard-tech-angels.fr"
-    }
+      "website": "https://www.mehdialami-ventures.ma",
+      "email": "mehdi@mehdialami-ventures.ma",
+      "linkedin": "https://linkedin.com/in/mehdi-alami-angel"
+    },
+    "source_inspiration": "Business angels individuels marocains"
   },
   {
-    "id": 13,
-    "nom": "Atlas Ventures",
-    "type": "vc",
-    "secteurs_preferes": ["fintech", "e-commerce", "SaaS", "logistique"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 300000, "max_eur": 2000000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["MRR minimum 10K€", "Traction prouvée", "Product-market fit", "Équipe technique solide"],
-    "description": "Fonds de capital-risque basé à Casablanca, Atlas Ventures est le premier fonds dédié aux startups technologiques marocaines et africaines en phase d'amorçage et de série A.",
+    "id": "INV_013",
+    "name": "Nadia Bennani (Angel Investor)",
+    "type": "Business Angel",
+    "description": "Femme d affaires et investisseure marocaine, ancienne directrice grand groupe bancaire. Investit dans startups co-fondées par des femmes en fintech et inclusion financière. Active dans le mentorat entrepreneuriat féminin.",
+    "sectors": [
+      "fintech",
+      "inclusion financière",
+      "healthtech",
+      "edtech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 100000,
+    "ticket_max": 800000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Projet innovant avec équipe diverse et compréhension profonde du problème",
+      "team_size_min": 1,
+      "must_have": [
+        "MVP ou prototype",
+        "compréhension marché cible"
+      ],
+      "nice_to_have": [
+        "équipe diverse",
+        "impact inclusion financière"
+      ]
+    },
+    "portfolio_examples": [
+      "App épargne femmes entrepreneures",
+      "Plateforme micro-crédit digital"
+    ],
     "contact": {
-      "email": "deals@atlas-ventures.ma",
-      "site_web": "https://www.atlas-ventures.ma"
-    }
+      "website": "https://www.nadiabennani-invest.ma",
+      "email": "nadia@nadiabennani-invest.ma",
+      "linkedin": "https://linkedin.com/in/nadia-bennani-angel"
+    },
+    "source_inspiration": "Business angels individuels marocains"
   },
   {
-    "id": 14,
-    "nom": "Meridian Capital",
-    "type": "vc",
-    "secteurs_preferes": ["SaaS", "IA", "cybersecurite", "deeptech"],
-    "stade_investissement": ["seed", "série A", "série B"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 5000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["ARR minimum 500K€", "Croissance annuelle > 100%", "Équipe technique solide", "Scalabilité démontrée"],
-    "description": "Fonds parisien spécialisé dans les technologies B2B, Meridian Capital accompagne les startups SaaS et deeptech de la série seed à la série B sur le marché européen.",
+    "id": "INV_014",
+    "name": "Diaspora Tech Angels",
+    "type": "Business Angel",
+    "description": "Réseau business angels diaspora marocaine basés en Europe et Amérique du Nord. Expertise internationale et connaissance marché marocain. Connexions entre écosystème marocain et hubs tech mondiaux.",
+    "sectors": [
+      "SaaS",
+      "fintech",
+      "e-commerce",
+      "logistics",
+      "edtech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 150000,
+    "ticket_max": 1500000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Ambition internationale et capacité de scaling au-delà du Maroc",
+      "team_size_min": 2,
+      "must_have": [
+        "ambition internationale",
+        "produit tech scalable"
+      ],
+      "nice_to_have": [
+        "co-fondateur technique",
+        "expérience internationale"
+      ]
+    },
+    "portfolio_examples": [
+      "SaaS gestion RH PME francophones",
+      "Commerce transfrontalier Maroc-Europe"
+    ],
     "contact": {
-      "email": "contact@meridian-capital.fr",
-      "site_web": "https://www.meridian-capital.fr"
-    }
+      "website": "https://www.diaspora-tech-angels.com",
+      "email": "pitch@diaspora-tech-angels.com",
+      "linkedin": "https://linkedin.com/company/diaspora-tech-angels"
+    },
+    "source_inspiration": "Réseaux de la diaspora marocaine"
   },
   {
-    "id": 15,
-    "nom": "Oasis Fund",
-    "type": "vc",
-    "secteurs_preferes": ["fintech", "agritech", "cleantech", "healthtech"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 200000, "max_eur": 1500000 },
-    "zone_geographique": ["MENA", "Afrique"],
-    "criteres_cles": ["Impact social mesurable", "Product-market fit", "Connaissance du marché local", "Traction prouvée"],
-    "description": "Basé à Dubaï avec un bureau à Casablanca, Oasis Fund investit dans les startups à impact qui répondent aux défis spécifiques de la région MENA et du continent africain.",
+    "id": "INV_015",
+    "name": "Green Angels Maroc",
+    "type": "Business Angel",
+    "description": "Collectif investisseurs providentiels marocains focalisé startups impact environnemental. Technologies propres, économie circulaire et solutions durables pour contexte africain. Suivi impact environnemental.",
+    "sectors": [
+      "cleantech",
+      "agritech",
+      "économie circulaire",
+      "énergie renouvelable"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 150000,
+    "ticket_max": 1200000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Solution innovante avec impact environnemental mesurable et modèle durable",
+      "team_size_min": 2,
+      "must_have": [
+        "impact environnemental",
+        "prototype ou pilote"
+      ],
+      "nice_to_have": [
+        "mesure impact quantifiée",
+        "partenariat environnement"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup compostage urbain connecté",
+      "Traitement eau faible coût"
+    ],
     "contact": {
-      "email": "submit@oasis-fund.com",
-      "site_web": "https://www.oasis-fund.com"
-    }
+      "website": "https://www.green-angels-maroc.ma",
+      "email": "contact@green-angels-maroc.ma",
+      "linkedin": "https://linkedin.com/company/green-angels-maroc"
+    },
+    "source_inspiration": "Réseaux investisseurs verts marocains"
   },
   {
-    "id": 16,
-    "nom": "Hexagone Partners",
-    "type": "vc",
-    "secteurs_preferes": ["SaaS", "marketplace", "e-commerce", "proptech"],
-    "stade_investissement": ["série A", "série B"],
-    "ticket_moyen": { "min_eur": 1000000, "max_eur": 8000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["ARR minimum 1M€", "Croissance annuelle > 80%", "Rentabilité unitaire prouvée", "Expansion internationale en cours"],
-    "description": "Hexagone Partners est un fonds de growth stage basé à Paris, ciblant les leaders émergents du numérique en France et en Europe avec des tickets de série A et B.",
+    "id": "INV_016",
+    "name": "Karim El Idrissi (Angel Investor)",
+    "type": "Business Angel",
+    "description": "Ancien CEO entreprise tech marocaine cotée, investisseur providentiel actif. Spécialisé SaaS B2B et marketplaces. Investit 4 à 6 startups par an et siège aux conseils. Approche hands-on.",
+    "sectors": [
+      "SaaS",
+      "marketplace",
+      "B2B",
+      "logistics"
+    ],
+    "stage": [
+      "seed"
+    ],
+    "ticket_min": 300000,
+    "ticket_max": 2000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "MENA"
+    ],
+    "criteria": {
+      "mrr_minimum": 20000,
+      "traction_required": "Au moins 5 clients payants B2B et pipeline commercial structuré",
+      "team_size_min": 3,
+      "must_have": [
+        "clients payants B2B",
+        "revenus récurrents"
+      ],
+      "nice_to_have": [
+        "NPS élevé",
+        "faible churn"
+      ]
+    },
+    "portfolio_examples": [
+      "Plateforme gestion supply chain",
+      "SaaS facturation électronique"
+    ],
     "contact": {
-      "email": "pipeline@hexagone-partners.fr",
-      "site_web": "https://www.hexagone-partners.fr"
-    }
+      "website": "https://www.kelidrissi-capital.ma",
+      "email": "karim@kelidrissi-capital.ma",
+      "linkedin": "https://linkedin.com/in/karim-el-idrissi-angel"
+    },
+    "source_inspiration": "Business angels individuels marocains"
   },
   {
-    "id": 17,
-    "nom": "Sahara Capital Partners",
-    "type": "vc",
-    "secteurs_preferes": ["fintech", "e-commerce", "logistique", "edtech"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 200000, "max_eur": 800000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["Équipe fondatrice complémentaire", "Prototype fonctionnel", "Marché adressable significatif"],
-    "description": "Fonds early-stage basé à Casablanca, Sahara Capital Partners soutient les entrepreneurs africains dès les premiers stades avec du capital patient et un accompagnement opérationnel.",
+    "id": "INV_017",
+    "name": "InnovFinancement Maroc",
+    "type": "Fonds Public",
+    "description": "Programme public de co-investissement en amorçage géré par l organisme national de garantie. Co-investit aux côtés de fonds privés pour réduire le risque. Couvre jusqu à 50% du montant avec plafond 5M MAD.",
+    "sectors": [
+      "tous secteurs innovants",
+      "tech",
+      "industrie",
+      "services"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 5000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup innovante immatriculée au Maroc avec co-investisseur privé identifié",
+      "team_size_min": 2,
+      "must_have": [
+        "immatriculation RC marocain",
+        "co-investisseur privé",
+        "caractère innovant"
+      ],
+      "nice_to_have": [
+        "brevet ou PI",
+        "emplois créés"
+      ]
+    },
+    "portfolio_examples": [
+      "Co-investissement fintech marocaine",
+      "Soutien startup industrielle innovante"
+    ],
     "contact": {
-      "email": "invest@sahara-capital.ma",
-      "site_web": "https://www.sahara-capital.ma"
-    }
+      "website": "https://www.innovfinancement.ma",
+      "email": "info@innovfinancement.ma",
+      "linkedin": "https://linkedin.com/company/innov-financement-maroc"
+    },
+    "source_inspiration": "Innov Invest / Tamwilcom"
   },
   {
-    "id": 18,
-    "nom": "NovaTech Ventures",
-    "type": "vc",
-    "secteurs_preferes": ["deeptech", "IA", "biotech", "cybersecurite"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 3000000 },
-    "zone_geographique": ["France", "Europe", "Global"],
-    "criteres_cles": ["Brevet ou PI", "Équipe technique solide", "Technologie propriétaire", "Publication scientifique"],
-    "description": "NovaTech Ventures est un fonds deeptech européen qui investit dans les technologies de rupture issues de laboratoires de recherche, avec un focus sur l'IA et la cybersécurité.",
+    "id": "INV_018",
+    "name": "Caisse Centrale de Garantie Startup",
+    "type": "Fonds Public",
+    "description": "Mécanisme public de garantie bancaire pour startups et jeunes entreprises innovantes marocaines. Garantit jusqu à 80% du montant emprunté. Prêts d honneur sans intérêt pour démarrage.",
+    "sectors": [
+      "tous secteurs"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 3000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Immatriculée depuis moins de 5 ans avec projet viable",
+      "team_size_min": 1,
+      "must_have": [
+        "immatriculation Maroc",
+        "plan affaires",
+        "projet viable"
+      ],
+      "nice_to_have": [
+        "premiers revenus",
+        "co-financement identifié"
+      ]
+    },
+    "portfolio_examples": [
+      "Garantie crédit startup agritech",
+      "Prêt honneur fondateur tech"
+    ],
     "contact": {
-      "email": "proposals@novatech-ventures.eu",
-      "site_web": "https://www.novatech-ventures.eu"
-    }
+      "website": "https://www.ccg-startup.ma",
+      "email": "startups@ccg-startup.ma",
+      "linkedin": "https://linkedin.com/company/ccg-startup"
+    },
+    "source_inspiration": "CCG (Caisse Centrale de Garantie)"
   },
   {
-    "id": 19,
-    "nom": "Zenith Growth Fund",
-    "type": "vc",
-    "secteurs_preferes": ["SaaS", "fintech", "marketplace"],
-    "stade_investissement": ["série A", "série B", "série C+"],
-    "ticket_moyen": { "min_eur": 2000000, "max_eur": 10000000 },
-    "zone_geographique": ["Europe", "Global"],
-    "criteres_cles": ["ARR minimum 2M€", "Expansion multi-pays", "Marge brute > 70%", "Net revenue retention > 120%"],
-    "description": "Fonds de croissance paneuropéen, Zenith Growth Fund cible les scale-ups SaaS et fintech avec une forte traction commerciale et une ambition de leadership continental.",
+    "id": "INV_019",
+    "name": "CRI Casablanca Digital",
+    "type": "Fonds Public",
+    "description": "Programme du Centre Régional d Investissement Casablanca-Settat pour startups digitales. Subventions création entreprises innovantes et guichet unique formalités. Zones activités dédiées startups.",
+    "sectors": [
+      "tech",
+      "digital",
+      "e-commerce",
+      "fintech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 2000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Projet création ou développement entreprise innovante région Casablanca-Settat",
+      "team_size_min": 1,
+      "must_have": [
+        "siège Casablanca-Settat",
+        "projet innovant"
+      ],
+      "nice_to_have": [
+        "création emplois",
+        "impact économique régional"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup e-commerce Casablanca",
+      "Entreprise tech zone franche"
+    ],
     "contact": {
-      "email": "growth@zenith-fund.com",
-      "site_web": "https://www.zenith-fund.com"
-    }
+      "website": "https://www.cri-casa-digital.ma",
+      "email": "digital@cri-casa.ma",
+      "linkedin": "https://linkedin.com/company/cri-casablanca-digital"
+    },
+    "source_inspiration": "CRI Casablanca-Settat"
   },
   {
-    "id": 20,
-    "nom": "Casablanca Seed Club",
-    "type": "vc",
-    "secteurs_preferes": ["fintech", "healthtech", "edtech", "e-commerce", "SaaS"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 200000, "max_eur": 600000 },
-    "zone_geographique": ["Maroc"],
-    "criteres_cles": ["Équipe fondatrice complémentaire", "Product-market fit", "Connaissance du marché local"],
-    "description": "Premier syndicat d'investissement en amorçage au Maroc, le Casablanca Seed Club regroupe 30 investisseurs pour financer les meilleures startups tech du royaume.",
+    "id": "INV_020",
+    "name": "AMDIE Export Tech",
+    "type": "Fonds Public",
+    "description": "Programme de l Agence de Développement des Investissements et Exportations pour startups tech à l international. Finance études de marché, salons internationaux et développement commercial export. Accompagnement internationalisation.",
+    "sectors": [
+      "tech",
+      "SaaS",
+      "industrie 4.0",
+      "services numériques"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 300000,
+    "ticket_max": 2000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": 50000,
+      "traction_required": "Produit validé localement et ambition expansion internationale",
+      "team_size_min": 3,
+      "must_have": [
+        "produit validé Maroc",
+        "stratégie export",
+        "capacité production"
+      ],
+      "nice_to_have": [
+        "premiers clients internationaux",
+        "certifications qualité"
+      ]
+    },
+    "portfolio_examples": [
+      "SaaS exportant vers Afrique subsaharienne",
+      "Solution IoT industrie exportée Europe"
+    ],
     "contact": {
-      "email": "dossiers@casablanca-seedclub.ma",
-      "site_web": "https://www.casablanca-seedclub.ma"
-    }
+      "website": "https://www.amdie-export-tech.ma",
+      "email": "export@amdie-tech.ma",
+      "linkedin": "https://linkedin.com/company/amdie-export-tech"
+    },
+    "source_inspiration": "AMDIE"
   },
   {
-    "id": 21,
-    "nom": "Boréal Investissement",
-    "type": "vc",
-    "secteurs_preferes": ["cleantech", "agritech", "IoT", "deeptech"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 400000, "max_eur": 2500000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Impact environnemental positif", "Technologie propriétaire", "Prototype fonctionnel", "Brevet ou PI"],
-    "description": "Fonds à impact climatique basé à Lyon, Boréal Investissement finance les innovations technologiques qui contribuent à la transition écologique et énergétique en Europe.",
+    "id": "INV_021",
+    "name": "Maroc Croissance PME",
+    "type": "Fonds Public",
+    "description": "Agence nationale appui PME et startups offrant financement, accompagnement et mise à niveau. Primes investissement matériel et immatériel jusqu à 30% du coût total. Accès marchés publics jeunes entreprises.",
+    "sectors": [
+      "tous secteurs",
+      "industrie",
+      "services",
+      "artisanat"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 5000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": 30000,
+      "traction_required": "PME ou startup en croissance avec projet investissement structuré",
+      "team_size_min": 3,
+      "must_have": [
+        "entreprise marocaine active",
+        "projet chiffré",
+        "business plan"
+      ],
+      "nice_to_have": [
+        "certifications qualité",
+        "formation employés"
+      ]
+    },
+    "portfolio_examples": [
+      "Prime investissement startup industrielle",
+      "Accompagnement digitalisation PME"
+    ],
     "contact": {
-      "email": "impact@boreal-invest.fr",
-      "site_web": "https://www.boreal-invest.fr"
-    }
+      "website": "https://www.maroc-croissance-pme.ma",
+      "email": "contact@maroc-croissance-pme.ma",
+      "linkedin": "https://linkedin.com/company/maroc-croissance-pme"
+    },
+    "source_inspiration": "Maroc PME"
   },
   {
-    "id": 22,
-    "nom": "Ksar Ventures",
-    "type": "vc",
-    "secteurs_preferes": ["fintech", "SaaS", "marketplace", "logistique"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 300000, "max_eur": 1800000 },
-    "zone_geographique": ["Maroc", "MENA", "Afrique"],
-    "criteres_cles": ["MRR minimum 10K€", "Traction prouvée", "Scalabilité démontrée", "Équipe technique solide"],
-    "description": "Fonds régional basé à Rabat, Ksar Ventures investit dans les champions technologiques émergents du Maroc et de l'Afrique francophone avec un accompagnement de proximité.",
+    "id": "INV_022",
+    "name": "Caisse de Développement et Gestion",
+    "type": "Fonds Public",
+    "description": "Institution financière publique marocaine investissant dans des fonds VC et directement dans projets structurants. Catalyseur mobilisant investissement privé vers startups et innovation. Plusieurs véhicules dédiés.",
+    "sectors": [
+      "infrastructure",
+      "fintech",
+      "cleantech",
+      "immobilier tech",
+      "industrie"
+    ],
+    "stage": [
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 5000000,
+    "ticket_max": 50000000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": 200000,
+      "traction_required": "Revenus significatifs et impact structurant sur l économie marocaine",
+      "team_size_min": 10,
+      "must_have": [
+        "revenus prouvés",
+        "modèle scalable",
+        "impact économique"
+      ],
+      "nice_to_have": [
+        "expansion africaine",
+        "partenariats institutionnels"
+      ]
+    },
+    "portfolio_examples": [
+      "Investissement fonds VC marocain",
+      "Financement fintech panafricaine"
+    ],
     "contact": {
-      "email": "pitch@ksar-ventures.ma",
-      "site_web": "https://www.ksar-ventures.ma"
-    }
+      "website": "https://www.cdg-ventures.ma",
+      "email": "ventures@cdg.ma",
+      "linkedin": "https://linkedin.com/company/cdg-ventures"
+    },
+    "source_inspiration": "Caisse de Dépôt et de Gestion"
   },
   {
-    "id": 23,
-    "nom": "Lumos Capital",
-    "type": "vc",
-    "secteurs_preferes": ["IA", "SaaS", "cybersecurite"],
-    "stade_investissement": ["série A", "série B"],
-    "ticket_moyen": { "min_eur": 1500000, "max_eur": 7000000 },
-    "zone_geographique": ["France", "Europe", "Global"],
-    "criteres_cles": ["ARR minimum 1M€", "Net revenue retention > 110%", "Marge brute > 65%", "Expansion internationale en cours"],
-    "description": "Fonds franco-allemand spécialisé dans l'intelligence artificielle appliquée, Lumos Capital cible les startups B2B en forte croissance avec un avantage technologique défendable.",
+    "id": "INV_023",
+    "name": "Fonds Régional Oriental Innovation",
+    "type": "Fonds Public",
+    "description": "Fonds régional soutien innovation et entrepreneuriat dans la région Oriental. Finance projets innovants jeunes entrepreneurs avec accent valorisation ressources locales. Accompagnement personnalisé et coworking.",
+    "sectors": [
+      "agritech",
+      "tourisme tech",
+      "logistics",
+      "artisanat digital"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 1500000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Projet innovant ancré dans la région Oriental avec potentiel création emplois",
+      "team_size_min": 1,
+      "must_have": [
+        "projet région Oriental",
+        "caractère innovant",
+        "plan emplois"
+      ],
+      "nice_to_have": [
+        "valorisation ressources locales",
+        "impact social régional"
+      ]
+    },
+    "portfolio_examples": [
+      "Agritech produits Oriental",
+      "Tourisme digital régional"
+    ],
     "contact": {
-      "email": "team@lumos-capital.eu",
-      "site_web": "https://www.lumos-capital.eu"
-    }
+      "website": "https://www.fonds-oriental-innov.ma",
+      "email": "contact@fonds-oriental-innov.ma",
+      "linkedin": "https://linkedin.com/company/fonds-oriental-innovation"
+    },
+    "source_inspiration": "Fonds régionaux marocains"
   },
   {
-    "id": 24,
-    "nom": "Tanit Partners",
-    "type": "vc",
-    "secteurs_preferes": ["fintech", "healthtech", "edtech", "agritech"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 250000, "max_eur": 1500000 },
-    "zone_geographique": ["MENA", "Afrique"],
-    "criteres_cles": ["Impact social mesurable", "Traction prouvée", "Product-market fit", "Connaissance du marché local"],
-    "description": "Basé à Tunis avec des opérations à Casablanca et Abidjan, Tanit Partners est un fonds panafricain qui investit dans les solutions technologiques à fort impact social.",
+    "id": "INV_024",
+    "name": "TechBoost Casablanca",
+    "type": "Accélérateur",
+    "description": "Programme accélération international à Casablanca, 13 semaines accompagnement intensif. Financement amorçage en échange de participation, réseau mondial mentors et investisseurs. 10-12 startups par cohorte.",
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "e-commerce",
+      "logistics",
+      "healthtech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 100000,
+    "ticket_max": 500000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique du Nord",
+      "MENA"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "MVP et équipe fondatrice prête à s engager 3 mois à temps plein",
+      "team_size_min": 2,
+      "must_have": [
+        "MVP",
+        "équipe temps plein",
+        "ambition croissance"
+      ],
+      "nice_to_have": [
+        "premiers utilisateurs",
+        "potentiel expansion régionale"
+      ]
+    },
+    "portfolio_examples": [
+      "Paiement mobile accéléré vers Afrique",
+      "SaaS gestion logistique"
+    ],
     "contact": {
-      "email": "apply@tanit-partners.com",
-      "site_web": "https://www.tanit-partners.com"
-    }
+      "website": "https://www.techboost-casa.com",
+      "email": "apply@techboost-casa.com",
+      "linkedin": "https://linkedin.com/company/techboost-casablanca"
+    },
+    "source_inspiration": "Techstars Casablanca"
   },
   {
-    "id": 25,
-    "nom": "Sequoia Francophone Fund",
-    "type": "vc",
-    "secteurs_preferes": ["SaaS", "fintech", "e-commerce", "IA"],
-    "stade_investissement": ["série A", "série B", "série C+"],
-    "ticket_moyen": { "min_eur": 3000000, "max_eur": 10000000 },
-    "zone_geographique": ["France", "Europe", "Global"],
-    "criteres_cles": ["ARR minimum 3M€", "Croissance annuelle > 100%", "Expansion multi-pays", "Marché adressable > 5Md€"],
-    "description": "Fonds de late-stage basé à Paris et Londres, Sequoia Francophone Fund investit dans les futures licornes européennes et accompagne leur expansion mondiale.",
+    "id": "INV_025",
+    "name": "LaStation Startup",
+    "type": "Accélérateur",
+    "description": "Accélérateur et incubation marocain, programme 6 mois pour startups en démarrage. Accompagnement opérationnel, workshops, mentorat et financement pré-seed. Coworking Casablanca et réseau partenaires corporates.",
+    "sectors": [
+      "tous secteurs tech",
+      "SaaS",
+      "e-commerce",
+      "fintech",
+      "edtech"
+    ],
+    "stage": [
+      "pré-seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 200000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Idée innovante avec première validation et fondateurs engagés",
+      "team_size_min": 1,
+      "must_have": [
+        "idée validée",
+        "disponibilité programme"
+      ],
+      "nice_to_have": [
+        "prototype",
+        "connaissance marché"
+      ]
+    },
+    "portfolio_examples": [
+      "Livraison hyperlocale",
+      "Solution edtech écoles privées"
+    ],
     "contact": {
-      "email": "opportunities@sequoia-francophone.com",
-      "site_web": "https://www.sequoia-francophone.com"
-    }
+      "website": "https://www.lastation-startup.ma",
+      "email": "candidature@lastation-startup.ma",
+      "linkedin": "https://linkedin.com/company/lastation-startup"
+    },
+    "source_inspiration": "LaStartupStation"
   },
   {
-    "id": 26,
-    "nom": "Riviera Ventures",
-    "type": "vc",
-    "secteurs_preferes": ["proptech", "cleantech", "IoT", "marketplace"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 300000, "max_eur": 2000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Product-market fit", "Scalabilité démontrée", "Équipe fondatrice complémentaire", "Modèle récurrent"],
-    "description": "Fonds basé à Nice spécialisé dans la proptech et les smart cities, Riviera Ventures investit dans les startups qui transforment l'immobilier et l'urbanisme en Europe.",
+    "id": "INV_026",
+    "name": "Dare Ventures Lab",
+    "type": "Accélérateur",
+    "description": "Programme accélération marocain startups impact social et environnemental. 4 mois mentorat, design thinking et financement amorçage. Solutions innovantes défis sociétaux Maroc et Afrique.",
+    "sectors": [
+      "impact social",
+      "edtech",
+      "healthtech",
+      "inclusion financière",
+      "cleantech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 80000,
+    "ticket_max": 400000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Projet impact avec approche innovante et fondateurs passionnés",
+      "team_size_min": 2,
+      "must_have": [
+        "impact social ou environnemental",
+        "solution innovante"
+      ],
+      "nice_to_have": [
+        "mesure impact",
+        "partenariat ONG"
+      ]
+    },
+    "portfolio_examples": [
+      "Accès eau potable zones rurales",
+      "Insertion professionnelle jeunes"
+    ],
     "contact": {
-      "email": "hello@riviera-ventures.fr",
-      "site_web": "https://www.riviera-ventures.fr"
-    }
+      "website": "https://www.dare-ventures-lab.ma",
+      "email": "apply@dare-ventures-lab.ma",
+      "linkedin": "https://linkedin.com/company/dare-ventures-lab"
+    },
+    "source_inspiration": "Dare Inc"
   },
   {
-    "id": 27,
-    "nom": "Nouvel Horizon Ventures",
-    "type": "vc",
-    "secteurs_preferes": ["biotech", "healthtech", "deeptech"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 3000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Validation clinique ou scientifique", "Brevet ou PI", "Équipe scientifique de renom", "Publication scientifique"],
-    "description": "Fonds de venture capital dédié aux sciences de la vie et à la santé, Nouvel Horizon Ventures finance les innovations biotech et medtech du stade seed à la série A en Europe.",
+    "id": "INV_027",
+    "name": "WonderTech Hub",
+    "type": "Accélérateur",
+    "description": "Hub innovation et accélérateur startups Rabat, spécialisé IA et technologies émergentes. Programme 5 mois avec ressources cloud, mentorat technique et financement. Partenariats grandes entreprises tech.",
+    "sectors": [
+      "IA",
+      "deeptech",
+      "IoT",
+      "robotique",
+      "cybersécurité"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 100000,
+    "ticket_max": 350000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Innovation technologique différenciante et équipe technique solide",
+      "team_size_min": 2,
+      "must_have": [
+        "innovation technologique",
+        "équipe technique"
+      ],
+      "nice_to_have": [
+        "publications ou brevets",
+        "partenariat académique"
+      ]
+    },
+    "portfolio_examples": [
+      "IA vision par ordinateur",
+      "IoT smart buildings"
+    ],
     "contact": {
-      "email": "sciences@nouvel-horizon.fr",
-      "site_web": "https://www.nouvel-horizon.fr"
-    }
+      "website": "https://www.wondertech-hub.ma",
+      "email": "startups@wondertech-hub.ma",
+      "linkedin": "https://linkedin.com/company/wondertech-hub"
+    },
+    "source_inspiration": "WonderLab"
   },
   {
-    "id": 28,
-    "nom": "MarocTech Corporate Fund",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["fintech", "cybersecurite", "IA", "SaaS"],
-    "stade_investissement": ["seed", "série A", "série B"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 3000000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["Synergie avec l'écosystème bancaire", "Technologie propriétaire", "Traction prouvée", "Conformité réglementaire"],
-    "description": "Bras d'investissement du groupe bancaire fictif Banque Royale du Maghreb, MarocTech Corporate Fund investit dans les startups fintech et cybersécurité en Afrique.",
+    "id": "INV_028",
+    "name": "StartPorte Incubateur",
+    "type": "Accélérateur",
+    "description": "Incubateur universitaire marocain accompagnant projets entrepreneuriaux académiques. Programme 12 mois avec hébergement, mentorat, accès laboratoires et financement pré-seed. Transfert technologie recherche-marché.",
+    "sectors": [
+      "deeptech",
+      "biotech",
+      "agritech",
+      "cleantech",
+      "edtech"
+    ],
+    "stage": [
+      "pré-seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 300000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Projet issu recherche académique avec potentiel commercialisation",
+      "team_size_min": 1,
+      "must_have": [
+        "lien académique",
+        "innovation scientifique"
+      ],
+      "nice_to_have": [
+        "résultats recherche publiés",
+        "prototype laboratoire"
+      ]
+    },
+    "portfolio_examples": [
+      "Spin-off biotechnologie",
+      "Deeptech laboratoire recherche"
+    ],
     "contact": {
-      "email": "ventures@maroctech-fund.ma",
-      "site_web": "https://www.maroctech-fund.ma"
-    }
+      "website": "https://www.startporte.ma",
+      "email": "incubation@startporte.ma",
+      "linkedin": "https://linkedin.com/company/startporte"
+    },
+    "source_inspiration": "Startgate"
   },
   {
-    "id": 29,
-    "nom": "OCP Innovation Ventures",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["agritech", "cleantech", "IoT", "deeptech"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 2500000 },
-    "zone_geographique": ["Maroc", "Afrique", "Global"],
-    "criteres_cles": ["Synergie avec l'agriculture et les engrais", "Impact environnemental positif", "Technologie propriétaire", "Scalabilité démontrée"],
-    "description": "Fonds corporate du groupe fictif PhosMaroc Industries, OCP Innovation Ventures finance les innovations agritech et cleantech qui transforment l'agriculture durable en Afrique.",
+    "id": "INV_029",
+    "name": "NouvelEspace Cowork",
+    "type": "Accélérateur",
+    "description": "Espace coworking et accélération Casablanca pour freelances et micro-entrepreneurs tech. Programme 3 mois validation marché et structuration modèle. Financement modeste mais accompagnement personnalisé.",
+    "sectors": [
+      "tech",
+      "freelance",
+      "économie créative",
+      "SaaS",
+      "services numériques"
+    ],
+    "stage": [
+      "pré-seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 150000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Entrepreneur avec idée produit tech et volonté de structurer en entreprise",
+      "team_size_min": 1,
+      "must_have": [
+        "idée produit tech",
+        "engagement programme"
+      ],
+      "nice_to_have": [
+        "compétences techniques",
+        "premiers clients freelance"
+      ]
+    },
+    "portfolio_examples": [
+      "Freelance devenu fondateur SaaS",
+      "Micro-entreprise dev web structurée"
+    ],
     "contact": {
-      "email": "innovation@ocp-ventures.ma",
-      "site_web": "https://www.ocp-ventures.ma"
-    }
+      "website": "https://www.nouvelespace.ma",
+      "email": "accelerate@nouvelespace.ma",
+      "linkedin": "https://linkedin.com/company/nouvelespace"
+    },
+    "source_inspiration": "New Work Lab"
   },
   {
-    "id": 30,
-    "nom": "TélécomPlus Ventures",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["IoT", "cybersecurite", "IA", "SaaS"],
-    "stade_investissement": ["seed", "série A", "série B"],
-    "ticket_moyen": { "min_eur": 700000, "max_eur": 4000000 },
-    "zone_geographique": ["Maroc", "MENA", "Afrique"],
-    "criteres_cles": ["Synergie avec les télécommunications", "Technologie propriétaire", "Scalabilité démontrée", "Base utilisateurs significative"],
-    "description": "Véhicule d'investissement du groupe télécom fictif TélécomPlus, ce fonds cible les startups innovantes dans l'IoT et la connectivité pour le marché MENA et africain.",
+    "id": "INV_030",
+    "name": "Solaire Cluster Accelerator",
+    "type": "Accélérateur",
+    "description": "Accélérateur spécialisé énergies renouvelables et efficacité énergétique au Maroc. Programme 6 mois avec infrastructures test, mentorat sectoriel et financement. Connecté aux acteurs énergie solaire et éolienne.",
+    "sectors": [
+      "cleantech",
+      "énergie solaire",
+      "énergie éolienne",
+      "efficacité énergétique",
+      "smart grid"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 100000,
+    "ticket_max": 500000,
+    "currency": "MAD",
+    "geography": [
+      "Maroc",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Innovation énergie avec prototype testable",
+      "team_size_min": 2,
+      "must_have": [
+        "innovation énergie/cleantech",
+        "prototype"
+      ],
+      "nice_to_have": [
+        "partenariat énergétique",
+        "certification technique"
+      ]
+    },
+    "portfolio_examples": [
+      "Monitoring solaire IA",
+      "Stockage énergie innovant"
+    ],
     "contact": {
-      "email": "startups@telecomplus-ventures.ma",
-      "site_web": "https://www.telecomplus-ventures.ma"
-    }
+      "website": "https://www.solaire-cluster-accelerator.ma",
+      "email": "apply@solaire-cluster.ma",
+      "linkedin": "https://linkedin.com/company/solaire-cluster-accelerator"
+    },
+    "source_inspiration": "Cluster Solaire"
   },
   {
-    "id": 31,
-    "nom": "Énergie Nouvelle Corporate Fund",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["cleantech", "IoT", "deeptech"],
-    "stade_investissement": ["série A", "série B"],
-    "ticket_moyen": { "min_eur": 1000000, "max_eur": 5000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Technologie propriétaire", "Impact environnemental positif", "Brevet ou PI", "Pilote industriel validé"],
-    "description": "Fonds corporate du groupe énergétique fictif Énergie Nouvelle SA, dédié aux startups cleantech et aux technologies de décarbonation industrielle en Europe.",
+    "id": "INV_031",
+    "name": "ParisVenture Tech",
+    "type": "VC",
+    "description": "Fonds de capital-risque parisien investissant dans les startups tech européennes et africaines du seed à la série B. Expertise reconnue en SaaS, fintech et marketplaces. Bureaux à Paris, Berlin et San Francisco.",
+    "sectors": [
+      "SaaS",
+      "fintech",
+      "marketplace",
+      "deeptech"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 15000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe",
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": 30000,
+      "traction_required": "Croissance rapide et potentiel leadership européen",
+      "team_size_min": 5,
+      "must_have": [
+        "croissance forte",
+        "marché européen",
+        "équipe expérimentée"
+      ],
+      "nice_to_have": [
+        "expansion internationale",
+        "métriques SaaS solides"
+      ]
+    },
+    "portfolio_examples": [
+      "Licorne fintech européenne",
+      "SaaS B2B cybersécurité"
+    ],
     "contact": {
-      "email": "innovation@energienouvelle-fund.fr",
-      "site_web": "https://www.energienouvelle-fund.fr"
-    }
+      "website": "https://www.parisventure-tech.com",
+      "email": "deals@parisventure-tech.com",
+      "linkedin": "https://linkedin.com/company/parisventure-tech"
+    },
+    "source_inspiration": "Partech"
   },
   {
-    "id": 32,
-    "nom": "Galerie Santé Ventures",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["healthtech", "biotech", "IA"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 800000, "max_eur": 4000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Validation clinique ou scientifique", "Conformité réglementaire", "Synergie avec la distribution pharmaceutique", "Brevet ou PI"],
-    "description": "Bras d'investissement du groupe pharmaceutique fictif Galerie Santé, ce fonds soutient les innovations healthtech et biotech à fort potentiel clinique en Europe.",
+    "id": "INV_032",
+    "name": "Brise Capital",
+    "type": "VC",
+    "description": "Fonds VC français early-stage axé impact positif et technologie responsable. Accompagnement opérationnel unique des fondateurs européens. Investit en seed et série A.",
+    "sectors": [
+      "SaaS",
+      "fintech",
+      "healthtech",
+      "greentech",
+      "edtech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 5000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": 15000,
+      "traction_required": "Produit lancé avec premiers clients et vision impact",
+      "team_size_min": 3,
+      "must_have": [
+        "produit lancé",
+        "premiers clients",
+        "vision impact"
+      ],
+      "nice_to_have": [
+        "rétention élevée",
+        "équipe diverse"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup mobilité durable",
+      "SaaS RH inclusion"
+    ],
     "contact": {
-      "email": "ventures@galerie-sante.fr",
-      "site_web": "https://www.galerie-sante-ventures.fr"
-    }
+      "website": "https://www.brise-capital.com",
+      "email": "pitch@brise-capital.com",
+      "linkedin": "https://linkedin.com/company/brise-capital"
+    },
+    "source_inspiration": "Breega"
   },
   {
-    "id": 33,
-    "nom": "DistribMaroc Digital Fund",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["e-commerce", "logistique", "marketplace", "SaaS"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 2000000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["Synergie avec la grande distribution", "Traction prouvée", "Modèle B2B2C", "Connaissance du marché local"],
-    "description": "Fonds d'innovation du groupe de grande distribution fictif DistribMaroc, investissant dans les startups qui digitalisent la chaîne de valeur du retail en Afrique.",
+    "id": "INV_033",
+    "name": "Kira Ventures",
+    "type": "VC",
+    "description": "Micro-VC français investissant dans plus de 100 startups par an en pré-seed et seed. Tickets modestes mais réseau immense. Fondé par serial entrepreneur reconnu.",
+    "sectors": [
+      "tous secteurs tech",
+      "SaaS",
+      "marketplace",
+      "consumer tech",
+      "fintech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 15000,
+    "ticket_max": 150000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe",
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Fondateur exceptionnel avec idée audacieuse et prototype",
+      "team_size_min": 1,
+      "must_have": [
+        "fondateur exceptionnel",
+        "idée scalable"
+      ],
+      "nice_to_have": [
+        "prototype",
+        "premiers utilisateurs"
+      ]
+    },
+    "portfolio_examples": [
+      "Pré-seed future licorne",
+      "Startup IA early-stage"
+    ],
     "contact": {
-      "email": "digital@distribmaroc-fund.ma",
-      "site_web": "https://www.distribmaroc-fund.ma"
-    }
+      "website": "https://www.kira-ventures.com",
+      "email": "founders@kira-ventures.com",
+      "linkedin": "https://linkedin.com/company/kira-ventures"
+    },
+    "source_inspiration": "Kima Ventures"
   },
   {
-    "id": 34,
-    "nom": "AutoRoute Invest",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["logistique", "IoT", "IA", "proptech"],
-    "stade_investissement": ["série A", "série B"],
-    "ticket_moyen": { "min_eur": 1000000, "max_eur": 5000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Synergie avec les infrastructures de transport", "Technologie propriétaire", "Pilote industriel validé", "Scalabilité démontrée"],
-    "description": "Véhicule d'investissement du groupe fictif d'infrastructures AutoRoute SA, ciblant les startups de mobilité intelligente et de logistique connectée en Europe.",
+    "id": "INV_034",
+    "name": "Elaia Investissements",
+    "type": "VC",
+    "description": "Société de gestion française indépendante pour startups tech européennes en logiciel et deeptech. Accompagnement fondateurs techniques. Focus propriété intellectuelle du seed à série B.",
+    "sectors": [
+      "deeptech",
+      "SaaS",
+      "cybersécurité",
+      "IA",
+      "biotech"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 10000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": 20000,
+      "traction_required": "Innovation technologique forte avec avantage compétitif durable",
+      "team_size_min": 3,
+      "must_have": [
+        "innovation technologique",
+        "propriété intellectuelle"
+      ],
+      "nice_to_have": [
+        "fondateurs recherche",
+        "brevets"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup IA NLP",
+      "Cybersécurité européenne"
+    ],
     "contact": {
-      "email": "ventures@autoroute-invest.fr",
-      "site_web": "https://www.autoroute-invest.fr"
-    }
+      "website": "https://www.elaia-investissements.com",
+      "email": "contact@elaia-investissements.com",
+      "linkedin": "https://linkedin.com/company/elaia-investissements"
+    },
+    "source_inspiration": "Elaia Partners"
   },
   {
-    "id": 35,
-    "nom": "Assurancia Ventures",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["fintech", "healthtech", "IA", "cybersecurite"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 600000, "max_eur": 3000000 },
-    "zone_geographique": ["France", "MENA"],
-    "criteres_cles": ["Synergie avec l'assurance", "Conformité réglementaire", "Traction prouvée", "Technologie propriétaire"],
-    "description": "Fonds corporate du groupe d'assurances fictif Assurancia, finançant les startups insurtech et les solutions de gestion des risques en France et dans la région MENA.",
+    "id": "INV_035",
+    "name": "IdeoCapital",
+    "type": "VC",
+    "description": "Société de gestion française pour startups et PME innovantes en croissance. Fonds VC, growth equity et dette privée. Expertise santé digitale, services financiers et éducation.",
+    "sectors": [
+      "healthtech",
+      "fintech",
+      "edtech",
+      "SaaS",
+      "consumer tech"
+    ],
+    "stage": [
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 2000000,
+    "ticket_max": 15000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": 100000,
+      "traction_required": "Revenus récurrents significatifs et modèle prouvé",
+      "team_size_min": 10,
+      "must_have": [
+        "revenus récurrents",
+        "croissance >50%",
+        "équipe structurée"
+      ],
+      "nice_to_have": [
+        "rentabilité en vue",
+        "expansion européenne"
+      ]
+    },
+    "portfolio_examples": [
+      "Santé en ligne série B",
+      "Fintech paiement B2B"
+    ],
     "contact": {
-      "email": "insurtech@assurancia-ventures.com",
-      "site_web": "https://www.assurancia-ventures.com"
-    }
+      "website": "https://www.ideocapital.fr",
+      "email": "investir@ideocapital.fr",
+      "linkedin": "https://linkedin.com/company/ideocapital"
+    },
+    "source_inspiration": "Idinvest (Eurazeo)"
   },
   {
-    "id": 36,
-    "nom": "AgroTech Corporate Fund",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["agritech", "biotech", "cleantech", "IoT"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 2500000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["Synergie avec l'agroalimentaire", "Impact environnemental positif", "Prototype fonctionnel", "Validation terrain"],
-    "description": "Bras d'investissement du groupe agroalimentaire fictif Atlas Agro, ce fonds accompagne les startups qui innovent dans l'agriculture de précision et la chaîne alimentaire en Afrique.",
+    "id": "INV_036",
+    "name": "XChange Capital",
+    "type": "VC",
+    "description": "Fonds VC franco-européen pour startups B2B early-stage. Logiciels entreprise, data et IA appliquée. Accompagnement go-to-market et réseau DSI.",
+    "sectors": [
+      "SaaS B2B",
+      "data",
+      "IA",
+      "enterprise software",
+      "cloud"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 8000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": 25000,
+      "traction_required": "Contrats entreprises signés et pipeline commercial solide",
+      "team_size_min": 4,
+      "must_have": [
+        "contrats B2B",
+        "product-market fit",
+        "équipe technique"
+      ],
+      "nice_to_have": [
+        "NRR >110%",
+        "clients grands comptes"
+      ]
+    },
+    "portfolio_examples": [
+      "SaaS données ETI",
+      "IA supply chain"
+    ],
     "contact": {
-      "email": "innovation@agrotech-fund.ma",
-      "site_web": "https://www.agrotech-fund.ma"
-    }
+      "website": "https://www.xchange-capital.com",
+      "email": "pitch@xchange-capital.com",
+      "linkedin": "https://linkedin.com/company/xchange-capital"
+    },
+    "source_inspiration": "XAnge"
   },
   {
-    "id": 37,
-    "nom": "LabelFinance Corporate Ventures",
-    "type": "fonds_corporate",
-    "secteurs_preferes": ["fintech", "IA", "cybersecurite", "SaaS"],
-    "stade_investissement": ["série A", "série B"],
-    "ticket_moyen": { "min_eur": 1000000, "max_eur": 5000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Synergie avec les services financiers", "Conformité réglementaire", "ARR minimum 500K€", "Technologie propriétaire"],
-    "description": "Fonds d'investissement stratégique de la banque fictive LabelFinance, ciblant les fintech européennes innovantes dans le paiement, la conformité et la gestion des risques.",
+    "id": "INV_037",
+    "name": "Serene Capital Partners",
+    "type": "VC",
+    "description": "Growth equity français pour startups tech européennes en hypercroissance. Série A à série C avec tickets importants. SaaS récurrents et marketplaces effet de réseau.",
+    "sectors": [
+      "SaaS",
+      "marketplace",
+      "fintech",
+      "insurtech"
+    ],
+    "stage": [
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 3000000,
+    "ticket_max": 15000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": 200000,
+      "traction_required": "ARR supérieur à 2M EUR et trajectoire rentabilité",
+      "team_size_min": 20,
+      "must_have": [
+        "ARR >2M EUR",
+        "croissance >80%",
+        "management complet"
+      ],
+      "nice_to_have": [
+        "multi-pays",
+        "unit economics positifs"
+      ]
+    },
+    "portfolio_examples": [
+      "Scale-up SaaS série B",
+      "Marketplace leader France"
+    ],
     "contact": {
-      "email": "fintech@labelfinance-ventures.fr",
-      "site_web": "https://www.labelfinance-ventures.fr"
-    }
+      "website": "https://www.serene-capital.com",
+      "email": "growth@serene-capital.com",
+      "linkedin": "https://linkedin.com/company/serene-capital-partners"
+    },
+    "source_inspiration": "Serena Capital"
   },
   {
-    "id": 38,
-    "nom": "WeFund Maroc",
-    "type": "crowdfunding",
-    "secteurs_preferes": ["e-commerce", "edtech", "healthtech", "agritech", "cleantech"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 10000, "max_eur": 300000 },
-    "zone_geographique": ["Maroc"],
-    "criteres_cles": ["Projet à impact social ou environnemental", "Communauté engagée", "Vidéo de présentation convaincante", "Prototype fonctionnel"],
-    "description": "Première plateforme de financement participatif au Maroc, WeFund Maroc permet aux startups marocaines de lever des fonds auprès de la communauté locale et de la diaspora.",
+    "id": "INV_038",
+    "name": "EuroZone Ventures",
+    "type": "VC",
+    "description": "Fonds français multi-stratégie couvrant VC, growth et buyout tech. Un des plus grands investisseurs tech européens. Expertise fintech et retail tech de l amorçage à l IPO.",
+    "sectors": [
+      "fintech",
+      "retail tech",
+      "mobilité",
+      "SaaS",
+      "consumer tech"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 1000000,
+    "ticket_max": 15000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe",
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": 50000,
+      "traction_required": "Potentiel leadership continental et équipe classe mondiale",
+      "team_size_min": 5,
+      "must_have": [
+        "potentiel leadership",
+        "équipe forte",
+        "traction"
+      ],
+      "nice_to_have": [
+        "présence internationale",
+        "marque reconnue"
+      ]
+    },
+    "portfolio_examples": [
+      "Licorne retail tech",
+      "Fintech paneuropéenne"
+    ],
     "contact": {
-      "email": "projets@wefund-maroc.ma",
-      "site_web": "https://www.wefund-maroc.ma"
-    }
+      "website": "https://www.eurozone-ventures.com",
+      "email": "deals@eurozone-ventures.com",
+      "linkedin": "https://linkedin.com/company/eurozone-ventures"
+    },
+    "source_inspiration": "Eurazeo"
   },
   {
-    "id": 39,
-    "nom": "CoFundr",
-    "type": "crowdfunding",
-    "secteurs_preferes": ["SaaS", "marketplace", "e-commerce", "fintech"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 50000, "max_eur": 500000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Traction prouvée", "Communauté engagée", "Pitch vidéo de qualité", "MRR minimum 3K€"],
-    "description": "Plateforme française d'equity crowdfunding spécialisée dans les startups tech, CoFundr a financé plus de 200 projets innovants depuis sa création.",
+    "id": "INV_039",
+    "name": "Alven Seed Partners",
+    "type": "VC",
+    "description": "Fonds VC français focalisé seed et série A startups tech européennes. Sélection rigoureuse et accompagnement long terme. SaaS, santé digitale et services financiers.",
+    "sectors": [
+      "SaaS",
+      "healthtech",
+      "fintech",
+      "e-commerce",
+      "data"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 300000,
+    "ticket_max": 7000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": 15000,
+      "traction_required": "Produit différencié avec premiers clients et fondateur visionnaire",
+      "team_size_min": 3,
+      "must_have": [
+        "produit différencié",
+        "premiers clients",
+        "vision"
+      ],
+      "nice_to_have": [
+        "rétention forte",
+        "avantage technologique"
+      ]
+    },
+    "portfolio_examples": [
+      "Santé digitale série A",
+      "SaaS gestion financière"
+    ],
     "contact": {
-      "email": "startups@cofundr.fr",
-      "site_web": "https://www.cofundr.fr"
-    }
+      "website": "https://www.alven-seed.com",
+      "email": "team@alven-seed.com",
+      "linkedin": "https://linkedin.com/company/alven-seed-partners"
+    },
+    "source_inspiration": "Alven Capital"
   },
   {
-    "id": 40,
-    "nom": "Afrik'Invest Crowd",
-    "type": "crowdfunding",
-    "secteurs_preferes": ["agritech", "cleantech", "edtech", "healthtech", "fintech"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 10000, "max_eur": 200000 },
-    "zone_geographique": ["Afrique", "MENA"],
-    "criteres_cles": ["Impact social mesurable", "Ancrage local fort", "Équipe fondatrice complémentaire", "Projet à impact communautaire"],
-    "description": "Plateforme panafricaine de crowdfunding dédiée aux startups à impact, Afrik'Invest Crowd connecte les entrepreneurs africains avec des investisseurs du continent et de la diaspora.",
+    "id": "INV_040",
+    "name": "BPI Digital Innovation",
+    "type": "VC",
+    "description": "Bras VC de la banque publique française pour startups deeptech et digitales. Rôle stratégique financement innovation capacité milliards. Co-investit avec fonds privés.",
+    "sectors": [
+      "deeptech",
+      "IA",
+      "cybersécurité",
+      "cloud",
+      "biotech",
+      "cleantech"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 1000000,
+    "ticket_max": 10000000,
+    "currency": "EUR",
+    "geography": [
+      "France"
+    ],
+    "criteria": {
+      "mrr_minimum": 30000,
+      "traction_required": "Innovation de rupture et potentiel champion technologique",
+      "team_size_min": 5,
+      "must_have": [
+        "siège France",
+        "innovation rupture",
+        "potentiel leadership"
+      ],
+      "nice_to_have": [
+        "PI forte",
+        "souveraineté tech"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup quantique",
+      "Cloud souverain"
+    ],
     "contact": {
-      "email": "hello@afrikinvest-crowd.com",
-      "site_web": "https://www.afrikinvest-crowd.com"
-    }
+      "website": "https://www.bpi-digital-innovation.fr",
+      "email": "ventures@bpi-digital.fr",
+      "linkedin": "https://linkedin.com/company/bpi-digital-innovation"
+    },
+    "source_inspiration": "Bpifrance Digital Venture"
   },
   {
-    "id": 41,
-    "nom": "SeedSquare",
-    "type": "crowdfunding",
-    "secteurs_preferes": ["deeptech", "biotech", "IA", "cleantech"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 30000, "max_eur": 400000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Innovation technologique démontrée", "Brevet ou PI", "Équipe technique solide", "Communauté engagée"],
-    "description": "Plateforme d'investissement participatif spécialisée dans les startups deeptech et scientifiques, SeedSquare démocratise l'accès au capital-risque technologique en Europe.",
+    "id": "INV_041",
+    "name": "Le Galion Angels",
+    "type": "Business Angel",
+    "description": "Communauté sélective de fondateurs tech françaises investissant collectivement. Membres entrepreneurs ayant levé ou réalisé exits. Mentorat pair à pair unique dans l écosystème.",
+    "sectors": [
+      "SaaS",
+      "fintech",
+      "marketplace",
+      "deeptech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 300000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": 10000,
+      "traction_required": "Fondateur exceptionnel recommandé par membre du réseau",
+      "team_size_min": 2,
+      "must_have": [
+        "recommandation membre",
+        "fondateur exceptionnel",
+        "produit tech"
+      ],
+      "nice_to_have": [
+        "traction commerciale",
+        "ambition européenne"
+      ]
+    },
+    "portfolio_examples": [
+      "Série A SaaS",
+      "Seed deeptech"
+    ],
     "contact": {
-      "email": "innovation@seedsquare.eu",
-      "site_web": "https://www.seedsquare.eu"
-    }
+      "website": "https://www.le-galion-angels.com",
+      "email": "membres@le-galion-angels.com",
+      "linkedin": "https://linkedin.com/company/le-galion-angels"
+    },
+    "source_inspiration": "The Galion Project"
   },
   {
-    "id": 42,
-    "nom": "DabaFund",
-    "type": "crowdfunding",
-    "secteurs_preferes": ["e-commerce", "marketplace", "logistique", "SaaS"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 15000, "max_eur": 250000 },
-    "zone_geographique": ["Maroc", "Afrique"],
-    "criteres_cles": ["Connaissance du marché local", "Traction prouvée", "Vidéo de présentation convaincante", "Modèle économique clair"],
-    "description": "Plateforme marocaine de financement participatif en equity, DabaFund permet aux citoyens d'investir dans les startups tech les plus prometteuses du Maroc et d'Afrique.",
+    "id": "INV_042",
+    "name": "FrenchTech Angels Network",
+    "type": "Business Angel",
+    "description": "Réseau national business angels français dans toutes régions. Sessions pitch régulières et due diligence structurée. 10K-100K EUR par deal avec co-investissements.",
+    "sectors": [
+      "tous secteurs",
+      "SaaS",
+      "e-commerce",
+      "healthtech",
+      "foodtech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 10000,
+    "ticket_max": 200000,
+    "currency": "EUR",
+    "geography": [
+      "France"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Prototype et marché adressable France ou Europe",
+      "team_size_min": 2,
+      "must_have": [
+        "prototype",
+        "marché identifié",
+        "équipe complémentaire"
+      ],
+      "nice_to_have": [
+        "premiers revenus",
+        "preuve concept"
+      ]
+    },
+    "portfolio_examples": [
+      "Foodtech pré-seed",
+      "E-commerce niche seed"
+    ],
     "contact": {
-      "email": "contact@dabafund.ma",
-      "site_web": "https://www.dabafund.ma"
-    }
+      "website": "https://www.frenchtech-angels.fr",
+      "email": "pitch@frenchtech-angels.fr",
+      "linkedin": "https://linkedin.com/company/frenchtech-angels-network"
+    },
+    "source_inspiration": "France Angels"
   },
   {
-    "id": 43,
-    "nom": "ImpactCrowd",
-    "type": "crowdfunding",
-    "secteurs_preferes": ["cleantech", "agritech", "healthtech", "edtech"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 20000, "max_eur": 350000 },
-    "zone_geographique": ["France", "Global"],
-    "criteres_cles": ["Impact social ou environnemental mesurable", "Objectifs de développement durable alignés", "Communauté engagée", "Transparence financière"],
-    "description": "Plateforme de crowdfunding à impact basée à Paris, ImpactCrowd finance exclusivement les startups qui contribuent aux Objectifs de Développement Durable des Nations Unies.",
+    "id": "INV_043",
+    "name": "StationF Combattants Fund",
+    "type": "Business Angel",
+    "description": "Programme financement du plus grand campus startups mondial Paris. 30+ programmes partenaires. Financement equity-free ou equity selon programmes.",
+    "sectors": [
+      "tous secteurs tech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 15000,
+    "ticket_max": 150000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe",
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup tech ambitieuse prête résider campus parisien",
+      "team_size_min": 2,
+      "must_have": [
+        "startup tech",
+        "engagement campus",
+        "ambition internationale"
+      ],
+      "nice_to_have": [
+        "diversité équipe",
+        "innovation disruptive"
+      ]
+    },
+    "portfolio_examples": [
+      "IA programme fighters",
+      "Fintech accélération"
+    ],
     "contact": {
-      "email": "impact@impactcrowd.fr",
-      "site_web": "https://www.impactcrowd.fr"
-    }
+      "website": "https://www.stationf-combattants.com",
+      "email": "apply@stationf-combattants.com",
+      "linkedin": "https://linkedin.com/company/stationf-combattants"
+    },
+    "source_inspiration": "Station F Fighters Program"
   },
   {
-    "id": 44,
-    "nom": "TechCrowd MENA",
-    "type": "crowdfunding",
-    "secteurs_preferes": ["fintech", "SaaS", "cybersecurite", "IA"],
-    "stade_investissement": ["seed"],
-    "ticket_moyen": { "min_eur": 25000, "max_eur": 500000 },
-    "zone_geographique": ["MENA"],
-    "criteres_cles": ["Traction prouvée", "Produit lancé sur le marché", "Équipe technique solide", "Pitch vidéo de qualité"],
-    "description": "Plateforme régionale d'equity crowdfunding pour les startups tech de la région MENA, TechCrowd connecte les fondateurs avec un réseau de plus de 5 000 investisseurs qualifiés.",
+    "id": "INV_044",
+    "name": "Femmes Investisseuses Tech",
+    "type": "Business Angel",
+    "description": "Réseau femmes business angels françaises axé diversité et inclusion. Promeut entrepreneuriat féminin et investit dans startups co-fondées par des femmes. Networking trimestriel.",
+    "sectors": [
+      "healthtech",
+      "edtech",
+      "fintech",
+      "SaaS",
+      "consumer tech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 10000,
+    "ticket_max": 100000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Innovation portée par équipe engagée avec attention diversité",
+      "team_size_min": 1,
+      "must_have": [
+        "innovation",
+        "engagement fondateurs"
+      ],
+      "nice_to_have": [
+        "équipe diverse",
+        "impact social"
+      ]
+    },
+    "portfolio_examples": [
+      "Femtech pré-seed",
+      "SaaS inclusion"
+    ],
     "contact": {
-      "email": "apply@techcrowd-mena.com",
-      "site_web": "https://www.techcrowd-mena.com"
-    }
+      "website": "https://www.femmes-investisseuses-tech.fr",
+      "email": "contact@femmes-investisseuses-tech.fr",
+      "linkedin": "https://linkedin.com/company/femmes-investisseuses-tech"
+    },
+    "source_inspiration": "Femmes Business Angels"
   },
   {
-    "id": 45,
-    "nom": "FundMyStartup",
-    "type": "crowdfunding",
-    "secteurs_preferes": ["marketplace", "e-commerce", "proptech", "IoT"],
-    "stade_investissement": ["pré-seed", "seed"],
-    "ticket_moyen": { "min_eur": 10000, "max_eur": 200000 },
-    "zone_geographique": ["France"],
-    "criteres_cles": ["Produit lancé sur le marché", "Communauté engagée", "Vidéo de présentation convaincante", "Premiers revenus"],
-    "description": "Plateforme française de crowdfunding equity grand public, FundMyStartup rend l'investissement startup accessible dès 100 euros avec une expérience utilisateur simplifiée.",
+    "id": "INV_045",
+    "name": "Anges Sante Innovation",
+    "type": "Business Angel",
+    "description": "Club business angels français spécialisé santé et biotech. Médecins, pharmaciens et professionnels santé. Expertise médicale et réseau système de santé.",
+    "sectors": [
+      "healthtech",
+      "medtech",
+      "biotech",
+      "pharmatech",
+      "e-santé"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 20000,
+    "ticket_max": 200000,
+    "currency": "EUR",
+    "geography": [
+      "France"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Innovation santé validée et chemin réglementaire identifié",
+      "team_size_min": 2,
+      "must_have": [
+        "innovation santé",
+        "chemin réglementaire"
+      ],
+      "nice_to_have": [
+        "essais cliniques",
+        "partenariat hospitalier"
+      ]
+    },
+    "portfolio_examples": [
+      "Diagnostic IA",
+      "Suivi patients chroniques"
+    ],
     "contact": {
-      "email": "bonjour@fundmystartup.fr",
-      "site_web": "https://www.fundmystartup.fr"
-    }
+      "website": "https://www.anges-sante-innovation.fr",
+      "email": "sante@anges-sante-innovation.fr",
+      "linkedin": "https://linkedin.com/company/anges-sante-innovation"
+    },
+    "source_inspiration": "Angels Santé"
   },
   {
-    "id": 46,
-    "nom": "Famille Alaoui Patrimoine",
-    "type": "family_office",
-    "secteurs_preferes": ["fintech", "proptech", "e-commerce", "SaaS"],
-    "stade_investissement": ["seed", "série A", "série B"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 5000000 },
-    "zone_geographique": ["Maroc", "MENA", "Afrique"],
-    "criteres_cles": ["Rentabilité prouvée", "Équipe fondatrice complémentaire", "Scalabilité démontrée", "Gouvernance solide"],
-    "description": "Family office d'une grande famille d'industriels marocains, Famille Alaoui Patrimoine diversifie ses investissements dans les startups tech à forte croissance au Maroc et en Afrique.",
+    "id": "INV_046",
+    "name": "BPI Amorcage National",
+    "type": "Fonds Public",
+    "description": "Banque publique française offrant prêts amorçage et bourses startups innovantes. Bourse French Tech pour startups en création. Acteur incontournable early-stage France.",
+    "sectors": [
+      "tous secteurs innovants"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 30000,
+    "ticket_max": 2500000,
+    "currency": "EUR",
+    "geography": [
+      "France"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup française innovante avec projet structuré",
+      "team_size_min": 1,
+      "must_have": [
+        "siège France",
+        "innovant",
+        "plan financement"
+      ],
+      "nice_to_have": [
+        "levée réalisée",
+        "R&D"
+      ]
+    },
+    "portfolio_examples": [
+      "Bourse French Tech 30K",
+      "Prêt amorçage 400K"
+    ],
     "contact": {
-      "email": "investissement@alaoui-patrimoine.ma",
-      "site_web": "https://www.alaoui-patrimoine.ma"
-    }
+      "website": "https://www.bpi-amorcage.fr",
+      "email": "amorcage@bpi-amorcage.fr",
+      "linkedin": "https://linkedin.com/company/bpi-amorcage-national"
+    },
+    "source_inspiration": "BPI France"
   },
   {
-    "id": 47,
-    "nom": "Maison Leclerc Investissement",
-    "type": "family_office",
-    "secteurs_preferes": ["healthtech", "biotech", "deeptech", "cleantech"],
-    "stade_investissement": ["série A", "série B", "série C+"],
-    "ticket_moyen": { "min_eur": 1000000, "max_eur": 10000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Brevet ou PI", "ARR minimum 1M€", "Équipe scientifique de renom", "Potentiel de leadership européen"],
-    "description": "Family office d'une famille française historique de l'industrie pharmaceutique, Maison Leclerc Investissement finance les innovations de rupture dans la santé et les sciences.",
+    "id": "INV_047",
+    "name": "French Tech Acceleration",
+    "type": "Fonds Public",
+    "description": "Initiative gouvernementale soutien écosystème startup français. Label French Tech pour financements, visas talents et visibilité. Réseau 13 métropoles et 63 pays.",
+    "sectors": [
+      "tous secteurs tech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 30000,
+    "ticket_max": 500000,
+    "currency": "EUR",
+    "geography": [
+      "France"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup tech française avec ambition internationale",
+      "team_size_min": 1,
+      "must_have": [
+        "startup tech française",
+        "ambition internationale"
+      ],
+      "nice_to_have": [
+        "diversité",
+        "impact social"
+      ]
+    },
+    "portfolio_examples": [
+      "Labellisée French Tech",
+      "French Tech Visa"
+    ],
     "contact": {
-      "email": "sciences@leclerc-investissement.fr",
-      "site_web": "https://www.leclerc-investissement.fr"
-    }
+      "website": "https://www.frenchtech-acceleration.gouv.fr",
+      "email": "contact@frenchtech-acceleration.gouv.fr",
+      "linkedin": "https://linkedin.com/company/frenchtech-acceleration"
+    },
+    "source_inspiration": "French Tech / Mission French Tech"
   },
   {
-    "id": 48,
-    "nom": "Groupe Benjelloun Capital",
-    "type": "family_office",
-    "secteurs_preferes": ["fintech", "logistique", "e-commerce", "marketplace"],
-    "stade_investissement": ["série A", "série B"],
-    "ticket_moyen": { "min_eur": 800000, "max_eur": 6000000 },
-    "zone_geographique": ["Maroc", "Afrique", "Global"],
-    "criteres_cles": ["Croissance annuelle > 50%", "Rentabilité unitaire prouvée", "Gouvernance solide", "Expansion internationale en cours"],
-    "description": "Bureau familial du groupe fictif Benjelloun, acteur majeur de la distribution au Maroc, investissant dans la digitalisation du commerce et de la logistique en Afrique.",
+    "id": "INV_048",
+    "name": "EIC Innovation Accelerateur",
+    "type": "Fonds Public",
+    "description": "Programme UE subventions et equity startups européennes innovantes. Jusqu à 2,5M EUR subventions plus equity. Programme majeur deeptech européennes.",
+    "sectors": [
+      "deeptech",
+      "cleantech",
+      "healthtech",
+      "IA",
+      "quantique",
+      "spatial"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 2500000,
+    "currency": "EUR",
+    "geography": [
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Innovation de rupture et potentiel marché mondial",
+      "team_size_min": 3,
+      "must_have": [
+        "européenne",
+        "innovation rupture",
+        "potentiel mondial"
+      ],
+      "nice_to_have": [
+        "brevets",
+        "prototypes avancés"
+      ]
+    },
+    "portfolio_examples": [
+      "Quantique EIC",
+      "Cleantech européenne"
+    ],
     "contact": {
-      "email": "capital@benjelloun-group.ma",
-      "site_web": "https://www.benjelloun-capital.ma"
-    }
+      "website": "https://www.eic-innovation-accelerateur.eu",
+      "email": "info@eic-innovation.eu",
+      "linkedin": "https://linkedin.com/company/eic-innovation-accelerateur"
+    },
+    "source_inspiration": "EIC Accelerator"
   },
   {
-    "id": 49,
-    "nom": "Héritage Montfort",
-    "type": "family_office",
-    "secteurs_preferes": ["SaaS", "IA", "cybersecurite", "proptech"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 3000000 },
-    "zone_geographique": ["France", "Europe"],
-    "criteres_cles": ["Équipe technique solide", "MRR minimum 20K€", "Modèle récurrent", "Marché adressable significatif"],
-    "description": "Family office de la famille Montfort, entrepreneurs dans l'immobilier et la technologie depuis trois générations, investissant dans les startups SaaS et proptech européennes.",
+    "id": "INV_049",
+    "name": "Region IDF Innovation",
+    "type": "Fonds Public",
+    "description": "Soutien innovation Région Île-de-France pour startups et PME. Subventions, avances remboursables et prêts participatifs. R&D, prototypage et développement commercial.",
+    "sectors": [
+      "tous secteurs innovants",
+      "mobilité",
+      "santé",
+      "environnement",
+      "numérique"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 30000,
+    "ticket_max": 500000,
+    "currency": "EUR",
+    "geography": [
+      "France"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Basée IDF avec projet innovation",
+      "team_size_min": 1,
+      "must_have": [
+        "siège IDF",
+        "projet innovation",
+        "plan financement"
+      ],
+      "nice_to_have": [
+        "partenariat labo",
+        "emplois IDF"
+      ]
+    },
+    "portfolio_examples": [
+      "R&D medtech IDF",
+      "Avance PME innovante"
+    ],
     "contact": {
-      "email": "ventures@heritage-montfort.fr",
-      "site_web": "https://www.heritage-montfort.fr"
-    }
+      "website": "https://www.idf-innovation.fr",
+      "email": "innovation@idf-innovation.fr",
+      "linkedin": "https://linkedin.com/company/region-idf-innovation"
+    },
+    "source_inspiration": "Région Île-de-France / Innov up"
   },
   {
-    "id": 50,
-    "nom": "Fondation Kettani Invest",
-    "type": "family_office",
-    "secteurs_preferes": ["edtech", "healthtech", "agritech", "cleantech"],
-    "stade_investissement": ["seed", "série A"],
-    "ticket_moyen": { "min_eur": 500000, "max_eur": 4000000 },
-    "zone_geographique": ["Maroc", "MENA", "Afrique"],
-    "criteres_cles": ["Impact social mesurable", "Product-market fit", "Équipe fondatrice complémentaire", "Vision claire à 5 ans"],
-    "description": "Véhicule d'investissement à impact de la famille Kettani, combinant rendement financier et impact social dans les domaines de l'éducation, la santé et l'agriculture durable au Maroc et en Afrique.",
+    "id": "INV_050",
+    "name": "Wilko Accelerateur Public",
+    "type": "Fonds Public",
+    "description": "Accélérateur français public-privé pour développement commercial et levée de fonds. Programme 9 mois mentorat et relations corporates. Relation startup-grand groupe.",
+    "sectors": [
+      "tous secteurs tech",
+      "industrie 4.0",
+      "smart city",
+      "retail tech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 200000,
+    "currency": "EUR",
+    "geography": [
+      "France"
+    ],
+    "criteria": {
+      "mrr_minimum": 5000,
+      "traction_required": "Produit lancé besoin accélération B2B",
+      "team_size_min": 3,
+      "must_have": [
+        "produit lancé",
+        "clients B2B potentiels"
+      ],
+      "nice_to_have": [
+        "POC grands comptes",
+        "récurrence"
+      ]
+    },
+    "portfolio_examples": [
+      "Smart city collectivités",
+      "SaaS industriel ETI"
+    ],
     "contact": {
-      "email": "impact@kettani-invest.ma",
-      "site_web": "https://www.kettani-invest.ma"
-    }
+      "website": "https://www.wilko-accelerateur.fr",
+      "email": "candidature@wilko-accelerateur.fr",
+      "linkedin": "https://linkedin.com/company/wilko-accelerateur"
+    },
+    "source_inspiration": "Wilco"
+  },
+  {
+    "id": "INV_051",
+    "name": "TelecomVentures Orange",
+    "type": "Corporate VC",
+    "description": "Bras VC grand opérateur télécom européen. Connectivité, fintech mobile, cybersécurité et cloud. Base clients massive et distribution Europe-Afrique.",
+    "sectors": [
+      "fintech mobile",
+      "cybersécurité",
+      "IoT",
+      "cloud",
+      "IA"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 5000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe",
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": 30000,
+      "traction_required": "Synergie avec activités opérateur télécom",
+      "team_size_min": 5,
+      "must_have": [
+        "synergie télécom",
+        "produit scalable"
+      ],
+      "nice_to_have": [
+        "Afrique",
+        "technologie propriétaire"
+      ]
+    },
+    "portfolio_examples": [
+      "Mobile money Afrique",
+      "Cybersécurité télécoms"
+    ],
+    "contact": {
+      "website": "https://www.telecomventures-orange.com",
+      "email": "ventures@telecomventures-orange.com",
+      "linkedin": "https://linkedin.com/company/telecomventures-orange"
+    },
+    "source_inspiration": "Orange Ventures"
+  },
+  {
+    "id": "INV_052",
+    "name": "Rail Digital Ventures",
+    "type": "Corporate VC",
+    "description": "Corporate venture groupe ferroviaire européen pour mobilité, logistique et smart city. Innovations intégrables opérations groupe. Budget dizaines millions euros.",
+    "sectors": [
+      "mobilité",
+      "logistics",
+      "smart city",
+      "IoT",
+      "IA"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 3000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": 15000,
+      "traction_required": "Innovation mobilité/logistique avec potentiel intégration transport",
+      "team_size_min": 3,
+      "must_have": [
+        "innovation mobilité",
+        "produit fonctionnel"
+      ],
+      "nice_to_have": [
+        "POC transport",
+        "brevet"
+      ]
+    },
+    "portfolio_examples": [
+      "Optimisation logistique",
+      "Maintenance prédictive"
+    ],
+    "contact": {
+      "website": "https://www.rail-digital-ventures.com",
+      "email": "startups@rail-digital-ventures.com",
+      "linkedin": "https://linkedin.com/company/rail-digital-ventures"
+    },
+    "source_inspiration": "SNCF Digital Ventures"
+  },
+  {
+    "id": "INV_053",
+    "name": "AssurTech Ventures",
+    "type": "Corporate VC",
+    "description": "VC leader mondial assurance pour insurtech, fintech et healthtech. Technologies transformant assurance et gestion risques. Données actuarielles et distribution globale.",
+    "sectors": [
+      "insurtech",
+      "fintech",
+      "healthtech",
+      "cybersécurité",
+      "data"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 5000000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe",
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": 20000,
+      "traction_required": "Innovation pertinente assurance avec modèle B2B",
+      "team_size_min": 4,
+      "must_have": [
+        "innovation assurance",
+        "modèle B2B"
+      ],
+      "nice_to_have": [
+        "conformité",
+        "partenariat assureur"
+      ]
+    },
+    "portfolio_examples": [
+      "Micro-assurance paramétrique",
+      "IA risques"
+    ],
+    "contact": {
+      "website": "https://www.assurtech-ventures.com",
+      "email": "invest@assurtech-ventures.com",
+      "linkedin": "https://linkedin.com/company/assurtech-ventures"
+    },
+    "source_inspiration": "AXA Venture Partners"
+  },
+  {
+    "id": "INV_054",
+    "name": "TechBoost Paris",
+    "type": "Accélérateur",
+    "description": "Accélération internationale Paris, 3 mois mentorat intensif, espace et financement. Réseau mondial entrepreneurs et investisseurs. Demo days attractifs.",
+    "sectors": [
+      "tous secteurs tech",
+      "SaaS",
+      "fintech",
+      "IA",
+      "marketplace"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 100000,
+    "ticket_max": 500000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe",
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Équipe forte et ambition croissance internationale rapide",
+      "team_size_min": 2,
+      "must_have": [
+        "équipe engagée",
+        "produit tech",
+        "ambition internationale"
+      ],
+      "nice_to_have": [
+        "utilisateurs",
+        "programme précédent"
+      ]
+    },
+    "portfolio_examples": [
+      "SaaS accéléré US",
+      "Fintech demo day"
+    ],
+    "contact": {
+      "website": "https://www.techboost-paris.com",
+      "email": "apply@techboost-paris.com",
+      "linkedin": "https://linkedin.com/company/techboost-paris"
+    },
+    "source_inspiration": "Techstars Paris"
+  },
+  {
+    "id": "INV_055",
+    "name": "LaFamille Startup Studio",
+    "type": "Accélérateur",
+    "description": "Studio startups et accélérateur parisien co-créant entreprises tech. Co-fondation, financement et accompagnement opérationnel. Spécialisé SaaS B2B depuis idée.",
+    "sectors": [
+      "SaaS B2B",
+      "marketplace",
+      "fintech",
+      "media tech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 100000,
+    "ticket_max": 500000,
+    "currency": "EUR",
+    "geography": [
+      "France",
+      "Europe"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Entrepreneur exceptionnel expertise sectorielle profonde",
+      "team_size_min": 1,
+      "must_have": [
+        "entrepreneur exceptionnel",
+        "expertise sectorielle"
+      ],
+      "nice_to_have": [
+        "expérience entrepreneuriale",
+        "réseau secteur"
+      ]
+    },
+    "portfolio_examples": [
+      "SaaS B2B expert RH",
+      "Marketplace média"
+    ],
+    "contact": {
+      "website": "https://www.lafamille-studio.com",
+      "email": "founders@lafamille-studio.com",
+      "linkedin": "https://linkedin.com/company/lafamille-startup-studio"
+    },
+    "source_inspiration": "The Family (eFounders)"
+  },
+  {
+    "id": "INV_056",
+    "name": "ParisTech Africa Fund",
+    "type": "VC",
+    "description": "Fonds de capital-risque panafricain investissant dans les startups tech à travers le continent. Présence à Lagos, Nairobi, Le Caire et Casablanca. Focus sur les solutions fintech, logistique et e-commerce pour le marché africain.",
+    "sectors": [
+      "fintech",
+      "logistics",
+      "e-commerce",
+      "SaaS",
+      "healthtech"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 5000000,
+    "currency": "USD",
+    "geography": [
+      "Afrique",
+      "MENA"
+    ],
+    "criteria": {
+      "mrr_minimum": 10000,
+      "traction_required": "Startup tech africaine avec traction démontrée et potentiel panafricain",
+      "team_size_min": 5,
+      "must_have": [
+        "traction marché",
+        "équipe locale forte",
+        "potentiel continental"
+      ],
+      "nice_to_have": [
+        "présence multi-pays",
+        "métriques croissance fortes"
+      ]
+    },
+    "portfolio_examples": [
+      "Fintech paiement mobile panafricaine",
+      "Plateforme logistique dernière mile"
+    ],
+    "contact": {
+      "website": "https://www.paristech-africa.com",
+      "email": "deals@paristech-africa.com",
+      "linkedin": "https://linkedin.com/company/paristech-africa-fund"
+    },
+    "source_inspiration": "Partech Africa"
+  },
+  {
+    "id": "INV_057",
+    "name": "TLCom Ventures",
+    "type": "VC",
+    "description": "Fonds VC panafricain investissant dans les entrepreneurs tech qui construisent des entreprises transformatrices en Afrique. Basé à Lagos et Nairobi avec un focus particulier sur l Afrique de l Est et de l Ouest. Accompagnement stratégique et opérationnel.",
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "logistics",
+      "healthtech",
+      "edtech"
+    ],
+    "stage": [
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 5000000,
+    "currency": "USD",
+    "geography": [
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": 20000,
+      "traction_required": "Startup tech africaine avec revenus récurrents et forte croissance mensuelle",
+      "team_size_min": 8,
+      "must_have": [
+        "revenus récurrents",
+        "croissance forte",
+        "équipe solide"
+      ],
+      "nice_to_have": [
+        "expansion multi-marchés",
+        "rentabilité unitaire"
+      ]
+    },
+    "portfolio_examples": [
+      "SaaS de gestion pour entreprises africaines",
+      "Plateforme e-santé Afrique de l Est"
+    ],
+    "contact": {
+      "website": "https://www.tlcom-ventures.com",
+      "email": "invest@tlcom-ventures.com",
+      "linkedin": "https://linkedin.com/company/tlcom-ventures"
+    },
+    "source_inspiration": "TLcom Capital"
+  },
+  {
+    "id": "INV_058",
+    "name": "Algebra Ventures Egypt",
+    "type": "VC",
+    "description": "Fonds de venture capital égyptien spécialisé dans les startups tech de la région MENA. Investit principalement dans les startups en phase d amorçage et de série A au Caire et dans la région. Expertise forte en fintech et marketplace.",
+    "sectors": [
+      "fintech",
+      "marketplace",
+      "SaaS",
+      "e-commerce",
+      "logistics"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 100000,
+    "ticket_max": 2000000,
+    "currency": "USD",
+    "geography": [
+      "MENA",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": 5000,
+      "traction_required": "Startup MENA avec produit lancé et premiers clients payants dans la région",
+      "team_size_min": 3,
+      "must_have": [
+        "produit lancé",
+        "premiers clients MENA"
+      ],
+      "nice_to_have": [
+        "expansion régionale planifiée",
+        "unit economics positifs"
+      ]
+    },
+    "portfolio_examples": [
+      "Fintech paiement Égypte",
+      "Marketplace services locaux MENA"
+    ],
+    "contact": {
+      "website": "https://www.algebra-ventures-egypt.com",
+      "email": "pitch@algebra-ventures-egypt.com",
+      "linkedin": "https://linkedin.com/company/algebra-ventures-egypt"
+    },
+    "source_inspiration": "Algebra Ventures"
+  },
+  {
+    "id": "INV_059",
+    "name": "Flat6 Labs Ventures",
+    "type": "VC",
+    "description": "Fonds d investissement et accélérateur régional MENA avec des programmes au Caire, Tunis, Bahreïn et Djeddah. Accompagne les startups du stade idée jusqu à la série A. Un des acteurs les plus actifs de l écosystème MENA.",
+    "sectors": [
+      "tous secteurs tech",
+      "fintech",
+      "edtech",
+      "healthtech",
+      "e-commerce"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 500000,
+    "currency": "USD",
+    "geography": [
+      "MENA",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Idée innovante ou MVP avec fondateurs engagés et potentiel régional MENA",
+      "team_size_min": 2,
+      "must_have": [
+        "équipe fondatrice engagée",
+        "idée ou MVP"
+      ],
+      "nice_to_have": [
+        "première traction",
+        "connaissance marché MENA"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup edtech Tunisie",
+      "Fintech Bahreïn accélérée"
+    ],
+    "contact": {
+      "website": "https://www.flat6-labs-ventures.com",
+      "email": "apply@flat6-labs-ventures.com",
+      "linkedin": "https://linkedin.com/company/flat6-labs-ventures"
+    },
+    "source_inspiration": "Flat6Labs"
+  },
+  {
+    "id": "INV_060",
+    "name": "Sawari Capital Partners",
+    "type": "VC",
+    "description": "Fonds de capital-risque et de growth equity basé au Caire investissant dans les startups technologiques MENA. Un des pionniers du VC dans la région avec plus de 15 ans d expérience. Focus sur fintech, edtech et logistics.",
+    "sectors": [
+      "fintech",
+      "edtech",
+      "logistics",
+      "SaaS",
+      "e-commerce"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 3000000,
+    "currency": "USD",
+    "geography": [
+      "MENA",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": 10000,
+      "traction_required": "Startup tech MENA avec traction et potentiel de devenir leader régional",
+      "team_size_min": 4,
+      "must_have": [
+        "traction marché MENA",
+        "équipe expérimentée",
+        "modèle scalable"
+      ],
+      "nice_to_have": [
+        "présence multi-pays MENA",
+        "partenariats stratégiques"
+      ]
+    },
+    "portfolio_examples": [
+      "Plateforme éducative leader MENA",
+      "Logistics tech Égypte"
+    ],
+    "contact": {
+      "website": "https://www.sawari-capital.com",
+      "email": "deals@sawari-capital.com",
+      "linkedin": "https://linkedin.com/company/sawari-capital-partners"
+    },
+    "source_inspiration": "Sawari Ventures"
+  },
+  {
+    "id": "INV_061",
+    "name": "Wamda Capital Invest",
+    "type": "VC",
+    "description": "Fonds d investissement MENA spécialisé dans les startups tech en croissance rapide. Basé à Dubaï avec une présence dans toute la région. Investit dans les secteurs en forte expansion et accompagne l internationalisation régionale.",
+    "sectors": [
+      "fintech",
+      "logistics",
+      "SaaS",
+      "marketplace",
+      "proptech"
+    ],
+    "stage": [
+      "série A",
+      "série B+"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 5000000,
+    "currency": "USD",
+    "geography": [
+      "MENA",
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": 30000,
+      "traction_required": "Startup MENA en croissance rapide avec modèle économique validé et ambition régionale",
+      "team_size_min": 10,
+      "must_have": [
+        "revenus significatifs",
+        "croissance forte",
+        "présence MENA"
+      ],
+      "nice_to_have": [
+        "rentabilité en vue",
+        "expansion GCC"
+      ]
+    },
+    "portfolio_examples": [
+      "Marketplace immobilier MENA",
+      "SaaS gestion entreprise Golfe"
+    ],
+    "contact": {
+      "website": "https://www.wamda-capital-invest.com",
+      "email": "invest@wamda-capital-invest.com",
+      "linkedin": "https://linkedin.com/company/wamda-capital-invest"
+    },
+    "source_inspiration": "Wamda Capital"
+  },
+  {
+    "id": "INV_062",
+    "name": "NovaStar Africa Ventures",
+    "type": "VC",
+    "description": "Fonds de capital-risque panafricain axé sur les startups à impact positif. Investit dans les entreprises qui améliorent l accès aux services essentiels pour les populations africaines. Focus agriculture, santé et services financiers.",
+    "sectors": [
+      "agritech",
+      "healthtech",
+      "fintech",
+      "edtech",
+      "cleantech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 200000,
+    "ticket_max": 3000000,
+    "currency": "USD",
+    "geography": [
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": 5000,
+      "traction_required": "Startup à impact avec modèle viable et potentiel de scaling en Afrique",
+      "team_size_min": 3,
+      "must_have": [
+        "impact social démontré",
+        "modèle viable",
+        "marché africain"
+      ],
+      "nice_to_have": [
+        "mesure impact",
+        "partenariats locaux"
+      ]
+    },
+    "portfolio_examples": [
+      "Agritech petits producteurs Afrique",
+      "Fintech inclusion Afrique de l Est"
+    ],
+    "contact": {
+      "website": "https://www.novastar-africa.com",
+      "email": "pitch@novastar-africa.com",
+      "linkedin": "https://linkedin.com/company/novastar-africa-ventures"
+    },
+    "source_inspiration": "Novastar Ventures"
+  },
+  {
+    "id": "INV_063",
+    "name": "Kepple Africa Ventures",
+    "type": "VC",
+    "description": "Fonds de micro-VC japonais-africain investissant dans un grand nombre de startups tech africaines en phase d amorçage. Stratégie de volume avec des tickets modestes et un accompagnement via réseau international. Présence à Lagos et Nairobi.",
+    "sectors": [
+      "fintech",
+      "e-commerce",
+      "logistics",
+      "healthtech",
+      "SaaS"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 500000,
+    "currency": "USD",
+    "geography": [
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup africaine avec fondateur exceptionnel et premier produit ou traction",
+      "team_size_min": 2,
+      "must_have": [
+        "fondateur exceptionnel",
+        "produit ou MVP",
+        "marché africain"
+      ],
+      "nice_to_have": [
+        "premiers utilisateurs",
+        "scalabilité technique"
+      ]
+    },
+    "portfolio_examples": [
+      "Fintech Nigeria early-stage",
+      "E-commerce Kenya seed"
+    ],
+    "contact": {
+      "website": "https://www.kepple-africa.com",
+      "email": "apply@kepple-africa.com",
+      "linkedin": "https://linkedin.com/company/kepple-africa-ventures"
+    },
+    "source_inspiration": "Kepple Africa"
+  },
+  {
+    "id": "INV_064",
+    "name": "Tony Elumelu Foundation Fund",
+    "type": "Fonds Public",
+    "description": "Programme de la fondation d un leader du secteur financier africain offrant formation, mentorat et capital d amorçage aux entrepreneurs africains. Subventions non dilutives de 5000 USD par entrepreneur sélectionné. Programme de 12 semaines de formation en ligne.",
+    "sectors": [
+      "tous secteurs",
+      "agritech",
+      "fintech",
+      "commerce",
+      "services"
+    ],
+    "stage": [
+      "pré-seed"
+    ],
+    "ticket_min": 5000,
+    "ticket_max": 5000,
+    "currency": "USD",
+    "geography": [
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Entrepreneur africain avec idée de business et motivation forte pour construire une entreprise viable",
+      "team_size_min": 1,
+      "must_have": [
+        "nationalité africaine",
+        "idée de business",
+        "engagement programme formation"
+      ],
+      "nice_to_have": [
+        "expérience entrepreneuriale",
+        "impact communautaire"
+      ]
+    },
+    "portfolio_examples": [
+      "Micro-entreprise agritech Nigeria",
+      "Commerce digital Afrique de l Ouest"
+    ],
+    "contact": {
+      "website": "https://www.tef-fund.org",
+      "email": "apply@tef-fund.org",
+      "linkedin": "https://linkedin.com/company/tef-fund"
+    },
+    "source_inspiration": "Tony Elumelu Foundation"
+  },
+  {
+    "id": "INV_065",
+    "name": "Catalyst Impact Fund",
+    "type": "Fonds Public",
+    "description": "Fonds d investissement à impact pour startups inclusives dans les marchés émergents. Finance les entreprises qui servent les populations à faibles revenus avec des services financiers, de santé ou d éducation. Accompagnement technique et accès réseau.",
+    "sectors": [
+      "inclusion financière",
+      "healthtech",
+      "edtech",
+      "agritech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 10000,
+    "ticket_max": 100000,
+    "currency": "USD",
+    "geography": [
+      "Afrique",
+      "MENA",
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup inclusive avec produit servant les populations à faibles revenus et modèle durable",
+      "team_size_min": 2,
+      "must_have": [
+        "impact inclusion",
+        "produit fonctionnel",
+        "populations cibles identifiées"
+      ],
+      "nice_to_have": [
+        "mesure impact social",
+        "partenariats ONG ou gouvernement"
+      ]
+    },
+    "portfolio_examples": [
+      "Fintech micro-épargne Afrique",
+      "Healthtech accès soins ruraux"
+    ],
+    "contact": {
+      "website": "https://www.catalyst-impact-fund.org",
+      "email": "apply@catalyst-impact-fund.org",
+      "linkedin": "https://linkedin.com/company/catalyst-impact-fund"
+    },
+    "source_inspiration": "Catalyst Fund"
+  },
+  {
+    "id": "INV_066",
+    "name": "Jack Ma Netpreneur Foundation",
+    "type": "Fonds Public",
+    "description": "Fondation offrant des prix et du mentorat aux entrepreneurs africains les plus prometteurs. Programme de compétition avec des prix allant jusqu à 300K USD pour les finalistes. Accès à un réseau mondial d entrepreneurs tech.",
+    "sectors": [
+      "e-commerce",
+      "fintech",
+      "logistics",
+      "agritech",
+      "tous secteurs tech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 25000,
+    "ticket_max": 300000,
+    "currency": "USD",
+    "geography": [
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Entrepreneur africain avec startup en activité démontrant innovation et impact",
+      "team_size_min": 2,
+      "must_have": [
+        "startup active",
+        "innovation démontrée",
+        "impact positif"
+      ],
+      "nice_to_have": [
+        "traction significative",
+        "potentiel panafricain"
+      ]
+    },
+    "portfolio_examples": [
+      "E-commerce innovation Afrique",
+      "Agritech primée continent"
+    ],
+    "contact": {
+      "website": "https://www.jm-netpreneur.org",
+      "email": "apply@jm-netpreneur.org",
+      "linkedin": "https://linkedin.com/company/jm-netpreneur-foundation"
+    },
+    "source_inspiration": "Jack Ma Foundation Africa Netpreneur Prize"
+  },
+  {
+    "id": "INV_067",
+    "name": "GSMA Mobile Innovation Fund",
+    "type": "Fonds Public",
+    "description": "Fonds d innovation de l association mondiale des opérateurs mobiles soutenant les startups qui utilisent la technologie mobile pour le développement. Subventions et assistance technique pour solutions mobile-first. Focus Afrique et marchés émergents.",
+    "sectors": [
+      "fintech mobile",
+      "healthtech mobile",
+      "agritech mobile",
+      "IoT",
+      "connectivité"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 500000,
+    "currency": "USD",
+    "geography": [
+      "Afrique",
+      "MENA",
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Solution mobile-first avec potentiel impact à grande échelle dans marchés émergents",
+      "team_size_min": 2,
+      "must_have": [
+        "solution mobile-first",
+        "impact développement",
+        "marchés émergents"
+      ],
+      "nice_to_have": [
+        "partenariat opérateur mobile",
+        "scalabilité technique"
+      ]
+    },
+    "portfolio_examples": [
+      "Solution mobile money agriculteurs",
+      "Healthtech SMS populations rurales"
+    ],
+    "contact": {
+      "website": "https://www.gsma-innovation-fund.org",
+      "email": "fund@gsma-innovation.org",
+      "linkedin": "https://linkedin.com/company/gsma-mobile-innovation"
+    },
+    "source_inspiration": "GSMA Innovation Fund"
+  },
+  {
+    "id": "INV_068",
+    "name": "Flat6 Labs Accelerator MENA",
+    "type": "Accélérateur",
+    "description": "Programme d accélération avec présence dans plusieurs pays MENA. 4 mois d accompagnement intensif avec mentorat, espace de travail et financement. Demo day connectant les startups aux investisseurs régionaux.",
+    "sectors": [
+      "tous secteurs tech",
+      "fintech",
+      "e-commerce",
+      "SaaS"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 20000,
+    "ticket_max": 100000,
+    "currency": "USD",
+    "geography": [
+      "MENA",
+      "Afrique du Nord"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Idée innovante ou MVP avec équipe dédiée et potentiel marché MENA",
+      "team_size_min": 2,
+      "must_have": [
+        "équipe dédiée",
+        "idée ou MVP",
+        "marché MENA"
+      ],
+      "nice_to_have": [
+        "première traction",
+        "co-fondateur technique"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup fintech Tunisie accélérée",
+      "E-commerce Égypte en seed"
+    ],
+    "contact": {
+      "website": "https://www.flat6-accelerator-mena.com",
+      "email": "apply@flat6-accelerator.com",
+      "linkedin": "https://linkedin.com/company/flat6-accelerator-mena"
+    },
+    "source_inspiration": "Flat6Labs (accélérateur)"
+  },
+  {
+    "id": "INV_069",
+    "name": "StartupBootcamp AfriTech",
+    "type": "Accélérateur",
+    "description": "Programme d accélération dédié aux startups tech africaines les plus prometteuses. 3 mois d accompagnement intensif au Cap ou à Lagos avec mentorat par plus de 200 experts. Financement et accès investisseurs internationaux.",
+    "sectors": [
+      "fintech",
+      "insurtech",
+      "logistics",
+      "agritech",
+      "e-commerce"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 20000,
+    "ticket_max": 120000,
+    "currency": "USD",
+    "geography": [
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup tech africaine avec MVP et potentiel de disruption sectorielle",
+      "team_size_min": 2,
+      "must_have": [
+        "MVP",
+        "équipe tech",
+        "potentiel disruption"
+      ],
+      "nice_to_have": [
+        "premiers clients",
+        "métriques engagement"
+      ]
+    },
+    "portfolio_examples": [
+      "Insurtech Afrique du Sud",
+      "Agritech Kenya accélérée"
+    ],
+    "contact": {
+      "website": "https://www.sbc-afritech.com",
+      "email": "apply@sbc-afritech.com",
+      "linkedin": "https://linkedin.com/company/startupbootcamp-afritech"
+    },
+    "source_inspiration": "Startupbootcamp AfriTech"
+  },
+  {
+    "id": "INV_070",
+    "name": "Google Startups Africa",
+    "type": "Accélérateur",
+    "description": "Programme de soutien aux startups africaines par un géant technologique mondial. Offre financement equity-free, crédits cloud, mentorat technique et accès au réseau mondial. Focus sur les startups utilisant l IA et les technologies avancées.",
+    "sectors": [
+      "IA",
+      "fintech",
+      "healthtech",
+      "edtech",
+      "SaaS"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 150000,
+    "currency": "USD",
+    "geography": [
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup africaine utilisant technologies avancées avec potentiel impact à grande échelle",
+      "team_size_min": 2,
+      "must_have": [
+        "utilisation technologie avancée",
+        "potentiel impact",
+        "équipe africaine"
+      ],
+      "nice_to_have": [
+        "utilisation IA/ML",
+        "scalabilité continentale"
+      ]
+    },
+    "portfolio_examples": [
+      "IA santé Afrique",
+      "Edtech IA pour étudiants africains"
+    ],
+    "contact": {
+      "website": "https://www.google-startups-africa.com",
+      "email": "africa@google-startups.com",
+      "linkedin": "https://linkedin.com/company/google-startups-africa"
+    },
+    "source_inspiration": "Google for Startups Africa"
+  },
+  {
+    "id": "INV_071",
+    "name": "Y Combinator Global",
+    "type": "Accélérateur",
+    "description": "Le plus célèbre accélérateur de startups au monde basé en Californie. Programme de 3 mois avec financement standard, mentorat intensif et accès au plus grand réseau d alumni tech. A financé plus de 4000 startups dont de nombreuses licornes.",
+    "sectors": [
+      "tous secteurs tech",
+      "SaaS",
+      "marketplace",
+      "fintech",
+      "IA"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 125000,
+    "ticket_max": 500000,
+    "currency": "USD",
+    "geography": [
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Fondateurs exceptionnels avec une idée ambitieuse et la capacité de construire rapidement",
+      "team_size_min": 2,
+      "must_have": [
+        "fondateurs exceptionnels",
+        "ambition mondiale",
+        "capacité exécution"
+      ],
+      "nice_to_have": [
+        "prototype",
+        "premiers utilisateurs",
+        "croissance hebdomadaire"
+      ]
+    },
+    "portfolio_examples": [
+      "Futures licornes mondiales",
+      "Startups IA révolutionnaires"
+    ],
+    "contact": {
+      "website": "https://www.yc-global.com",
+      "email": "apply@yc-global.com",
+      "linkedin": "https://linkedin.com/company/yc-global"
+    },
+    "source_inspiration": "Y Combinator"
+  },
+  {
+    "id": "INV_072",
+    "name": "TechStars Global Fund",
+    "type": "Accélérateur",
+    "description": "Réseau mondial d accélérateurs avec des programmes dans plus de 40 villes. Accompagnement intensif de 13 semaines avec mentorat par des entrepreneurs expérimentés. Financement standard en échange d une participation au capital.",
+    "sectors": [
+      "tous secteurs tech",
+      "SaaS",
+      "fintech",
+      "healthtech",
+      "logistics"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 120000,
+    "currency": "USD",
+    "geography": [
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup tech avec MVP et équipe fondatrice forte prête pour accélération intensive",
+      "team_size_min": 2,
+      "must_have": [
+        "MVP",
+        "équipe fondatrice",
+        "ambition croissance"
+      ],
+      "nice_to_have": [
+        "premiers utilisateurs",
+        "engagement programme"
+      ]
+    },
+    "portfolio_examples": [
+      "SaaS mondial accéléré",
+      "Fintech internationale"
+    ],
+    "contact": {
+      "website": "https://www.techstars-global-fund.com",
+      "email": "apply@techstars-global.com",
+      "linkedin": "https://linkedin.com/company/techstars-global-fund"
+    },
+    "source_inspiration": "Techstars"
+  },
+  {
+    "id": "INV_073",
+    "name": "500 Startups Global",
+    "type": "VC",
+    "description": "Fonds de micro-VC et accélérateur global investissant dans des startups early-stage à travers le monde. Un des investisseurs les plus actifs au monde avec des centaines d investissements par an. Expertise forte en growth marketing et internationalisation.",
+    "sectors": [
+      "tous secteurs tech",
+      "fintech",
+      "SaaS",
+      "e-commerce",
+      "edtech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 25000,
+    "ticket_max": 250000,
+    "currency": "USD",
+    "geography": [
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup tech avec potentiel mondial et fondateur capable d exécuter rapidement",
+      "team_size_min": 2,
+      "must_have": [
+        "fondateur fort",
+        "idée scalable",
+        "marché mondial"
+      ],
+      "nice_to_have": [
+        "premiers revenus",
+        "métriques croissance"
+      ]
+    },
+    "portfolio_examples": [
+      "Startups émergentes financées mondialement",
+      "Fintech marchés émergents"
+    ],
+    "contact": {
+      "website": "https://www.500-startups-global.com",
+      "email": "apply@500-global.com",
+      "linkedin": "https://linkedin.com/company/500-startups-global"
+    },
+    "source_inspiration": "500 Global"
+  },
+  {
+    "id": "INV_074",
+    "name": "Sequoia Scout Network",
+    "type": "VC",
+    "description": "Programme de scouting du fonds de venture capital le plus prestigieux au monde. Investit via des scouts dans les toutes premières phases des startups les plus prometteuses. Tickets modestes mais accès potentiel aux fonds principaux pour les tours suivants.",
+    "sectors": [
+      "deeptech",
+      "SaaS",
+      "fintech",
+      "IA",
+      "consumer tech"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 200000,
+    "currency": "USD",
+    "geography": [
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Innovation de classe mondiale avec fondateur exceptionnel et potentiel de licorne",
+      "team_size_min": 1,
+      "must_have": [
+        "innovation exceptionnelle",
+        "fondateur visionnaire"
+      ],
+      "nice_to_have": [
+        "avantage technologique unique",
+        "marché TAM >1B USD"
+      ]
+    },
+    "portfolio_examples": [
+      "Pré-seed future décacorne",
+      "Deeptech révolutionnaire"
+    ],
+    "contact": {
+      "website": "https://www.sequoia-scout.com",
+      "email": "scout@sequoia-scout.com",
+      "linkedin": "https://linkedin.com/company/sequoia-scout-network"
+    },
+    "source_inspiration": "Sequoia Scout"
+  },
+  {
+    "id": "INV_075",
+    "name": "a16z Scout Program",
+    "type": "VC",
+    "description": "Programme de scout d un des fonds VC les plus influents de la Silicon Valley. Scouts composés d entrepreneurs et opérateurs investissant dans les startups les plus early-stage. Porte d entrée vers un écosystème d investissement majeur.",
+    "sectors": [
+      "SaaS",
+      "crypto",
+      "IA",
+      "consumer tech",
+      "biotech"
+    ],
+    "stage": [
+      "pré-seed"
+    ],
+    "ticket_min": 25000,
+    "ticket_max": 100000,
+    "currency": "USD",
+    "geography": [
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Idée transformatrice avec fondateur exceptionnel dans un marché à fort potentiel de disruption",
+      "team_size_min": 1,
+      "must_have": [
+        "idée transformatrice",
+        "fondateur exceptionnel"
+      ],
+      "nice_to_have": [
+        "premier prototype",
+        "réseau Silicon Valley"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup crypto early-stage",
+      "IA générative pré-seed"
+    ],
+    "contact": {
+      "website": "https://www.a16z-scout.com",
+      "email": "scout@a16z-scout.com",
+      "linkedin": "https://linkedin.com/company/a16z-scout-program"
+    },
+    "source_inspiration": "a16z Scout"
+  },
+  {
+    "id": "INV_076",
+    "name": "Plug and Play Ventures",
+    "type": "Accélérateur",
+    "description": "Plateforme d innovation et accélérateur mondial connectant startups et grandes entreprises. Programmes sectoriels dans plus de 30 pays. Financement et accès à un réseau de plus de 500 corporates partenaires.",
+    "sectors": [
+      "fintech",
+      "insurtech",
+      "supply chain",
+      "mobilité",
+      "IoT",
+      "smart city"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 25000,
+    "ticket_max": 200000,
+    "currency": "USD",
+    "geography": [
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup tech avec solution pouvant intéresser les grandes entreprises partenaires du réseau",
+      "team_size_min": 2,
+      "must_have": [
+        "solution B2B",
+        "produit tech",
+        "intérêt corporate"
+      ],
+      "nice_to_have": [
+        "POC avec entreprise",
+        "scalabilité mondiale"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup fintech connectée aux banques",
+      "IoT smart city corporate"
+    ],
+    "contact": {
+      "website": "https://www.plugandplay-ventures.com",
+      "email": "ventures@plugandplay.com",
+      "linkedin": "https://linkedin.com/company/plugandplay-ventures"
+    },
+    "source_inspiration": "Plug and Play"
+  },
+  {
+    "id": "INV_077",
+    "name": "Antler Global Fund",
+    "type": "VC",
+    "description": "Plateforme mondiale de venture capital investissant dès le jour zéro. Aide les fondateurs à former des équipes, valider des idées et construire des entreprises. Programmes dans plus de 25 villes à travers le monde.",
+    "sectors": [
+      "tous secteurs tech",
+      "SaaS",
+      "deeptech",
+      "fintech",
+      "IA"
+    ],
+    "stage": [
+      "pré-seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 150000,
+    "currency": "USD",
+    "geography": [
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Individu exceptionnel ou équipe naissante avec volonté de créer startup tech ambitieuse",
+      "team_size_min": 1,
+      "must_have": [
+        "individu exceptionnel",
+        "ambition tech",
+        "engagement programme"
+      ],
+      "nice_to_have": [
+        "expertise sectorielle",
+        "expérience entrepreneuriale"
+      ]
+    },
+    "portfolio_examples": [
+      "Startup co-fondée dans le programme",
+      "IA créée from scratch"
+    ],
+    "contact": {
+      "website": "https://www.antler-global-fund.com",
+      "email": "apply@antler-global.com",
+      "linkedin": "https://linkedin.com/company/antler-global-fund"
+    },
+    "source_inspiration": "Antler"
+  },
+  {
+    "id": "INV_078",
+    "name": "Founders Factory Global",
+    "type": "Accélérateur",
+    "description": "Studio de startups et accélérateur global co-créant des entreprises avec des corporates partenaires. Programmes de 6 mois combinant ressources corporate et agilité startup. Présence à Londres, Johannesburg et Lagos.",
+    "sectors": [
+      "fintech",
+      "healthtech",
+      "edtech",
+      "consumer tech",
+      "IA"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 30000,
+    "ticket_max": 250000,
+    "currency": "USD",
+    "geography": [
+      "Global",
+      "Afrique"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup ou entrepreneur avec idée innovante alignée avec les secteurs des corporates partenaires",
+      "team_size_min": 1,
+      "must_have": [
+        "innovation",
+        "alignement corporate",
+        "potentiel croissance"
+      ],
+      "nice_to_have": [
+        "prototype",
+        "connaissance sectorielle"
+      ]
+    },
+    "portfolio_examples": [
+      "Fintech co-créée avec banque",
+      "Healthtech accélérée par assureur"
+    ],
+    "contact": {
+      "website": "https://www.founders-factory-global.com",
+      "email": "apply@founders-factory.com",
+      "linkedin": "https://linkedin.com/company/founders-factory-global"
+    },
+    "source_inspiration": "Founders Factory"
+  },
+  {
+    "id": "INV_079",
+    "name": "SeedStars Emerging Markets",
+    "type": "VC",
+    "description": "Fonds d investissement et accélérateur global focalisé sur les startups dans les marchés émergents. Organise des compétitions de pitch dans plus de 80 pays et investit dans les startups les plus prometteuses. Focus inclusion et impact.",
+    "sectors": [
+      "fintech",
+      "edtech",
+      "healthtech",
+      "agritech",
+      "SaaS"
+    ],
+    "stage": [
+      "pré-seed",
+      "seed"
+    ],
+    "ticket_min": 50000,
+    "ticket_max": 500000,
+    "currency": "USD",
+    "geography": [
+      "Global",
+      "Afrique",
+      "MENA"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Startup de marché émergent avec solution innovante à un problème local ou régional",
+      "team_size_min": 2,
+      "must_have": [
+        "marché émergent",
+        "solution innovante",
+        "équipe locale"
+      ],
+      "nice_to_have": [
+        "traction marché",
+        "impact social"
+      ]
+    },
+    "portfolio_examples": [
+      "Fintech Afrique primée",
+      "Edtech MENA sélectionnée"
+    ],
+    "contact": {
+      "website": "https://www.seedstars-emerging.com",
+      "email": "apply@seedstars-emerging.com",
+      "linkedin": "https://linkedin.com/company/seedstars-emerging-markets"
+    },
+    "source_inspiration": "Seedstars"
+  },
+  {
+    "id": "INV_080",
+    "name": "Pioneer Ventures Global",
+    "type": "VC",
+    "description": "Programme mondial de scouting et financement des talents tech les plus prometteurs peu importe leur localisation. Utilise un système de classement en ligne pour identifier les fondateurs les plus déterminés. Financement rapide et accès communauté mondiale.",
+    "sectors": [
+      "tous secteurs tech",
+      "IA",
+      "SaaS",
+      "deeptech",
+      "consumer tech"
+    ],
+    "stage": [
+      "pré-seed"
+    ],
+    "ticket_min": 25000,
+    "ticket_max": 100000,
+    "currency": "USD",
+    "geography": [
+      "Global"
+    ],
+    "criteria": {
+      "mrr_minimum": null,
+      "traction_required": "Individu exceptionnellement talentueux travaillant sur un projet tech ambitieux",
+      "team_size_min": 1,
+      "must_have": [
+        "talent exceptionnel",
+        "projet tech ambitieux",
+        "détermination"
+      ],
+      "nice_to_have": [
+        "prototype",
+        "progrès hebdomadaire mesurable"
+      ]
+    },
+    "portfolio_examples": [
+      "Fondateur solo financé en remote",
+      "Startup deeptech issue du classement"
+    ],
+    "contact": {
+      "website": "https://www.pioneer-ventures-global.com",
+      "email": "apply@pioneer-ventures.com",
+      "linkedin": "https://linkedin.com/company/pioneer-ventures-global"
+    },
+    "source_inspiration": "Pioneer"
   }
 ]
