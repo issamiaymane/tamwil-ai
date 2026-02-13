@@ -6,6 +6,10 @@ from dotenv import load_dotenv
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 load_dotenv(ROOT_DIR / ".env")
 
+# Suppress HuggingFace warnings
+os.environ.setdefault("HF_HUB_DISABLE_SYMLINKS_WARNING", "1")
+os.environ.setdefault("HF_HUB_DISABLE_IMPLICIT_TOKEN", "1")
+
 # OpenAI
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 
