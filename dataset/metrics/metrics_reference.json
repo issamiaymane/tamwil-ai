@@ -3,8 +3,8 @@
     "id": "MRR",
     "name": "Monthly Recurring Revenue",
     "name_fr": "Revenu Mensuel Récurrent",
-    "definition": "Le MRR représente la somme de tous les revenus récurrents générés chaque mois par les abonnements actifs. C'est l'indicateur fondamental de la santé financière d'une startup SaaS, car il mesure la prévisibilité et la stabilité des revenus. Il inclut les nouveaux abonnements, les expansions (upsells), les contractions (downgrades) et exclut les revenus ponctuels comme les frais d'installation ou de conseil. Le MRR se décompose en quatre composantes : New MRR (nouveaux clients), Expansion MRR (montées en gamme), Contraction MRR (descentes en gamme) et Churned MRR (clients perdus).",
-    "formula": "MRR = Somme des revenus récurrents mensuels de tous les abonnés actifs = (Nombre d'abonnés × Prix moyen de l'abonnement mensuel) + Expansion MRR - Contraction MRR - Churned MRR. Pour les abonnements annuels : montant annuel / 12.",
+    "definition": "Le MRR représente la somme de tous les revenus récurrents générés chaque mois par les abonnements actifs. C'est l'indicateur fondamental de la santé financière d'une startup SaaS. Il inclut les nouveaux abonnements, les expansions (upsells), les contractions (downgrades) et exclut les revenus ponctuels. Le MRR se décompose en : New MRR (nouveaux clients), Expansion MRR (montées en gamme), Contraction MRR (descentes en gamme) et Churned MRR (clients perdus).",
+    "formula": "MRR = Somme des revenus récurrents mensuels de tous les abonnés actifs. Pour les abonnements annuels : montant annuel / 12.",
     "unit": "currency",
     "applicable_sectors": ["SaaS", "abonnement"],
     "benchmarks": {
@@ -33,23 +33,25 @@
         "excellent": ">5M€/mois"
       }
     },
-    "interpretation": "Le MRR est la métrique reine pour toute startup fonctionnant sur un modèle d'abonnement. Les investisseurs l'utilisent pour évaluer la traction commerciale et projeter la croissance future. Un MRR en croissance constante démontre une adéquation produit-marché (product-market fit) et la capacité de l'équipe à acquérir et retenir des clients. Les investisseurs seed recherchent généralement un MRR minimum de 10-15K€ pour confirmer le product-market fit, tandis qu'en série A, un MRR de 100K€+ est souvent attendu. Au Maroc, les seuils peuvent être ajustés à la baisse de 30-50% par rapport aux benchmarks américains en raison du pouvoir d'achat local, mais les startups ciblant l'international doivent viser les standards globaux.",
+    "interpretation": "Le MRR est la métrique reine pour toute startup SaaS. Les investisseurs seed recherchent généralement un MRR minimum de 10-15K€ pour confirmer le product-market fit. En série A, un MRR de 100-250K€ est attendu, correspondant à un ARR de $1.5-3M selon SaaStr. Selon le rapport SaaS Capital 2025 (1 500+ sociétés analysées), la médiane de croissance du MRR est de 25% annuel pour les SaaS privées. Au Maroc, les seuils peuvent être ajustés à la baisse de 30-50% par rapport aux benchmarks américains.",
     "improvement_tips": [
-      "Mettre en place une stratégie d'upsell en proposant des fonctionnalités premium aux clients existants pour augmenter l'ARPU",
-      "Réduire le churn en améliorant l'onboarding et le support client proactif pour maximiser la rétention",
-      "Augmenter le prix moyen par client en proposant des plans annuels avec une remise incitative de 15-20%",
-      "Diversifier les canaux d'acquisition (SEO, contenu, partenariats) pour augmenter le volume de nouveaux abonnés",
-      "Implémenter un système de facturation automatique et de relance pour minimiser les échecs de paiement involontaires"
+      "Mettre en place une stratégie d'upsell en proposant des fonctionnalités premium pour augmenter l'ARPU",
+      "Réduire le churn en améliorant l'onboarding et le support client proactif",
+      "Proposer des plans annuels avec remise de 15-20% pour sécuriser le revenu",
+      "Diversifier les canaux d'acquisition (SEO, contenu, partenariats)"
     ],
     "related_metrics": ["ARR", "MRR_GROWTH", "CHURN_RATE", "REVENUE_CHURN"],
-    "source_inspiration": "SaaS Capital Annual Survey 2024, OpenView Partners SaaS Benchmarks, Bessemer Venture Partners Cloud Index"
+    "sources": [
+      "https://www.saas-capital.com/research/",
+      "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report"
+    ]
   },
   {
     "id": "ARR",
     "name": "Annual Recurring Revenue",
     "name_fr": "Revenu Annuel Récurrent",
-    "definition": "L'ARR est la valeur annualisée des revenus récurrents. Il est calculé en multipliant le MRR par 12 et représente le montant total des revenus récurrents qu'une entreprise peut s'attendre à générer sur une période de 12 mois, en supposant qu'aucun changement ne se produise dans la base d'abonnés. C'est la métrique privilégiée par les investisseurs pour évaluer la taille, comparer les startups SaaS entre elles et déterminer les multiples de valorisation. L'ARR ne doit inclure que les revenus véritablement récurrents, excluant les services ponctuels et les frais d'installation.",
-    "formula": "ARR = MRR × 12. Attention : ne pas inclure les revenus non récurrents (services de consulting, frais de setup, paiements ponctuels).",
+    "definition": "L'ARR est la valeur annualisée des revenus récurrents (MRR × 12). C'est la métrique privilégiée par les investisseurs pour évaluer la taille d'une startup SaaS, comparer les sociétés entre elles et déterminer les multiples de valorisation. L'ARR ne doit inclure que les revenus véritablement récurrents, excluant les services ponctuels et les frais d'installation.",
+    "formula": "ARR = MRR × 12. Ne pas inclure les revenus non récurrents (consulting, frais de setup).",
     "unit": "currency",
     "applicable_sectors": ["SaaS", "abonnement"],
     "benchmarks": {
@@ -78,112 +80,121 @@
         "excellent": ">60M€/an"
       }
     },
-    "interpretation": "L'ARR est le langage commun entre fondateurs et investisseurs pour évaluer la taille d'une startup SaaS. Selon SaaS Capital, la médiane des startups levant en série A se situe autour de 1-2M€ d'ARR. Les multiples de valorisation s'expriment en fonction de l'ARR : une startup en forte croissance (>100% annuel) peut être valorisée à 15-30x son ARR, tandis qu'une croissance modérée (30-50% annuel) se situera entre 5-10x ARR. Pour les startups marocaines, l'ARR est particulièrement important car il démontre la capacité à générer des revenus prévisibles dans un marché émergent, un signal fort pour les investisseurs internationaux.",
+    "interpretation": "L'ARR est le langage commun entre fondateurs et investisseurs. Selon SaaStr, les startups levant en série A visent typiquement $1.5-3M d'ARR. Les multiples de valorisation s'expriment en fonction de l'ARR : le Bessemer Cloud 100 (2024) affiche une médiane de 20x ARR pour les 100 premières sociétés cloud privées, avec une croissance médiane de 75%. Pour une croissance modérée (25-50% YoY, médiane SaaS Capital 2025), les multiples se situent entre 5-10x ARR.",
     "improvement_tips": [
-      "Proposer des contrats annuels avec des remises de 15-20% par rapport au tarif mensuel pour sécuriser et stabiliser l'ARR",
-      "Développer une stratégie d'expansion de comptes (land and expand) pour augmenter l'ARR par client existant",
-      "Cibler des segments de marché à plus forte valeur pour augmenter le panier moyen et accélérer la croissance de l'ARR",
-      "Mettre en place un programme de partenariats et de revendeurs pour accélérer l'acquisition à moindre coût"
+      "Proposer des contrats annuels avec remises de 15-20% pour sécuriser l'ARR",
+      "Développer une stratégie land-and-expand pour augmenter l'ARR par client",
+      "Cibler des segments à plus forte valeur pour augmenter le panier moyen",
+      "Mettre en place un programme de partenariats et revendeurs"
     ],
     "related_metrics": ["MRR", "MRR_GROWTH", "LTV", "CHURN_RATE"],
-    "source_inspiration": "Bessemer Venture Partners Cloud Index, SaaS Capital Annual Survey 2024, KeyBanc Capital Markets SaaS Survey"
+    "sources": [
+      "https://www.saas-capital.com/research/",
+      "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report",
+      "https://www.saastr.com/"
+    ]
   },
   {
     "id": "MRR_GROWTH",
     "name": "MRR Growth Rate",
     "name_fr": "Taux de Croissance du MRR",
-    "definition": "Le taux de croissance du MRR mesure l'augmentation (ou la diminution) en pourcentage du revenu mensuel récurrent d'un mois à l'autre (Month-over-Month). Il décompose la croissance nette en quatre composantes : nouveau MRR (nouveaux clients), expansion MRR (upsells et cross-sells), contraction MRR (downgrades) et churned MRR (clients perdus). C'est l'indicateur le plus scruté par les investisseurs early-stage car il reflète le momentum commercial et la capacité de la startup à scaler.",
-    "formula": "Taux de Croissance MRR (MoM) = ((MRR du mois en cours - MRR du mois précédent) / MRR du mois précédent) × 100. Peut aussi se décomposer en : (New MRR + Expansion MRR - Churned MRR - Contraction MRR) / MRR mois N-1 × 100.",
+    "definition": "Le taux de croissance du MRR mesure l'augmentation en pourcentage du revenu mensuel récurrent d'un mois à l'autre (Month-over-Month) ou d'une année à l'autre (Year-over-Year). Il décompose la croissance nette en : nouveau MRR, expansion MRR, contraction MRR et churned MRR. C'est l'indicateur le plus scruté par les investisseurs early-stage.",
+    "formula": "Taux de Croissance MRR (MoM) = ((MRR mois N - MRR mois N-1) / MRR mois N-1) × 100. YoY = ((MRR mois N - MRR même mois N-1) / MRR même mois N-1) × 100.",
     "unit": "percentage",
     "applicable_sectors": ["SaaS", "abonnement", "marketplace"],
     "benchmarks": {
       "pre_seed": {
-        "bad": "<5% mois sur mois",
-        "ok": "5-10% mois sur mois",
-        "good": "10-20% mois sur mois",
-        "excellent": ">20% mois sur mois"
+        "bad": "<5% MoM",
+        "ok": "5-10% MoM",
+        "good": "10-20% MoM",
+        "excellent": ">20% MoM"
       },
       "seed": {
-        "bad": "<5% mois sur mois",
-        "ok": "5-10% mois sur mois",
-        "good": "10-15% mois sur mois",
-        "excellent": ">15% mois sur mois"
+        "bad": "<5% MoM",
+        "ok": "5-10% MoM",
+        "good": "10-15% MoM",
+        "excellent": ">15% MoM"
       },
       "serie_a": {
-        "bad": "<3% mois sur mois",
-        "ok": "3-7% mois sur mois",
-        "good": "7-12% mois sur mois",
-        "excellent": ">12% mois sur mois"
+        "bad": "<3% MoM",
+        "ok": "3-7% MoM",
+        "good": "7-12% MoM",
+        "excellent": ">12% MoM"
       },
       "serie_b": {
-        "bad": "<2% mois sur mois",
-        "ok": "2-5% mois sur mois",
-        "good": "5-8% mois sur mois",
-        "excellent": ">8% mois sur mois"
+        "bad": "<2% MoM",
+        "ok": "2-5% MoM",
+        "good": "5-8% MoM",
+        "excellent": ">8% MoM"
       }
     },
-    "interpretation": "Le taux de croissance du MRR est probablement la métrique la plus importante en early-stage car elle indique la vitesse à laquelle la startup capte le marché. Une croissance MoM de 15-20% est considérée comme exceptionnelle selon Y Combinator (la fameuse règle des 7% par semaine). Un taux de 10% mois sur mois signifie un triplement annuel du revenu (règle du T2D3 : triple, triple, double, double, double). Les investisseurs regardent aussi la décomposition de cette croissance : une startup dont la croissance provient principalement de l'expansion plutôt que de nouveaux clients a généralement un meilleur profil de risque. Attention à la loi des grands nombres : maintenir 15% MoM sur 100K€ de MRR est bien plus difficile que sur 5K€.",
+    "interpretation": "Selon le SaaS Capital Annual Survey 2025 (1 500+ sociétés), la médiane de croissance annuelle (YoY) pour les SaaS privées est de 25%. Les meilleures (top quartile) atteignent 50%+. Le Bessemer Cloud 100 affiche une médiane de 75% de croissance pour les 100 premières sociétés cloud. Un taux MoM de 10% correspond à un triplement annuel (T2D3 : triple, triple, double, double, double). Y Combinator recommande 7% de croissance hebdomadaire en phase d'accélération.",
     "improvement_tips": [
-      "Analyser la décomposition du MRR (nouveau, expansion, contraction, churn) pour identifier les leviers de croissance les plus efficaces",
-      "Optimiser l'entonnoir de conversion à chaque étape pour maximiser le nouveau MRR acquis",
-      "Créer des mécanismes d'expansion naturels dans le produit (limites d'usage, fonctionnalités premium, tarification à l'usage)",
-      "Réduire le churn en identifiant les signaux d'alerte précoces grâce à l'analyse comportementale des utilisateurs",
-      "Mettre en place des boucles de croissance virales (programmes de parrainage, partage in-app) pour accélérer l'acquisition organique"
+      "Analyser la décomposition du MRR (nouveau, expansion, contraction, churn) pour identifier les leviers",
+      "Optimiser l'entonnoir de conversion à chaque étape",
+      "Créer des mécanismes d'expansion naturels dans le produit (limites d'usage, fonctionnalités premium)",
+      "Mettre en place des boucles de croissance virales (parrainage, partage in-app)"
     ],
     "related_metrics": ["MRR", "ARR", "CHURN_RATE", "REVENUE_CHURN", "CAC"],
-    "source_inspiration": "OpenView Partners SaaS Benchmarks 2024, SaaS Capital Growth Benchmarks, Y Combinator Growth Guide, ChartMogul SaaS Growth Report"
+    "sources": [
+      "https://www.saas-capital.com/research/",
+      "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report",
+      "https://www.ycombinator.com/library/5b-how-to-evaluate-startup-ideas"
+    ]
   },
   {
     "id": "CAC",
     "name": "Customer Acquisition Cost",
     "name_fr": "Coût d'Acquisition Client",
-    "definition": "Le CAC représente le coût total moyen dépensé pour acquérir un nouveau client payant. Il englobe l'ensemble des dépenses de vente et de marketing divisées par le nombre de nouveaux clients acquis sur une période donnée. Cela comprend les salaires de l'équipe commerciale et marketing, les dépenses publicitaires, les outils et logiciels, les événements et tout autre coût directement lié à l'acquisition de clients. On distingue le CAC blended (tous canaux confondus) du CAC par canal (organique, payant, outbound).",
-    "formula": "CAC = (Total des dépenses de vente + Total des dépenses de marketing) / Nombre de nouveaux clients acquis sur la période. CAC par canal : CAC Organique (SEO, contenu, referral) vs CAC Payant (publicité, outbound).",
+    "definition": "Le CAC représente le coût total moyen pour acquérir un nouveau client payant. Il englobe les dépenses de vente et de marketing divisées par le nombre de nouveaux clients acquis. On distingue le CAC blended (tous canaux) du CAC par canal (organique, payant, outbound).",
+    "formula": "CAC = (Total dépenses vente + Total dépenses marketing) / Nombre de nouveaux clients acquis sur la période.",
     "unit": "currency",
     "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
     "benchmarks": {
       "pre_seed": {
-        "bad": ">500€ par client",
-        "ok": "200-500€ par client",
-        "good": "50-200€ par client",
-        "excellent": "<50€ par client"
+        "bad": ">500€",
+        "ok": "200-500€",
+        "good": "50-200€",
+        "excellent": "<50€"
       },
       "seed": {
-        "bad": ">1 000€ par client",
-        "ok": "400-1 000€ par client",
-        "good": "100-400€ par client",
-        "excellent": "<100€ par client"
+        "bad": ">1 000€",
+        "ok": "400-1 000€",
+        "good": "100-400€",
+        "excellent": "<100€"
       },
       "serie_a": {
-        "bad": ">2 000€ par client",
-        "ok": "800-2 000€ par client",
-        "good": "200-800€ par client",
-        "excellent": "<200€ par client"
+        "bad": ">2 000€",
+        "ok": "800-2 000€",
+        "good": "200-800€",
+        "excellent": "<200€"
       },
       "serie_b": {
-        "bad": ">5 000€ par client",
-        "ok": "2 000-5 000€ par client",
-        "good": "500-2 000€ par client",
-        "excellent": "<500€ par client"
+        "bad": ">5 000€",
+        "ok": "2 000-5 000€",
+        "good": "500-2 000€",
+        "excellent": "<500€"
       }
     },
-    "interpretation": "Le CAC est essentiel pour comprendre l'efficacité de la machine commerciale. Un CAC élevé n'est pas forcément mauvais s'il est compensé par une LTV élevée (ratio LTV/CAC). Selon OpenView, les startups SaaS B2B en seed ont un CAC médian de 150-250€, mais les meilleurs performeurs maintiennent un CAC inférieur à 100€ grâce à un mix organique/referral fort. Les investisseurs regardent l'évolution du CAC dans le temps : un CAC qui augmente peut signaler une saturation du marché cible ou une inefficacité croissante des canaux d'acquisition. Dans le contexte marocain, le CAC est généralement plus bas grâce à des coûts salariaux et publicitaires inférieurs, mais il faut comparer avec des entreprises similaires dans la région MENA.",
+    "interpretation": "Le CAC est essentiel pour comprendre l'efficacité de la machine commerciale. Un CAC élevé n'est pas forcément mauvais s'il est compensé par une LTV élevée (ratio LTV/CAC). Selon le SaaS Capital 2025 Survey, le ratio LTV:CAC médian est de 3.6:1, ce qui signifie que pour un CAC de 500€, la LTV devrait dépasser 1 800€. Dans le contexte marocain, le CAC est généralement plus bas grâce à des coûts salariaux et publicitaires inférieurs.",
     "improvement_tips": [
-      "Optimiser les canaux d'acquisition en mesurant le CAC par canal pour concentrer les investissements sur les plus performants",
-      "Développer une stratégie de contenu (inbound marketing) et SEO pour réduire la dépendance aux canaux payants à long terme",
-      "Mettre en place un programme de parrainage avec incitations bilatérales pour transformer les clients satisfaits en ambassadeurs",
-      "Améliorer le taux de conversion du site web et des landing pages grâce à l'A/B testing systématique",
-      "Automatiser les processus de vente pour les segments à faible valeur et concentrer les commerciaux sur les gros comptes à forte valeur"
+      "Mesurer le CAC par canal pour concentrer les investissements sur les plus performants",
+      "Développer l'inbound marketing et SEO pour réduire la dépendance aux canaux payants",
+      "Mettre en place un programme de parrainage pour réduire le CAC moyen",
+      "Améliorer le taux de conversion via l'A/B testing systématique"
     ],
     "related_metrics": ["LTV", "LTV_CAC", "PAYBACK_PERIOD", "MRR", "BURN_RATE"],
-    "source_inspiration": "First Round Capital State of Startups, ProfitWell CAC Benchmarks, OpenView Partners SaaS Benchmarks 2024"
+    "sources": [
+      "https://www.saas-capital.com/research/",
+      "https://www.highalpha.com/2024-saas-benchmarks-report"
+    ]
   },
   {
     "id": "LTV",
     "name": "Customer Lifetime Value",
     "name_fr": "Valeur Vie Client",
-    "definition": "La LTV (ou CLV - Customer Lifetime Value) représente le revenu total net qu'un client génère pour l'entreprise sur toute la durée de sa relation commerciale. Elle prend en compte le revenu moyen par client, la marge brute et la durée moyenne de rétention. C'est une métrique prospective qui aide à déterminer combien investir pour acquérir et retenir un client. La LTV doit impérativement être supérieure au CAC pour assurer la viabilité du modèle économique.",
-    "formula": "LTV = (Revenu moyen par client par mois × Marge brute en %) / Taux de churn mensuel. Alternative simplifiée : LTV = ARPU mensuel × Durée de vie moyenne du client en mois × Marge brute. Exemple : ARPU = 100€/mois, marge brute = 80%, churn mensuel = 5% => LTV = (100 × 0,80) / 0,05 = 1 600€.",
+    "definition": "La LTV représente le revenu total net qu'un client génère pour l'entreprise sur toute la durée de sa relation commerciale. Elle prend en compte le revenu moyen par client, la marge brute et la durée de rétention. La LTV doit impérativement être supérieure au CAC pour assurer la viabilité du modèle.",
+    "formula": "LTV = (Revenu moyen par client par mois × Marge brute %) / Taux de churn mensuel. Exemple : ARPU = 100€/mois, marge = 80%, churn mensuel = 3.5% => LTV = (100 × 0.80) / 0.035 = 2 286€.",
     "unit": "currency",
     "applicable_sectors": ["SaaS", "abonnement", "e-commerce", "marketplace", "tous"],
     "benchmarks": {
@@ -212,23 +223,25 @@
         "excellent": ">500 000€"
       }
     },
-    "interpretation": "La LTV est fondamentale car elle détermine le plafond économiquement viable du CAC. Une LTV élevée signifie que chaque client génère beaucoup de valeur, justifiant des investissements importants en acquisition. Les investisseurs évaluent la LTV en parallèle du CAC pour vérifier la viabilité du modèle économique. Une LTV qui augmente dans le temps (grâce à l'upsell ou à une meilleure rétention) est un signal très positif de product-market fit et de pricing power. Selon a16z, les meilleures startups SaaS B2B enterprise affichent des LTV de 10-50K€ grâce à des ARPU élevés et un churn faible. Attention : la LTV est une estimation basée sur des hypothèses, il faut donc être conservateur dans les projections, surtout en phase pré-seed où les données historiques sont limitées.",
+    "interpretation": "La LTV détermine le plafond viable du CAC. Selon le SaaS Capital 2025 Survey, le ratio LTV:CAC médian est de 3.6:1. Avec un churn mensuel moyen de 3.5% pour les SaaS B2B (Vitally 2025), la durée de vie moyenne d'un client est d'environ 29 mois. Les meilleures startups SaaS B2B enterprise affichent des LTV de 10-50K€ grâce à des ARPU élevés et un churn faible (<1% mensuel).",
     "improvement_tips": [
-      "Améliorer la rétention en réduisant le churn grâce à un meilleur onboarding et un customer success proactif",
-      "Augmenter le revenu moyen par client en développant des offres premium et des services complémentaires (upsell/cross-sell)",
-      "Mettre en place une stratégie de cross-sell et upsell basée sur l'analyse des usages et des comportements",
-      "Améliorer la marge brute en optimisant les coûts de délivrance du service (automatisation, self-service)",
-      "Segmenter les clients par LTV pour personnaliser l'expérience et concentrer les efforts de rétention sur les segments à plus forte valeur"
+      "Améliorer la rétention via un meilleur onboarding et un customer success proactif",
+      "Augmenter le revenu moyen par client via l'upsell/cross-sell",
+      "Améliorer la marge brute en optimisant les coûts de délivrance",
+      "Segmenter les clients par LTV pour personnaliser les efforts de rétention"
     ],
     "related_metrics": ["CAC", "LTV_CAC", "CHURN_RATE", "GROSS_MARGIN", "UNIT_ECONOMICS"],
-    "source_inspiration": "First Round Capital Startup Metrics, David Skok (For Entrepreneurs), Bessemer Venture Partners Efficiency Benchmarks"
+    "sources": [
+      "https://www.saas-capital.com/research/",
+      "https://www.vitally.io/post/average-churn-rate"
+    ]
   },
   {
     "id": "LTV_CAC",
     "name": "LTV/CAC Ratio",
     "name_fr": "Ratio LTV/CAC",
-    "definition": "Le ratio LTV/CAC compare la valeur totale générée par un client sur sa durée de vie au coût nécessaire pour l'acquérir. C'est l'un des indicateurs les plus importants de la viabilité et de l'efficacité du modèle économique d'une startup. Un ratio supérieur à 3x est généralement considéré comme sain par les investisseurs, signifiant que chaque euro investi en acquisition génère au moins 3 euros de valeur client sur la durée.",
-    "formula": "Ratio LTV/CAC = Valeur Vie Client (LTV) / Coût d'Acquisition Client (CAC). Exemple : si LTV = 3 000€ et CAC = 500€, le ratio = 6x.",
+    "definition": "Le ratio LTV/CAC compare la valeur totale générée par un client sur sa durée de vie au coût nécessaire pour l'acquérir. Un ratio supérieur à 3x est considéré comme sain. C'est l'un des indicateurs les plus importants de la viabilité du modèle économique.",
+    "formula": "Ratio LTV/CAC = Valeur Vie Client (LTV) / Coût d'Acquisition Client (CAC). Exemple : LTV = 3 000€ et CAC = 500€ => ratio = 6x.",
     "unit": "ratio",
     "applicable_sectors": ["SaaS", "abonnement", "e-commerce", "marketplace", "tous"],
     "benchmarks": {
@@ -239,8 +252,8 @@
         "excellent": ">3x"
       },
       "seed": {
-        "bad": "<1,5x",
-        "ok": "1,5-3x",
+        "bad": "<1.5x",
+        "ok": "1.5-3x",
         "good": "3-5x",
         "excellent": ">5x"
       },
@@ -257,23 +270,24 @@
         "excellent": ">6x"
       }
     },
-    "interpretation": "Le ratio LTV/CAC est souvent considéré comme le 'Saint Graal' des métriques startup, popularisé par David Skok et a16z. Un ratio inférieur à 1x signifie que l'entreprise perd de l'argent sur chaque client acquis : c'est une situation critique. Un ratio entre 1x et 3x est acceptable mais indique une marge d'amélioration. Le sweet spot se situe entre 3x et 5x. Un ratio supérieur à 5x peut paradoxalement indiquer un sous-investissement en acquisition : l'entreprise pourrait croître plus vite en dépensant davantage. Les investisseurs recherchent un équilibre entre ce ratio et la vitesse de croissance. Pour les startups marocaines, un ratio de 3x+ avec un CAC plus bas qu'en Europe est un argument de vente solide auprès des investisseurs.",
+    "interpretation": "Selon le SaaS Capital Annual Survey 2025, le ratio LTV:CAC médian des SaaS privées est de 3.6:1. Un ratio inférieur à 1x signifie que l'entreprise perd de l'argent sur chaque client. Le sweet spot est 3-5x. Un ratio supérieur à 5x peut indiquer un sous-investissement en acquisition : l'entreprise pourrait croître plus vite en dépensant davantage. Pour les startups marocaines, un ratio de 3x+ avec un CAC plus bas qu'en Europe est un argument solide pour les investisseurs.",
     "improvement_tips": [
-      "Travailler sur les deux leviers simultanément : augmenter la LTV (rétention, upsell) et réduire le CAC (optimisation des canaux, acquisition organique)",
-      "Segmenter les clients par ratio LTV/CAC pour identifier les segments les plus rentables à cibler en priorité",
-      "Développer le bouche-à-oreille et les recommandations organiques via un programme de parrainage pour réduire le CAC moyen",
-      "Investir dans le succès client (Customer Success) pour maximiser la durée de vie et l'expansion des comptes existants",
-      "Analyser régulièrement les cohortes pour vérifier que le ratio s'améliore au fil du temps et ajuster la stratégie en conséquence"
+      "Travailler les deux leviers : augmenter la LTV (rétention, upsell) et réduire le CAC (canaux organiques)",
+      "Segmenter les clients par ratio LTV/CAC pour identifier les segments les plus rentables",
+      "Développer le bouche-à-oreille via un programme de parrainage",
+      "Analyser les cohortes pour vérifier que le ratio s'améliore dans le temps"
     ],
     "related_metrics": ["LTV", "CAC", "PAYBACK_PERIOD", "CHURN_RATE", "GROSS_MARGIN"],
-    "source_inspiration": "David Skok (For Entrepreneurs), a16z '16 Startup Metrics', Bessemer Venture Partners, First Round Capital State of Startups"
+    "sources": [
+      "https://www.saas-capital.com/research/"
+    ]
   },
   {
     "id": "CHURN_RATE",
     "name": "Churn Rate / Logo Churn",
-    "name_fr": "Taux de Désabonnement / Churn Client",
-    "definition": "Le taux de churn (ou taux d'attrition) mesure le pourcentage de clients qui cessent d'utiliser le produit ou annulent leur abonnement sur une période donnée. Le 'logo churn' se concentre sur le nombre de clients perdus, indépendamment de leur valeur. C'est un indicateur critique de la satisfaction client et de l'adéquation produit-marché. Le churn est l'ennemi numéro un de la croissance SaaS : même un churn apparemment faible de 5% mensuel signifie la perte de 46% des clients en un an.",
-    "formula": "Taux de Churn Mensuel = (Nombre de clients perdus durant le mois / Nombre total de clients au début du mois) × 100. Taux de Churn Annuel = 1 - (1 - Taux de Churn Mensuel)^12.",
+    "name_fr": "Taux de Désabonnement",
+    "definition": "Le taux de churn mesure le pourcentage de clients qui cessent d'utiliser le produit ou annulent leur abonnement sur une période donnée. Le logo churn se concentre sur le nombre de clients perdus, indépendamment de leur valeur. C'est un indicateur critique de la satisfaction client et du product-market fit.",
+    "formula": "Taux de Churn Mensuel = (Clients perdus durant le mois / Clients au début du mois) × 100. Churn Annuel = 1 - (1 - Churn Mensuel)^12.",
     "unit": "percentage",
     "applicable_sectors": ["SaaS", "abonnement"],
     "benchmarks": {
@@ -292,8 +306,8 @@
       "serie_a": {
         "bad": ">5% mensuel",
         "ok": "3-5% mensuel",
-        "good": "1,5-3% mensuel",
-        "excellent": "<1,5% mensuel"
+        "good": "1.5-3% mensuel",
+        "excellent": "<1.5% mensuel"
       },
       "serie_b": {
         "bad": ">3% mensuel",
@@ -302,23 +316,26 @@
         "excellent": "<1% mensuel"
       }
     },
-    "interpretation": "Le churn est le tueur silencieux des startups SaaS. Un churn mensuel de 5% oblige à acquérir constamment de nouveaux clients juste pour maintenir le niveau de revenu. Les investisseurs évaluent le churn en fonction du segment de marché : le churn est naturellement plus élevé pour les clients PME (3-7% mensuel) que pour les clients entreprise (<1% mensuel). Selon SaaS Capital, les meilleures startups SaaS B2B affichent un logo churn inférieur à 1% mensuel. Un churn élevé en early-stage peut être acceptable s'il diminue progressivement avec l'amélioration du produit et de l'onboarding. Dans le contexte marocain, le churn peut être influencé par des facteurs spécifiques comme la saisonnalité (Ramadan, été) et les cycles de paiement locaux.",
+    "interpretation": "Selon les données Vitally 2025, le taux de churn mensuel moyen pour les SaaS B2B est de 3.5%, ce qui représente un churn annuel d'environ 35%. Le churn est naturellement plus élevé pour les clients PME/TPE (5-7% mensuel) que pour les clients enterprise (<1% mensuel). Selon SaaS Capital, les meilleures startups SaaS B2B affichent un logo churn inférieur à 1% mensuel. Un churn mensuel de 5% oblige à acquérir constamment de nouveaux clients juste pour maintenir le revenu.",
     "improvement_tips": [
-      "Mettre en place un processus d'onboarding structuré pour que les nouveaux clients atteignent rapidement le premier moment de valeur ('aha moment')",
-      "Identifier les signaux prédictifs de churn (baisse d'utilisation, tickets de support fréquents) et intervenir proactivement avant le désabonnement",
-      "Réaliser des entretiens de sortie systématiques pour comprendre les raisons du désabonnement et corriger les patterns récurrents",
-      "Créer un système de scoring de santé client pour prioriser les interventions de l'équipe Customer Success",
-      "Proposer des alternatives au désabonnement : pause temporaire, downgrade, ou offre de rétention personnalisée"
+      "Structurer l'onboarding pour que les clients atteignent le 'aha moment' rapidement",
+      "Identifier les signaux prédictifs de churn (baisse d'utilisation) et intervenir proactivement",
+      "Réaliser des entretiens de sortie systématiques pour corriger les patterns récurrents",
+      "Proposer des alternatives au désabonnement : pause, downgrade, offre de rétention"
     ],
-    "related_metrics": ["REVENUE_CHURN", "LTV", "MRR", "RETENTION_D30", "NPS"],
-    "source_inspiration": "SaaS Capital Churn Benchmarks 2024, Recurly Research Churn Index, ProfitWell Retention Benchmarks"
+    "related_metrics": ["REVENUE_CHURN", "LTV", "MRR", "NPS"],
+    "sources": [
+      "https://www.vitally.io/post/average-churn-rate",
+      "https://www.saas-capital.com/research/",
+      "https://recurly.com/research/churn-rate-benchmarks/"
+    ]
   },
   {
     "id": "REVENUE_CHURN",
-    "name": "Revenue Churn / Net Revenue Retention",
-    "name_fr": "Churn de Revenu / Rétention Nette de Revenu",
-    "definition": "Le churn de revenu mesure le pourcentage de revenus récurrents perdus en raison des désabonnements et des downgrades. La Rétention Nette de Revenu (NRR ou NDR - Net Dollar Retention) est la métrique inverse qui inclut également l'expansion (upsells) : une NRR supérieure à 100% signifie que les revenus des clients existants augmentent même en tenant compte du churn. C'est la métrique la plus valorisée par les investisseurs car elle mesure la qualité réelle de la base de revenus et le potentiel de croissance organique.",
-    "formula": "NRR = ((MRR début de période + Expansion MRR - Contraction MRR - Churned MRR) / MRR début de période) × 100. Churn de revenu brut = (MRR perdu par churn + MRR perdu par contraction) / MRR début de période × 100. Exemple : MRR début = 100K€, Expansion = 15K€, Contraction = 3K€, Churn = 5K€ => NRR = 107%.",
+    "name": "Net Revenue Retention (NRR)",
+    "name_fr": "Rétention Nette de Revenu (NRR)",
+    "definition": "La NRR (Net Revenue Retention) mesure la variation des revenus des clients existants en incluant l'expansion (upsells), la contraction (downgrades) et le churn. Une NRR supérieure à 100% signifie que les revenus des clients existants augmentent même en tenant compte du churn. C'est la métrique la plus valorisée par les investisseurs.",
+    "formula": "NRR = ((MRR début + Expansion MRR - Contraction MRR - Churned MRR) / MRR début) × 100. Exemple : MRR début = 100K€, Expansion = 15K€, Contraction = 3K€, Churn = 5K€ => NRR = 107%.",
     "unit": "percentage",
     "applicable_sectors": ["SaaS", "abonnement"],
     "benchmarks": {
@@ -347,23 +364,25 @@
         "excellent": "NRR >130%"
       }
     },
-    "interpretation": "La NRR est considérée par de nombreux investisseurs comme la métrique la plus importante après le MRR. Selon SaaS Capital, la médiane des startups SaaS publiques se situe autour de 110-115% de NRR. Les meilleures (Snowflake ~158%, Twilio ~131%, Datadog ~130%) dépassent 130%. Un NRR supérieur à 100% crée un effet de composition puissant : même sans nouveaux clients, le revenu croît. C'est le signal ultime de product-market fit et de pricing power. Pour les startups marocaines B2B, une NRR de 100%+ est un signal très fort pour les investisseurs internationaux et démontre la capacité à monétiser efficacement la base installée.",
+    "interpretation": "Selon le SaaS Capital Annual Survey 2025, la NRR médiane des SaaS privées est de 102%, et les meilleures (best-in-class) dépassent 110%. Les SaaS publiques cotées affichent des NRR de 110-115% en médiane. Les leaders (Snowflake ~158%, Datadog ~130%) dépassent 130%. Un NRR >100% crée un effet de composition : même sans nouveaux clients, le revenu croît. C'est le signal ultime de product-market fit.",
     "improvement_tips": [
-      "Concevoir des plans tarifaires qui encouragent naturellement l'expansion (tarification à l'usage, par utilisateur, par fonctionnalité)",
-      "Mettre en place une équipe Customer Success dédiée aux comptes à forte valeur pour maximiser l'expansion et réduire le churn",
-      "Créer des rapports d'utilisation réguliers montrant la valeur générée pour encourager les clients à upgrader",
-      "Développer de nouvelles fonctionnalités premium qui répondent aux besoins croissants des clients existants et créent des opportunités d'upsell",
-      "Implémenter un système d'alerte précoce pour les clients à risque de contraction et intervenir proactivement"
+      "Concevoir des plans tarifaires qui encouragent l'expansion (tarification à l'usage, par siège)",
+      "Mettre en place une équipe Customer Success pour les comptes à forte valeur",
+      "Créer des rapports d'utilisation montrant la valeur pour encourager les upgrades",
+      "Développer des fonctionnalités premium créant des opportunités d'upsell"
     ],
     "related_metrics": ["CHURN_RATE", "MRR", "MRR_GROWTH", "LTV", "ARR"],
-    "source_inspiration": "Bessemer Venture Partners Cloud Index, OpenView Partners NRR Benchmarks 2024, SaaS Capital Net Revenue Retention Data"
+    "sources": [
+      "https://www.saas-capital.com/research/",
+      "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report"
+    ]
   },
   {
     "id": "BURN_RATE",
     "name": "Burn Rate",
     "name_fr": "Taux de Consommation de Trésorerie",
-    "definition": "Le burn rate représente le montant de trésorerie net consommé par la startup chaque mois. Le burn rate brut (gross burn) correspond aux dépenses totales mensuelles, tandis que le burn rate net (net burn) déduit les revenus générés. C'est un indicateur vital de la viabilité à court terme de l'entreprise et de la vitesse à laquelle elle consomme les fonds levés. La gestion du burn rate est directement liée à la survie de la startup et à sa capacité à négocier en position de force lors des levées de fonds.",
-    "formula": "Burn Rate Net mensuel = Total des dépenses mensuelles - Total des revenus mensuels. Burn Rate Brut = Total des dépenses mensuelles (salaires + loyer + outils + marketing + serveurs + autres). Exemple : si dépenses = 30K€/mois et revenus = 10K€/mois, net burn = 20K€/mois.",
+    "definition": "Le burn rate représente le montant de trésorerie net consommé par la startup chaque mois. Le burn rate brut (gross burn) correspond aux dépenses totales mensuelles, tandis que le burn rate net (net burn) déduit les revenus générés. C'est un indicateur vital de la viabilité à court terme.",
+    "formula": "Burn Rate Net = Dépenses mensuelles totales - Revenus mensuels. Burn Multiple = Net Burn / Net New ARR (plus il est bas, mieux c'est).",
     "unit": "currency",
     "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
     "benchmarks": {
@@ -392,23 +411,24 @@
         "excellent": "<100 000€/mois"
       }
     },
-    "interpretation": "Le burn rate doit être analysé en relation avec la croissance et le runway restant. Un burn rate élevé peut être acceptable si la startup croît très rapidement et que chaque euro investi génère une croissance proportionnelle du revenu. Les investisseurs évaluent le 'burn multiple' (burn net / ARR net nouveau) pour mesurer l'efficacité de la dépense. Un burn multiple inférieur à 2x est considéré comme excellent selon Bessemer. Selon First Round Capital, la médiane du net burn en seed est de 30-50K€/mois pour une startup tech avec 3-5 employés. Dans le contexte marocain, les startups bénéficient de coûts opérationnels plus faibles (salaires, loyers), ce qui devrait se refléter dans un burn rate plus maîtrisé par rapport aux startups européennes ou américaines.",
+    "interpretation": "Le burn rate doit être analysé en relation avec la croissance et le runway. Selon Bessemer Venture Partners, le 'burn multiple' (net burn / net new ARR) est la meilleure mesure d'efficacité du capital. Un burn multiple <1x est excellent, 1-2x est bon, >2x est préoccupant. Dans le contexte marocain, les startups bénéficient de coûts opérationnels plus faibles (salaires, loyers) ce qui devrait se refléter dans un burn rate plus maîtrisé.",
     "improvement_tips": [
-      "Analyser chaque poste de dépense mensuellement et éliminer les coûts non essentiels qui ne contribuent pas directement à la croissance",
-      "Prioriser les dépenses qui ont un impact direct et mesurable sur la croissance du revenu (marketing performant, développement produit)",
-      "Négocier des conditions de paiement différées avec les fournisseurs et passer en paiement annuel pour obtenir des remises",
-      "Recruter de manière progressive et privilégier les profils polyvalents en phase early-stage plutôt que des spécialistes coûteux",
-      "Utiliser des outils open-source ou des crédits gratuits pour startups (AWS Activate, Google for Startups, Microsoft for Startups) pour réduire les coûts d'infrastructure"
+      "Analyser chaque poste de dépense et éliminer les coûts non essentiels",
+      "Prioriser les dépenses à impact direct sur la croissance du revenu",
+      "Recruter progressivement et privilégier les profils polyvalents en early-stage",
+      "Utiliser les crédits cloud gratuits (AWS Activate, Google for Startups, Microsoft for Startups)"
     ],
     "related_metrics": ["RUNWAY", "GROSS_MARGIN", "MRR", "UNIT_ECONOMICS"],
-    "source_inspiration": "First Round Capital State of Startups, a16z Guide to Startup Metrics, Kruze Consulting SaaS Burn Rate Data"
+    "sources": [
+      "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report"
+    ]
   },
   {
     "id": "RUNWAY",
     "name": "Runway",
-    "name_fr": "Durée de Vie de la Trésorerie (Runway)",
-    "definition": "Le runway représente le nombre de mois pendant lesquels une startup peut continuer à fonctionner avant d'épuiser ses réserves de trésorerie, en maintenant le rythme de dépense actuel (burn rate). C'est un indicateur de survie qui détermine l'urgence de lever des fonds ou d'atteindre la rentabilité. Un runway court met la startup en position de faiblesse dans les négociations de financement, tandis qu'un runway confortable permet de négocier des conditions plus favorables.",
-    "formula": "Runway (en mois) = Solde de trésorerie actuel / Burn Rate Net mensuel. Exemple : 300K€ en banque / 25K€ de net burn mensuel = 12 mois de runway. Pour un calcul plus précis, intégrer la croissance du revenu : Runway ajusté = Trésorerie / (Burn Rate - Croissance mensuelle du revenu).",
+    "name_fr": "Durée de Vie de la Trésorerie",
+    "definition": "Le runway représente le nombre de mois pendant lesquels une startup peut continuer à fonctionner avant d'épuiser ses réserves de trésorerie, au rythme de dépense actuel. C'est un indicateur de survie qui détermine l'urgence de lever des fonds.",
+    "formula": "Runway (mois) = Solde de trésorerie / Burn Rate Net mensuel. Runway ajusté = Trésorerie / (Burn Rate - Croissance mensuelle du revenu).",
     "unit": "mois",
     "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
     "benchmarks": {
@@ -437,23 +457,26 @@
         "excellent": ">24 mois"
       }
     },
-    "interpretation": "Un runway inférieur à 6 mois est considéré comme critique : la startup est en zone de danger et doit lever ou réduire son burn immédiatement. La règle d'or selon a16z est de commencer à lever quand il reste 9-12 mois de runway, car un processus de levée de fonds prend en moyenne 3 à 6 mois. Les meilleures startups maintiennent 18+ mois de runway pour négocier en position de force. Les investisseurs préfèrent les startups avec un runway confortable car cela démontre une gestion financière prudente. Dans l'écosystème marocain, où les cycles de levée peuvent être plus longs, il est recommandé de maintenir un runway d'au moins 12 mois après chaque levée.",
+    "interpretation": "Un runway <6 mois est critique. La règle recommandée est de commencer à lever quand il reste 9-12 mois de runway, car un processus de levée prend 3-6 mois en moyenne (8-14 mois au Maroc selon l'écosystème local plus restreint). Les meilleures startups maintiennent 18+ mois de runway pour négocier en position de force. Au Maroc, les programmes Innov Invest/Tamwilcom (prêts d'honneur jusqu'à 400K MAD) et FORSA (100K MAD) permettent d'étendre le runway sans dilution.",
     "improvement_tips": [
-      "Commencer la préparation de la prochaine levée de fonds au moins 6-9 mois avant la fin du runway, jamais en dessous de 6 mois restants",
-      "Réduire le burn rate en éliminant les dépenses non essentielles pour étendre le runway en cas de difficulté à lever",
-      "Explorer des sources de financement non dilutives (subventions, prêts d'honneur, Maroc PME, revenus de services) pour compléter les fonds levés",
-      "Mettre en place des scénarios financiers (optimiste, réaliste, pessimiste) pour anticiper les besoins de trésorerie à 12-18 mois",
-      "Accélérer le passage à la rentabilité unitaire pour réduire la dépendance aux levées de fonds et allonger mécaniquement le runway"
+      "Commencer la levée 6-9 mois avant la fin du runway",
+      "Réduire le burn rate en éliminant les dépenses non essentielles",
+      "Explorer le financement non-dilutif (Innov Invest, FORSA, BPI France)",
+      "Accélérer le passage à la rentabilité unitaire"
     ],
     "related_metrics": ["BURN_RATE", "MRR", "GROSS_MARGIN"],
-    "source_inspiration": "First Round Capital State of Startups, Y Combinator Startup School, a16z Financial Planning Guide for Startups"
+    "sources": [
+      "https://innovinvest.ma/",
+      "https://forsa.ma/",
+      "https://www.bpifrance.fr/"
+    ]
   },
   {
     "id": "GROSS_MARGIN",
     "name": "Gross Margin",
     "name_fr": "Marge Brute",
-    "definition": "La marge brute représente le pourcentage du chiffre d'affaires restant après déduction des coûts directs liés à la production ou à la délivrance du produit/service (COGS - Cost of Goods Sold). Pour une startup SaaS, les COGS incluent l'hébergement cloud, les licences de logiciels tiers, le support technique de premier niveau et les coûts de délivrance du service. C'est un indicateur clé de l'efficacité opérationnelle, du potentiel de scalabilité du modèle et de la qualité du business model.",
-    "formula": "Marge Brute (%) = ((Chiffre d'affaires - Coût des ventes) / Chiffre d'affaires) × 100. COGS SaaS = Hébergement cloud (AWS, GCP, Azure) + Support client direct + Coûts de délivrance + Licences tierces intégrées au produit.",
+    "definition": "La marge brute représente le pourcentage du chiffre d'affaires restant après déduction des coûts directs (COGS). Pour une startup SaaS, les COGS incluent l'hébergement cloud, les licences tierces, le support technique de premier niveau et les coûts de délivrance. C'est un indicateur clé de la scalabilité du modèle.",
+    "formula": "Marge Brute (%) = ((CA - Coût des ventes) / CA) × 100. COGS SaaS = Hébergement cloud + Support direct + Licences tierces intégrées.",
     "unit": "percentage",
     "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
     "benchmarks": {
@@ -482,68 +505,72 @@
         "excellent": ">82%"
       }
     },
-    "interpretation": "La marge brute est un indicateur fondamental de la scalabilité du modèle économique. Les startups SaaS les plus performantes affichent des marges brutes de 70-85%, ce qui reflète la nature scalable du logiciel. Selon OpenView, la médiane des startups SaaS se situe autour de 72-78%. Les marketplaces affichent des marges sur la commission (take rate) de 60-80%. Le e-commerce a des marges plus faibles (30-50%). Les investisseurs utilisent la marge brute pour évaluer le potentiel de rentabilité à long terme et les comparables de valorisation. Une marge brute faible en SaaS (<60%) peut indiquer trop de services manuels, des coûts d'infrastructure non optimisés ou une dépendance excessive à des API tierces coûteuses.",
+    "interpretation": "Les startups SaaS les plus performantes affichent des marges brutes de 70-85%, reflétant la scalabilité du logiciel. Selon le Bessemer Cloud 100 (2024), la médiane des marges brutes pour les meilleures sociétés cloud est supérieure à 80%. Le SaaS Capital 2025 Survey confirme une médiane de 78% pour les SaaS privées. Les marketplaces affichent 60-80% et le e-commerce 30-50%. Une marge brute faible en SaaS (<60%) indique trop de services manuels ou des coûts d'infrastructure non optimisés.",
     "improvement_tips": [
-      "Automatiser les processus manuels de délivrance du service pour réduire les coûts variables par client",
-      "Négocier les coûts d'hébergement cloud (crédits startup, reserved instances, optimisation des ressources, architectures serverless)",
-      "Réduire les coûts de support en améliorant la documentation, les FAQ dynamiques et les outils de self-service",
-      "Analyser la marge par segment de client et par produit pour identifier les zones d'amélioration prioritaires",
-      "Envisager une migration vers des solutions d'infrastructure plus économiques si la marge est structurellement trop faible"
+      "Automatiser les processus manuels pour réduire les coûts variables par client",
+      "Négocier les coûts cloud (crédits startup, reserved instances, architectures serverless)",
+      "Réduire les coûts de support via la documentation et les outils self-service",
+      "Migrer vers des solutions d'infrastructure plus économiques si la marge est structurellement basse"
     ],
     "related_metrics": ["UNIT_ECONOMICS", "LTV", "BURN_RATE", "MRR"],
-    "source_inspiration": "Bessemer Venture Partners Cloud Index, KeyBanc Capital Markets SaaS Survey, OpenView Partners SaaS Benchmarks 2024, SaaS Capital Margin Benchmarks"
+    "sources": [
+      "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report",
+      "https://www.saas-capital.com/research/"
+    ]
   },
   {
     "id": "UNIT_ECONOMICS",
-    "name": "Unit Economics / Contribution Margin",
-    "name_fr": "Économie Unitaire / Marge de Contribution",
-    "definition": "L'économie unitaire mesure la rentabilité générée par une seule unité de transaction (un client, une commande, un trajet, etc.) après déduction de tous les coûts variables directement attribuables à cette unité. La marge de contribution est le montant restant après les coûts variables, avant les coûts fixes. C'est la base de la viabilité du modèle économique : si l'économie unitaire est négative, croître ne fait qu'aggraver les pertes. C'est la preuve que le modèle peut scaler de manière profitable.",
-    "formula": "Marge de Contribution par Unité = Revenu par Unité - Coûts Variables par Unité (COGS, délivrance, support, commissions, paiements). Taux de Contribution = (Marge de Contribution / Revenu par Unité) × 100. Alternative : Contribution mensuelle par client = ARPU - COGS par client - CAC mensuel amorti.",
+    "name": "Unit Economics",
+    "name_fr": "Économie Unitaire",
+    "definition": "L'économie unitaire mesure la rentabilité d'une seule unité de transaction (un client, une commande) après déduction de tous les coûts variables. La marge de contribution est le montant restant après les coûts variables, avant les coûts fixes. Si l'économie unitaire est négative, croître ne fait qu'aggraver les pertes.",
+    "formula": "Marge de Contribution = Revenu par Unité - Coûts Variables par Unité. Taux de Contribution = (Marge de Contribution / Revenu par Unité) × 100.",
     "unit": "currency",
-    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "livraison", "tous"],
+    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
     "benchmarks": {
       "pre_seed": {
         "bad": "Marge de contribution négative",
-        "ok": "Marge de contribution 0-10%",
-        "good": "Marge de contribution 10-25%",
-        "excellent": "Marge de contribution >25%"
+        "ok": "0-10%",
+        "good": "10-25%",
+        "excellent": ">25%"
       },
       "seed": {
         "bad": "Marge de contribution négative",
-        "ok": "Marge de contribution 0-15%",
-        "good": "Marge de contribution 15-35%",
-        "excellent": "Marge de contribution >35%"
+        "ok": "0-15%",
+        "good": "15-35%",
+        "excellent": ">35%"
       },
       "serie_a": {
-        "bad": "Marge de contribution <10%",
-        "ok": "Marge de contribution 10-25%",
-        "good": "Marge de contribution 25-45%",
-        "excellent": "Marge de contribution >45%"
+        "bad": "<10%",
+        "ok": "10-25%",
+        "good": "25-45%",
+        "excellent": ">45%"
       },
       "serie_b": {
-        "bad": "Marge de contribution <15%",
-        "ok": "Marge de contribution 15-30%",
-        "good": "Marge de contribution 30-50%",
-        "excellent": "Marge de contribution >50%"
+        "bad": "<15%",
+        "ok": "15-30%",
+        "good": "30-50%",
+        "excellent": ">50%"
       }
     },
-    "interpretation": "L'économie unitaire positive est le prérequis absolu pour toute startup cherchant à lever des fonds au-delà du seed. Si l'entreprise perd de l'argent sur chaque transaction, la croissance ne fera qu'aggraver les pertes. Les investisseurs vérifient systématiquement que l'économie unitaire est positive ou en voie de le devenir à court terme. Selon a16z, les meilleures startups SaaS affichent une contribution margin par client supérieure à 50% dès le seed. En phase pré-seed, une économie unitaire légèrement négative peut être acceptable si un chemin clair vers la positivité est identifié (économies d'échelle, augmentation des prix, réduction des coûts). Pour les startups marocaines, l'avantage de coûts opérationnels plus bas doit se traduire par une économie unitaire positive plus rapidement.",
+    "interpretation": "L'économie unitaire positive est le prérequis pour toute startup cherchant à lever au-delà du seed. Avec une marge brute SaaS médiane de 78% (SaaS Capital 2025) et un CAC payback de 9-24 mois (Bessemer), les meilleures startups atteignent une contribution margin >50% par client. En phase pré-seed, une économie unitaire légèrement négative est acceptable si un chemin clair vers la positivité est identifié. Pour les startups marocaines, l'avantage des coûts plus bas doit se traduire par une économie unitaire positive plus rapidement.",
     "improvement_tips": [
-      "Cartographier précisément tous les coûts variables par transaction pour identifier les postes les plus importants à optimiser",
-      "Tester des augmentations de prix progressives pour améliorer la marge sans impacter négativement la rétention",
-      "Négocier les coûts fournisseurs en fonction du volume pour bénéficier d'économies d'échelle",
-      "Automatiser les processus manuels qui génèrent des coûts variables élevés (support, opérations, onboarding)",
-      "Éliminer les segments de clients à économie unitaire structurellement négative et se concentrer sur les segments rentables"
+      "Cartographier tous les coûts variables par transaction",
+      "Tester des augmentations de prix progressives sans impacter la rétention",
+      "Négocier les coûts fournisseurs en fonction du volume",
+      "Éliminer les segments clients à économie unitaire structurellement négative"
     ],
     "related_metrics": ["GROSS_MARGIN", "LTV", "CAC", "BURN_RATE"],
-    "source_inspiration": "a16z Unit Economics Guide, First Round Capital Startup Metrics, Bill Gurley (Above the Crowd) on Unit Economics"
+    "sources": [
+      "https://www.saas-capital.com/research/",
+      "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report"
+    ]
   },
   {
     "id": "GMV",
     "name": "Gross Merchandise Value",
-    "name_fr": "Volume Brut de Marchandises (GMV)",
-    "definition": "Le GMV représente la valeur totale des transactions réalisées sur une plateforme marketplace ou e-commerce sur une période donnée, avant déduction des frais, retours, remises et annulations. C'est l'indicateur principal de la taille et de la traction d'une marketplace. Le GMV ne représente pas le chiffre d'affaires de la plateforme (qui est le take rate appliqué au GMV), mais le volume total d'activité économique qu'elle facilite. Attention : un GMV élevé avec un take rate faible peut masquer une faible monétisation.",
-    "formula": "GMV = Nombre total de transactions × Valeur moyenne par transaction (avant déductions). Revenu net de la plateforme = GMV × Take Rate.",
+    "name_fr": "Volume Brut de Marchandises",
+    "definition": "Le GMV représente la valeur totale des transactions réalisées sur une plateforme marketplace ou e-commerce, avant déduction des frais, retours et annulations. C'est l'indicateur principal de la taille d'une marketplace. Le GMV ne représente pas le CA de la plateforme (qui est le take rate × GMV).",
+    "formula": "GMV = Nombre de transactions × Valeur moyenne par transaction. Revenu net = GMV × Take Rate.",
     "unit": "currency",
     "applicable_sectors": ["marketplace", "e-commerce"],
     "benchmarks": {
@@ -572,158 +599,24 @@
         "excellent": ">100M€/mois"
       }
     },
-    "interpretation": "Le GMV est la métrique de référence pour les marketplaces car il mesure le volume total d'activité économique de la plateforme. Selon a16z, les meilleures marketplaces en seed affichent un GMV mensuel de 100K€+ avec une croissance de 15-20% MoM. Les investisseurs analysent la croissance du GMV et le taux de conversion en revenus (take rate). Attention : un GMV élevé ne garantit pas la rentabilité si le take rate est trop faible ou si les coûts d'acquisition vendeurs/acheteurs sont trop élevés. Pour les marketplaces marocaines, le GMV doit être analysé en tenant compte de la taille du marché adressable local et du potentiel d'expansion régionale (MENA, Afrique francophone).",
+    "interpretation": "Le GMV est la métrique de référence pour les marketplaces. Les investisseurs analysent la croissance du GMV et le take rate. Le take rate médian des marketplaces est de 12-15% (Airbnb ~15%, Etsy ~18%, Fiverr ~27%). Un GMV élevé avec un take rate faible peut masquer une faible monétisation. Pour les marketplaces marocaines, le GMV doit être analysé en tenant compte de la taille du marché adressable local et du potentiel d'expansion régionale (MENA, Afrique francophone).",
     "improvement_tips": [
-      "Augmenter la fréquence des transactions en améliorant l'expérience utilisateur et la découverte de produits/services",
-      "Augmenter la valeur moyenne des commandes grâce à des recommandations personnalisées, du cross-sell et du bundling",
-      "Élargir l'offre de produits ou services pour attirer de nouveaux segments d'acheteurs et diversifier les usages",
-      "Réduire le taux d'abandon de panier en simplifiant le processus de paiement et en offrant plusieurs moyens de paiement locaux",
-      "Développer des programmes de fidélité et des mécaniques de récurrence pour augmenter la fréquence d'achat par utilisateur"
+      "Augmenter la fréquence des transactions via l'amélioration de l'UX et la découverte produits",
+      "Augmenter la valeur moyenne des commandes via recommandations et cross-sell",
+      "Élargir l'offre pour attirer de nouveaux segments",
+      "Réduire le taux d'abandon de panier et proposer plusieurs moyens de paiement locaux"
     ],
-    "related_metrics": ["TAKE_RATE", "UNIT_ECONOMICS", "CAC", "GROSS_MARGIN"],
-    "source_inspiration": "a16z Marketplace Metrics, Bill Gurley (Above the Crowd), Andreessen Horowitz Marketplace 100"
-  },
-  {
-    "id": "TAKE_RATE",
-    "name": "Take Rate / Commission",
-    "name_fr": "Taux de Commission (Take Rate)",
-    "definition": "Le take rate est le pourcentage du GMV que la marketplace retient comme revenu. C'est la commission prélevée sur chaque transaction entre acheteurs et vendeurs. Le take rate détermine le modèle de revenus de la marketplace et varie considérablement selon le secteur, la valeur ajoutée de la plateforme et le pouvoir de négociation par rapport aux vendeurs. Un take rate trop élevé peut freiner l'adoption, tandis qu'un take rate trop bas peut compromettre la viabilité économique.",
-    "formula": "Take Rate (%) = (Revenus de la plateforme / GMV total) × 100. Exemple : si GMV = 100K€ et revenu = 15K€, take rate = 15%.",
-    "unit": "percentage",
-    "applicable_sectors": ["marketplace"],
-    "benchmarks": {
-      "pre_seed": {
-        "bad": "<3%",
-        "ok": "3-8%",
-        "good": "8-15%",
-        "excellent": ">15%"
-      },
-      "seed": {
-        "bad": "<5%",
-        "ok": "5-10%",
-        "good": "10-18%",
-        "excellent": ">18%"
-      },
-      "serie_a": {
-        "bad": "<5%",
-        "ok": "5-12%",
-        "good": "12-20%",
-        "excellent": ">20%"
-      },
-      "serie_b": {
-        "bad": "<8%",
-        "ok": "8-15%",
-        "good": "15-25%",
-        "excellent": ">25%"
-      }
-    },
-    "interpretation": "Le take rate dépend fortement de la catégorie de la marketplace. Les marketplaces de services gérées (managed marketplaces) comme Airbnb prélèvent 12-20%, les marketplaces de produits physiques 10-25% (Etsy ~18%, Amazon ~15%), et les marketplaces de services digitaux 15-30% (Fiverr ~27%, Upwork ~20%). Selon a16z, le take rate médian des marketplaces venture-backed est de 12-15%. Un take rate élevé est justifiable si la plateforme apporte une valeur significative (paiement, logistique, garantie, audience qualifiée). Un take rate en hausse est un signal très positif de pricing power. Pour le marché marocain, les take rates doivent être adaptés au pouvoir d'achat local tout en restant économiquement viables.",
-    "improvement_tips": [
-      "Augmenter progressivement le take rate en ajoutant des services à valeur ajoutée (paiement sécurisé, livraison, garantie, assurance)",
-      "Proposer des services premium optionnels pour les vendeurs (mise en avant, analytics avancés, publicité in-app) pour diversifier les revenus",
-      "Segmenter le take rate par catégorie de produit en fonction de la marge typique du vendeur dans chaque catégorie",
-      "Tester des modèles hybrides (commission + abonnement vendeur) pour diversifier et stabiliser les sources de revenus",
-      "Analyser la sensibilité au prix des vendeurs par segment pour trouver le take rate optimal qui maximise le revenu sans impacter le volume"
-    ],
-    "related_metrics": ["GMV", "GROSS_MARGIN", "UNIT_ECONOMICS", "MRR"],
-    "source_inspiration": "a16z Marketplace Metrics, Bill Gurley (Above the Crowd), Andreessen Horowitz Marketplace 100, Sameer Singh Marketplace Take Rate Analysis"
-  },
-  {
-    "id": "DAU_MAU",
-    "name": "DAU/MAU Ratio",
-    "name_fr": "Ratio Utilisateurs Actifs Quotidiens / Mensuels",
-    "definition": "Le ratio DAU/MAU (Daily Active Users / Monthly Active Users), aussi appelé 'stickiness ratio', mesure le niveau d'engagement des utilisateurs en calculant la proportion d'utilisateurs mensuels actifs qui reviennent quotidiennement. Un ratio élevé indique un produit fortement ancré dans les habitudes quotidiennes des utilisateurs. C'est la métrique d'engagement de référence pour les applications grand public et les produits consumer tech. Un ratio de 50% signifie qu'en moyenne, un utilisateur mensuel utilise le produit 15 jours sur 30.",
-    "formula": "Ratio DAU/MAU = (Nombre d'utilisateurs actifs quotidiens / Nombre d'utilisateurs actifs mensuels) × 100.",
-    "unit": "ratio",
-    "applicable_sectors": ["app mobile", "consumer tech", "réseaux sociaux", "SaaS"],
-    "benchmarks": {
-      "pre_seed": {
-        "bad": "<5%",
-        "ok": "5-10%",
-        "good": "10-20%",
-        "excellent": ">20%"
-      },
-      "seed": {
-        "bad": "<10%",
-        "ok": "10-15%",
-        "good": "15-25%",
-        "excellent": ">25%"
-      },
-      "serie_a": {
-        "bad": "<10%",
-        "ok": "10-20%",
-        "good": "20-30%",
-        "excellent": ">30%"
-      },
-      "serie_b": {
-        "bad": "<15%",
-        "ok": "15-25%",
-        "good": "25-40%",
-        "excellent": ">40%"
-      }
-    },
-    "interpretation": "Le ratio DAU/MAU est un indicateur puissant du product-market fit et de l'adhésivité (stickiness) du produit. Les applications sociales de niveau mondial comme Facebook et WhatsApp affichent des ratios de 50-70%, tandis que les applications utilitaires visent 20-30%. Pour le B2B SaaS, un ratio supérieur à 40% est excellent car il indique que l'outil est essentiel au travail quotidien (Slack ~55%). Selon a16z, les startups avec un DAU/MAU supérieur à 25% au seed ont significativement plus de chances de lever en série A. Pour les startups marocaines grand public, ce ratio doit être analysé en tenant compte des habitudes d'utilisation mobile locales et de la qualité de la connectivité internet.",
-    "improvement_tips": [
-      "Implémenter des notifications push personnalisées et contextuelles (pas du spam) pour encourager les visites quotidiennes",
-      "Créer des mécaniques de contenu frais quotidien pour donner une raison de revenir (feed personnalisé, recommandations, actualités)",
-      "Intégrer des éléments de gamification (streaks, récompenses quotidiennes, niveaux) pour créer des habitudes d'usage",
-      "Optimiser les performances de l'application pour réduire les frictions d'usage (temps de chargement, mode hors-ligne)",
-      "Analyser les parcours des utilisateurs les plus engagés (power users) pour identifier et reproduire leurs comportements chez les autres"
-    ],
-    "related_metrics": ["RETENTION_D30", "NPS", "CHURN_RATE"],
-    "source_inspiration": "a16z Engagement Metrics, Sequoia Capital Consumer Product Benchmarks, Mixpanel Product Benchmarks Report"
-  },
-  {
-    "id": "NPS",
-    "name": "Net Promoter Score",
-    "name_fr": "Score Net de Recommandation (NPS)",
-    "definition": "Le NPS mesure la probabilité que les clients recommandent le produit ou service à leur entourage. Il est calculé en soustrayant le pourcentage de détracteurs (score 0-6) du pourcentage de promoteurs (score 9-10) sur une échelle de 0 à 10. Les passifs (score 7-8) ne sont pas pris en compte dans le calcul. Le NPS est un indicateur avancé de la croissance organique, de la satisfaction client globale et du potentiel de bouche-à-oreille. Le score varie de -100 à +100.",
-    "formula": "NPS = % de Promoteurs (scores 9-10) - % de Détracteurs (scores 0-6). Question posée : 'Sur une échelle de 0 à 10, dans quelle mesure recommanderiez-vous [produit] à un ami ou collègue ?'.",
-    "unit": "score",
-    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "app mobile", "tous"],
-    "benchmarks": {
-      "pre_seed": {
-        "bad": "<0 (plus de détracteurs que de promoteurs)",
-        "ok": "0-20",
-        "good": "20-40",
-        "excellent": ">40"
-      },
-      "seed": {
-        "bad": "<10",
-        "ok": "10-30",
-        "good": "30-50",
-        "excellent": ">50"
-      },
-      "serie_a": {
-        "bad": "<20",
-        "ok": "20-40",
-        "good": "40-60",
-        "excellent": ">60"
-      },
-      "serie_b": {
-        "bad": "<25",
-        "ok": "25-45",
-        "good": "45-65",
-        "excellent": ">65"
-      }
-    },
-    "interpretation": "Le NPS est un indicateur précurseur de la croissance car un NPS élevé génère du bouche-à-oreille positif et réduit mécaniquement le CAC. Selon Bain & Company (créateur du NPS), les entreprises avec un NPS supérieur à 50 croissent 2x plus vite que leurs concurrents grâce au bouche-à-oreille. Les meilleures entreprises tech affichent des NPS de 50-70+ (Apple ~72, Netflix ~68). Un NPS négatif est un signal d'alarme majeur indiquant une insatisfaction généralisée qui se traduira par du churn et un bouche-à-oreille négatif. Dans le contexte marocain, il est utile de segmenter le NPS par profil de client et par canal d'acquisition pour identifier les segments les plus satisfaits et concentrer les efforts sur eux.",
-    "improvement_tips": [
-      "Réaliser des enquêtes NPS régulières (trimestrielles) et analyser les verbatims des détracteurs pour identifier les axes d'amélioration prioritaires",
-      "Mettre en place un processus de suivi systématique des détracteurs pour résoudre leurs problèmes rapidement et tenter de les convertir",
-      "Transformer les promoteurs en ambassadeurs actifs grâce à un programme de parrainage avec récompenses (codes referral, avantages exclusifs)",
-      "Suivre l'évolution du NPS par cohorte pour mesurer l'impact concret des améliorations produit sur la satisfaction",
-      "Intégrer le NPS dans les OKR de l'équipe et en faire un objectif transversal suivi au niveau du comité de direction"
-    ],
-    "related_metrics": ["CHURN_RATE", "LTV", "DAU_MAU", "RETENTION_D30"],
-    "source_inspiration": "Bain & Company NPS Benchmarks, Delighted NPS Industry Benchmarks, Retently SaaS NPS Data, First Round Capital Startup Surveys"
+    "related_metrics": ["UNIT_ECONOMICS", "CAC", "GROSS_MARGIN"],
+    "sources": [
+      "https://a16z.com/marketplace-100/"
+    ]
   },
   {
     "id": "PAYBACK_PERIOD",
     "name": "CAC Payback Period",
     "name_fr": "Période de Récupération du CAC",
-    "definition": "La période de récupération du CAC mesure le nombre de mois nécessaires pour récupérer le coût d'acquisition d'un client à travers les marges générées par ce client. C'est un indicateur d'efficacité du capital qui combine le CAC, le revenu moyen par client et la marge brute. Plus la période est courte, plus rapidement l'entreprise peut réinvestir dans l'acquisition de nouveaux clients et moins elle dépend de financements externes pour financer sa croissance.",
-    "formula": "Période de Récupération (mois) = CAC / (Revenu moyen mensuel par client × Marge brute en %). Exemple : CAC = 600€, ARPU = 100€/mois, Marge brute = 80% => Payback = 600 / (100 × 0,80) = 7,5 mois.",
+    "definition": "La période de récupération du CAC mesure le nombre de mois nécessaires pour récupérer le coût d'acquisition d'un client à travers les marges générées. Plus la période est courte, plus rapidement l'entreprise peut réinvestir dans l'acquisition.",
+    "formula": "Payback (mois) = CAC / (Revenu moyen mensuel par client × Marge brute %). Exemple : CAC = 600€, ARPU = 100€/mois, Marge = 80% => Payback = 7.5 mois.",
     "unit": "mois",
     "applicable_sectors": ["SaaS", "abonnement", "marketplace", "tous"],
     "benchmarks": {
@@ -752,60 +645,63 @@
         "excellent": "<5 mois"
       }
     },
-    "interpretation": "La période de récupération du CAC est un indicateur crucial de la capacité d'autofinancement de la croissance. Selon OpenView, la médiane des startups SaaS B2B se situe autour de 15-18 mois. Un payback inférieur à 12 mois est considéré comme bon par la majorité des VCs, permettant à l'entreprise de recycler rapidement le capital investi en acquisition. Un payback de moins de 6 mois est exceptionnel et signifie que la startup peut théoriquement autofinancer sa croissance. Un payback supérieur à 24 mois est problématique car il nécessite beaucoup de capital et expose à un risque de churn avant récupération du CAC. Les investisseurs comparent cette métrique au runway : si le payback est supérieur au runway, l'entreprise aura besoin de lever avant que les clients acquis ne deviennent rentables.",
+    "interpretation": "Selon Bessemer Venture Partners, le CAC payback varie entre 9 et 24 mois selon l'ACV (Annual Contract Value) : les produits à faible ACV (<$5K) visent un payback <12 mois, tandis que les produits enterprise ($50K+) peuvent tolérer 18-24 mois. Un payback <6 mois est exceptionnel et permet d'autofinancer la croissance. Le High Alpha/OpenView 2024 SaaS Benchmarks Report confirme une médiane de 15-18 mois pour les SaaS B2B.",
     "improvement_tips": [
-      "Réduire le CAC en investissant dans les canaux organiques (contenu, SEO, referral) plutôt que l'acquisition payante à coût élevé",
-      "Augmenter le revenu moyen par client dès le premier mois en proposant des offres d'onboarding premium ou des add-ons",
-      "Améliorer la marge brute en automatisant la délivrance du service et en réduisant les coûts variables par client",
-      "Proposer des paiements annuels anticipés pour récupérer le CAC immédiatement (cash-flow positif dès le premier jour)",
-      "Cibler les segments de clients à plus forte valeur et plus faible coût d'acquisition pour optimiser le ratio CAC/revenu"
+      "Réduire le CAC via les canaux organiques (contenu, SEO, referral)",
+      "Augmenter le revenu moyen dès le premier mois via des offres d'onboarding premium",
+      "Améliorer la marge brute en automatisant la délivrance du service",
+      "Proposer des paiements annuels anticipés pour récupérer le CAC immédiatement"
     ],
     "related_metrics": ["CAC", "LTV", "LTV_CAC", "GROSS_MARGIN", "BURN_RATE"],
-    "source_inspiration": "OpenView Partners Payback Period Benchmarks, Bessemer Venture Partners Cloud Index Efficiency Score, David Skok CAC Payback Analysis"
+    "sources": [
+      "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report",
+      "https://www.highalpha.com/2024-saas-benchmarks-report"
+    ]
   },
   {
-    "id": "RETENTION_D30",
-    "name": "Retention Day 30",
-    "name_fr": "Rétention à 30 Jours",
-    "definition": "La rétention à 30 jours (D30) mesure le pourcentage d'utilisateurs qui reviennent utiliser le produit 30 jours après leur première inscription ou première utilisation. C'est un indicateur fondamental de l'adéquation produit-marché (product-market fit) pour les applications grand public et les produits consumer tech. Une rétention D30 élevée signifie que les utilisateurs trouvent suffisamment de valeur dans le produit pour y revenir régulièrement après la phase de découverte initiale. La courbe de rétention est aussi importante que le chiffre : une courbe qui se stabilise est meilleure qu'une courbe en chute constante.",
-    "formula": "Rétention D30 (%) = (Nombre d'utilisateurs actifs au jour 30 de la cohorte / Nombre total d'utilisateurs dans la cohorte initiale) × 100.",
-    "unit": "percentage",
-    "applicable_sectors": ["app mobile", "consumer tech", "SaaS", "marketplace"],
+    "id": "NPS",
+    "name": "Net Promoter Score",
+    "name_fr": "Score Net de Recommandation",
+    "definition": "Le NPS mesure la probabilité que les clients recommandent le produit. Calculé en soustrayant le % de détracteurs (score 0-6) du % de promoteurs (score 9-10) sur une échelle de 0 à 10. Les passifs (7-8) ne sont pas comptabilisés. Le score varie de -100 à +100.",
+    "formula": "NPS = % Promoteurs (scores 9-10) - % Détracteurs (scores 0-6). Question : 'Sur une échelle de 0 à 10, recommanderiez-vous [produit] ?'.",
+    "unit": "score",
+    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
     "benchmarks": {
       "pre_seed": {
-        "bad": "<10%",
-        "ok": "10-20%",
-        "good": "20-30%",
-        "excellent": ">30%"
+        "bad": "<0",
+        "ok": "0-20",
+        "good": "20-40",
+        "excellent": ">40"
       },
       "seed": {
-        "bad": "<15%",
-        "ok": "15-25%",
-        "good": "25-35%",
-        "excellent": ">35%"
+        "bad": "<10",
+        "ok": "10-30",
+        "good": "30-50",
+        "excellent": ">50"
       },
       "serie_a": {
-        "bad": "<20%",
-        "ok": "20-30%",
-        "good": "30-40%",
-        "excellent": ">40%"
+        "bad": "<20",
+        "ok": "20-40",
+        "good": "40-60",
+        "excellent": ">60"
       },
       "serie_b": {
-        "bad": "<25%",
-        "ok": "25-35%",
-        "good": "35-45%",
-        "excellent": ">45%"
+        "bad": "<25",
+        "ok": "25-45",
+        "good": "45-65",
+        "excellent": ">65"
       }
     },
-    "interpretation": "La rétention D30 est considérée comme l'une des meilleures mesures du product-market fit pour les produits consumer. Les meilleures applications mobiles atteignent une rétention D30 de 25-40% (top 10% d'Android selon Adjust). La forme de la courbe de rétention est aussi importante que le chiffre absolu : une courbe qui se stabilise (même à un niveau modeste) indique un noyau d'utilisateurs fidèles, ce qui est meilleur signe qu'une courbe en chute constante. Les investisseurs analysent les cohortes de rétention pour comprendre si les améliorations produit se traduisent par une meilleure rétention au fil du temps. Pour le marché marocain, il faut tenir compte des spécificités d'usage mobile (forfaits data limités, qualité réseau variable) qui peuvent impacter la rétention et nécessitent une optimisation technique spécifique.",
+    "interpretation": "Le NPS est un indicateur précurseur de la croissance. Selon Bain & Company (créateur du NPS), les entreprises avec un NPS >50 croissent 2x plus vite grâce au bouche-à-oreille. Les meilleures entreprises tech affichent des NPS de 50-70+. Un NPS négatif est un signal d'alarme majeur. Le NPS est corrélé inversement au churn : les détracteurs ont un taux de churn 2-3x supérieur aux promoteurs.",
     "improvement_tips": [
-      "Optimiser l'expérience de première utilisation (FTUE - First Time User Experience) pour créer un moment 'aha' le plus rapidement possible",
-      "Mettre en place des séquences d'onboarding progressives par email et notifications push durant les 7 premiers jours critiques",
-      "Identifier et reproduire les actions clés que les utilisateurs retenus effectuent dans les 48 premières heures ('magic moment')",
-      "Implémenter des mécaniques de rappel personnalisées basées sur les habitudes d'utilisation de chaque segment",
-      "Analyser les cohortes de rétention par source d'acquisition pour identifier les canaux qui amènent les utilisateurs les plus engagés et concentrer les investissements dessus"
+      "Réaliser des enquêtes NPS trimestrielles et analyser les verbatims des détracteurs",
+      "Mettre en place un suivi systématique des détracteurs pour résoudre leurs problèmes",
+      "Transformer les promoteurs en ambassadeurs via un programme de parrainage",
+      "Suivre le NPS par cohorte pour mesurer l'impact des améliorations produit"
     ],
-    "related_metrics": ["DAU_MAU", "CHURN_RATE", "NPS", "LTV", "CAC"],
-    "source_inspiration": "Adjust Mobile App Retention Benchmarks 2024, Mixpanel Product Benchmarks Report, Lenny Rachitsky Retention Benchmarks, a16z Consumer Tech Metrics"
+    "related_metrics": ["CHURN_RATE", "LTV", "REVENUE_CHURN"],
+    "sources": [
+      "https://www.bain.com/consulting-services/customer-strategy-and-marketing/customer-loyalty/"
+    ]
   }
 ]
