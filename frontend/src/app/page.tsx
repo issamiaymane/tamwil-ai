@@ -9,6 +9,7 @@ import { DEFAULT_PROFILE } from "@/lib/constants";
 import { StartupProfile, Message, Conversation } from "@/lib/types";
 
 const STORAGE_KEY = "tamwil-conversations";
+const PROFILE_KEY = "tamwil-profile";
 
 function loadConversations(): Conversation[] {
   if (typeof window === "undefined") return [];
@@ -22,6 +23,20 @@ function loadConversations(): Conversation[] {
 
 function saveConversations(conversations: Conversation[]) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(conversations));
+}
+
+function loadProfile(): StartupProfile | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(PROFILE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function saveProfile(profile: StartupProfile) {
+  localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
 }
 
 function createNewConversation(): Conversation {
@@ -48,6 +63,10 @@ export default function Home() {
     if (saved.length > 0) {
       setActiveId(saved[0].id);
     }
+    const savedProfile = loadProfile();
+    if (savedProfile) {
+      setProfile(savedProfile);
+    }
     setHydrated(true);
   }, []);
 
@@ -57,6 +76,13 @@ export default function Home() {
       saveConversations(conversations);
     }
   }, [conversations, hydrated]);
+
+  // Save profile to localStorage whenever it changes
+  useEffect(() => {
+    if (hydrated) {
+      saveProfile(profile);
+    }
+  }, [profile, hydrated]);
 
   const activeConversation = conversations.find((c) => c.id === activeId);
   const activeMessages = activeConversation?.messages ?? [];
@@ -84,6 +110,19 @@ export default function Home() {
     [activeId]
   );
 
+  const handleRenameConversation = useCallback(
+    (id: string, newTitle: string) => {
+      setConversations((prev) =>
+        prev.map((c) =>
+          c.id === id
+            ? { ...c, title: newTitle, updatedAt: new Date().toISOString() }
+            : c
+        )
+      );
+    },
+    []
+  );
+
   const handleSend = async (text: string) => {
     let convId = activeId;
 
@@ -109,7 +148,7 @@ export default function Home() {
         return {
           ...c,
           messages: [...c.messages, userMessage],
-          title: isFirst ? text.slice(0, 50) : c.title,
+          title: isFirst ? text : c.title,
           updatedAt: new Date().toISOString(),
         };
       })
@@ -180,6 +219,7 @@ export default function Home() {
           onNewChat={handleNewChat}
           onSelectConversation={handleSelectConversation}
           onDeleteConversation={handleDeleteConversation}
+          onRenameConversation={handleRenameConversation}
           profile={profile}
           onProfileChange={setProfile}
         />

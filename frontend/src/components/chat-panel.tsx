@@ -25,6 +25,7 @@ const SUGGESTIONS = [
 export function ChatPanel({ messages, isLoading, onSend }: ChatPanelProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // Auto-scroll when new messages arrive
   useEffect(() => {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isLoading]);
@@ -42,51 +43,53 @@ export function ChatPanel({ messages, isLoading, onSend }: ChatPanelProps) {
         <ThemeToggle />
       </div>
 
-      <ScrollArea className="flex-1 px-6 py-4">
-        {messages.length === 0 && (
-          <div className="flex flex-col items-center justify-center py-16">
-            <div className="flex size-16 items-center justify-center rounded-2xl bg-primary/10 mb-6">
-              <Bot className="size-8 text-primary" />
-            </div>
-            <h2 className="text-2xl font-semibold tracking-tight">
-              Bienvenue sur Tamwil AI
-            </h2>
-            <p className="mt-2 max-w-md text-center text-muted-foreground">
-              Votre assistant IA pour le financement des startups au Maroc et en Afrique francophone.
-            </p>
-            <div className="mt-8 grid grid-cols-2 gap-3 w-full max-w-lg">
-              {SUGGESTIONS.map((s) => (
-                <button
-                  key={s.text}
-                  onClick={() => onSend(s.text)}
-                  className="flex items-start gap-3 rounded-xl border bg-card p-4 text-left text-sm transition-colors hover:bg-accent hover:border-orange-300/30"
-                >
-                  <s.icon className="size-4 mt-0.5 shrink-0 text-primary" />
-                  <span>{s.text}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {messages.map((message) => (
-          <MessageBubble key={message.id} message={message} />
-        ))}
-
-        {isLoading && (
-          <div className="flex justify-start mb-3">
-            <div className="rounded-2xl rounded-bl-sm bg-muted px-4 py-3">
-              <div className="flex gap-1">
-                <span className="size-2 animate-bounce rounded-full bg-primary/50" style={{ animationDelay: "0ms" }} />
-                <span className="size-2 animate-bounce rounded-full bg-primary/50" style={{ animationDelay: "150ms" }} />
-                <span className="size-2 animate-bounce rounded-full bg-primary/50" style={{ animationDelay: "300ms" }} />
+      <div className="relative flex-1 overflow-hidden">
+        <ScrollArea className="h-full px-6 py-4">
+          {messages.length === 0 && (
+            <div className="flex flex-col items-center justify-center py-16">
+              <div className="flex size-16 items-center justify-center rounded-2xl bg-primary/10 mb-6">
+                <Bot className="size-8 text-primary" />
+              </div>
+              <h2 className="text-2xl font-semibold tracking-tight">
+                Bienvenue sur Tamwil AI
+              </h2>
+              <p className="mt-2 max-w-md text-center text-muted-foreground">
+                Votre assistant IA pour le financement des startups au Maroc et en Afrique francophone.
+              </p>
+              <div className="mt-8 grid grid-cols-2 gap-3 w-full max-w-lg">
+                {SUGGESTIONS.map((s) => (
+                  <button
+                    key={s.text}
+                    onClick={() => onSend(s.text)}
+                    className="flex items-start gap-3 rounded-xl border bg-card p-4 text-left text-sm transition-colors hover:bg-accent hover:border-orange-300/30"
+                  >
+                    <s.icon className="size-4 mt-0.5 shrink-0 text-primary" />
+                    <span>{s.text}</span>
+                  </button>
+                ))}
               </div>
             </div>
-          </div>
-        )}
+          )}
 
-        <div ref={scrollRef} />
-      </ScrollArea>
+          {messages.map((message) => (
+            <MessageBubble key={message.id} message={message} />
+          ))}
+
+          {isLoading && (
+            <div className="flex justify-start mb-3">
+              <div className="rounded-2xl rounded-bl-sm bg-muted px-4 py-3">
+                <div className="flex gap-1">
+                  <span className="size-2 animate-bounce rounded-full bg-primary/50" style={{ animationDelay: "0ms" }} />
+                  <span className="size-2 animate-bounce rounded-full bg-primary/50" style={{ animationDelay: "150ms" }} />
+                  <span className="size-2 animate-bounce rounded-full bg-primary/50" style={{ animationDelay: "300ms" }} />
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div ref={scrollRef} />
+        </ScrollArea>
+      </div>
 
       <ChatInput onSend={onSend} isLoading={isLoading} />
     </div>

@@ -2,8 +2,6 @@
 
 import { ReactNode, useState, createContext, useContext } from "react";
 import { AnimatedGridPattern } from "@/components/animated-grid-pattern";
-import { Button } from "@/components/ui/button";
-import { PanelLeft } from "lucide-react";
 
 interface SidebarContextType {
   collapsed: boolean;
@@ -44,24 +42,13 @@ export function ChatLayout({ sidebar, children }: ChatLayoutProps) {
 
         <aside
           className={`relative z-10 shrink-0 bg-sidebar overflow-hidden transition-all duration-300 ease-in-out ${
-            collapsed ? "w-0" : "w-[260px]"
+            collapsed ? "w-[52px]" : "w-[260px]"
           }`}
         >
           <div className="flex h-full w-[260px] flex-col">{sidebar}</div>
         </aside>
 
         <main className="relative z-10 flex flex-1 flex-col overflow-hidden">
-          {/* Reopen button when collapsed */}
-          {collapsed && (
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setCollapsed(false)}
-              className="absolute left-3 top-3 z-20 size-8 text-muted-foreground hover:text-foreground"
-            >
-              <PanelLeft className="size-4" />
-            </Button>
-          )}
           {children}
         </main>
       </div>

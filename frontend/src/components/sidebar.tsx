@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -9,16 +10,25 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ProfileForm } from "@/components/profile-form";
 import { useSidebar } from "@/components/chat-layout";
 import { Conversation, StartupProfile } from "@/lib/types";
 import {
   PanelLeftClose,
+  PanelLeft,
   SquarePen,
-  MessageSquare,
   Trash2,
   CircleUserRound,
+  Ellipsis,
+  Pencil,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -27,21 +37,9 @@ interface SidebarProps {
   onNewChat: () => void;
   onSelectConversation: (id: string) => void;
   onDeleteConversation: (id: string) => void;
+  onRenameConversation: (id: string, title: string) => void;
   profile: StartupProfile;
   onProfileChange: (profile: StartupProfile) => void;
-}
-
-function timeAgo(dateStr: string): string {
-  const seconds = Math.floor(
-    (Date.now() - new Date(dateStr).getTime()) / 1000
-  );
-  if (seconds < 60) return "à l'instant";
-  const minutes = Math.floor(seconds / 60);
-  if (minutes < 60) return `il y a ${minutes}min`;
-  const hours = Math.floor(minutes / 60);
-  if (hours < 24) return `il y a ${hours}h`;
-  const days = Math.floor(hours / 24);
-  return `il y a ${days}j`;
 }
 
 export function Sidebar({
@@ -50,11 +48,82 @@ export function Sidebar({
   onNewChat,
   onSelectConversation,
   onDeleteConversation,
+  onRenameConversation,
   profile,
   onProfileChange,
 }: SidebarProps) {
-  const { toggle } = useSidebar();
+  const { collapsed, toggle } = useSidebar();
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editValue, setEditValue] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
 
+  useEffect(() => {
+    if (editingId && inputRef.current) {
+      inputRef.current.focus();
+      inputRef.current.select();
+    }
+  }, [editingId]);
+
+  const startRename = (conv: Conversation) => {
+    setEditingId(conv.id);
+    setEditValue(conv.title);
+  };
+
+  const commitRename = () => {
+    if (editingId && editValue.trim()) {
+      onRenameConversation(editingId, editValue.trim());
+    }
+    setEditingId(null);
+  };
+
+  const cancelRename = () => {
+    setEditingId(null);
+  };
+
+  /* ── Collapsed icon strip ── */
+  if (collapsed) {
+    return (
+      <div className="flex h-full w-[52px] flex-col items-center bg-sidebar text-sidebar-foreground py-2 gap-1">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={toggle}
+          className="size-8 text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent"
+        >
+          <PanelLeft className="size-4" />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onNewChat}
+          className="size-8 text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent"
+        >
+          <SquarePen className="size-4" />
+        </Button>
+
+        <div className="flex-1" />
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <button className="flex size-8 items-center justify-center rounded-lg transition-colors hover:bg-sidebar-accent">
+              <CircleUserRound className="size-4 text-sidebar-foreground/60" />
+            </button>
+          </DialogTrigger>
+          <DialogContent className="max-w-md max-h-[85vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle>Profil Startup</DialogTitle>
+              <DialogDescription>
+                Personnalisez vos résultats
+              </DialogDescription>
+            </DialogHeader>
+            <ProfileForm profile={profile} onProfileChange={onProfileChange} />
+          </DialogContent>
+        </Dialog>
+      </div>
+    );
+  }
+
+  /* ── Expanded sidebar ── */
   return (
     <div className="flex h-full flex-col bg-sidebar text-sidebar-foreground">
       {/* Top bar — collapse + new chat */}
@@ -89,29 +158,80 @@ export function Sidebar({
           )}
 
           {conversations.map((conv) => (
-            <button
+            <div
               key={conv.id}
-              onClick={() => onSelectConversation(conv.id)}
-              className={`group relative flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors
+              role="button"
+              tabIndex={0}
+              onClick={() => {
+                if (editingId !== conv.id) onSelectConversation(conv.id);
+              }}
+              onKeyDown={(e) => {
+                if (
+                  editingId !== conv.id &&
+                  (e.key === "Enter" || e.key === " ")
+                ) {
+                  e.preventDefault();
+                  onSelectConversation(conv.id);
+                }
+              }}
+              className={`group relative flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors cursor-pointer
                 ${
                   conv.id === activeId
                     ? "bg-sidebar-accent text-sidebar-accent-foreground"
                     : "text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
                 }`}
             >
-              <span className="flex-1 truncate text-[13px]">
-                {conv.title}
-              </span>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onDeleteConversation(conv.id);
-                }}
-                className="opacity-0 group-hover:opacity-100 shrink-0 rounded p-1 text-sidebar-foreground/30 hover:text-destructive transition-opacity"
-              >
-                <Trash2 className="size-3.5" />
-              </button>
-            </button>
+              {editingId === conv.id ? (
+                <input
+                  ref={inputRef}
+                  value={editValue}
+                  onChange={(e) => setEditValue(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      commitRename();
+                    } else if (e.key === "Escape") {
+                      cancelRename();
+                    }
+                    e.stopPropagation();
+                  }}
+                  onBlur={commitRename}
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex-1 bg-transparent border border-sidebar-border rounded px-1 py-0.5 text-[13px] text-sidebar-foreground outline-none focus:border-primary"
+                />
+              ) : (
+                <span className="flex-1 min-w-0 truncate text-[13px]">
+                  {conv.title}
+                </span>
+              )}
+
+              {editingId !== conv.id && (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button
+                      onClick={(e) => e.stopPropagation()}
+                      className="opacity-0 group-hover:opacity-100 data-[state=open]:opacity-100 shrink-0 rounded p-1 text-sidebar-foreground/40 hover:text-sidebar-foreground transition-opacity"
+                    >
+                      <Ellipsis className="size-4" />
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent side="right" align="start">
+                    <DropdownMenuItem onClick={() => startRename(conv)}>
+                      <Pencil className="size-4" />
+                      Renommer
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem
+                      onClick={() => onDeleteConversation(conv.id)}
+                      className="text-destructive focus:text-destructive"
+                    >
+                      <Trash2 className="size-4" />
+                      Supprimer
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              )}
+            </div>
           ))}
         </div>
       </ScrollArea>

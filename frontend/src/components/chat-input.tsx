@@ -1,9 +1,7 @@
 "use client";
 
-import { useState, KeyboardEvent } from "react";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { SendHorizonal } from "lucide-react";
+import { useState, useRef, useEffect, KeyboardEvent } from "react";
+import { ArrowUp } from "lucide-react";
 
 interface ChatInputProps {
   onSend: (text: string) => void;
@@ -12,6 +10,15 @@ interface ChatInputProps {
 
 export function ChatInput({ onSend, isLoading }: ChatInputProps) {
   const [value, setValue] = useState("");
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Auto-resize textarea
+  useEffect(() => {
+    const el = textareaRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = `${Math.min(el.scrollHeight, 200)}px`;
+  }, [value]);
 
   const handleSend = () => {
     const trimmed = value.trim();
@@ -28,28 +35,31 @@ export function ChatInput({ onSend, isLoading }: ChatInputProps) {
   };
 
   return (
-    <div className="border-t px-6 py-4">
-      <div className="flex items-end gap-3">
-        <Textarea
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Posez votre question..."
-          className="min-h-[44px] max-h-32 resize-none"
-          disabled={isLoading}
-        />
-        <Button
-          onClick={handleSend}
-          disabled={isLoading || !value.trim()}
-          size="icon"
-          className="shrink-0"
-        >
-          <SendHorizonal className="size-4" />
-        </Button>
+    <div className="px-4 pb-4 pt-2">
+      <div className="mx-auto max-w-3xl">
+        <div className="flex items-end gap-2 rounded-2xl bg-muted/60 border border-border/50 px-4 py-3 focus-within:border-border transition-colors">
+          <textarea
+            ref={textareaRef}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Posez votre question..."
+            disabled={isLoading}
+            rows={1}
+            className="flex-1 resize-none bg-transparent text-sm leading-6 placeholder:text-muted-foreground/60 focus:outline-none disabled:opacity-50"
+          />
+          <button
+            onClick={handleSend}
+            disabled={isLoading || !value.trim()}
+            className="flex size-8 shrink-0 items-center justify-center rounded-full bg-foreground text-background transition-opacity disabled:opacity-30"
+          >
+            <ArrowUp className="size-4" />
+          </button>
+        </div>
+        <p className="mt-2 text-center text-[11px] text-muted-foreground/50">
+          Entrée pour envoyer · Shift+Entrée pour un retour à la ligne
+        </p>
       </div>
-      <p className="mt-2 text-xs text-muted-foreground">
-        Entrée pour envoyer, Shift+Entrée pour un retour à la ligne
-      </p>
     </div>
   );
 }
