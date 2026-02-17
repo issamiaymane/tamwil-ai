@@ -118,7 +118,8 @@ def _build_grant_documents() -> list[Document]:
             f"Secteurs : {sectors}\n"
             f"Âge max : {eligibility.get('age_max_company', 'N/A')}\n"
             f"Conditions : {conditions}\n"
-            f"Processus : {g.get('application_process', '')}"
+            f"Processus : {g.get('application_process', '')}\n"
+            f"Deadline : {g.get('deadline_info', '')}"
         )
         doc = Document(
             page_content=text,
@@ -142,6 +143,12 @@ def _build_metric_documents() -> list[Document]:
         for stage, levels in m.get("benchmarks", {}).items():
             benchmarks_text += f"  {stage}: bad={levels.get('bad')}, ok={levels.get('ok')}, good={levels.get('good')}, excellent={levels.get('excellent')}\n"
 
+        benchmarks_mad_text = ""
+        if m.get("benchmarks_mad"):
+            benchmarks_mad_text = "Benchmarks MAD :\n"
+            for stage, levels in m["benchmarks_mad"].items():
+                benchmarks_mad_text += f"  {stage}: bad={levels.get('bad')}, ok={levels.get('ok')}, good={levels.get('good')}, excellent={levels.get('excellent')}\n"
+
         tips = "; ".join(m.get("improvement_tips", []))
 
         text = (
@@ -150,6 +157,7 @@ def _build_metric_documents() -> list[Document]:
             f"Formule : {m.get('formula', '')}\n"
             f"Unité : {m.get('unit', '')}\n"
             f"Benchmarks :\n{benchmarks_text}"
+            f"{benchmarks_mad_text}"
             f"Interprétation : {m.get('interpretation', '')}\n"
             f"Conseils d'amélioration : {tips}"
         )

@@ -6,7 +6,10 @@
     "definition": "Le MRR représente la somme de tous les revenus récurrents générés chaque mois par les abonnements actifs. C'est l'indicateur fondamental de la santé financière d'une startup SaaS. Il inclut les nouveaux abonnements, les expansions (upsells), les contractions (downgrades) et exclut les revenus ponctuels. Le MRR se décompose en : New MRR (nouveaux clients), Expansion MRR (montées en gamme), Contraction MRR (descentes en gamme) et Churned MRR (clients perdus).",
     "formula": "MRR = Somme des revenus récurrents mensuels de tous les abonnés actifs. Pour les abonnements annuels : montant annuel / 12.",
     "unit": "currency",
-    "applicable_sectors": ["SaaS", "abonnement"],
+    "applicable_sectors": [
+      "SaaS",
+      "abonnement"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "<500€/mois",
@@ -40,11 +43,42 @@
       "Proposer des plans annuels avec remise de 15-20% pour sécuriser le revenu",
       "Diversifier les canaux d'acquisition (SEO, contenu, partenariats)"
     ],
-    "related_metrics": ["ARR", "MRR_GROWTH", "CHURN_RATE", "REVENUE_CHURN"],
+    "related_metrics": [
+      "ARR",
+      "MRR_GROWTH",
+      "CHURN_RATE",
+      "REVENUE_CHURN"
+    ],
     "sources": [
       "https://www.saas-capital.com/research/",
       "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report"
-    ]
+    ],
+    "benchmarks_mad": {
+      "pre_seed": {
+        "bad": "<5 250 MAD/mois",
+        "ok": "5 250-21 000 MAD/mois",
+        "good": "21 000-52 500 MAD/mois",
+        "excellent": ">52 500 MAD/mois"
+      },
+      "seed": {
+        "bad": "<52 500 MAD/mois",
+        "ok": "52 500-157 500 MAD/mois",
+        "good": "157 500-525 000 MAD/mois",
+        "excellent": ">525 000 MAD/mois"
+      },
+      "serie_a": {
+        "bad": "<525 000 MAD/mois",
+        "ok": "525 000-1,575M MAD/mois",
+        "good": "1,575M-5,25M MAD/mois",
+        "excellent": ">5,25M MAD/mois"
+      },
+      "serie_b": {
+        "bad": "<5,25M MAD/mois",
+        "ok": "5,25M-15,75M MAD/mois",
+        "good": "15,75M-52,5M MAD/mois",
+        "excellent": ">52,5M MAD/mois"
+      }
+    }
   },
   {
     "id": "ARR",
@@ -53,7 +87,10 @@
     "definition": "L'ARR est la valeur annualisée des revenus récurrents (MRR × 12). C'est la métrique privilégiée par les investisseurs pour évaluer la taille d'une startup SaaS, comparer les sociétés entre elles et déterminer les multiples de valorisation. L'ARR ne doit inclure que les revenus véritablement récurrents, excluant les services ponctuels et les frais d'installation.",
     "formula": "ARR = MRR × 12. Ne pas inclure les revenus non récurrents (consulting, frais de setup).",
     "unit": "currency",
-    "applicable_sectors": ["SaaS", "abonnement"],
+    "applicable_sectors": [
+      "SaaS",
+      "abonnement"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "<6 000€/an",
@@ -87,12 +124,43 @@
       "Cibler des segments à plus forte valeur pour augmenter le panier moyen",
       "Mettre en place un programme de partenariats et revendeurs"
     ],
-    "related_metrics": ["MRR", "MRR_GROWTH", "LTV", "CHURN_RATE"],
+    "related_metrics": [
+      "MRR",
+      "MRR_GROWTH",
+      "LTV",
+      "CHURN_RATE"
+    ],
     "sources": [
       "https://www.saas-capital.com/research/",
       "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report",
       "https://www.saastr.com/"
-    ]
+    ],
+    "benchmarks_mad": {
+      "pre_seed": {
+        "bad": "<63 000 MAD/an",
+        "ok": "63 000-252 000 MAD/an",
+        "good": "252 000-630 000 MAD/an",
+        "excellent": ">630 000 MAD/an"
+      },
+      "seed": {
+        "bad": "<630 000 MAD/an",
+        "ok": "630 000-1,89M MAD/an",
+        "good": "1,89M-6,3M MAD/an",
+        "excellent": ">6,3M MAD/an"
+      },
+      "serie_a": {
+        "bad": "<6,3M MAD/an",
+        "ok": "6,3M-18,9M MAD/an",
+        "good": "18,9M-63M MAD/an",
+        "excellent": ">63M MAD/an"
+      },
+      "serie_b": {
+        "bad": "<63M MAD/an",
+        "ok": "63M-189M MAD/an",
+        "good": "189M-630M MAD/an",
+        "excellent": ">630M MAD/an"
+      }
+    }
   },
   {
     "id": "MRR_GROWTH",
@@ -101,7 +169,11 @@
     "definition": "Le taux de croissance du MRR mesure l'augmentation en pourcentage du revenu mensuel récurrent d'un mois à l'autre (Month-over-Month) ou d'une année à l'autre (Year-over-Year). Il décompose la croissance nette en : nouveau MRR, expansion MRR, contraction MRR et churned MRR. C'est l'indicateur le plus scruté par les investisseurs early-stage.",
     "formula": "Taux de Croissance MRR (MoM) = ((MRR mois N - MRR mois N-1) / MRR mois N-1) × 100. YoY = ((MRR mois N - MRR même mois N-1) / MRR même mois N-1) × 100.",
     "unit": "percentage",
-    "applicable_sectors": ["SaaS", "abonnement", "marketplace"],
+    "applicable_sectors": [
+      "SaaS",
+      "abonnement",
+      "marketplace"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "<5% MoM",
@@ -135,7 +207,13 @@
       "Créer des mécanismes d'expansion naturels dans le produit (limites d'usage, fonctionnalités premium)",
       "Mettre en place des boucles de croissance virales (parrainage, partage in-app)"
     ],
-    "related_metrics": ["MRR", "ARR", "CHURN_RATE", "REVENUE_CHURN", "CAC"],
+    "related_metrics": [
+      "MRR",
+      "ARR",
+      "CHURN_RATE",
+      "REVENUE_CHURN",
+      "CAC"
+    ],
     "sources": [
       "https://www.saas-capital.com/research/",
       "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report",
@@ -149,7 +227,13 @@
     "definition": "Le CAC représente le coût total moyen pour acquérir un nouveau client payant. Il englobe les dépenses de vente et de marketing divisées par le nombre de nouveaux clients acquis. On distingue le CAC blended (tous canaux) du CAC par canal (organique, payant, outbound).",
     "formula": "CAC = (Total dépenses vente + Total dépenses marketing) / Nombre de nouveaux clients acquis sur la période.",
     "unit": "currency",
-    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
+    "applicable_sectors": [
+      "SaaS",
+      "marketplace",
+      "e-commerce",
+      "fintech",
+      "tous"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": ">500€",
@@ -183,11 +267,43 @@
       "Mettre en place un programme de parrainage pour réduire le CAC moyen",
       "Améliorer le taux de conversion via l'A/B testing systématique"
     ],
-    "related_metrics": ["LTV", "LTV_CAC", "PAYBACK_PERIOD", "MRR", "BURN_RATE"],
+    "related_metrics": [
+      "LTV",
+      "LTV_CAC",
+      "PAYBACK_PERIOD",
+      "MRR",
+      "BURN_RATE"
+    ],
     "sources": [
       "https://www.saas-capital.com/research/",
       "https://www.highalpha.com/2024-saas-benchmarks-report"
-    ]
+    ],
+    "benchmarks_mad": {
+      "pre_seed": {
+        "bad": ">5 250 MAD",
+        "ok": "2 100-5 250 MAD",
+        "good": "525-2 100 MAD",
+        "excellent": "<525 MAD"
+      },
+      "seed": {
+        "bad": ">10 500 MAD",
+        "ok": "5 250-10 500 MAD",
+        "good": "1 575-5 250 MAD",
+        "excellent": "<1 575 MAD"
+      },
+      "serie_a": {
+        "bad": ">21 000 MAD",
+        "ok": "10 500-21 000 MAD",
+        "good": "5 250-10 500 MAD",
+        "excellent": "<5 250 MAD"
+      },
+      "serie_b": {
+        "bad": ">52 500 MAD",
+        "ok": "21 000-52 500 MAD",
+        "good": "10 500-21 000 MAD",
+        "excellent": "<10 500 MAD"
+      }
+    }
   },
   {
     "id": "LTV",
@@ -196,7 +312,13 @@
     "definition": "La LTV représente le revenu total net qu'un client génère pour l'entreprise sur toute la durée de sa relation commerciale. Elle prend en compte le revenu moyen par client, la marge brute et la durée de rétention. La LTV doit impérativement être supérieure au CAC pour assurer la viabilité du modèle.",
     "formula": "LTV = (Revenu moyen par client par mois × Marge brute %) / Taux de churn mensuel. Exemple : ARPU = 100€/mois, marge = 80%, churn mensuel = 3.5% => LTV = (100 × 0.80) / 0.035 = 2 286€.",
     "unit": "currency",
-    "applicable_sectors": ["SaaS", "abonnement", "e-commerce", "marketplace", "tous"],
+    "applicable_sectors": [
+      "SaaS",
+      "abonnement",
+      "e-commerce",
+      "marketplace",
+      "tous"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "<500€",
@@ -230,11 +352,43 @@
       "Améliorer la marge brute en optimisant les coûts de délivrance",
       "Segmenter les clients par LTV pour personnaliser les efforts de rétention"
     ],
-    "related_metrics": ["CAC", "LTV_CAC", "CHURN_RATE", "GROSS_MARGIN", "UNIT_ECONOMICS"],
+    "related_metrics": [
+      "CAC",
+      "LTV_CAC",
+      "CHURN_RATE",
+      "GROSS_MARGIN",
+      "UNIT_ECONOMICS"
+    ],
     "sources": [
       "https://www.saas-capital.com/research/",
       "https://www.vitally.io/post/average-churn-rate"
-    ]
+    ],
+    "benchmarks_mad": {
+      "pre_seed": {
+        "bad": "<5 250 MAD",
+        "ok": "5 250-21 000 MAD",
+        "good": "21 000-52 500 MAD",
+        "excellent": ">52 500 MAD"
+      },
+      "seed": {
+        "bad": "<21 000 MAD",
+        "ok": "21 000-52 500 MAD",
+        "good": "52 500-210 000 MAD",
+        "excellent": ">210 000 MAD"
+      },
+      "serie_a": {
+        "bad": "<52 500 MAD",
+        "ok": "52 500-210 000 MAD",
+        "good": "210 000-525 000 MAD",
+        "excellent": ">525 000 MAD"
+      },
+      "serie_b": {
+        "bad": "<525 000 MAD",
+        "ok": "525 000-2,1M MAD",
+        "good": "2,1M-5,25M MAD",
+        "excellent": ">5,25M MAD"
+      }
+    }
   },
   {
     "id": "LTV_CAC",
@@ -243,7 +397,13 @@
     "definition": "Le ratio LTV/CAC compare la valeur totale générée par un client sur sa durée de vie au coût nécessaire pour l'acquérir. Un ratio supérieur à 3x est considéré comme sain. C'est l'un des indicateurs les plus importants de la viabilité du modèle économique.",
     "formula": "Ratio LTV/CAC = Valeur Vie Client (LTV) / Coût d'Acquisition Client (CAC). Exemple : LTV = 3 000€ et CAC = 500€ => ratio = 6x.",
     "unit": "ratio",
-    "applicable_sectors": ["SaaS", "abonnement", "e-commerce", "marketplace", "tous"],
+    "applicable_sectors": [
+      "SaaS",
+      "abonnement",
+      "e-commerce",
+      "marketplace",
+      "tous"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "<1x",
@@ -277,7 +437,13 @@
       "Développer le bouche-à-oreille via un programme de parrainage",
       "Analyser les cohortes pour vérifier que le ratio s'améliore dans le temps"
     ],
-    "related_metrics": ["LTV", "CAC", "PAYBACK_PERIOD", "CHURN_RATE", "GROSS_MARGIN"],
+    "related_metrics": [
+      "LTV",
+      "CAC",
+      "PAYBACK_PERIOD",
+      "CHURN_RATE",
+      "GROSS_MARGIN"
+    ],
     "sources": [
       "https://www.saas-capital.com/research/"
     ]
@@ -289,7 +455,10 @@
     "definition": "Le taux de churn mesure le pourcentage de clients qui cessent d'utiliser le produit ou annulent leur abonnement sur une période donnée. Le logo churn se concentre sur le nombre de clients perdus, indépendamment de leur valeur. C'est un indicateur critique de la satisfaction client et du product-market fit.",
     "formula": "Taux de Churn Mensuel = (Clients perdus durant le mois / Clients au début du mois) × 100. Churn Annuel = 1 - (1 - Churn Mensuel)^12.",
     "unit": "percentage",
-    "applicable_sectors": ["SaaS", "abonnement"],
+    "applicable_sectors": [
+      "SaaS",
+      "abonnement"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": ">10% mensuel",
@@ -323,7 +492,12 @@
       "Réaliser des entretiens de sortie systématiques pour corriger les patterns récurrents",
       "Proposer des alternatives au désabonnement : pause, downgrade, offre de rétention"
     ],
-    "related_metrics": ["REVENUE_CHURN", "LTV", "MRR", "NPS"],
+    "related_metrics": [
+      "REVENUE_CHURN",
+      "LTV",
+      "MRR",
+      "NPS"
+    ],
     "sources": [
       "https://www.vitally.io/post/average-churn-rate",
       "https://www.saas-capital.com/research/",
@@ -337,7 +511,10 @@
     "definition": "La NRR (Net Revenue Retention) mesure la variation des revenus des clients existants en incluant l'expansion (upsells), la contraction (downgrades) et le churn. Une NRR supérieure à 100% signifie que les revenus des clients existants augmentent même en tenant compte du churn. C'est la métrique la plus valorisée par les investisseurs.",
     "formula": "NRR = ((MRR début + Expansion MRR - Contraction MRR - Churned MRR) / MRR début) × 100. Exemple : MRR début = 100K€, Expansion = 15K€, Contraction = 3K€, Churn = 5K€ => NRR = 107%.",
     "unit": "percentage",
-    "applicable_sectors": ["SaaS", "abonnement"],
+    "applicable_sectors": [
+      "SaaS",
+      "abonnement"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "NRR <80%",
@@ -371,7 +548,13 @@
       "Créer des rapports d'utilisation montrant la valeur pour encourager les upgrades",
       "Développer des fonctionnalités premium créant des opportunités d'upsell"
     ],
-    "related_metrics": ["CHURN_RATE", "MRR", "MRR_GROWTH", "LTV", "ARR"],
+    "related_metrics": [
+      "CHURN_RATE",
+      "MRR",
+      "MRR_GROWTH",
+      "LTV",
+      "ARR"
+    ],
     "sources": [
       "https://www.saas-capital.com/research/",
       "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report"
@@ -384,7 +567,13 @@
     "definition": "Le burn rate représente le montant de trésorerie net consommé par la startup chaque mois. Le burn rate brut (gross burn) correspond aux dépenses totales mensuelles, tandis que le burn rate net (net burn) déduit les revenus générés. C'est un indicateur vital de la viabilité à court terme.",
     "formula": "Burn Rate Net = Dépenses mensuelles totales - Revenus mensuels. Burn Multiple = Net Burn / Net New ARR (plus il est bas, mieux c'est).",
     "unit": "currency",
-    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
+    "applicable_sectors": [
+      "SaaS",
+      "marketplace",
+      "e-commerce",
+      "fintech",
+      "tous"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": ">15 000€/mois",
@@ -418,10 +607,41 @@
       "Recruter progressivement et privilégier les profils polyvalents en early-stage",
       "Utiliser les crédits cloud gratuits (AWS Activate, Google for Startups, Microsoft for Startups)"
     ],
-    "related_metrics": ["RUNWAY", "GROSS_MARGIN", "MRR", "UNIT_ECONOMICS"],
+    "related_metrics": [
+      "RUNWAY",
+      "GROSS_MARGIN",
+      "MRR",
+      "UNIT_ECONOMICS"
+    ],
     "sources": [
       "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report"
-    ]
+    ],
+    "benchmarks_mad": {
+      "pre_seed": {
+        "bad": ">105 000 MAD/mois",
+        "ok": "52 500-105 000 MAD/mois",
+        "good": "21 000-52 500 MAD/mois",
+        "excellent": "<21 000 MAD/mois"
+      },
+      "seed": {
+        "bad": ">525 000 MAD/mois",
+        "ok": "210 000-525 000 MAD/mois",
+        "good": "105 000-210 000 MAD/mois",
+        "excellent": "<105 000 MAD/mois"
+      },
+      "serie_a": {
+        "bad": ">2,1M MAD/mois",
+        "ok": "1,05M-2,1M MAD/mois",
+        "good": "525 000-1,05M MAD/mois",
+        "excellent": "<525 000 MAD/mois"
+      },
+      "serie_b": {
+        "bad": ">5,25M MAD/mois",
+        "ok": "2,1M-5,25M MAD/mois",
+        "good": "1,05M-2,1M MAD/mois",
+        "excellent": "<1,05M MAD/mois"
+      }
+    }
   },
   {
     "id": "RUNWAY",
@@ -430,7 +650,13 @@
     "definition": "Le runway représente le nombre de mois pendant lesquels une startup peut continuer à fonctionner avant d'épuiser ses réserves de trésorerie, au rythme de dépense actuel. C'est un indicateur de survie qui détermine l'urgence de lever des fonds.",
     "formula": "Runway (mois) = Solde de trésorerie / Burn Rate Net mensuel. Runway ajusté = Trésorerie / (Burn Rate - Croissance mensuelle du revenu).",
     "unit": "mois",
-    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
+    "applicable_sectors": [
+      "SaaS",
+      "marketplace",
+      "e-commerce",
+      "fintech",
+      "tous"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "<3 mois",
@@ -464,7 +690,11 @@
       "Explorer le financement non-dilutif (Innov Invest, FORSA, BPI France)",
       "Accélérer le passage à la rentabilité unitaire"
     ],
-    "related_metrics": ["BURN_RATE", "MRR", "GROSS_MARGIN"],
+    "related_metrics": [
+      "BURN_RATE",
+      "MRR",
+      "GROSS_MARGIN"
+    ],
     "sources": [
       "https://innovinvest.ma/",
       "https://forsa.ma/",
@@ -478,7 +708,13 @@
     "definition": "La marge brute représente le pourcentage du chiffre d'affaires restant après déduction des coûts directs (COGS). Pour une startup SaaS, les COGS incluent l'hébergement cloud, les licences tierces, le support technique de premier niveau et les coûts de délivrance. C'est un indicateur clé de la scalabilité du modèle.",
     "formula": "Marge Brute (%) = ((CA - Coût des ventes) / CA) × 100. COGS SaaS = Hébergement cloud + Support direct + Licences tierces intégrées.",
     "unit": "percentage",
-    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
+    "applicable_sectors": [
+      "SaaS",
+      "marketplace",
+      "e-commerce",
+      "fintech",
+      "tous"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "<40%",
@@ -512,7 +748,12 @@
       "Réduire les coûts de support via la documentation et les outils self-service",
       "Migrer vers des solutions d'infrastructure plus économiques si la marge est structurellement basse"
     ],
-    "related_metrics": ["UNIT_ECONOMICS", "LTV", "BURN_RATE", "MRR"],
+    "related_metrics": [
+      "UNIT_ECONOMICS",
+      "LTV",
+      "BURN_RATE",
+      "MRR"
+    ],
     "sources": [
       "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report",
       "https://www.saas-capital.com/research/"
@@ -525,7 +766,13 @@
     "definition": "L'économie unitaire mesure la rentabilité d'une seule unité de transaction (un client, une commande) après déduction de tous les coûts variables. La marge de contribution est le montant restant après les coûts variables, avant les coûts fixes. Si l'économie unitaire est négative, croître ne fait qu'aggraver les pertes.",
     "formula": "Marge de Contribution = Revenu par Unité - Coûts Variables par Unité. Taux de Contribution = (Marge de Contribution / Revenu par Unité) × 100.",
     "unit": "currency",
-    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
+    "applicable_sectors": [
+      "SaaS",
+      "marketplace",
+      "e-commerce",
+      "fintech",
+      "tous"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "Marge de contribution négative",
@@ -559,7 +806,12 @@
       "Négocier les coûts fournisseurs en fonction du volume",
       "Éliminer les segments clients à économie unitaire structurellement négative"
     ],
-    "related_metrics": ["GROSS_MARGIN", "LTV", "CAC", "BURN_RATE"],
+    "related_metrics": [
+      "GROSS_MARGIN",
+      "LTV",
+      "CAC",
+      "BURN_RATE"
+    ],
     "sources": [
       "https://www.saas-capital.com/research/",
       "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report"
@@ -572,7 +824,10 @@
     "definition": "Le GMV représente la valeur totale des transactions réalisées sur une plateforme marketplace ou e-commerce, avant déduction des frais, retours et annulations. C'est l'indicateur principal de la taille d'une marketplace. Le GMV ne représente pas le CA de la plateforme (qui est le take rate × GMV).",
     "formula": "GMV = Nombre de transactions × Valeur moyenne par transaction. Revenu net = GMV × Take Rate.",
     "unit": "currency",
-    "applicable_sectors": ["marketplace", "e-commerce"],
+    "applicable_sectors": [
+      "marketplace",
+      "e-commerce"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "<5 000€/mois",
@@ -606,10 +861,40 @@
       "Élargir l'offre pour attirer de nouveaux segments",
       "Réduire le taux d'abandon de panier et proposer plusieurs moyens de paiement locaux"
     ],
-    "related_metrics": ["UNIT_ECONOMICS", "CAC", "GROSS_MARGIN"],
+    "related_metrics": [
+      "UNIT_ECONOMICS",
+      "CAC",
+      "GROSS_MARGIN"
+    ],
     "sources": [
       "https://a16z.com/marketplace-100/"
-    ]
+    ],
+    "benchmarks_mad": {
+      "pre_seed": {
+        "bad": "<52 500 MAD/mois",
+        "ok": "52 500-525 000 MAD/mois",
+        "good": "525 000-1,05M MAD/mois",
+        "excellent": ">1,05M MAD/mois"
+      },
+      "seed": {
+        "bad": "<525 000 MAD/mois",
+        "ok": "525 000-2,1M MAD/mois",
+        "good": "2,1M-10,5M MAD/mois",
+        "excellent": ">10,5M MAD/mois"
+      },
+      "serie_a": {
+        "bad": "<2,1M MAD/mois",
+        "ok": "2,1M-10,5M MAD/mois",
+        "good": "10,5M-52,5M MAD/mois",
+        "excellent": ">52,5M MAD/mois"
+      },
+      "serie_b": {
+        "bad": "<10,5M MAD/mois",
+        "ok": "10,5M-52,5M MAD/mois",
+        "good": "52,5M-1,05Mrd MAD/mois",
+        "excellent": ">1,05Mrd MAD/mois"
+      }
+    }
   },
   {
     "id": "PAYBACK_PERIOD",
@@ -618,7 +903,12 @@
     "definition": "La période de récupération du CAC mesure le nombre de mois nécessaires pour récupérer le coût d'acquisition d'un client à travers les marges générées. Plus la période est courte, plus rapidement l'entreprise peut réinvestir dans l'acquisition.",
     "formula": "Payback (mois) = CAC / (Revenu moyen mensuel par client × Marge brute %). Exemple : CAC = 600€, ARPU = 100€/mois, Marge = 80% => Payback = 7.5 mois.",
     "unit": "mois",
-    "applicable_sectors": ["SaaS", "abonnement", "marketplace", "tous"],
+    "applicable_sectors": [
+      "SaaS",
+      "abonnement",
+      "marketplace",
+      "tous"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": ">24 mois",
@@ -652,7 +942,13 @@
       "Améliorer la marge brute en automatisant la délivrance du service",
       "Proposer des paiements annuels anticipés pour récupérer le CAC immédiatement"
     ],
-    "related_metrics": ["CAC", "LTV", "LTV_CAC", "GROSS_MARGIN", "BURN_RATE"],
+    "related_metrics": [
+      "CAC",
+      "LTV",
+      "LTV_CAC",
+      "GROSS_MARGIN",
+      "BURN_RATE"
+    ],
     "sources": [
       "https://www.bvp.com/atlas/the-cloud-100-benchmarks-report",
       "https://www.highalpha.com/2024-saas-benchmarks-report"
@@ -665,7 +961,13 @@
     "definition": "Le NPS mesure la probabilité que les clients recommandent le produit. Calculé en soustrayant le % de détracteurs (score 0-6) du % de promoteurs (score 9-10) sur une échelle de 0 à 10. Les passifs (7-8) ne sont pas comptabilisés. Le score varie de -100 à +100.",
     "formula": "NPS = % Promoteurs (scores 9-10) - % Détracteurs (scores 0-6). Question : 'Sur une échelle de 0 à 10, recommanderiez-vous [produit] ?'.",
     "unit": "score",
-    "applicable_sectors": ["SaaS", "marketplace", "e-commerce", "fintech", "tous"],
+    "applicable_sectors": [
+      "SaaS",
+      "marketplace",
+      "e-commerce",
+      "fintech",
+      "tous"
+    ],
     "benchmarks": {
       "pre_seed": {
         "bad": "<0",
@@ -699,9 +1001,211 @@
       "Transformer les promoteurs en ambassadeurs via un programme de parrainage",
       "Suivre le NPS par cohorte pour mesurer l'impact des améliorations produit"
     ],
-    "related_metrics": ["CHURN_RATE", "LTV", "REVENUE_CHURN"],
+    "related_metrics": [
+      "CHURN_RATE",
+      "LTV",
+      "REVENUE_CHURN"
+    ],
     "sources": [
       "https://www.bain.com/consulting-services/customer-strategy-and-marketing/customer-loyalty/"
+    ]
+  },
+  {
+    "id": "TAKE_RATE",
+    "name": "Take Rate",
+    "name_fr": "Taux de Commission",
+    "definition": "Le take rate représente le pourcentage de la valeur totale des transactions (GMV) que la marketplace retient comme commission. C'est le véritable chiffre d'affaires de la plateforme. Varie selon le type de marketplace : les marketplaces de services (Uber, Airbnb) ont des take rates plus élevés que les marketplaces de produits. Selon a16z, plus la marketplace prend en charge de tâches (logistique, assurance, paiement), plus le take rate est élevé.",
+    "formula": "Take Rate (%) = (Revenu net de la marketplace / GMV) × 100. Exemple : si la GMV est de 1 000 000€ et le revenu net de 120 000€, le take rate est de 12%.",
+    "unit": "percentage",
+    "applicable_sectors": [
+      "marketplace",
+      "e-commerce",
+      "fintech"
+    ],
+    "benchmarks": {
+      "pre_seed": {
+        "bad": "<3%",
+        "ok": "3-8%",
+        "good": "8-15%",
+        "excellent": ">15%"
+      },
+      "seed": {
+        "bad": "<5%",
+        "ok": "5-10%",
+        "good": "10-18%",
+        "excellent": ">18%"
+      },
+      "serie_a": {
+        "bad": "<8%",
+        "ok": "8-12%",
+        "good": "12-20%",
+        "excellent": ">20%"
+      },
+      "serie_b": {
+        "bad": "<10%",
+        "ok": "10-15%",
+        "good": "15-25%",
+        "excellent": ">25%"
+      }
+    },
+    "interpretation": "La médiane des marketplaces est de 12-15% selon a16z (Marketplace 100). Airbnb affiche environ 15% (3% frais hôte + jusqu'à 20% frais voyageur), Etsy environ 18% (6,5% transaction + frais annexes), Uber 20-28% selon les marchés. Jumia facture 5-20% par catégorie de produit. Pour les marketplaces marocaines, un take rate de 8-15% est réaliste selon le secteur. Un take rate trop bas signifie une faible monétisation du GMV, tandis qu'un take rate trop élevé peut décourager les vendeurs.",
+    "improvement_tips": [
+      "Augmenter la valeur ajoutée (services premium, assurance, logistique) pour justifier une commission plus élevée",
+      "Tester des modèles de commission différenciés par catégorie de produit ou service",
+      "Proposer des plans d'abonnement aux vendeurs professionnels en complément de la commission",
+      "Analyser l'élasticité du take rate par segment pour optimiser le revenu total"
+    ],
+    "related_metrics": [
+      "GMV",
+      "GROSS_MARGIN",
+      "UNIT_ECONOMICS",
+      "CAC"
+    ],
+    "sources": [
+      "https://a16z.com/13-metrics-for-marketplace-companies/",
+      "https://www.tidemarkcap.com/vskp-chapter/marketplace-take-rates"
+    ]
+  },
+  {
+    "id": "TPV",
+    "name": "Total Payment Volume",
+    "name_fr": "Volume Total de Paiements",
+    "definition": "Le TPV représente le montant total des transactions traitées par une plateforme de paiement sur une période donnée. C'est la métrique de référence pour les fintechs de paiement, permettant de mesurer la taille et la croissance de l'activité. Le revenu est dérivé du TPV via le taux de commission moyen (ex: Stripe retient environ 2,9% du TPV).",
+    "formula": "TPV = Somme de toutes les transactions traitées sur la période. Revenu = TPV × taux moyen de commission. Exemple : TPV de 10M€/mois avec 2% de commission = 200 000€ de revenu mensuel.",
+    "unit": "currency",
+    "applicable_sectors": [
+      "fintech",
+      "marketplace",
+      "e-commerce"
+    ],
+    "benchmarks": {
+      "pre_seed": {
+        "bad": "<100 000€/mois",
+        "ok": "100 000-500 000€/mois",
+        "good": "500 000-2M€/mois",
+        "excellent": ">2M€/mois"
+      },
+      "seed": {
+        "bad": "<1M€/mois",
+        "ok": "1M-5M€/mois",
+        "good": "5M-20M€/mois",
+        "excellent": ">20M€/mois"
+      },
+      "serie_a": {
+        "bad": "<10M€/mois",
+        "ok": "10M-50M€/mois",
+        "good": "50M-200M€/mois",
+        "excellent": ">200M€/mois"
+      },
+      "serie_b": {
+        "bad": "<100M€/mois",
+        "ok": "100M-500M€/mois",
+        "good": "500M-2Mrd€/mois",
+        "excellent": ">2Mrd€/mois"
+      }
+    },
+    "benchmarks_mad": {
+      "pre_seed": {
+        "bad": "<1,05M MAD/mois",
+        "ok": "1,05M-5,25M MAD/mois",
+        "good": "5,25M-21M MAD/mois",
+        "excellent": ">21M MAD/mois"
+      },
+      "seed": {
+        "bad": "<10,5M MAD/mois",
+        "ok": "10,5M-52,5M MAD/mois",
+        "good": "52,5M-210M MAD/mois",
+        "excellent": ">210M MAD/mois"
+      },
+      "serie_a": {
+        "bad": "<105M MAD/mois",
+        "ok": "105M-525M MAD/mois",
+        "good": "525M-2,1Mrd MAD/mois",
+        "excellent": ">2,1Mrd MAD/mois"
+      },
+      "serie_b": {
+        "bad": "<1,05Mrd MAD/mois",
+        "ok": "1,05Mrd-5,25Mrd MAD/mois",
+        "good": "5,25Mrd-21Mrd MAD/mois",
+        "excellent": ">21Mrd MAD/mois"
+      }
+    },
+    "interpretation": "Le TPV est la métrique reine des fintechs de paiement. Stripe a traité 1,4 billion USD en 2024 (+38% annuel). Flutterwave (Afrique) a traité 31 milliards USD en 2024. Au Maroc, HPS gère le switch national SWAM qui a traité 401 millions de paiements par carte en 2024. Cash Plus a réalisé son IPO à environ 550 millions USD de valorisation. Le marché des paiements électroniques marocain est en forte croissance avec le M-Wallet et la stratégie d'inclusion financière de Bank Al-Maghrib.",
+    "improvement_tips": [
+      "Diversifier les canaux d'acquisition de marchands pour augmenter le volume",
+      "Faciliter l'intégration technique (SDK, plugins) pour réduire les frictions d'adoption",
+      "Augmenter la récurrence des transactions via des fonctionnalités de paiement récurrent",
+      "Étendre la couverture géographique pour capter de nouveaux flux de paiement"
+    ],
+    "related_metrics": [
+      "GMV",
+      "TAKE_RATE",
+      "GROSS_MARGIN",
+      "BURN_RATE"
+    ],
+    "sources": [
+      "https://a16z.com/13-metrics-for-marketplace-companies/",
+      "https://stripe.com/newsroom/news/stripe-2024-update",
+      "https://www.bkam.ma/"
+    ]
+  },
+  {
+    "id": "DAU_MAU",
+    "name": "DAU/MAU Ratio (Stickiness)",
+    "name_fr": "Ratio DAU/MAU (Adhésivité)",
+    "definition": "Le ratio DAU/MAU mesure le pourcentage d'utilisateurs actifs mensuels qui utilisent le produit chaque jour. C'est un indicateur clé de l'engagement et de la 'stickiness' d'un produit. Un ratio élevé signifie que les utilisateurs reviennent quotidiennement, signe d'un produit qui crée des habitudes d'usage.",
+    "formula": "DAU/MAU (%) = (Utilisateurs Actifs Quotidiens / Utilisateurs Actifs Mensuels) × 100. Exemple : 5 000 DAU et 25 000 MAU = ratio de 20%.",
+    "unit": "percentage",
+    "applicable_sectors": [
+      "marketplace",
+      "fintech",
+      "SaaS",
+      "consumer tech",
+      "edtech",
+      "mobile"
+    ],
+    "benchmarks": {
+      "pre_seed": {
+        "bad": "<5%",
+        "ok": "5-10%",
+        "good": "10-20%",
+        "excellent": ">20%"
+      },
+      "seed": {
+        "bad": "<10%",
+        "ok": "10-20%",
+        "good": "20-30%",
+        "excellent": ">30%"
+      },
+      "serie_a": {
+        "bad": "<15%",
+        "ok": "15-25%",
+        "good": "25-40%",
+        "excellent": ">40%"
+      },
+      "serie_b": {
+        "bad": "<20%",
+        "ok": "20-30%",
+        "good": "30-50%",
+        "excellent": ">50%"
+      }
+    },
+    "interpretation": "Selon Sequoia Capital, le standard DAU/MAU est de 10-20%, seules quelques entreprises dépassent 50%. WhatsApp atteint 72-83%, Facebook environ 66%. Par secteur : fintech moyen 22%, SaaS B2B environ 13%, e-commerce environ 10%. Le rapport Mixpanel 2024 (basé sur 7 700+ clients et 11,7 billions d'événements) indique une moyenne toutes industries de 37%. Pour les applications mobiles et fintechs marocaines, viser 15-25% est un bon objectif en seed. Ce ratio est particulièrement pertinent pour les super-apps et les applications à usage quotidien.",
+    "improvement_tips": [
+      "Créer des habitudes d'usage quotidien via des notifications pertinentes et du contenu frais",
+      "Implémenter des fonctionnalités de gamification pour encourager l'engagement quotidien",
+      "Analyser les cohortes pour identifier les fonctionnalités qui génèrent le plus d'engagement",
+      "Réduire les frictions d'utilisation (temps de chargement, UX simplifiée) pour favoriser le retour"
+    ],
+    "related_metrics": [
+      "CHURN_RATE",
+      "NPS",
+      "MRR_GROWTH",
+      "LTV"
+    ],
+    "sources": [
+      "https://www.geckoboard.com/best-practice/kpi-examples/dau-mau-ratio/",
+      "https://mixpanel.com/wp-content/uploads/2024/01/2024_Benchmarks_Report.pdf"
     ]
   }
 ]

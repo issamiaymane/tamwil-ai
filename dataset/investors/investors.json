@@ -4,797 +4,1675 @@
     "name": "CDG Invest",
     "type": "VC",
     "description": "Filiale d'investissement de la Caisse de Dépôt et de Gestion (CDG), l'un des plus grands investisseurs institutionnels du Maroc. CDG Invest gère plusieurs fonds et véhicules d'investissement couvrant le capital-risque, le capital-développement et les infrastructures. Active dans l'accompagnement de l'écosystème entrepreneurial marocain à travers notamment le programme 212 Founders.",
-    "sectors": ["infrastructure", "technologie", "industrie", "services financiers", "immobilier"],
-    "stage": ["série A", "série B+", "growth"],
+    "sectors": [
+      "infrastructure",
+      "technologie",
+      "industrie",
+      "services financiers",
+      "immobilier"
+    ],
+    "stage": [
+      "série A",
+      "série B+",
+      "growth"
+    ],
     "ticket_min": 5000000,
     "ticket_max": 100000000,
     "currency": "MAD",
-    "geography": ["Maroc", "Afrique"],
+    "geography": [
+      "Maroc",
+      "Afrique"
+    ],
     "criteria": {
       "description": "Entreprises marocaines ou à fort ancrage marocain avec un modèle économique prouvé, potentiel de croissance significatif et impact sur le développement économique du pays."
     },
-    "portfolio_examples": ["Chari", "WafR"],
+    "portfolio_examples": [
+      "Chari",
+      "WafR"
+    ],
     "contact": {
       "website": "https://www.cdginvest.ma/",
       "linkedin": "https://www.linkedin.com/company/cdg-invest/"
     },
-    "sources": ["https://www.cdginvest.ma/", "https://www.cdg.ma/"]
+    "sources": [
+      "https://www.cdginvest.ma/",
+      "https://www.cdg.ma/"
+    ]
   },
   {
     "id": "INV_002",
     "name": "212 Founders",
     "type": "VC",
     "description": "Fonds de capital-risque marocain lancé par CDG Invest, dédié au financement de startups technologiques en phase d'amorçage et de croissance au Maroc. 212 Founders investit des tickets de 3 à 10 millions de dirhams et offre un accompagnement stratégique aux fondateurs.",
-    "sectors": ["fintech", "SaaS", "e-commerce", "healthtech", "edtech", "logistique"],
-    "stage": ["seed", "série A"],
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "e-commerce",
+      "healthtech",
+      "edtech",
+      "logistique"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": 3000000,
     "ticket_max": 10000000,
     "currency": "MAD",
-    "geography": ["Maroc"],
+    "geography": [
+      "Maroc"
+    ],
     "criteria": {
       "description": "Startups technologiques marocaines avec un MVP validé, une traction initiale et une équipe fondatrice solide. Recherche de startups à fort potentiel de scalabilité."
     },
-    "portfolio_examples": ["Chari", "Épicerie Verte", "WafR", "Dabadoc"],
+    "portfolio_examples": [
+      "Chari",
+      "Épicerie Verte",
+      "WafR",
+      "Dabadoc"
+    ],
     "contact": {
       "website": "https://www.212founders.com/",
       "linkedin": "https://www.linkedin.com/company/212founders/"
     },
-    "sources": ["https://www.212founders.com/", "https://www.cdginvest.ma/"]
+    "sources": [
+      "https://www.212founders.com/",
+      "https://www.cdginvest.ma/"
+    ]
   },
   {
     "id": "INV_003",
     "name": "Maroc Numeric Fund (MNF)",
     "type": "VC",
     "description": "Premier fonds de capital-risque dédié aux technologies de l'information et de la communication au Maroc. Créé en 2010 avec le soutien de la Caisse de Dépôt et de Gestion et du ministère de l'Industrie. MNF a investi dans de nombreuses startups tech marocaines pionnières.",
-    "sectors": ["fintech", "SaaS", "e-commerce", "TIC", "mobile"],
-    "stage": ["seed", "série A"],
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "e-commerce",
+      "TIC",
+      "mobile"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": 1000000,
     "ticket_max": 10000000,
     "currency": "MAD",
-    "geography": ["Maroc"],
+    "geography": [
+      "Maroc"
+    ],
     "criteria": {
       "description": "Startups innovantes dans le secteur des TIC au Maroc avec un modèle économique viable et une équipe technique compétente."
     },
-    "portfolio_examples": ["Screendy", "MyTindy", "WB Engineering"],
+    "portfolio_examples": [
+      "Screendy",
+      "MyTindy",
+      "WB Engineering"
+    ],
     "contact": {
       "website": "https://www.mnf.ma/",
       "linkedin": "https://www.linkedin.com/company/maroc-numeric-fund/"
     },
-    "sources": ["https://www.mnf.ma/", "https://www.amic.org.ma/"]
+    "sources": [
+      "https://www.mnf.ma/",
+      "https://www.amic.org.ma/"
+    ]
   },
   {
     "id": "INV_004",
     "name": "Azur Innovation Fund",
     "type": "VC",
     "description": "Fonds d'investissement marocain axé sur l'innovation et les nouvelles technologies. Soutenu par des investisseurs institutionnels marocains, il cible les startups technologiques à fort potentiel de croissance au Maroc et en Afrique du Nord.",
-    "sectors": ["fintech", "SaaS", "cleantech", "agritech"],
-    "stage": ["seed", "série A"],
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "cleantech",
+      "agritech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": 2000000,
     "ticket_max": 15000000,
     "currency": "MAD",
-    "geography": ["Maroc", "Afrique du Nord"],
+    "geography": [
+      "Maroc",
+      "Afrique du Nord"
+    ],
     "criteria": {
       "description": "Startups innovantes marocaines avec un produit technologique différenciant et un potentiel de déploiement régional."
     },
-    "portfolio_examples": null,
+    "portfolio_examples": [
+      "ORA Technologies",
+      "Tookeez",
+      "KWIKS",
+      "DataPathology",
+      "Agenz",
+      "Koolskools",
+      "KONTA"
+    ],
     "contact": {
-      "website": null,
-      "linkedin": null
+      "website": "https://www.azurinnov.com/",
+      "linkedin": "https://ma.linkedin.com/company/azur-innovation-management"
     },
-    "sources": ["https://www.amic.org.ma/"]
+    "sources": [
+      "https://www.amic.org.ma/"
+    ]
   },
   {
     "id": "INV_005",
     "name": "Outlierz Ventures",
     "type": "VC",
     "description": "Fonds de capital-risque basé au Maroc, cofondé par Amine Zariat, spécialisé dans l'investissement en amorçage dans les startups technologiques en Afrique et au Moyen-Orient. Outlierz Ventures se distingue par son approche panafricaine et son réseau d'entrepreneurs.",
-    "sectors": ["fintech", "SaaS", "e-commerce", "healthtech", "edtech", "logistique"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "e-commerce",
+      "healthtech",
+      "edtech",
+      "logistique"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 50000,
     "ticket_max": 500000,
     "currency": "USD",
-    "geography": ["Maroc", "Afrique", "MENA"],
+    "geography": [
+      "Maroc",
+      "Afrique",
+      "MENA"
+    ],
     "criteria": {
       "description": "Startups tech early-stage en Afrique et MENA avec des fondateurs ambitieux, un produit innovant et un potentiel de marché significatif."
     },
-    "portfolio_examples": ["Chari", "Terraa", "Gayya"],
+    "portfolio_examples": [
+      "Chari",
+      "Terraa",
+      "Gayya"
+    ],
     "contact": {
       "website": "https://www.outlierz.co/",
       "linkedin": "https://www.linkedin.com/company/outliervezentures/"
     },
-    "sources": ["https://www.outlierz.co/", "https://www.crunchbase.com/organization/outlierz-ventures"]
+    "sources": [
+      "https://www.outlierz.co/",
+      "https://www.crunchbase.com/organization/outlierz-ventures"
+    ]
   },
   {
     "id": "INV_006",
     "name": "MITC Capital",
     "type": "VC",
     "description": "Société de gestion marocaine qui gère plusieurs fonds d'investissement dédiés aux startups et PME innovantes. MITC Capital (Morocco Information Technopark Company Capital) est liée à l'écosystème du Technopark de Casablanca et accompagne les entrepreneurs technologiques marocains.",
-    "sectors": ["TIC", "offshoring", "SaaS", "fintech"],
-    "stage": ["seed", "série A"],
+    "sectors": [
+      "TIC",
+      "offshoring",
+      "SaaS",
+      "fintech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": 1000000,
     "ticket_max": 10000000,
     "currency": "MAD",
-    "geography": ["Maroc"],
+    "geography": [
+      "Maroc"
+    ],
     "criteria": {
       "description": "Startups et PME innovantes au Maroc, principalement dans le secteur des TIC, avec un modèle économique solide et un potentiel de croissance."
     },
-    "portfolio_examples": null,
+    "portfolio_examples": [
+      "CleanMob",
+      "Z.Systems",
+      "Cypherleak",
+      "OnePay",
+      "Logidoo"
+    ],
     "contact": {
       "website": "https://www.mitccapital.ma/",
       "linkedin": "https://www.linkedin.com/company/mitc-capital/"
     },
-    "sources": ["https://www.mitccapital.ma/", "https://www.amic.org.ma/"]
+    "sources": [
+      "https://www.mitccapital.ma/",
+      "https://www.amic.org.ma/"
+    ]
   },
   {
     "id": "INV_007",
     "name": "Kalys Ventures",
     "type": "BA",
     "description": "Réseau d'investisseurs providentiels (business angels) basé au Maroc, fondé pour combler le gap de financement early-stage dans l'écosystème startup marocain. Kalys Ventures investit des tickets de 50 000 à 200 000 USD dans des startups en phase d'amorçage.",
-    "sectors": ["fintech", "SaaS", "e-commerce", "marketplace", "edtech"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "e-commerce",
+      "marketplace",
+      "edtech"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 50000,
     "ticket_max": 200000,
     "currency": "USD",
-    "geography": ["Maroc", "Afrique du Nord"],
+    "geography": [
+      "Maroc",
+      "Afrique du Nord"
+    ],
     "criteria": {
       "description": "Startups early-stage avec un fondateur ou co-fondateurs engagés, un MVP fonctionnel et des premiers signes de traction sur le marché."
     },
-    "portfolio_examples": null,
+    "portfolio_examples": [
+      "Logidoo",
+      "Weego",
+      "PaySika",
+      "Kumulus",
+      "UserGuest"
+    ],
     "contact": {
-      "website": null,
-      "linkedin": null
+      "website": "https://kalysvc.co/",
+      "linkedin": "https://www.linkedin.com/company/kalys-ventures"
     },
-    "sources": ["https://www.crunchbase.com/organization/kalys-ventures"]
+    "sources": [
+      "https://www.crunchbase.com/organization/kalys-ventures"
+    ]
   },
   {
     "id": "INV_008",
     "name": "SEAF Morocco Growth Fund",
     "type": "VC",
     "description": "Fonds géré par Small Enterprise Assistance Funds (SEAF), un gestionnaire d'investissement à impact global. Le fonds marocain cible les PME et startups en croissance au Maroc, avec une approche d'investissement à impact combinant rendement financier et impact social.",
-    "sectors": ["agritech", "industrie", "services", "technologie"],
-    "stage": ["série A", "growth"],
+    "sectors": [
+      "agritech",
+      "industrie",
+      "services",
+      "technologie"
+    ],
+    "stage": [
+      "série A",
+      "growth"
+    ],
     "ticket_min": 500000,
     "ticket_max": 3000000,
     "currency": "USD",
-    "geography": ["Maroc"],
+    "geography": [
+      "Maroc"
+    ],
     "criteria": {
       "description": "PME et startups marocaines en phase de croissance avec un impact social ou environnemental mesurable et un potentiel de rentabilité."
     },
-    "portfolio_examples": null,
+    "portfolio_examples": [
+      "SOWIT",
+      "SOS Credit",
+      "Deepsense",
+      "3Dental",
+      "eDukaty",
+      "Mazma"
+    ],
     "contact": {
       "website": "https://www.seaf.com/",
       "linkedin": "https://www.linkedin.com/company/seaborneafunds/"
     },
-    "sources": ["https://www.seaf.com/portfolios/morocco-growth-fund/"]
+    "sources": [
+      "https://www.seaf.com/portfolios/morocco-growth-fund/"
+    ]
   },
   {
     "id": "INV_009",
     "name": "AfricInvest",
     "type": "VC",
     "description": "L'un des plus grands groupes de private equity et venture capital en Afrique, basé à Tunis avec des bureaux au Maroc et dans plusieurs pays africains. AfricInvest gère plus de 2 milliards USD d'actifs et investit activement au Maroc à travers plusieurs fonds dédiés aux PME et startups africaines.",
-    "sectors": ["services financiers", "santé", "éducation", "technologie", "biens de consommation", "agribusiness"],
-    "stage": ["série A", "série B+", "growth"],
+    "sectors": [
+      "services financiers",
+      "santé",
+      "éducation",
+      "technologie",
+      "biens de consommation",
+      "agribusiness"
+    ],
+    "stage": [
+      "série A",
+      "série B+",
+      "growth"
+    ],
     "ticket_min": 1000000,
     "ticket_max": 30000000,
     "currency": "USD",
-    "geography": ["Maroc", "Tunisie", "Afrique du Nord", "Afrique subsaharienne"],
+    "geography": [
+      "Maroc",
+      "Tunisie",
+      "Afrique du Nord",
+      "Afrique subsaharienne"
+    ],
     "criteria": {
       "description": "Entreprises et startups africaines en croissance avec des revenus établis, un leadership fort et un potentiel d'expansion panafricaine."
     },
-    "portfolio_examples": ["Instadeep", "MNT-Halan", "Chari"],
+    "portfolio_examples": [
+      "Instadeep",
+      "MNT-Halan",
+      "Chari"
+    ],
     "contact": {
       "website": "https://www.africinvest.com/",
       "linkedin": "https://www.linkedin.com/company/africinvest/"
     },
-    "sources": ["https://www.africinvest.com/", "https://www.crunchbase.com/organization/africinvest"]
+    "sources": [
+      "https://www.africinvest.com/",
+      "https://www.crunchbase.com/organization/africinvest"
+    ]
   },
   {
     "id": "INV_010",
     "name": "Fonds Mohammed VI pour l'Investissement (FM6I)",
     "type": "fonds_public",
-    "description": "Fonds souverain marocain doté de 15 milliards de dirhams (environ 1,5 milliard USD), lancé officiellement en 2024 sous la présidence du Roi Mohammed VI. Le FM6I vise à catalyser l'investissement privé au Maroc en co-investissant dans des secteurs stratégiques incluant la technologie, l'industrie et les infrastructures.",
-    "sectors": ["technologie", "industrie", "tourisme", "agriculture", "infrastructure"],
-    "stage": ["série A", "série B+", "growth"],
+    "description": "Le Fonds Mohammed VI pour l'Investissement est un fonds souverain marocain créé en 2020 pour catalyser l'investissement au Maroc. Le FM6I n'investit pas directement dans les startups mais opère via des véhicules intermédiaires : CapAccess (dette subordonnée jusqu'à 30 millions MAD par entreprise à 5,5% fixe) et 14 sociétés de gestion sélectionnées pour déployer 19 milliards MAD dans des fonds sectoriels et thématiques. Le FM6I vise à tripler les investissements du capital-investissement au Maroc.",
+    "sectors": [
+      "technologie",
+      "industrie",
+      "tourisme",
+      "agriculture",
+      "infrastructure"
+    ],
+    "stage": [
+      "série A",
+      "série B+",
+      "growth"
+    ],
     "ticket_min": null,
     "ticket_max": null,
     "currency": "MAD",
-    "geography": ["Maroc"],
+    "geography": [
+      "Maroc"
+    ],
     "criteria": {
       "description": "Projets d'investissement structurants pour l'économie marocaine, à fort potentiel de création d'emplois et de valeur ajoutée, dans les secteurs prioritaires définis par le Nouveau Modèle de Développement."
     },
-    "portfolio_examples": null,
+    "portfolio_examples": [],
     "contact": {
       "website": "https://www.fm6i.ma/",
       "linkedin": "https://www.linkedin.com/company/fonds-mohammed-vi-pour-l-investissement/"
     },
-    "sources": ["https://www.fm6i.ma/", "https://www.mapnews.ma/"]
+    "sources": [
+      "https://www.fm6i.ma/",
+      "https://www.mapnews.ma/"
+    ]
   },
   {
     "id": "INV_011",
     "name": "UM6P Ventures",
     "type": "CVC",
     "description": "Bras d'investissement de l'Université Mohammed VI Polytechnique (UM6P), basée à Benguerir. UM6P Ventures soutient les startups deeptech et à impact issues de l'écosystème de recherche de l'UM6P et du groupe OCP, avec un focus sur l'agriculture, les mines, l'énergie et les technologies vertes.",
-    "sectors": ["agritech", "cleantech", "deeptech", "biotech", "mining tech"],
-    "stage": ["pre-seed", "seed", "série A"],
-    "ticket_min": null,
-    "ticket_max": null,
+    "sectors": [
+      "agritech",
+      "cleantech",
+      "deeptech",
+      "biotech",
+      "mining tech"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 250000,
+    "ticket_max": 5000000,
     "currency": "MAD",
-    "geography": ["Maroc", "Afrique"],
+    "geography": [
+      "Maroc",
+      "Afrique"
+    ],
     "criteria": {
       "description": "Startups deeptech et à impact, idéalement issues de l'écosystème UM6P/OCP, avec un fort contenu technologique et scientifique et un potentiel d'impact en Afrique."
     },
-    "portfolio_examples": ["Sowit", "Terraa"],
+    "portfolio_examples": [
+      "Chari",
+      "Deepecho",
+      "WafR",
+      "PayLik",
+      "ATAREC",
+      "Nascent Materials"
+    ],
     "contact": {
       "website": "https://www.um6p.ma/",
       "linkedin": "https://www.linkedin.com/school/um6p/"
     },
-    "sources": ["https://www.um6p.ma/", "https://www.ocpgroup.ma/"]
+    "sources": [
+      "https://www.um6p.ma/",
+      "https://www.ocpgroup.ma/"
+    ]
   },
   {
     "id": "INV_012",
     "name": "R&D Maroc (OCP Group)",
     "type": "CVC",
-    "description": "Initiative d'investissement en innovation du Groupe OCP, leader mondial des phosphates. OCP soutient l'innovation et les startups dans les domaines de l'agriculture, de l'eau, de l'énergie et des technologies durables à travers divers programmes et fonds dédiés.",
-    "sectors": ["agritech", "cleantech", "biotech", "mining tech", "énergie"],
-    "stage": ["seed", "série A"],
+    "description": "R&D Maroc est une association reconnue d'utilité publique, créée en 1997, dédiée à la promotion de la R&D et de l'innovation au Maroc. Ce n'est pas un fonds d'investissement mais une structure d'accompagnement labellisée par Tamwilcom pour le programme Innov Invest. R&D Maroc a accompagné 35 startups via son programme 'Innov Idea' (2018-2022), dont 19 ont déposé des brevets. Depuis 2024, le programme 'R&D Maroc 60 Startups' vise 60 startups en 5 ans en partenariat avec Tamwilcom.",
+    "sectors": [
+      "agritech",
+      "cleantech",
+      "biotech",
+      "mining tech",
+      "énergie"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": null,
     "ticket_max": null,
     "currency": "MAD",
-    "geography": ["Maroc", "Afrique"],
+    "geography": [
+      "Maroc",
+      "Afrique"
+    ],
     "criteria": {
       "description": "Startups et projets d'innovation liés aux domaines stratégiques d'OCP : agriculture durable, gestion de l'eau, énergie propre et technologies minières."
     },
-    "portfolio_examples": ["Sowit"],
+    "portfolio_examples": [],
     "contact": {
       "website": "https://www.ocpgroup.ma/",
       "linkedin": "https://www.linkedin.com/company/ocp-group/"
     },
-    "sources": ["https://www.ocpgroup.ma/"]
+    "sources": [
+      "https://www.ocpgroup.ma/"
+    ]
   },
   {
     "id": "INV_013",
     "name": "Tamwilcom (ex-CCG)",
     "type": "fonds_public",
     "description": "Établissement public marocain (anciennement Caisse Centrale de Garantie) qui facilite l'accès au financement pour les TPME et startups marocaines. Tamwilcom propose des garanties de prêts, du co-financement et des programmes dédiés à l'entrepreneuriat innovant, notamment le programme Innov Invest.",
-    "sectors": ["tous secteurs"],
-    "stage": ["pre-seed", "seed", "série A"],
+    "sectors": [
+      "tous secteurs"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed",
+      "série A"
+    ],
     "ticket_min": null,
     "ticket_max": null,
     "currency": "MAD",
-    "geography": ["Maroc"],
+    "geography": [
+      "Maroc"
+    ],
     "criteria": {
       "description": "TPME et startups innovantes marocaines éligibles aux programmes de garantie et de financement de Tamwilcom, notamment via le fonds Innov Invest."
     },
-    "portfolio_examples": null,
+    "portfolio_examples": [],
     "contact": {
       "website": "https://www.tamwilcom.ma/",
       "linkedin": "https://www.linkedin.com/company/tamwilcom/"
     },
-    "sources": ["https://www.tamwilcom.ma/", "https://www.finances.gov.ma/"]
+    "sources": [
+      "https://www.tamwilcom.ma/",
+      "https://www.finances.gov.ma/"
+    ]
   },
   {
     "id": "INV_014",
     "name": "Partech Partners",
     "type": "VC",
     "description": "Fonds de capital-risque international basé à Paris, San Francisco et Dakar. Partech est l'un des fonds VC les plus actifs en Europe et en Afrique, avec plus de 2 milliards d'euros sous gestion. Investit du seed au growth dans les startups technologiques.",
-    "sectors": ["fintech", "SaaS", "marketplace", "enterprise software", "deeptech", "healthtech"],
-    "stage": ["seed", "série A", "série B+", "growth"],
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "marketplace",
+      "enterprise software",
+      "deeptech",
+      "healthtech"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+",
+      "growth"
+    ],
     "ticket_min": 200000,
     "ticket_max": 50000000,
     "currency": "EUR",
-    "geography": ["Europe", "Afrique", "Amérique du Nord"],
+    "geography": [
+      "Europe",
+      "Afrique",
+      "Amérique du Nord"
+    ],
     "criteria": {
       "description": "Startups technologiques avec un produit différenciant, une équipe fondatrice exceptionnelle et un potentiel de marché mondial ou continental. Forte conviction dans les fondateurs."
     },
-    "portfolio_examples": ["Bolt", "Mirakl", "Believe", "Wave", "TradeDepot"],
+    "portfolio_examples": [
+      "Bolt",
+      "Mirakl",
+      "Believe",
+      "Wave",
+      "TradeDepot"
+    ],
     "contact": {
       "website": "https://partechpartners.com/",
       "linkedin": "https://www.linkedin.com/company/partech-partners/"
     },
-    "sources": ["https://partechpartners.com/", "https://www.crunchbase.com/organization/partech-partners"]
+    "sources": [
+      "https://partechpartners.com/",
+      "https://www.crunchbase.com/organization/partech-partners"
+    ]
   },
   {
     "id": "INV_015",
     "name": "Kima Ventures",
     "type": "BA",
     "description": "Fonds d'investissement en amorçage cofondé par Xavier Niel (fondateur de Free/Iliad) et Jeremie Berrebi. Kima Ventures est l'un des investisseurs seed les plus actifs au monde, réalisant environ 100 investissements par an avec des tickets d'environ 150 000 euros.",
-    "sectors": ["fintech", "SaaS", "marketplace", "deeptech", "healthtech", "consumer tech"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "marketplace",
+      "deeptech",
+      "healthtech",
+      "consumer tech"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 150000,
     "ticket_max": 150000,
     "currency": "EUR",
-    "geography": ["monde entier"],
+    "geography": [
+      "monde entier"
+    ],
     "criteria": {
       "description": "Startups en phase d'amorçage dans tous les secteurs tech, avec un fondateur ou une équipe déterminée. Processus de décision très rapide (moins de 2 semaines)."
     },
-    "portfolio_examples": ["Algolia", "Livestorm", "Front"],
+    "portfolio_examples": [
+      "Algolia",
+      "Livestorm",
+      "Front"
+    ],
     "contact": {
       "website": "https://www.kimaventures.com/",
       "linkedin": "https://www.linkedin.com/company/kima-ventures/"
     },
-    "sources": ["https://www.kimaventures.com/", "https://www.crunchbase.com/organization/kima-ventures"]
+    "sources": [
+      "https://www.kimaventures.com/",
+      "https://www.crunchbase.com/organization/kima-ventures"
+    ]
   },
   {
     "id": "INV_016",
     "name": "Breega",
     "type": "VC",
     "description": "Fonds de capital-risque early-stage basé à Paris et Londres. Breega investit dans les startups technologiques européennes en phase d'amorçage et série A, avec un focus sur le B2B SaaS, la fintech et les marketplaces. Gère plus de 250 millions d'euros.",
-    "sectors": ["SaaS", "fintech", "marketplace", "enterprise software", "data"],
-    "stage": ["seed", "série A"],
+    "sectors": [
+      "SaaS",
+      "fintech",
+      "marketplace",
+      "enterprise software",
+      "data"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": 500000,
     "ticket_max": 8000000,
     "currency": "EUR",
-    "geography": ["Europe"],
+    "geography": [
+      "Europe"
+    ],
     "criteria": {
       "description": "Startups européennes early-stage avec un produit tech innovant, un potentiel de marché européen ou mondial et une équipe fondatrice ambitieuse."
     },
-    "portfolio_examples": ["Spendesk", "Luko", "Brigad", "Stockly"],
+    "portfolio_examples": [
+      "Spendesk",
+      "Luko",
+      "Brigad",
+      "Stockly"
+    ],
     "contact": {
       "website": "https://www.breega.com/",
       "linkedin": "https://www.linkedin.com/company/breega/"
     },
-    "sources": ["https://www.breega.com/", "https://www.crunchbase.com/organization/breega-capital"]
+    "sources": [
+      "https://www.breega.com/",
+      "https://www.crunchbase.com/organization/breega-capital"
+    ]
   },
   {
     "id": "INV_017",
     "name": "Elaia Partners",
     "type": "VC",
     "description": "Société de capital-risque parisienne fondée en 2002, spécialisée dans le financement de startups technologiques européennes, avec un focus particulier sur le deeptech, le SaaS et l'intelligence artificielle. Elaia gère plus de 1 milliard d'euros d'actifs.",
-    "sectors": ["deeptech", "SaaS", "intelligence artificielle", "cybersécurité", "enterprise software"],
-    "stage": ["seed", "série A", "série B+"],
+    "sectors": [
+      "deeptech",
+      "SaaS",
+      "intelligence artificielle",
+      "cybersécurité",
+      "enterprise software"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
     "ticket_min": 500000,
     "ticket_max": 15000000,
     "currency": "EUR",
-    "geography": ["Europe"],
+    "geography": [
+      "Europe"
+    ],
     "criteria": {
       "description": "Startups technologiques européennes avec une forte composante d'innovation technologique, idéalement issue de la recherche, avec un potentiel de leadership de marché."
     },
-    "portfolio_examples": ["Criteo", "Mirakl", "Orchestra Networks", "Shift Technology"],
+    "portfolio_examples": [
+      "Criteo",
+      "Mirakl",
+      "Orchestra Networks",
+      "Shift Technology"
+    ],
     "contact": {
       "website": "https://www.elaia.com/",
       "linkedin": "https://www.linkedin.com/company/elaia-partners/"
     },
-    "sources": ["https://www.elaia.com/", "https://www.crunchbase.com/organization/elaia-partners"]
+    "sources": [
+      "https://www.elaia.com/",
+      "https://www.crunchbase.com/organization/elaia-partners"
+    ]
   },
   {
     "id": "INV_018",
     "name": "Eurazeo",
     "type": "VC",
     "description": "Groupe d'investissement européen coté en bourse, basé à Paris. Eurazeo gère plus de 35 milliards d'euros d'actifs diversifiés et dispose d'une activité significative de capital-risque et growth equity ciblant les startups tech européennes à forte croissance.",
-    "sectors": ["fintech", "SaaS", "santé", "consumer tech", "B2B software"],
-    "stage": ["série A", "série B+", "growth"],
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "santé",
+      "consumer tech",
+      "B2B software"
+    ],
+    "stage": [
+      "série A",
+      "série B+",
+      "growth"
+    ],
     "ticket_min": 5000000,
     "ticket_max": 100000000,
     "currency": "EUR",
-    "geography": ["Europe", "Amérique du Nord"],
+    "geography": [
+      "Europe",
+      "Amérique du Nord"
+    ],
     "criteria": {
       "description": "Startups et scale-ups technologiques en forte croissance avec des revenus récurrents significatifs, un leadership de marché émergent et un potentiel international."
     },
-    "portfolio_examples": ["ContentSquare", "Doctolib", "Payfit", "Malt"],
+    "portfolio_examples": [
+      "ContentSquare",
+      "Doctolib",
+      "Payfit",
+      "Malt"
+    ],
     "contact": {
       "website": "https://www.eurazeo.com/",
       "linkedin": "https://www.linkedin.com/company/eurazeo/"
     },
-    "sources": ["https://www.eurazeo.com/", "https://www.crunchbase.com/organization/eurazeo"]
+    "sources": [
+      "https://www.eurazeo.com/",
+      "https://www.crunchbase.com/organization/eurazeo"
+    ]
   },
   {
     "id": "INV_019",
     "name": "XAnge",
     "type": "VC",
     "description": "Fonds de capital-risque européen (anciennement Siparex Innovation), basé à Paris et Munich. XAnge investit dans les startups technologiques en phase d'amorçage et série A en Europe, avec un focus sur le SaaS, les marketplaces et la fintech. Gère environ 600 millions d'euros.",
-    "sectors": ["SaaS", "marketplace", "fintech", "enterprise software", "consumer tech"],
-    "stage": ["seed", "série A"],
+    "sectors": [
+      "SaaS",
+      "marketplace",
+      "fintech",
+      "enterprise software",
+      "consumer tech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": 500000,
     "ticket_max": 10000000,
     "currency": "EUR",
-    "geography": ["Europe"],
+    "geography": [
+      "Europe"
+    ],
     "criteria": {
       "description": "Startups européennes early-stage avec un produit tech solide, des premiers clients et un potentiel de scalabilité en Europe."
     },
-    "portfolio_examples": ["Younited Credit", "Mirakl", "Dataiku"],
+    "portfolio_examples": [
+      "Younited Credit",
+      "Mirakl",
+      "Dataiku"
+    ],
     "contact": {
       "website": "https://www.xange.fr/",
       "linkedin": "https://www.linkedin.com/company/xange/"
     },
-    "sources": ["https://www.xange.fr/", "https://www.crunchbase.com/organization/xange-private-equity"]
+    "sources": [
+      "https://www.xange.fr/",
+      "https://www.crunchbase.com/organization/xange-private-equity"
+    ]
   },
   {
     "id": "INV_020",
     "name": "Serena Capital",
     "type": "VC",
     "description": "Fonds de capital-risque français fondé par des entrepreneurs, spécialisé dans l'investissement dans les startups B2B software et SaaS en Europe. Serena gère environ 600 millions d'euros et se positionne comme un partenaire opérationnel pour les fondateurs.",
-    "sectors": ["B2B software", "SaaS", "data", "intelligence artificielle", "fintech"],
-    "stage": ["seed", "série A", "série B+"],
+    "sectors": [
+      "B2B software",
+      "SaaS",
+      "data",
+      "intelligence artificielle",
+      "fintech"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
     "ticket_min": 1000000,
     "ticket_max": 20000000,
     "currency": "EUR",
-    "geography": ["Europe"],
+    "geography": [
+      "Europe"
+    ],
     "criteria": {
       "description": "Startups B2B software européennes avec un modèle SaaS ou récurrent, une forte rétention clients et un potentiel de leadership sur leur segment de marché."
     },
-    "portfolio_examples": ["Dataiku", "Ivalua", "Lifen", "Alma"],
+    "portfolio_examples": [
+      "Dataiku",
+      "Ivalua",
+      "Lifen",
+      "Alma"
+    ],
     "contact": {
       "website": "https://www.serena.vc/",
       "linkedin": "https://www.linkedin.com/company/serena-capital/"
     },
-    "sources": ["https://www.serena.vc/", "https://www.crunchbase.com/organization/serena-capital"]
+    "sources": [
+      "https://www.serena.vc/",
+      "https://www.crunchbase.com/organization/serena-capital"
+    ]
   },
   {
     "id": "INV_021",
     "name": "Alven",
     "type": "VC",
     "description": "Société de capital-risque parisienne fondée en 2000, investissant dans les startups technologiques européennes en phase early-stage. Alven a financé certaines des plus grandes réussites de la tech française et européenne et gère environ 900 millions d'euros.",
-    "sectors": ["SaaS", "fintech", "marketplace", "consumer tech", "deeptech"],
-    "stage": ["seed", "série A"],
+    "sectors": [
+      "SaaS",
+      "fintech",
+      "marketplace",
+      "consumer tech",
+      "deeptech"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": 500000,
     "ticket_max": 15000000,
     "currency": "EUR",
-    "geography": ["Europe"],
+    "geography": [
+      "Europe"
+    ],
     "criteria": {
       "description": "Startups technologiques européennes avec des fondateurs exceptionnels, un produit innovant et un large marché adressable."
     },
-    "portfolio_examples": ["Stripe (early investor)", "Algolia", "Dataiku", "Qonto"],
+    "portfolio_examples": [
+      "Stripe (early investor)",
+      "Algolia",
+      "Dataiku",
+      "Qonto"
+    ],
     "contact": {
       "website": "https://www.alven.co/",
       "linkedin": "https://www.linkedin.com/company/alven-capital/"
     },
-    "sources": ["https://www.alven.co/", "https://www.crunchbase.com/organization/alven-capital-partners"]
+    "sources": [
+      "https://www.alven.co/",
+      "https://www.crunchbase.com/organization/alven-capital-partners"
+    ]
   },
   {
     "id": "INV_022",
     "name": "Newfund Capital",
     "type": "VC",
     "description": "Fonds de capital-risque franco-américain basé à Paris et Los Angeles, spécialisé dans les investissements seed et série A dans les startups B2B. Newfund accompagne les startups européennes qui souhaitent s'étendre aux États-Unis.",
-    "sectors": ["B2B software", "SaaS", "fintech", "proptech", "industrie 4.0"],
-    "stage": ["seed", "série A"],
+    "sectors": [
+      "B2B software",
+      "SaaS",
+      "fintech",
+      "proptech",
+      "industrie 4.0"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": 500000,
     "ticket_max": 5000000,
     "currency": "EUR",
-    "geography": ["Europe", "Amérique du Nord"],
+    "geography": [
+      "Europe",
+      "Amérique du Nord"
+    ],
     "criteria": {
       "description": "Startups B2B avec un produit technologique fort, un potentiel transatlantique et une ambition de leadership mondial sur leur segment."
     },
-    "portfolio_examples": ["Zencargo", "Energiency", "reciTAL"],
+    "portfolio_examples": [
+      "Zencargo",
+      "Energiency",
+      "reciTAL"
+    ],
     "contact": {
       "website": "https://www.newfundcap.com/",
       "linkedin": "https://www.linkedin.com/company/newfund/"
     },
-    "sources": ["https://www.newfundcap.com/", "https://www.crunchbase.com/organization/newfund"]
+    "sources": [
+      "https://www.newfundcap.com/",
+      "https://www.crunchbase.com/organization/newfund"
+    ]
   },
   {
     "id": "INV_023",
     "name": "Cathay Innovation",
     "type": "VC",
     "description": "Fonds de capital-risque global basé à Paris et San Francisco, fondé par Denis Barrier et Mingpo Cai. Cathay Innovation investit dans les startups technologiques en phase de croissance avec un réseau de partenaires corporates internationaux (Michelin, Sodexo, etc.).",
-    "sectors": ["mobilité", "supply chain", "foodtech", "fintech", "enterprise software"],
-    "stage": ["série A", "série B+"],
+    "sectors": [
+      "mobilité",
+      "supply chain",
+      "foodtech",
+      "fintech",
+      "enterprise software"
+    ],
+    "stage": [
+      "série A",
+      "série B+"
+    ],
     "ticket_min": 5000000,
     "ticket_max": 30000000,
     "currency": "EUR",
-    "geography": ["Europe", "Amérique du Nord", "Asie"],
+    "geography": [
+      "Europe",
+      "Amérique du Nord",
+      "Asie"
+    ],
     "criteria": {
       "description": "Startups technologiques en phase de croissance pouvant bénéficier du réseau de partenaires corporates de Cathay pour accélérer leur développement commercial."
     },
-    "portfolio_examples": ["Exotec", "Jumia", "Meero"],
+    "portfolio_examples": [
+      "Exotec",
+      "Jumia",
+      "Meero"
+    ],
     "contact": {
       "website": "https://www.cathayinnovation.com/",
       "linkedin": "https://www.linkedin.com/company/cathay-innovation/"
     },
-    "sources": ["https://www.cathayinnovation.com/", "https://www.crunchbase.com/organization/cathay-innovation"]
+    "sources": [
+      "https://www.cathayinnovation.com/",
+      "https://www.crunchbase.com/organization/cathay-innovation"
+    ]
   },
   {
     "id": "INV_024",
     "name": "Partech Africa",
     "type": "VC",
     "description": "Bras africain de Partech Partners, dédié à l'investissement dans les startups technologiques du continent. Partech Africa a levé un Fund II de 280 millions d'euros, l'un des plus grands fonds VC dédiés à l'Afrique. Investit des tickets de 1 à 15 millions USD du seed à la série B.",
-    "sectors": ["fintech", "logistique", "e-commerce", "healthtech", "agritech", "SaaS"],
-    "stage": ["seed", "série A", "série B+"],
+    "sectors": [
+      "fintech",
+      "logistique",
+      "e-commerce",
+      "healthtech",
+      "agritech",
+      "SaaS"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+"
+    ],
     "ticket_min": 1000000,
     "ticket_max": 15000000,
     "currency": "USD",
-    "geography": ["Afrique"],
+    "geography": [
+      "Afrique"
+    ],
     "criteria": {
       "description": "Startups technologiques africaines avec une traction significative, un modèle scalable et un potentiel panafricain. Équipe fondatrice forte avec une connaissance approfondie du marché local."
     },
-    "portfolio_examples": ["Wave", "TradeDepot", "Nomba", "Autochek"],
+    "portfolio_examples": [
+      "Wave",
+      "TradeDepot",
+      "Nomba",
+      "Autochek"
+    ],
     "contact": {
       "website": "https://partechpartners.com/africa/",
       "linkedin": "https://www.linkedin.com/company/partech-partners/"
     },
-    "sources": ["https://partechpartners.com/africa/", "https://www.crunchbase.com/organization/partech-ventures"]
+    "sources": [
+      "https://partechpartners.com/africa/",
+      "https://www.crunchbase.com/organization/partech-ventures"
+    ]
   },
   {
     "id": "INV_025",
     "name": "TLcom Capital",
     "type": "VC",
     "description": "Société de capital-risque spécialisée dans la technologie en Afrique, avec des bureaux à Lagos, Nairobi et Londres. TLcom gère le Tide Africa Fund (71 millions USD pour le Fund I, 150 millions USD pour le Fund II) et investit dans les startups tech africaines à forte croissance.",
-    "sectors": ["fintech", "logistique", "e-commerce", "SaaS", "healthtech"],
-    "stage": ["série A", "série B+"],
+    "sectors": [
+      "fintech",
+      "logistique",
+      "e-commerce",
+      "SaaS",
+      "healthtech"
+    ],
+    "stage": [
+      "série A",
+      "série B+"
+    ],
     "ticket_min": 500000,
     "ticket_max": 10000000,
     "currency": "USD",
-    "geography": ["Afrique"],
+    "geography": [
+      "Afrique"
+    ],
     "criteria": {
       "description": "Startups technologiques africaines avec un product-market fit démontré, une croissance rapide des revenus et un potentiel de leadership régional ou panafricain."
     },
-    "portfolio_examples": ["Andela", "uLesson", "Okra", "Nomba"],
+    "portfolio_examples": [
+      "Andela",
+      "uLesson",
+      "Okra",
+      "Nomba"
+    ],
     "contact": {
       "website": "https://www.tlcomcapital.com/",
       "linkedin": "https://www.linkedin.com/company/tlcom-capital/"
     },
-    "sources": ["https://www.tlcomcapital.com/", "https://www.crunchbase.com/organization/tlcom-capital"]
+    "sources": [
+      "https://www.tlcomcapital.com/",
+      "https://www.crunchbase.com/organization/tlcom-capital"
+    ]
   },
   {
     "id": "INV_026",
     "name": "Launch Africa Ventures",
     "type": "VC",
     "description": "Fonds de capital-risque panafricain basé en Afrique du Sud, l'un des investisseurs early-stage les plus actifs sur le continent avec plus de 200 investissements. Launch Africa cible les startups tech africaines en pré-seed et seed avec des tickets de 25 000 à 100 000 USD.",
-    "sectors": ["fintech", "agritech", "healthtech", "edtech", "logistique", "SaaS"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "fintech",
+      "agritech",
+      "healthtech",
+      "edtech",
+      "logistique",
+      "SaaS"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 25000,
     "ticket_max": 100000,
     "currency": "USD",
-    "geography": ["Afrique"],
+    "geography": [
+      "Afrique"
+    ],
     "criteria": {
       "description": "Startups tech africaines early-stage avec un fondateur déterminé, un MVP fonctionnel et un potentiel de marché significatif. Approche sectorielle agnostique."
     },
-    "portfolio_examples": ["Chari", "Wasoko", "Carry1st"],
+    "portfolio_examples": [
+      "Chari",
+      "Wasoko",
+      "Carry1st"
+    ],
     "contact": {
       "website": "https://www.launchafrica.vc/",
       "linkedin": "https://www.linkedin.com/company/launch-africa-ventures/"
     },
-    "sources": ["https://www.launchafrica.vc/", "https://www.crunchbase.com/organization/launch-africa-ventures"]
+    "sources": [
+      "https://www.launchafrica.vc/",
+      "https://www.crunchbase.com/organization/launch-africa-ventures"
+    ]
   },
   {
     "id": "INV_027",
     "name": "Saviu Ventures",
     "type": "VC",
     "description": "Fonds de capital-risque spécialisé dans l'Afrique francophone, basé à Paris. Saviu cible les startups technologiques dans les marchés francophones d'Afrique (Maroc, Sénégal, Côte d'Ivoire, Tunisie, etc.) avec des tickets early-stage.",
-    "sectors": ["fintech", "e-commerce", "logistique", "SaaS", "agritech"],
-    "stage": ["pre-seed", "seed", "série A"],
+    "sectors": [
+      "fintech",
+      "e-commerce",
+      "logistique",
+      "SaaS",
+      "agritech"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed",
+      "série A"
+    ],
     "ticket_min": 100000,
     "ticket_max": 1000000,
     "currency": "USD",
-    "geography": ["Afrique francophone", "Maroc", "Sénégal", "Côte d'Ivoire", "Tunisie"],
+    "geography": [
+      "Afrique francophone",
+      "Maroc",
+      "Sénégal",
+      "Côte d'Ivoire",
+      "Tunisie"
+    ],
     "criteria": {
       "description": "Startups tech opérant en Afrique francophone avec un produit adapté aux marchés locaux, une équipe fondatrice locale et un potentiel de croissance régionale."
     },
-    "portfolio_examples": ["Chari", "Daba Finance"],
+    "portfolio_examples": [
+      "Chari",
+      "Daba Finance"
+    ],
     "contact": {
       "website": "https://www.saviu.vc/",
       "linkedin": "https://www.linkedin.com/company/saviu-ventures/"
     },
-    "sources": ["https://www.saviu.vc/", "https://www.crunchbase.com/organization/saviu-ventures"]
+    "sources": [
+      "https://www.saviu.vc/",
+      "https://www.crunchbase.com/organization/saviu-ventures"
+    ]
   },
   {
     "id": "INV_028",
     "name": "Seedstars Africa Ventures",
     "type": "VC",
     "description": "Fonds de capital-risque dédié à l'Afrique, issu du groupe Seedstars basé en Suisse. Seedstars Africa Ventures investit dans les startups technologiques early-stage à travers le continent, avec un focus sur les solutions à impact dans les marchés émergents.",
-    "sectors": ["fintech", "edtech", "healthtech", "agritech", "SaaS"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "fintech",
+      "edtech",
+      "healthtech",
+      "agritech",
+      "SaaS"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 100000,
     "ticket_max": 500000,
     "currency": "USD",
-    "geography": ["Afrique"],
+    "geography": [
+      "Afrique"
+    ],
     "criteria": {
       "description": "Startups tech africaines early-stage avec un fort potentiel d'impact, un modèle économique innovant et une capacité à résoudre des problèmes majeurs sur le continent."
     },
-    "portfolio_examples": null,
+    "portfolio_examples": [
+      "Poa! Internet",
+      "Beacon Power Services",
+      "Shamba Pride",
+      "Bizao",
+      "XENO",
+      "Ampersand"
+    ],
     "contact": {
       "website": "https://www.seedstars.com/",
       "linkedin": "https://www.linkedin.com/company/seedstars/"
     },
-    "sources": ["https://www.seedstars.com/", "https://www.crunchbase.com/organization/seedstars"]
+    "sources": [
+      "https://www.seedstars.com/",
+      "https://www.crunchbase.com/organization/seedstars"
+    ]
   },
   {
     "id": "INV_029",
     "name": "Flat6Labs",
     "type": "accelerateur",
-    "description": "L'un des plus grands accélérateurs de startups dans la région MENA, fondé au Caire en 2011. Flat6Labs opère des programmes d'accélération dans plusieurs pays (Égypte, Tunisie, Bahreïn, Jordanie, etc.) et investit dans les startups early-stage avec un programme structuré de mentorat.",
-    "sectors": ["fintech", "e-commerce", "SaaS", "healthtech", "edtech", "logistique"],
-    "stage": ["pre-seed", "seed"],
+    "description": "L'un des plus grands accélérateurs de startups dans la région MENA, fondé au Caire en 2011. Flat6Labs opère des programmes d'accélération dans plusieurs pays (Égypte, Tunisie, Bahreïn, Jordanie, Maroc) et investit dans les startups early-stage avec un programme structuré de mentorat. Au Maroc, Flat6Labs opère via SB3S à Casablanca, structure labellisée Tamwilcom pour le programme Innov Invest.",
+    "sectors": [
+      "fintech",
+      "e-commerce",
+      "SaaS",
+      "healthtech",
+      "edtech",
+      "logistique"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 15000,
     "ticket_max": 150000,
     "currency": "USD",
-    "geography": ["MENA", "Égypte", "Tunisie", "Bahreïn", "Jordanie"],
+    "geography": [
+      "MENA",
+      "Maroc",
+      "Égypte",
+      "Tunisie",
+      "Bahreïn",
+      "Jordanie"
+    ],
     "criteria": {
       "description": "Startups early-stage dans la région MENA avec une idée innovante, un prototype ou MVP, et des fondateurs engagés prêts à participer à un programme d'accélération intensif."
     },
-    "portfolio_examples": ["Swvl", "Halan", "Si-Ware Systems"],
+    "portfolio_examples": [
+      "Swvl",
+      "Halan",
+      "Si-Ware Systems"
+    ],
     "contact": {
       "website": "https://www.flat6labs.com/",
       "linkedin": "https://www.linkedin.com/company/flat6labs/"
     },
-    "sources": ["https://www.flat6labs.com/", "https://www.crunchbase.com/organization/flat6labs"]
+    "sources": [
+      "https://www.flat6labs.com/",
+      "https://www.crunchbase.com/organization/flat6labs"
+    ]
   },
   {
     "id": "INV_030",
     "name": "Algebra Ventures",
     "type": "VC",
     "description": "Fonds de capital-risque basé au Caire, l'un des investisseurs VC les plus actifs en Égypte et dans la région MENA. Algebra Ventures investit dans les startups technologiques de la série seed à la série A, avec un focus sur la fintech, le SaaS et les marketplaces.",
-    "sectors": ["fintech", "SaaS", "marketplace", "e-commerce", "logistique"],
-    "stage": ["seed", "série A"],
+    "sectors": [
+      "fintech",
+      "SaaS",
+      "marketplace",
+      "e-commerce",
+      "logistique"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
     "ticket_min": 500000,
     "ticket_max": 5000000,
     "currency": "USD",
-    "geography": ["Égypte", "MENA"],
+    "geography": [
+      "Égypte",
+      "MENA"
+    ],
     "criteria": {
       "description": "Startups technologiques dans la région MENA avec un product-market fit démontré, une croissance rapide et un potentiel de leadership sur leur marché."
     },
-    "portfolio_examples": ["Swvl", "Paymob", "Lucky"],
+    "portfolio_examples": [
+      "Swvl",
+      "Paymob",
+      "Lucky"
+    ],
     "contact": {
       "website": "https://www.algebraventures.com/",
       "linkedin": "https://www.linkedin.com/company/algebra-ventures/"
     },
-    "sources": ["https://www.algebraventures.com/", "https://www.crunchbase.com/organization/algebra-ventures"]
+    "sources": [
+      "https://www.algebraventures.com/",
+      "https://www.crunchbase.com/organization/algebra-ventures"
+    ]
   },
   {
     "id": "INV_031",
     "name": "Ventures Platform",
     "type": "VC",
     "description": "Fonds de capital-risque basé à Lagos, Nigeria, fondé par Kola Aina. Ventures Platform investit dans les startups technologiques africaines early-stage avec un fund de 46 millions USD. Actif principalement en Afrique de l'Ouest et de l'Est.",
-    "sectors": ["fintech", "healthtech", "agritech", "logistique", "SaaS"],
-    "stage": ["pre-seed", "seed", "série A"],
+    "sectors": [
+      "fintech",
+      "healthtech",
+      "agritech",
+      "logistique",
+      "SaaS"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed",
+      "série A"
+    ],
     "ticket_min": 50000,
     "ticket_max": 500000,
     "currency": "USD",
-    "geography": ["Nigeria", "Afrique de l'Ouest", "Afrique"],
+    "geography": [
+      "Nigeria",
+      "Afrique de l'Ouest",
+      "Afrique"
+    ],
     "criteria": {
       "description": "Startups tech africaines early-stage avec des fondateurs résilients, un produit répondant à un besoin réel du marché et un potentiel de croissance rapide."
     },
-    "portfolio_examples": ["Piggyvest", "Mono", "Termii"],
+    "portfolio_examples": [
+      "Piggyvest",
+      "Mono",
+      "Termii"
+    ],
     "contact": {
       "website": "https://venturesplatform.com/",
       "linkedin": "https://www.linkedin.com/company/ventures-platform/"
     },
-    "sources": ["https://venturesplatform.com/", "https://www.crunchbase.com/organization/ventures-platform"]
+    "sources": [
+      "https://venturesplatform.com/",
+      "https://www.crunchbase.com/organization/ventures-platform"
+    ]
   },
   {
     "id": "INV_032",
     "name": "Kepple Africa Ventures",
     "type": "VC",
     "description": "Fonds de capital-risque japonais-africain basé à Lagos et Nairobi, filiale de Kepple Inc. (Japon). Kepple Africa est l'un des investisseurs seed les plus actifs en Afrique avec plus de 100 investissements dans des startups tech africaines.",
-    "sectors": ["fintech", "logistique", "e-commerce", "SaaS", "agritech"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "fintech",
+      "logistique",
+      "e-commerce",
+      "SaaS",
+      "agritech"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 50000,
     "ticket_max": 300000,
     "currency": "USD",
-    "geography": ["Afrique"],
+    "geography": [
+      "Afrique"
+    ],
     "criteria": {
       "description": "Startups tech africaines en phase d'amorçage avec un modèle économique innovant et un potentiel de croissance sur les marchés africains."
     },
-    "portfolio_examples": ["TeamApt (Moniepoint)", "Wasoko", "54gene"],
+    "portfolio_examples": [
+      "TeamApt (Moniepoint)",
+      "Wasoko",
+      "54gene"
+    ],
     "contact": {
       "website": "https://kepple-africa.com/",
       "linkedin": "https://www.linkedin.com/company/kepple-africa-ventures/"
     },
-    "sources": ["https://kepple-africa.com/", "https://www.crunchbase.com/organization/kepple-africa-ventures"]
+    "sources": [
+      "https://kepple-africa.com/",
+      "https://www.crunchbase.com/organization/kepple-africa-ventures"
+    ]
   },
   {
     "id": "INV_033",
     "name": "Y Combinator",
     "type": "accelerateur",
     "description": "Le plus prestigieux accélérateur de startups au monde, basé à San Francisco. YC investit 500 000 USD dans chaque startup acceptée (125K pour 7% + 375K sur un MFN) et a accompagné plus de 4 000 startups incluant Airbnb, Stripe, et Dropbox. Accepte des startups du monde entier, y compris d'Afrique et du MENA.",
-    "sectors": ["tous secteurs tech"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "tous secteurs tech"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 500000,
     "ticket_max": 500000,
     "currency": "USD",
-    "geography": ["monde entier"],
+    "geography": [
+      "monde entier"
+    ],
     "criteria": {
       "description": "Fondateurs exceptionnels travaillant sur un problème important avec un grand marché adressable. Le processus de sélection est extrêmement compétitif (taux d'acceptation ~1.5-3%). Privilégie l'équipe fondatrice et la taille du marché."
     },
-    "portfolio_examples": ["Airbnb", "Stripe", "Dropbox", "Coinbase", "Instacart", "DoorDash"],
+    "portfolio_examples": [
+      "Airbnb",
+      "Stripe",
+      "Dropbox",
+      "Coinbase",
+      "Instacart",
+      "DoorDash"
+    ],
     "contact": {
       "website": "https://www.ycombinator.com/",
       "linkedin": "https://www.linkedin.com/company/y-combinator/"
     },
-    "sources": ["https://www.ycombinator.com/", "https://www.crunchbase.com/organization/y-combinator"]
+    "sources": [
+      "https://www.ycombinator.com/",
+      "https://www.crunchbase.com/organization/y-combinator"
+    ]
   },
   {
     "id": "INV_034",
     "name": "Techstars",
     "type": "accelerateur",
     "description": "Réseau mondial d'accélérateurs de startups avec des programmes dans plus de 150 pays. Techstars investit 120 000 USD pour 6% d'equity dans chaque startup acceptée. Opère des programmes thématiques et géographiques, incluant Techstars Toronto, Boulder, NYC, etc.",
-    "sectors": ["tous secteurs tech"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "tous secteurs tech"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 120000,
     "ticket_max": 120000,
     "currency": "USD",
-    "geography": ["monde entier"],
+    "geography": [
+      "monde entier"
+    ],
     "criteria": {
       "description": "Startups early-stage avec une équipe fondatrice coachable et ambitieuse, un produit ou prototype fonctionnel et un potentiel de marché significatif. Programme de 3 mois intensif avec mentorat."
     },
-    "portfolio_examples": ["SendGrid", "DigitalOcean", "Sphero", "ClassPass"],
+    "portfolio_examples": [
+      "SendGrid",
+      "DigitalOcean",
+      "Sphero",
+      "ClassPass"
+    ],
     "contact": {
       "website": "https://www.techstars.com/",
       "linkedin": "https://www.linkedin.com/company/techstars/"
     },
-    "sources": ["https://www.techstars.com/", "https://www.crunchbase.com/organization/techstars"]
+    "sources": [
+      "https://www.techstars.com/",
+      "https://www.crunchbase.com/organization/techstars"
+    ]
   },
   {
     "id": "INV_035",
     "name": "500 Global",
     "type": "VC",
     "description": "Fonds de capital-risque global (anciennement 500 Startups), basé à San Francisco. 500 Global a investi dans plus de 2 800 startups dans 80+ pays et gère environ 2,8 milliards USD. Propose des programmes d'accélération et investit des tickets seed d'environ 150 000 USD.",
-    "sectors": ["fintech", "edtech", "e-commerce", "SaaS", "marketplace"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "fintech",
+      "edtech",
+      "e-commerce",
+      "SaaS",
+      "marketplace"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 50000,
     "ticket_max": 250000,
     "currency": "USD",
-    "geography": ["monde entier"],
+    "geography": [
+      "monde entier"
+    ],
     "criteria": {
       "description": "Startups early-stage avec un produit à forte traction, un grand marché adressable et une équipe fondatrice data-driven. Présence dans les marchés émergents appréciée."
     },
-    "portfolio_examples": ["Canva", "Grab", "Udemy", "Credit Karma", "Talkdesk"],
+    "portfolio_examples": [
+      "Canva",
+      "Grab",
+      "Udemy",
+      "Credit Karma",
+      "Talkdesk"
+    ],
     "contact": {
       "website": "https://500.co/",
       "linkedin": "https://www.linkedin.com/company/500-global/"
     },
-    "sources": ["https://500.co/", "https://www.crunchbase.com/organization/500-startups"]
+    "sources": [
+      "https://500.co/",
+      "https://www.crunchbase.com/organization/500-startups"
+    ]
   },
   {
     "id": "INV_036",
     "name": "Plug and Play Tech Center",
     "type": "accelerateur",
     "description": "Plateforme d'innovation et accélérateur basé dans la Silicon Valley, opérant dans plus de 50 villes dans le monde. Plug and Play connecte les startups avec de grandes entreprises partenaires et investit dans plus de 200 startups par an. A récemment étendu ses activités en Afrique et au Moyen-Orient.",
-    "sectors": ["fintech", "supply chain", "mobilité", "healthtech", "insurtech", "énergie"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "fintech",
+      "supply chain",
+      "mobilité",
+      "healthtech",
+      "insurtech",
+      "énergie"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 25000,
     "ticket_max": 500000,
     "currency": "USD",
-    "geography": ["monde entier"],
+    "geography": [
+      "monde entier"
+    ],
     "criteria": {
       "description": "Startups technologiques avec un produit innovant pouvant intéresser les entreprises partenaires de Plug and Play. La startup doit être prête à s'engager dans un programme d'accélération et de mise en relation avec des corporates."
     },
-    "portfolio_examples": ["Dropbox", "PayPal", "Honey", "N26"],
+    "portfolio_examples": [
+      "Dropbox",
+      "PayPal",
+      "Honey",
+      "N26"
+    ],
     "contact": {
       "website": "https://www.plugandplaytechcenter.com/",
       "linkedin": "https://www.linkedin.com/company/plug-and-play-tech-center/"
     },
-    "sources": ["https://www.plugandplaytechcenter.com/", "https://www.crunchbase.com/organization/plug-and-play-ventures"]
+    "sources": [
+      "https://www.plugandplaytechcenter.com/",
+      "https://www.crunchbase.com/organization/plug-and-play-ventures"
+    ]
   },
   {
     "id": "INV_037",
     "name": "Seedstars",
     "type": "accelerateur",
     "description": "Groupe suisse d'investissement et d'accélération focalisé sur les marchés émergents. Seedstars organise des compétitions de startups dans plus de 80 pays, identifiant et finançant les meilleurs entrepreneurs tech dans les marchés en développement, y compris au Maroc et en Afrique.",
-    "sectors": ["fintech", "edtech", "healthtech", "agritech", "SaaS"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "fintech",
+      "edtech",
+      "healthtech",
+      "agritech",
+      "SaaS"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 50000,
     "ticket_max": 500000,
     "currency": "USD",
-    "geography": ["marchés émergents", "Afrique", "MENA", "Asie du Sud-Est", "Amérique latine"],
+    "geography": [
+      "marchés émergents",
+      "Afrique",
+      "MENA",
+      "Asie du Sud-Est",
+      "Amérique latine"
+    ],
     "criteria": {
       "description": "Startups tech dans les marchés émergents avec un produit à impact, un modèle économique solide et un potentiel de croissance dans des marchés mal desservis."
     },
-    "portfolio_examples": null,
+    "portfolio_examples": [
+      "Bizao",
+      "Poa! Internet",
+      "Shamba Pride"
+    ],
     "contact": {
       "website": "https://www.seedstars.com/",
       "linkedin": "https://www.linkedin.com/company/seedstars/"
     },
-    "sources": ["https://www.seedstars.com/", "https://www.crunchbase.com/organization/seedstars"]
+    "sources": [
+      "https://www.seedstars.com/",
+      "https://www.crunchbase.com/organization/seedstars"
+    ]
   },
   {
     "id": "INV_038",
     "name": "Innov Invest (Tamwilcom)",
     "type": "fonds_public",
     "description": "Programme marocain de financement de l'innovation géré par Tamwilcom (ex-CCG), avec le soutien de la Banque Mondiale. Innov Invest propose des prêts d'honneur, des co-investissements en equity et des garanties pour les startups innovantes marocaines. Doté de 700 millions de dirhams.",
-    "sectors": ["tous secteurs innovants"],
-    "stage": ["pre-seed", "seed"],
+    "sectors": [
+      "tous secteurs innovants"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed"
+    ],
     "ticket_min": 100000,
     "ticket_max": 5000000,
     "currency": "MAD",
-    "geography": ["Maroc"],
+    "geography": [
+      "Maroc"
+    ],
     "criteria": {
       "description": "Startups et porteurs de projets innovants marocains à différents stades de développement. Le programme offre des prêts d'honneur (jusqu'à 500 000 MAD) et du co-investissement en equity pour les startups en amorçage."
     },
-    "portfolio_examples": null,
+    "portfolio_examples": [],
     "contact": {
       "website": "https://www.tamwilcom.ma/",
       "linkedin": "https://www.linkedin.com/company/tamwilcom/"
     },
-    "sources": ["https://www.tamwilcom.ma/", "https://www.worldbank.org/"]
+    "sources": [
+      "https://www.tamwilcom.ma/",
+      "https://www.worldbank.org/"
+    ]
+  },
+  {
+    "id": "INV_039",
+    "name": "STV (Saudi Technology Ventures)",
+    "type": "VC",
+    "description": "Saudi Technology Ventures (STV) est le plus grand fonds de capital-risque technologique de la région MENA, basé à Riyad. Fondé en 2017 avec un investissement ancre de 500 millions USD de stc (Saudi Telecom), STV gère plus de 1,4 milliard USD d'actifs, dont un AI Fund de 100 millions USD lancé avec le soutien de Google. STV a investi dans plus de 35 entreprises, dont 2 licornes (Tabby, Jasper AI), et a réalisé un exit majeur avec Careem (acquis par Uber pour 3,1 milliards USD en 2019).",
+    "sectors": [
+      "fintech",
+      "e-commerce",
+      "SaaS",
+      "logistique",
+      "healthtech",
+      "intelligence artificielle"
+    ],
+    "stage": [
+      "seed",
+      "série A",
+      "série B+",
+      "growth"
+    ],
+    "ticket_min": 5000000,
+    "ticket_max": 30000000,
+    "currency": "USD",
+    "geography": [
+      "MENA",
+      "Arabie Saoudite",
+      "EAU"
+    ],
+    "criteria": {
+      "description": "Startups technologiques de la région MENA avec une traction significative, un potentiel de leadership régional et une équipe fondatrice solide. Focus sur les opportunités à plus de 10 millions USD."
+    },
+    "portfolio_examples": [
+      "Tabby",
+      "Careem",
+      "Jasper AI",
+      "Unifonic",
+      "Salla",
+      "Foodics",
+      "Jahez",
+      "Vezeeta"
+    ],
+    "contact": {
+      "website": "https://stv.vc/",
+      "linkedin": "https://www.linkedin.com/company/stvcapital"
+    },
+    "sources": [
+      "https://stv.vc/",
+      "https://tracxn.com/d/venture-capital/stv/"
+    ]
+  },
+  {
+    "id": "INV_040",
+    "name": "BECO Capital",
+    "type": "VC",
+    "description": "Fonds de capital-risque basé à Dubai, fondé en 2012 par Dany Farha et Amir Farha. BECO Capital gère environ 820 millions USD répartis sur 5 fonds, dont Fund IV (120 millions USD pour l'early-stage) et un Growth Fund (250 millions USD pour Series B à pré-IPO), tous deux clôturés en septembre 2025. BECO Capital a investi dans 65 entreprises et réalisé 2 exits à plus d'un milliard USD : Careem (acquis par Uber) et Property Finder.",
+    "sectors": [
+      "fintech",
+      "e-commerce",
+      "SaaS",
+      "proptech",
+      "consumer tech",
+      "intelligence artificielle"
+    ],
+    "stage": [
+      "pre-seed",
+      "seed",
+      "série A",
+      "série B+",
+      "growth"
+    ],
+    "ticket_min": 500000,
+    "ticket_max": 20000000,
+    "currency": "USD",
+    "geography": [
+      "MENA",
+      "EAU",
+      "Arabie Saoudite"
+    ],
+    "criteria": {
+      "description": "Startups tech de la région MENA avec un produit validé, une traction commerciale et un potentiel d'expansion régionale. Approche sector-agnostic avec des piliers dans le FinTech, PropTech et AI."
+    },
+    "portfolio_examples": [
+      "Careem",
+      "Property Finder",
+      "Kitopi",
+      "Swvl",
+      "Fresha",
+      "Abwaab",
+      "Thndr"
+    ],
+    "contact": {
+      "website": "https://becocapital.com/",
+      "linkedin": "https://www.linkedin.com/company/beco-capital"
+    },
+    "sources": [
+      "https://becocapital.com/",
+      "https://www.crunchbase.com/organization/beco-capital"
+    ]
+  },
+  {
+    "id": "INV_041",
+    "name": "Wamda Capital",
+    "type": "VC",
+    "description": "Fonds de capital-risque basé à Dubai, issu de la plateforme Wamda dédiée à l'entrepreneuriat dans la région MENA. Fondé par Fadi Ghandour (fondateur d'Aramex). Wamda Capital gère environ 125-150 millions USD (Fund I de 75 millions USD + Fund II d'environ 70 millions USD + Wamda Seed). Le fonds a investi dans plus de 100 entreprises et compte 4 licornes dans son portfolio (Tabby, Insider, WRITER et d'autres).",
+    "sectors": [
+      "fintech",
+      "e-commerce",
+      "SaaS",
+      "marketplace",
+      "consumer tech",
+      "logistique"
+    ],
+    "stage": [
+      "seed",
+      "série A"
+    ],
+    "ticket_min": 250000,
+    "ticket_max": 5000000,
+    "currency": "USD",
+    "geography": [
+      "MENA",
+      "EAU",
+      "Jordanie",
+      "Égypte",
+      "Turquie"
+    ],
+    "criteria": {
+      "description": "Startups tech de la région MENA avec des fondateurs visionnaires, un produit à fort potentiel de marché et une capacité d'exécution démontrée."
+    },
+    "portfolio_examples": [
+      "Careem",
+      "Souq.com",
+      "Tabby",
+      "Insider",
+      "Tamatem Games",
+      "Mumzworld",
+      "Eyewa",
+      "RemotePass"
+    ],
+    "contact": {
+      "website": "https://wamdacapital.com/",
+      "linkedin": "https://www.linkedin.com/company/wamda-capital"
+    },
+    "sources": [
+      "https://wamdacapital.com/",
+      "https://www.crunchbase.com/organization/wamda-capital"
+    ]
   }
 ]

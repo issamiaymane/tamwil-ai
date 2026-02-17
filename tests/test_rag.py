@@ -36,7 +36,7 @@ class TestIngestion:
     def test_investor_count(self):
         docs = load_all_documents()
         investors = [d for d in docs if d.metadata.get("type") == "investor"]
-        assert len(investors) == 38
+        assert len(investors) == 41
 
     def test_grant_count(self):
         docs = load_all_documents()
@@ -46,7 +46,7 @@ class TestIngestion:
     def test_faq_count(self):
         docs = load_all_documents()
         faqs = [d for d in docs if d.metadata.get("type") == "faq"]
-        assert len(faqs) == 50
+        assert len(faqs) == 54
 
 
 # --- Retriever ---

@@ -53,6 +53,9 @@ METRIC_PATTERNS = {
     "NPS": r"(?:nps)[:\s]*(\d[\d\s.,]*)",
     "GROSS_MARGIN": r"(?:marge brute|gross margin)[:\s]*(\d[\d\s.,]*)\s*%?",
     "MRR_GROWTH": r"(?:croissance|growth)[:\s]*(\d[\d\s.,]*)\s*%?",
+    "TAKE_RATE": r"(?:take\s*rate|taux de commission)[:\s]*(\d[\d\s.,]*)\s*%?",
+    "TPV": r"(?:tpv|total payment volume|volume de paiement)[:\s]*(\d[\d\s]*)",
+    "DAU_MAU": r"(?:dau/mau|dau mau|stickiness|adh[ée]sivit[ée])[:\s]*(\d[\d\s.,]*)\s*%?",
 }
 
 STAGE_PATTERNS = [
