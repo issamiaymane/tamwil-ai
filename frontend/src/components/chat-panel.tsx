@@ -7,7 +7,8 @@ import { MessageBubble } from "@/components/message-bubble";
 import { ChatInput } from "@/components/chat-input";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Message } from "@/lib/types";
-import { Bot, TrendingUp, Users, Landmark, MessageCircle } from "lucide-react";
+import { useSidebar } from "@/components/chat-layout";
+import { Bot, TrendingUp, Users, Landmark, MessageCircle, Menu } from "lucide-react";
 
 interface ChatPanelProps {
   messages: Message[];
@@ -24,6 +25,7 @@ const SUGGESTIONS = [
 
 export function ChatPanel({ messages, isLoading, onSend }: ChatPanelProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { setMobileOpen } = useSidebar();
 
   // Auto-scroll when new messages arrive
   useEffect(() => {
@@ -32,36 +34,42 @@ export function ChatPanel({ messages, isLoading, onSend }: ChatPanelProps) {
 
   return (
     <div className="flex flex-1 flex-col overflow-hidden">
-      <div className="flex items-center justify-between bg-gradient-to-b from-background/80 via-background/60 to-background/40 backdrop-blur-md border-b border-primary/10 px-6 py-3">
-        <div className="flex items-center gap-3">
+      <div className="flex items-center justify-between bg-gradient-to-b from-background/80 via-background/60 to-background/40 backdrop-blur-md border-b border-primary/10 px-3 sm:px-6 py-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <button
+            onClick={() => setMobileOpen(true)}
+            className="flex size-8 items-center justify-center rounded-lg transition-colors hover:bg-accent md:hidden"
+          >
+            <Menu className="size-5" />
+          </button>
           <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Bot className="size-4" />
           </div>
           <h1 className="text-lg font-semibold">Tamwil AI</h1>
-          <Badge variant="secondary" className="text-xs">Beta</Badge>
+          <Badge variant="secondary" className="text-xs hidden sm:inline-flex">Beta</Badge>
         </div>
         <ThemeToggle />
       </div>
 
       <div className="relative flex-1 overflow-hidden">
-        <ScrollArea className="h-full px-6 py-4">
+        <ScrollArea className="h-full px-3 sm:px-6 py-4">
           {messages.length === 0 && (
-            <div className="flex flex-col items-center justify-center py-16">
-              <div className="flex size-16 items-center justify-center rounded-2xl bg-primary/10 mb-6">
-                <Bot className="size-8 text-primary" />
+            <div className="flex flex-col items-center justify-center py-8 sm:py-16">
+              <div className="flex size-14 sm:size-16 items-center justify-center rounded-2xl bg-primary/10 mb-4 sm:mb-6">
+                <Bot className="size-7 sm:size-8 text-primary" />
               </div>
-              <h2 className="text-2xl font-semibold tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-center">
                 Bienvenue sur Tamwil AI
               </h2>
-              <p className="mt-2 max-w-md text-center text-muted-foreground">
+              <p className="mt-2 max-w-md text-center text-sm sm:text-base text-muted-foreground px-2">
                 Votre assistant IA pour le financement des startups au Maroc et en Afrique francophone.
               </p>
-              <div className="mt-8 grid grid-cols-2 gap-3 w-full max-w-lg">
+              <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-lg">
                 {SUGGESTIONS.map((s) => (
                   <button
                     key={s.text}
                     onClick={() => onSend(s.text)}
-                    className="flex items-start gap-3 rounded-xl border bg-card p-4 text-left text-sm transition-colors hover:bg-accent hover:border-orange-300/30"
+                    className="flex items-start gap-3 rounded-xl border bg-card p-3 sm:p-4 text-left text-sm transition-colors hover:bg-accent hover:border-orange-300/30"
                   >
                     <s.icon className="size-4 mt-0.5 shrink-0 text-primary" />
                     <span>{s.text}</span>

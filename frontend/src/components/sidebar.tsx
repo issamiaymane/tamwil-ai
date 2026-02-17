@@ -52,7 +52,7 @@ export function Sidebar({
   profile,
   onProfileChange,
 }: SidebarProps) {
-  const { collapsed, toggle } = useSidebar();
+  const { collapsed, toggle, setMobileOpen } = useSidebar();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editValue, setEditValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
@@ -80,10 +80,10 @@ export function Sidebar({
     setEditingId(null);
   };
 
-  /* ── Collapsed icon strip ── */
+  /* ── Collapsed icon strip (desktop only) ── */
   if (collapsed) {
     return (
-      <div className="flex h-full w-[52px] flex-col items-center bg-sidebar text-sidebar-foreground py-2 gap-1">
+      <div className="hidden md:flex h-full w-[52px] flex-col items-center bg-sidebar text-sidebar-foreground py-2 gap-1">
         <Button
           variant="ghost"
           size="icon"
@@ -126,20 +126,33 @@ export function Sidebar({
   /* ── Expanded sidebar ── */
   return (
     <div className="flex h-full flex-col bg-sidebar text-sidebar-foreground">
-      {/* Top bar — collapse + new chat */}
+      {/* Top bar — close (mobile) / collapse (desktop) + new chat */}
       <div className="flex items-center justify-between p-2">
+        {/* Mobile: close overlay */}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => setMobileOpen(false)}
+          className="size-8 text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent md:hidden"
+        >
+          <PanelLeftClose className="size-4" />
+        </Button>
+        {/* Desktop: collapse sidebar */}
         <Button
           variant="ghost"
           size="icon"
           onClick={toggle}
-          className="size-8 text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent"
+          className="hidden md:flex size-8 text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent"
         >
           <PanelLeftClose className="size-4" />
         </Button>
         <Button
           variant="ghost"
           size="icon"
-          onClick={onNewChat}
+          onClick={() => {
+            onNewChat();
+            setMobileOpen(false);
+          }}
           className="size-8 text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent"
         >
           <SquarePen className="size-4" />
@@ -163,7 +176,10 @@ export function Sidebar({
               role="button"
               tabIndex={0}
               onClick={() => {
-                if (editingId !== conv.id) onSelectConversation(conv.id);
+                if (editingId !== conv.id) {
+                  onSelectConversation(conv.id);
+                  setMobileOpen(false);
+                }
               }}
               onKeyDown={(e) => {
                 if (

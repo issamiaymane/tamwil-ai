@@ -35,9 +35,9 @@ export function ChatInput({ onSend, isLoading }: ChatInputProps) {
   };
 
   return (
-    <div className="px-4 pb-4 pt-2">
+    <div className="px-2 sm:px-4 pb-4 pt-2">
       <div className="mx-auto max-w-3xl">
-        <div className="flex items-end gap-2 rounded-2xl bg-muted/60 border border-border/50 px-4 py-3 focus-within:border-border transition-colors">
+        <div className="flex items-end gap-2 rounded-2xl bg-muted/60 border border-border/50 px-3 sm:px-4 py-3 focus-within:border-border transition-colors">
           <textarea
             ref={textareaRef}
             value={value}

@@ -8,6 +8,13 @@ import { sendMessage } from "@/lib/api";
 import { DEFAULT_PROFILE } from "@/lib/constants";
 import { StartupProfile, Message, Conversation } from "@/lib/types";
 
+function generateId(): string {
+  if (typeof crypto !== "undefined" && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+  return Date.now().toString(36) + Math.random().toString(36).slice(2);
+}
+
 const STORAGE_KEY = "tamwil-conversations";
 const PROFILE_KEY = "tamwil-profile";
 
@@ -41,7 +48,7 @@ function saveProfile(profile: StartupProfile) {
 
 function createNewConversation(): Conversation {
   return {
-    id: crypto.randomUUID(),
+    id: generateId(),
     title: "Nouvelle conversation",
     messages: [],
     createdAt: new Date().toISOString(),
@@ -135,7 +142,7 @@ export default function Home() {
     }
 
     const userMessage: Message = {
-      id: crypto.randomUUID(),
+      id: generateId(),
       role: "user",
       content: text,
       timestamp: new Date(),
@@ -169,7 +176,7 @@ export default function Home() {
       });
 
       const assistantMessage: Message = {
-        id: crypto.randomUUID(),
+        id: generateId(),
         role: "assistant",
         content: response.reply,
         timestamp: new Date(),
@@ -188,7 +195,7 @@ export default function Home() {
       );
     } catch {
       const errorMessage: Message = {
-        id: crypto.randomUUID(),
+        id: generateId(),
         role: "assistant",
         content: "Désolé, une erreur est survenue. Veuillez réessayer.",
         timestamp: new Date(),
