@@ -30,8 +30,6 @@ Thumbs.db
 # Logs
 *.log
 
-# Markdown documentation
-*.md
 
 # Node.js / Next.js
 node_modules/
