@@ -1,7 +1,8 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Message } from "@/lib/types";
+import { Message, SourceInfo } from "@/lib/types";
+import { ExternalLink } from "lucide-react";
 
 interface MessageBubbleProps {
   message: Message;
@@ -140,8 +141,34 @@ function renderInline(text: string): React.ReactNode {
   });
 }
 
+function SourceChips({ sources }: { sources: SourceInfo[] }) {
+  return (
+    <div className="flex flex-wrap gap-1.5 mt-3">
+      {sources.map((source, i) => {
+        const label = source.name.replace(/\.(md|json)$/, "").replace(/_/g, " ");
+        return (
+          <a
+            key={i}
+            href={source.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-medium text-primary hover:bg-primary/20 transition-colors"
+          >
+            <span className="flex size-4 items-center justify-center rounded-full bg-primary/20 text-[9px] font-bold">
+              {i + 1}
+            </span>
+            {label}
+            <ExternalLink className="size-2.5" />
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+
 export function MessageBubble({ message }: MessageBubbleProps) {
   const isUser = message.role === "user";
+  const sources = message.sources ?? [];
 
   return (
     <div className={cn("flex mb-3", isUser ? "justify-end" : "justify-start")}>
@@ -154,6 +181,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
         )}
       >
         {isUser ? message.content : formatContent(message.content)}
+        {sources.length > 0 && <SourceChips sources={sources} />}
       </div>
     </div>
   );

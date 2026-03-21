@@ -9,10 +9,17 @@ export interface StartupProfile {
   ltv: number | "";
 }
 
+export interface SourceInfo {
+  name: string;
+  type: string;
+  url: string;
+}
+
 export interface Message {
   id: string;
   role: "user" | "assistant";
   content: string;
+  sources?: SourceInfo[];
   timestamp: Date;
 }
 
@@ -24,6 +31,7 @@ export interface ChatRequest {
 
 export interface ChatResponse {
   reply: string;
+  sources: SourceInfo[];
 }
 
 export interface Conversation {

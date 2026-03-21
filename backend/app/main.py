@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from backend.app.router import route
+from backend.app.source_urls import get_source_url
 
 
 # --- Pydantic models matching the frontend TypeScript interfaces ---
@@ -34,8 +35,15 @@ class ChatRequest(BaseModel):
     history: list[HistoryMessage] = []
 
 
+class SourceInfo(BaseModel):
+    name: str
+    type: str
+    url: str
+
+
 class ChatResponse(BaseModel):
     reply: str
+    sources: list[SourceInfo] = []
 
 
 # --- App ---
@@ -44,7 +52,7 @@ app = FastAPI(title="Tamwil AI", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://192.168.88.1:3000"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -196,10 +204,24 @@ def _format_metrics(result: dict) -> str:
 
 def _format_qa(result: dict) -> str:
     """Format RAG Q&A result as markdown."""
-    lines = [result.get("answer", "")]
-    if result.get("sources"):
-        lines.append("\n---\n**Sources :** " + ", ".join(result["sources"]))
-    return "\n".join(lines)
+    return result.get("answer", "")
+
+
+def _extract_sources(router_output: dict) -> list[dict]:
+    """Extract structured source info from router output."""
+    result = router_output.get("result", {})
+    raw_sources = result.get("sources", [])
+    sources = []
+    for entry in raw_sources:
+        # entry format: "filename.md (type)"
+        name = entry
+        doc_type = ""
+        if " (" in entry and entry.endswith(")"):
+            name, doc_type = entry.rsplit(" (", 1)
+            doc_type = doc_type.rstrip(")")
+        url = get_source_url(name)
+        sources.append({"name": name, "type": doc_type, "url": url})
+    return sources
 
 
 def _format_response(router_output: dict) -> str:
@@ -232,7 +254,8 @@ async def chat(request: ChatRequest):
     history = [{"role": m.role, "content": m.content} for m in request.history]
     router_output = route(request.message, startup_profile=profile, history=history)
     reply = _format_response(router_output)
-    return ChatResponse(reply=reply)
+    sources = _extract_sources(router_output)
+    return ChatResponse(reply=reply, sources=sources)
 
 
 @app.get("/health")

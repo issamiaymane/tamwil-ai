@@ -180,6 +180,7 @@ export default function Home() {
         id: generateId(),
         role: "assistant",
         content: response.reply,
+        sources: response.sources,
         timestamp: new Date(),
       };
 
