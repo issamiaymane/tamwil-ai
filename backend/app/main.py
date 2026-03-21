@@ -3,11 +3,15 @@ FastAPI server for Tamwil AI.
 Exposes the router/orchestrator as an HTTP API for the Next.js frontend.
 """
 
+import json
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
-from backend.app.router import route
+from backend.app.router import route, detect_intent
+from backend.app.modules.rag_qa import answer_question_stream
 from backend.app.source_urls import get_source_url
 
 
@@ -256,6 +260,89 @@ async def chat(request: ChatRequest):
     reply = _format_response(router_output)
     sources = _extract_sources(router_output)
     return ChatResponse(reply=reply, sources=sources)
+
+
+def _sse_event(event: str, data: str) -> str:
+    """Format a single SSE event. Multi-line data gets split into multiple data: lines."""
+    lines = data.split("\n")
+    data_lines = "\n".join(f"data: {line}" for line in lines)
+    return f"event: {event}\n{data_lines}\n\n"
+
+
+def _resolve_sources(raw_sources: list[str]) -> list[dict]:
+    """Convert raw source strings to structured dicts with URLs."""
+    sources = []
+    for entry in raw_sources:
+        name = entry
+        doc_type = ""
+        if " (" in entry and entry.endswith(")"):
+            name, doc_type = entry.rsplit(" (", 1)
+            doc_type = doc_type.rstrip(")")
+        url = get_source_url(name)
+        sources.append({"name": name, "type": doc_type, "url": url})
+    return sources
+
+
+async def _stream_qa(message: str, profile: dict, history: list[dict]):
+    """Generator for streaming QA responses as SSE events."""
+    for item in answer_question_stream(message, history=history):
+        if item["type"] == "sources":
+            sources = _resolve_sources(item["sources"])
+            yield _sse_event("sources", json.dumps(sources))
+        elif item["type"] == "token":
+            yield _sse_event("token", item["token"])
+    yield _sse_event("done", "")
+
+
+async def _stream_non_qa(message: str, profile: dict, history: list[dict]):
+    """Generator for non-streaming intents sent as single SSE events."""
+    router_output = route(message, startup_profile=profile, history=history)
+    reply = _format_response(router_output)
+    sources = _extract_sources(router_output)
+
+    yield _sse_event("sources", json.dumps(sources))
+    yield _sse_event("reply", json.dumps({"text": reply}))
+    yield _sse_event("done", "")
+
+
+GREETING_WORDS = {"bonjour", "salut", "hello", "hi", "hey", "bonsoir", "coucou", "salam", "yo", "merci", "thanks", "thank you", "ok", "oui", "non", "d'accord", "hola", "bonne", "journée", "soir", "nuit", "svp", "stp", "wesh", "azul", "marhaba"}
+
+
+def _is_greeting(message: str) -> bool:
+    """Check if the message is a casual greeting with no real question."""
+    words = set(message.lower().strip().rstrip("!?.,").split())
+    return len(words) <= 3 and bool(words & GREETING_WORDS)
+
+
+async def _stream_greeting(message: str, profile: dict, history: list[dict]):
+    """Generator for greeting messages — no sources, fixed French response."""
+    yield _sse_event("sources", json.dumps([]))
+    greeting = "Bonjour ! Comment puis-je vous aider aujourd'hui dans le domaine du financement de startups au Maroc et en Afrique francophone ?"
+    yield _sse_event("token", greeting)
+    yield _sse_event("done", "")
+
+
+@app.post("/api/chat/stream")
+async def chat_stream(request: ChatRequest):
+    """Process a chat message and stream the response as SSE events."""
+    profile = _build_router_profile(request.profile)
+    history = [{"role": m.role, "content": m.content} for m in request.history]
+
+    if _is_greeting(request.message):
+        generator = _stream_greeting
+    else:
+        intent = detect_intent(request.message, history=history)
+        generator = _stream_qa if intent == "qa" else _stream_non_qa
+
+    return StreamingResponse(
+        generator(request.message, profile, history),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no",
+        },
+    )
 
 
 @app.get("/health")

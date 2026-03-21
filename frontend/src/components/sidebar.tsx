@@ -227,7 +227,7 @@ export function Sidebar({
                   <DropdownMenuTrigger asChild>
                     <button
                       onClick={(e) => e.stopPropagation()}
-                      className="opacity-0 group-hover:opacity-100 data-[state=open]:opacity-100 shrink-0 rounded p-1 text-sidebar-foreground/40 hover:text-sidebar-foreground transition-opacity"
+                      className="shrink-0 flex items-center justify-center rounded p-1 text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-colors"
                     >
                       <Ellipsis className="size-4" />
                     </button>

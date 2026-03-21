@@ -12,11 +12,20 @@ from backend.app.rag.retriever import retrieve
 
 SYSTEM_PROMPT = """Tu es Tamwil AI, un assistant expert en financement de startups au Maroc et en Afrique francophone.
 
-Règles :
-- Réponds UNIQUEMENT en français.
-- Base tes réponses EXCLUSIVEMENT sur le contexte fourni ci-dessous.
-- Si le contexte ne contient pas l'information, dis-le clairement : "Je n'ai pas cette information dans ma base de connaissances."
-- Cite les sources quand c'est pertinent.
+=== RÈGLES COMPORTEMENTALES (PRIORITAIRES) ===
+1. Tente TOUJOURS de répondre en utilisant le contexte récupéré — ne refuse jamais sauf si la question est totalement hors domaine.
+2. Si les documents récupérés couvrent partiellement le sujet, utilise-les comme base et complète avec tes connaissances générales — un contexte partiel n'est pas un contexte absent.
+3. Ne fabrique JAMAIS de noms de documents, statistiques ou références. Si tu enrichis avec tes connaissances générales, signale-le naturellement (ex: "D'après les informations disponibles...").
+4. Ne dis JAMAIS "Je n'ai pas cette information dans ma base de connaissances" ou toute variante de refus — réponds avec ce que tu sais et précise que certains détails peuvent varier.
+5. Reste concentré sur le domaine (financement, startups, Maroc/Afrique) mais ne refuse pas les questions raisonnablement liées — fais preuve de jugement.
+6. Réponds TOUJOURS dans la langue utilisée par l'utilisateur — ne change jamais de langue en cours de réponse.
+7. Maintiens un ton professionnel et utile, quelle que soit la complétude du contexte.
+8. Si aucun document pertinent n'est récupéré, donne la meilleure réponse générale possible et suggère à l'utilisateur de reformuler ou préciser.
+9. Si les chunks récupérés ont une faible pertinence, tente quand même une réponse — faible pertinence ne signifie pas zéro pertinence.
+
+RÈGLE D'OR : Une réponse partielle est TOUJOURS meilleure qu'aucune réponse. L'utilisateur doit toujours recevoir quelque chose d'utile.
+
+=== INSTRUCTIONS ===
 - Sois concis, structuré et actionnable.
 - Tiens compte de l'historique de conversation pour comprendre les références implicites (ex: "ces métriques", "explique ça").
 
@@ -102,6 +111,60 @@ def answer_question(question: str, k: int = 5, history: list[dict] = None) -> di
         "sources": sources,
         "mode": "rag_llm",
     }
+
+
+def answer_question_stream(question: str, k: int = 5, history: list[dict] = None):
+    """Stream answer tokens using RAG (retrieve + generate).
+
+    Yields:
+        First yield: dict with {"type": "sources", "sources": [...]}
+        Subsequent yields: dict with {"type": "token", "token": "..."}
+    """
+    enriched_query = _build_enriched_query(question, history)
+    docs = retrieve(enriched_query, k=k)
+
+    context_parts = []
+    sources = []
+    for doc in docs:
+        context_parts.append(doc.page_content)
+        source = doc.metadata.get("source", "inconnu")
+        doc_type = doc.metadata.get("type", "")
+        source_entry = f"{source} ({doc_type})"
+        if source_entry not in sources:
+            sources.append(source_entry)
+
+    context = "\n---\n".join(context_parts)
+
+    # Yield sources first
+    yield {"type": "sources", "sources": sources}
+
+    if not OPENAI_API_KEY:
+        fallback = (
+            "⚠ Clé API OpenAI non configurée. Voici les extraits pertinents :\n\n"
+            + "\n\n---\n\n".join(context_parts[:3])
+        )
+        yield {"type": "token", "token": fallback}
+        return
+
+    messages = [("system", SYSTEM_PROMPT)]
+    if history:
+        for msg in history[-6:]:
+            role = "human" if msg["role"] == "user" else "ai"
+            messages.append((role, msg["content"]))
+    messages.append(("human", USER_PROMPT))
+
+    prompt = ChatPromptTemplate.from_messages(messages)
+
+    llm = ChatOpenAI(
+        model=LLM_MODEL,
+        api_key=OPENAI_API_KEY,
+        temperature=0.3,
+        streaming=True,
+    )
+
+    chain = prompt | llm | StrOutputParser()
+    for chunk in chain.stream({"context": context, "question": question}):
+        yield {"type": "token", "token": chunk}
 
 
 # --- Standalone test ---

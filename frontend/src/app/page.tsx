@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { ChatLayout } from "@/components/chat-layout";
 import { Sidebar } from "@/components/sidebar";
 import { ChatPanel } from "@/components/chat-panel";
-import { sendMessage } from "@/lib/api";
+import { sendMessageStream } from "@/lib/api";
 import { DEFAULT_PROFILE } from "@/lib/constants";
 import { GuidedTour } from "@/components/guided-tour";
 import { StartupProfile, Message, Conversation } from "@/lib/types";
@@ -149,13 +149,26 @@ export default function Home() {
       timestamp: new Date(),
     };
 
+    const assistantId = generateId();
+
+    // Add user message + empty assistant placeholder
     setConversations((prev) =>
       prev.map((c) => {
         if (c.id !== convId) return c;
         const isFirst = c.messages.length === 0;
         return {
           ...c,
-          messages: [...c.messages, userMessage],
+          messages: [
+            ...c.messages,
+            userMessage,
+            {
+              id: assistantId,
+              role: "assistant" as const,
+              content: "",
+              sources: [],
+              timestamp: new Date(),
+            },
+          ],
           title: isFirst ? text : c.title,
           updatedAt: new Date().toISOString(),
         };
@@ -163,58 +176,115 @@ export default function Home() {
     );
     setIsLoading(true);
 
+    const currentConv = conversations.find((c) => c.id === convId);
+    const history = (currentConv?.messages ?? []).map((m) => ({
+      role: m.role,
+      content: m.content,
+    }));
+
     try {
-      const currentConv = conversations.find((c) => c.id === convId);
-      const history = (currentConv?.messages ?? []).map((m) => ({
-        role: m.role,
-        content: m.content,
-      }));
-
-      const response = await sendMessage({
-        message: text,
-        profile,
-        history,
-      });
-
-      const assistantMessage: Message = {
-        id: generateId(),
-        role: "assistant",
-        content: response.reply,
-        sources: response.sources,
-        timestamp: new Date(),
-      };
-
-      setConversations((prev) =>
-        prev.map((c) =>
-          c.id === convId
-            ? {
-                ...c,
-                messages: [...c.messages, assistantMessage],
-                updatedAt: new Date().toISOString(),
-              }
-            : c
-        )
+      await sendMessageStream(
+        { message: text, profile, history },
+        {
+          onSources: (sources) => {
+            setConversations((prev) =>
+              prev.map((c) =>
+                c.id !== convId
+                  ? c
+                  : {
+                      ...c,
+                      messages: c.messages.map((m) =>
+                        m.id === assistantId ? { ...m, sources } : m
+                      ),
+                    }
+              )
+            );
+          },
+          onToken: (token) => {
+            setConversations((prev) =>
+              prev.map((c) =>
+                c.id !== convId
+                  ? c
+                  : {
+                      ...c,
+                      messages: c.messages.map((m) =>
+                        m.id === assistantId
+                          ? { ...m, content: m.content + token }
+                          : m
+                      ),
+                    }
+              )
+            );
+          },
+          onReply: (replyText) => {
+            setConversations((prev) =>
+              prev.map((c) =>
+                c.id !== convId
+                  ? c
+                  : {
+                      ...c,
+                      messages: c.messages.map((m) =>
+                        m.id === assistantId
+                          ? { ...m, content: replyText }
+                          : m
+                      ),
+                    }
+              )
+            );
+          },
+          onDone: () => {
+            setConversations((prev) =>
+              prev.map((c) =>
+                c.id !== convId
+                  ? c
+                  : { ...c, updatedAt: new Date().toISOString() }
+              )
+            );
+            setIsLoading(false);
+          },
+          onError: (error) => {
+            console.error("Stream error:", error);
+            setConversations((prev) =>
+              prev.map((c) =>
+                c.id !== convId
+                  ? c
+                  : {
+                      ...c,
+                      messages: c.messages.map((m) =>
+                        m.id === assistantId
+                          ? {
+                              ...m,
+                              content:
+                                "Désolé, une erreur est survenue. Veuillez réessayer.",
+                            }
+                          : m
+                      ),
+                    }
+              )
+            );
+            setIsLoading(false);
+          },
+        }
       );
     } catch {
-      const errorMessage: Message = {
-        id: generateId(),
-        role: "assistant",
-        content: "Désolé, une erreur est survenue. Veuillez réessayer.",
-        timestamp: new Date(),
-      };
-
       setConversations((prev) =>
         prev.map((c) =>
-          c.id === convId
-            ? {
+          c.id !== convId
+            ? c
+            : {
                 ...c,
-                messages: [...c.messages, errorMessage],
-                updatedAt: new Date().toISOString(),
+                messages: c.messages.map((m) =>
+                  m.id === assistantId
+                    ? {
+                        ...m,
+                        content:
+                          "Désolé, une erreur est survenue. Veuillez réessayer.",
+                      }
+                    : m
+                ),
               }
-            : c
         )
       );
-    } finally {
       setIsLoading(false);
     }
   };

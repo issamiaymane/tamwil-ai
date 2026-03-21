@@ -117,16 +117,21 @@ def _detect_intent(message: str, history: list[dict] = None) -> str:
             return "scoring"
 
     # Check if user is asking about metrics in context of a previous scoring/diagnostic request
+    # Only trigger if the current message also mentions a metric term (not just "expliquer" + history)
     if history:
+        metric_terms = ["métrique", "metrique", "kpi", "mrr", "cac", "churn", "ltv", "burn rate", "fundability"]
         explanation_words = ["explique", "expliquer", "c'est quoi", "définition", "definition", "signifie", "veut dire", "comprends pas"]
         has_explanation_request = any(w in msg_lower for w in explanation_words)
-        if has_explanation_request:
-            last_messages = " ".join(m["content"] for m in history[-4:]).lower()
-            metric_context = any(w in last_messages for w in ["métrique", "metrique", "kpi", "mrr", "cac", "churn", "ltv", "burn rate", "fundability", "scoring", "diagnostic"])
-            if metric_context:
-                return "metrics"
+        has_metric_in_message = any(w in msg_lower for w in metric_terms)
+        if has_explanation_request and has_metric_in_message:
+            return "metrics"
 
     return "qa"
+
+
+def detect_intent(message: str, history: list[dict] = None) -> str:
+    """Public API for intent detection."""
+    return _detect_intent(message, history)
 
 
 # Key metrics to explain (most common for scoring/diagnostic)

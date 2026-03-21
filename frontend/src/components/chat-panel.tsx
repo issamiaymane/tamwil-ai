@@ -85,7 +85,7 @@ export function ChatPanel({ messages, isLoading, onSend }: ChatPanelProps) {
             <MessageBubble key={message.id} message={message} />
           ))}
 
-          {isLoading && (
+          {isLoading && (messages.length === 0 || messages[messages.length - 1]?.content === "") && (
             <div className="flex justify-start mb-3">
               <div className="rounded-2xl rounded-bl-sm bg-muted px-4 py-3">
                 <div className="flex gap-1">
