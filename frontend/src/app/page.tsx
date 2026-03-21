@@ -6,6 +6,7 @@ import { Sidebar } from "@/components/sidebar";
 import { ChatPanel } from "@/components/chat-panel";
 import { sendMessage } from "@/lib/api";
 import { DEFAULT_PROFILE } from "@/lib/constants";
+import { GuidedTour } from "@/components/guided-tour";
 import { StartupProfile, Message, Conversation } from "@/lib/types";
 
 function generateId(): string {
@@ -218,25 +219,28 @@ export default function Home() {
   };
 
   return (
-    <ChatLayout
-      sidebar={
-        <Sidebar
-          conversations={conversations}
-          activeId={activeId}
-          onNewChat={handleNewChat}
-          onSelectConversation={handleSelectConversation}
-          onDeleteConversation={handleDeleteConversation}
-          onRenameConversation={handleRenameConversation}
-          profile={profile}
-          onProfileChange={setProfile}
+    <>
+      <ChatLayout
+        sidebar={
+          <Sidebar
+            conversations={conversations}
+            activeId={activeId}
+            onNewChat={handleNewChat}
+            onSelectConversation={handleSelectConversation}
+            onDeleteConversation={handleDeleteConversation}
+            onRenameConversation={handleRenameConversation}
+            profile={profile}
+            onProfileChange={setProfile}
+          />
+        }
+      >
+        <ChatPanel
+          messages={activeMessages}
+          isLoading={isLoading}
+          onSend={handleSend}
         />
-      }
-    >
-      <ChatPanel
-        messages={activeMessages}
-        isLoading={isLoading}
-        onSend={handleSend}
-      />
-    </ChatLayout>
+      </ChatLayout>
+      <GuidedTour />
+    </>
   );
 }

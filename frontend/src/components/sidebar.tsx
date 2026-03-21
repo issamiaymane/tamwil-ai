@@ -125,7 +125,7 @@ export function Sidebar({
 
   /* ── Expanded sidebar ── */
   return (
-    <div className="flex h-full flex-col bg-sidebar text-sidebar-foreground">
+    <div id="tour-sidebar" className="flex h-full flex-col bg-sidebar text-sidebar-foreground">
       {/* Top bar — close (mobile) / collapse (desktop) + new chat */}
       <div className="flex items-center justify-between p-2">
         {/* Mobile: close overlay */}
@@ -147,6 +147,7 @@ export function Sidebar({
           <PanelLeftClose className="size-4" />
         </Button>
         <Button
+          id="tour-new-chat"
           variant="ghost"
           size="icon"
           onClick={() => {
@@ -256,7 +257,7 @@ export function Sidebar({
       <div className="border-t border-sidebar-border p-2">
         <Dialog>
           <DialogTrigger asChild>
-            <button className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition-colors hover:bg-sidebar-accent">
+            <button id="tour-profile" className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition-colors hover:bg-sidebar-accent">
               <div className="flex size-8 items-center justify-center rounded-full bg-sidebar-accent">
                 <CircleUserRound className="size-4 text-sidebar-foreground/70" />
               </div>

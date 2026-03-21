@@ -48,7 +48,9 @@ export function ChatPanel({ messages, isLoading, onSend }: ChatPanelProps) {
           <h1 className="text-lg font-semibold">Tamwil AI</h1>
           <Badge variant="secondary" className="text-xs hidden sm:inline-flex">Beta</Badge>
         </div>
-        <ThemeToggle />
+        <div id="tour-theme-toggle">
+          <ThemeToggle />
+        </div>
       </div>
 
       <div className="relative flex-1 overflow-hidden">
@@ -64,7 +66,7 @@ export function ChatPanel({ messages, isLoading, onSend }: ChatPanelProps) {
               <p className="mt-2 max-w-md text-center text-sm sm:text-base text-muted-foreground px-2">
                 Votre assistant IA pour le financement des startups au Maroc et en Afrique francophone.
               </p>
-              <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-lg">
+              <div id="tour-suggestions" className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-lg">
                 {SUGGESTIONS.map((s) => (
                   <button
                     key={s.text}
