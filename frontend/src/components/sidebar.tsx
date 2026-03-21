@@ -102,7 +102,9 @@ function ConversationItem({
         />
       ) : (
         <span className="truncate text-[13px]" style={{ flex: "1 1 0", minWidth: 0 }}>
-          {conv.title}
+          {conv.title.split(" ").length > 4
+            ? conv.title.split(" ").slice(0, 4).join(" ") + "..."
+            : conv.title}
         </span>
       )}
 
