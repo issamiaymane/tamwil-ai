@@ -31,6 +31,115 @@ import {
   Pencil,
 } from "lucide-react";
 
+function ConversationItem({
+  conv,
+  isActive,
+  isEditing,
+  editValue,
+  inputRef,
+  onSelect,
+  onEditChange,
+  onCommitRename,
+  onCancelRename,
+  onStartRename,
+  onDelete,
+}: {
+  conv: Conversation;
+  isActive: boolean;
+  isEditing: boolean;
+  editValue: string;
+  inputRef: React.RefObject<HTMLInputElement | null>;
+  onSelect: () => void;
+  onEditChange: (v: string) => void;
+  onCommitRename: () => void;
+  onCancelRename: () => void;
+  onStartRename: () => void;
+  onDelete: () => void;
+}) {
+  const [hovered, setHovered] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const showBtn = hovered || menuOpen;
+
+  return (
+    <div
+      role="button"
+      tabIndex={0}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onClick={() => {
+        if (!isEditing) onSelect();
+      }}
+      onKeyDown={(e) => {
+        if (!isEditing && (e.key === "Enter" || e.key === " ")) {
+          e.preventDefault();
+          onSelect();
+        }
+      }}
+      className={`relative flex w-full items-center gap-1 rounded-lg px-2 py-2 text-left text-sm transition-colors cursor-pointer overflow-hidden
+        ${
+          isActive
+            ? "bg-sidebar-accent text-sidebar-accent-foreground"
+            : "text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
+        }`}
+    >
+      {isEditing ? (
+        <input
+          ref={inputRef}
+          value={editValue}
+          onChange={(e) => onEditChange(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              onCommitRename();
+            } else if (e.key === "Escape") {
+              onCancelRename();
+            }
+            e.stopPropagation();
+          }}
+          onBlur={onCommitRename}
+          onClick={(e) => e.stopPropagation()}
+          className="flex-1 min-w-0 bg-transparent border border-sidebar-border rounded px-1 py-0.5 text-[13px] text-sidebar-foreground outline-none focus:border-primary"
+        />
+      ) : (
+        <span className="truncate text-[13px]" style={{ flex: "1 1 0", minWidth: 0 }}>
+          {conv.title}
+        </span>
+      )}
+
+      {!isEditing && (
+        <DropdownMenu onOpenChange={setMenuOpen}>
+          <DropdownMenuTrigger asChild>
+            <button
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                opacity: showBtn ? 1 : 0,
+                pointerEvents: showBtn ? "auto" : "none",
+              }}
+              className="flex-shrink-0 flex size-6 items-center justify-center rounded text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-opacity"
+            >
+              <Ellipsis className="size-4" />
+            </button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent side="right" align="start">
+            <DropdownMenuItem onClick={onStartRename}>
+              <Pencil className="size-4" />
+              Renommer
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem
+              onClick={onDelete}
+              className="text-destructive focus:text-destructive"
+            >
+              <Trash2 className="size-4" />
+              Supprimer
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      )}
+    </div>
+  );
+}
+
 interface SidebarProps {
   conversations: Conversation[];
   activeId: string | null;
@@ -172,83 +281,23 @@ export function Sidebar({
           )}
 
           {conversations.map((conv) => (
-            <div
+            <ConversationItem
               key={conv.id}
-              role="button"
-              tabIndex={0}
-              onClick={() => {
-                if (editingId !== conv.id) {
-                  onSelectConversation(conv.id);
-                  setMobileOpen(false);
-                }
+              conv={conv}
+              isActive={conv.id === activeId}
+              isEditing={editingId === conv.id}
+              editValue={editValue}
+              inputRef={inputRef}
+              onSelect={() => {
+                onSelectConversation(conv.id);
+                setMobileOpen(false);
               }}
-              onKeyDown={(e) => {
-                if (
-                  editingId !== conv.id &&
-                  (e.key === "Enter" || e.key === " ")
-                ) {
-                  e.preventDefault();
-                  onSelectConversation(conv.id);
-                }
-              }}
-              className={`group relative flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors cursor-pointer
-                ${
-                  conv.id === activeId
-                    ? "bg-sidebar-accent text-sidebar-accent-foreground"
-                    : "text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
-                }`}
-            >
-              {editingId === conv.id ? (
-                <input
-                  ref={inputRef}
-                  value={editValue}
-                  onChange={(e) => setEditValue(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      e.preventDefault();
-                      commitRename();
-                    } else if (e.key === "Escape") {
-                      cancelRename();
-                    }
-                    e.stopPropagation();
-                  }}
-                  onBlur={commitRename}
-                  onClick={(e) => e.stopPropagation()}
-                  className="flex-1 bg-transparent border border-sidebar-border rounded px-1 py-0.5 text-[13px] text-sidebar-foreground outline-none focus:border-primary"
-                />
-              ) : (
-                <span className="flex-1 min-w-0 truncate text-[13px]">
-                  {conv.title}
-                </span>
-              )}
-
-              {editingId !== conv.id && (
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <button
-                      onClick={(e) => e.stopPropagation()}
-                      className="shrink-0 flex items-center justify-center rounded p-1 text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-colors"
-                    >
-                      <Ellipsis className="size-4" />
-                    </button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent side="right" align="start">
-                    <DropdownMenuItem onClick={() => startRename(conv)}>
-                      <Pencil className="size-4" />
-                      Renommer
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem
-                      onClick={() => onDeleteConversation(conv.id)}
-                      className="text-destructive focus:text-destructive"
-                    >
-                      <Trash2 className="size-4" />
-                      Supprimer
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              )}
-            </div>
+              onEditChange={setEditValue}
+              onCommitRename={commitRename}
+              onCancelRename={cancelRename}
+              onStartRename={() => startRename(conv)}
+              onDelete={() => onDeleteConversation(conv.id)}
+            />
           ))}
         </div>
       </ScrollArea>
