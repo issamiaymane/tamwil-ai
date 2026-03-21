@@ -18,6 +18,7 @@ Règles :
 - Si le contexte ne contient pas l'information, dis-le clairement : "Je n'ai pas cette information dans ma base de connaissances."
 - Cite les sources quand c'est pertinent.
 - Sois concis, structuré et actionnable.
+- Tiens compte de l'historique de conversation pour comprendre les références implicites (ex: "ces métriques", "explique ça").
 
 Contexte :
 {context}"""
@@ -25,18 +26,32 @@ Contexte :
 USER_PROMPT = "{question}"
 
 
-def answer_question(question: str, k: int = 5) -> dict:
+def _build_enriched_query(question: str, history: list[dict] = None) -> str:
+    """Enrich user question with recent conversation context for better RAG retrieval."""
+    if not history:
+        return question
+
+    # Take last 2 exchanges max to add context
+    recent = history[-4:]
+    history_text = " ".join(msg["content"] for msg in recent)
+
+    return f"{history_text} {question}"
+
+
+def answer_question(question: str, k: int = 5, history: list[dict] = None) -> dict:
     """Answer a question using RAG (retrieve + generate).
 
     Args:
         question: User question in French.
         k: Number of chunks to retrieve (default 5).
+        history: Conversation history as list of {"role": ..., "content": ...} dicts.
 
     Returns:
         Dict with answer text and sources used.
     """
-    # Retrieve relevant chunks
-    docs = retrieve(question, k=k)
+    # Enrich query with conversation context for better retrieval
+    enriched_query = _build_enriched_query(question, history)
+    docs = retrieve(enriched_query, k=k)
 
     # Build context from retrieved documents
     context_parts = []
@@ -63,10 +78,15 @@ def answer_question(question: str, k: int = 5) -> dict:
             "mode": "fallback_no_llm",
         }
 
-    prompt = ChatPromptTemplate.from_messages([
-        ("system", SYSTEM_PROMPT),
-        ("human", USER_PROMPT),
-    ])
+    # Build message list with history for conversational context
+    messages = [("system", SYSTEM_PROMPT)]
+    if history:
+        for msg in history[-6:]:  # Last 3 exchanges max
+            role = "human" if msg["role"] == "user" else "ai"
+            messages.append((role, msg["content"]))
+    messages.append(("human", USER_PROMPT))
+
+    prompt = ChatPromptTemplate.from_messages(messages)
 
     llm = ChatOpenAI(
         model=LLM_MODEL,

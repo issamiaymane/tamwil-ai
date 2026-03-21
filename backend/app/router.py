@@ -11,6 +11,7 @@ from backend.app.modules.diagnostic import diagnose_kpis
 from backend.app.modules.matching_investors import match_investors
 from backend.app.modules.matching_grants import match_grants
 from backend.app.modules.rag_qa import answer_question
+from backend.app.utils.data_loader import load_metrics
 
 
 # --- Intent Detection Keywords ---
@@ -25,6 +26,21 @@ INTENT_KEYWORDS = {
         "diagnostic", "diagnostiquer", "analyser mes kpi",
         "santé financière", "sante financiere", "comment va ma startup",
         "analyse financière", "bilan financier",
+    ],
+    "metrics": [
+        "expliquer les métriques", "expliquer les metriques",
+        "explique les métriques", "explique les metriques",
+        "c'est quoi les métriques", "c'est quoi les metriques",
+        "c'est quoi un kpi", "c'est quoi les kpi",
+        "définition des métriques", "definition des metriques",
+        "quelles métriques", "quelles metriques",
+        "explique moi ces métriques", "explique moi ces metriques",
+        "c'est quoi mrr", "c'est quoi le mrr",
+        "c'est quoi cac", "c'est quoi le cac",
+        "c'est quoi churn", "c'est quoi le churn",
+        "c'est quoi ltv", "c'est quoi le ltv",
+        "c'est quoi burn rate", "c'est quoi le burn rate",
+        "ces métriques", "ces metriques",
     ],
     "investors": [
         "investisseur", "investor", "vc", "venture capital",
@@ -81,7 +97,7 @@ COUNTRY_KEYWORDS = [
 ]
 
 
-def _detect_intent(message: str) -> str:
+def _detect_intent(message: str, history: list[dict] = None) -> str:
     """Detect user intent from message keywords. Returns intent name."""
     msg_lower = message.lower()
 
@@ -100,7 +116,63 @@ def _detect_intent(message: str) -> str:
         if re.search(pattern, msg_lower, re.IGNORECASE):
             return "scoring"
 
+    # Check if user is asking about metrics in context of a previous scoring/diagnostic request
+    if history:
+        explanation_words = ["explique", "expliquer", "c'est quoi", "définition", "definition", "signifie", "veut dire", "comprends pas"]
+        has_explanation_request = any(w in msg_lower for w in explanation_words)
+        if has_explanation_request:
+            last_messages = " ".join(m["content"] for m in history[-4:]).lower()
+            metric_context = any(w in last_messages for w in ["métrique", "metrique", "kpi", "mrr", "cac", "churn", "ltv", "burn rate", "fundability", "scoring", "diagnostic"])
+            if metric_context:
+                return "metrics"
+
     return "qa"
+
+
+# Key metrics to explain (most common for scoring/diagnostic)
+CORE_METRICS = ["MRR", "CHURN_RATE", "CAC", "LTV", "BURN_RATE", "LTV_CAC", "RUNWAY"]
+
+
+def _explain_metrics(message: str) -> dict:
+    """Return definitions of key startup metrics from metrics_reference.json."""
+    metrics_ref = {m["id"]: m for m in load_metrics()}
+    msg_lower = message.lower()
+
+    # Check if user asks about a specific metric
+    specific_ids = []
+    keyword_to_id = {
+        "mrr": "MRR", "revenu mensuel": "MRR",
+        "arr": "ARR", "revenu annuel": "ARR",
+        "churn": "CHURN_RATE", "désabonnement": "CHURN_RATE", "desabonnement": "CHURN_RATE",
+        "cac": "CAC", "coût d'acquisition": "CAC", "cout d'acquisition": "CAC",
+        "ltv": "LTV", "lifetime value": "LTV", "valeur vie": "LTV",
+        "ltv/cac": "LTV_CAC", "ratio ltv": "LTV_CAC",
+        "burn rate": "BURN_RATE", "burn": "BURN_RATE", "trésorerie": "BURN_RATE",
+        "runway": "RUNWAY",
+        "nps": "NPS",
+        "marge brute": "GROSS_MARGIN", "gross margin": "GROSS_MARGIN",
+        "croissance": "MRR_GROWTH", "growth": "MRR_GROWTH",
+    }
+    for keyword, metric_id in keyword_to_id.items():
+        if keyword in msg_lower and metric_id not in specific_ids:
+            specific_ids.append(metric_id)
+
+    # If no specific metric found, explain the core ones
+    metric_ids = specific_ids if specific_ids else CORE_METRICS
+
+    explanations = []
+    for mid in metric_ids:
+        ref = metrics_ref.get(mid)
+        if not ref:
+            continue
+        explanations.append({
+            "id": ref["id"],
+            "name_fr": ref.get("name_fr", ref["name"]),
+            "definition": ref.get("definition", ""),
+            "formula": ref.get("formula", ""),
+        })
+
+    return {"metrics": explanations}
 
 
 def _extract_metrics(message: str) -> dict:
@@ -173,20 +245,25 @@ def _extract_amount(message: str) -> int | None:
     return None
 
 
-def route(user_message: str, startup_profile: dict = None) -> dict:
+def route(user_message: str, startup_profile: dict = None, history: list[dict] = None) -> dict:
     """Route a user message to the correct business module.
 
     Args:
         user_message: The user's natural language message.
         startup_profile: Optional pre-filled startup profile from sidebar form.
+        history: Conversation history as list of {"role": ..., "content": ...} dicts.
 
     Returns:
         Dict with intent, module used, and result.
     """
     profile = startup_profile or {}
-    intent = _detect_intent(user_message)
+    intent = _detect_intent(user_message, history=history)
 
-    if intent == "scoring":
+    if intent == "metrics":
+        result = _explain_metrics(user_message)
+        return {"intent": "metrics", "result": result}
+
+    elif intent == "scoring":
         metrics = _extract_metrics(user_message)
         # Merge with profile if available
         metrics.update({k: v for k, v in profile.get("metrics", {}).items() if k not in metrics})
@@ -195,7 +272,16 @@ def route(user_message: str, startup_profile: dict = None) -> dict:
         if not metrics:
             return {
                 "intent": "scoring",
-                "error": "Aucune métrique détectée. Veuillez fournir vos KPIs (ex: MRR: 8000, churn: 5%, CAC: 200).",
+                "error": (
+                    "Pour calculer votre score de fundability, j'ai besoin de vos KPIs. "
+                    "Voici les métriques que vous pouvez fournir :\n\n"
+                    "- **MRR** (Revenu Mensuel Récurrent) : vos revenus d'abonnements par mois (ex: MRR: 8000)\n"
+                    "- **Churn** (Taux de Désabonnement) : % de clients perdus par mois (ex: churn: 5%)\n"
+                    "- **CAC** (Coût d'Acquisition Client) : coût moyen pour acquérir un client (ex: CAC: 200)\n"
+                    "- **LTV** (Valeur Vie Client) : revenu total généré par un client (ex: LTV: 2000)\n"
+                    "- **Burn Rate** : trésorerie consommée par mois (ex: burn rate: 15000)\n\n"
+                    "Exemple : *MRR: 8000, churn: 5%, CAC: 200, stade seed*"
+                ),
             }
 
         result = score_fundability(metrics, stage)
@@ -209,7 +295,16 @@ def route(user_message: str, startup_profile: dict = None) -> dict:
         if not metrics:
             return {
                 "intent": "diagnostic",
-                "error": "Aucune métrique détectée. Veuillez fournir vos KPIs à analyser (ex: CAC: 200, LTV: 400, churn: 8%).",
+                "error": (
+                    "Pour réaliser votre diagnostic financier, j'ai besoin de vos KPIs. "
+                    "Voici les métriques que vous pouvez fournir :\n\n"
+                    "- **CAC** (Coût d'Acquisition Client) : coût moyen pour acquérir un client (ex: CAC: 200)\n"
+                    "- **LTV** (Valeur Vie Client) : revenu total généré par un client (ex: LTV: 400)\n"
+                    "- **Churn** (Taux de Désabonnement) : % de clients perdus par mois (ex: churn: 8%)\n"
+                    "- **MRR** (Revenu Mensuel Récurrent) : vos revenus d'abonnements par mois\n"
+                    "- **Burn Rate** : trésorerie consommée par mois\n\n"
+                    "Exemple : *CAC: 200, LTV: 400, churn: 8%*"
+                ),
             }
 
         result = diagnose_kpis(metrics, stage)
@@ -240,8 +335,8 @@ def route(user_message: str, startup_profile: dict = None) -> dict:
         return {"intent": "grants", "result": result}
 
     else:
-        # Fallback: RAG Q&A
-        result = answer_question(user_message)
+        # Fallback: RAG Q&A (with conversation history for context)
+        result = answer_question(user_message, history=history)
         return {"intent": "qa", "result": result}
 
 

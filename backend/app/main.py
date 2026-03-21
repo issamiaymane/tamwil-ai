@@ -178,6 +178,22 @@ def _format_grants(result: dict) -> str:
     return "\n".join(lines)
 
 
+def _format_metrics(result: dict) -> str:
+    """Format metric explanations as markdown."""
+    explanations = result.get("metrics", [])
+    if not explanations:
+        return "Aucune métrique trouvée."
+
+    lines = ["Voici les métriques clés pour évaluer votre startup :\n"]
+    for m in explanations:
+        lines.append(f"### {m['name_fr']} ({m['id']})")
+        lines.append(f"{m['definition']}\n")
+        if m.get("formula"):
+            lines.append(f"**Formule :** {m['formula']}\n")
+    lines.append("---\nVous pouvez maintenant fournir vos KPIs pour calculer votre score, par exemple :\n*MRR: 8000, churn: 5%, CAC: 200, stade seed*")
+    return "\n".join(lines)
+
+
 def _format_qa(result: dict) -> str:
     """Format RAG Q&A result as markdown."""
     lines = [result.get("answer", "")]
@@ -197,6 +213,7 @@ def _format_response(router_output: dict) -> str:
     formatters = {
         "scoring": _format_scoring,
         "diagnostic": _format_diagnostic,
+        "metrics": _format_metrics,
         "investors": _format_investors,
         "grants": _format_grants,
         "qa": _format_qa,
@@ -212,7 +229,8 @@ def _format_response(router_output: dict) -> str:
 async def chat(request: ChatRequest):
     """Process a chat message and return a markdown response."""
     profile = _build_router_profile(request.profile)
-    router_output = route(request.message, startup_profile=profile)
+    history = [{"role": m.role, "content": m.content} for m in request.history]
+    router_output = route(request.message, startup_profile=profile, history=history)
     reply = _format_response(router_output)
     return ChatResponse(reply=reply)
 
