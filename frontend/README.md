@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tamwil AI — Frontend
+
+Next.js 16 + React 19 + Tailwind CSS 4 interface for the Tamwil AI chatbot.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The backend must be running on port 8000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Terminal 1 — Backend
+uvicorn backend.app.main:app --reload --port 8000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Terminal 2 — Frontend
+cd frontend && npm run dev
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── layout.tsx              # Root layout
+│   └── page.tsx                # Main page
+├── components/
+│   ├── chat-layout.tsx         # Main layout (sidebar + chat panel)
+│   ├── chat-panel.tsx          # Message area with SSE streaming
+│   ├── chat-input.tsx          # User message input
+│   ├── message-bubble.tsx      # Message rendering (markdown + sources)
+│   ├── sidebar.tsx             # Draggable sidebar with conversation list
+│   ├── profile-form.tsx        # Startup profile form
+│   ├── guided-tour.tsx         # Interactive onboarding tour (React Joyride)
+│   ├── theme-toggle.tsx        # Dark/light mode toggle
+│   ├── theme-provider.tsx      # Theme context provider
+│   ├── animated-grid-pattern.tsx # Decorative background
+│   └── ui/                     # Reusable UI primitives (button, card, dialog, etc.)
+└── lib/
+    ├── api.ts                  # API client (REST + SSE streaming)
+    ├── types.ts                # TypeScript interfaces
+    ├── constants.ts            # Constants
+    └── utils.ts                # Utilities
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API Connection
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **REST**: `POST http://localhost:8000/api/chat` — non-streaming responses
+- **SSE**: `POST http://localhost:8000/api/chat/stream` — streaming responses (used for Q&A)
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Chat conversationnel with markdown rendering
+- SSE streaming for real-time Q&A responses
+- Startup profile form (sector, stage, country, metrics)
+- Multiple conversations with local storage persistence
+- Draggable/resizable sidebar with conversation hover menu
+- Dark/light mode
+- Interactive guided tour for first-time users
+- Structured source display with clickable URLs

@@ -24,7 +24,7 @@ L'ensemble des données a été **construit manuellement** à partir de sources 
 | Base FAQ | JSON | 54 Q&A | 62 KB |
 | Guides fundraising | Markdown | 6 fichiers (3 554 lignes) | 176 KB |
 | Documents réglementaires | Markdown | 4 fichiers (1 817 lignes) | 100 KB |
-| **Total** | | **138 entrées + 10 documents** | **~521 KB** |
+| **Total** | | **138 entrées + 10 documents** | **~504 KB** |
 
 **Langue principale** : français | **Couverture géographique** : Maroc, France, Afrique, International
 

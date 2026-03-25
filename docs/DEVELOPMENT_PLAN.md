@@ -113,8 +113,10 @@
 |----------------|-------------|-------------------|
 | Scoring | `scoring.py` | "score", "fundability", "pret a lever", metrics provided |
 | Diagnostic | `diagnostic.py` | "diagnostic", "analyser mes KPIs", "comment va ma startup" |
+| Metrics | `router.py` (_explain_metrics) | "expliquer les métriques", "c'est quoi les KPI", "c'est quoi MRR" |
 | Investors | `matching_investors.py` | "investisseur", "VC", "business angel", "qui peut investir" |
 | Grants | `matching_grants.py` | "subvention", "aide", "programme", "financement public" |
+| Greeting | `main.py` (_is_greeting) | "bonjour", "salut", "hello", "salam" (≤3 words) |
 | General Q&A | `rag_qa.py` | Everything else (free-form questions) |
 
 **Approach options:**
@@ -122,8 +124,9 @@
 - **LLM-based** — more intelligent, asks the LLM to classify intent
 
 **Deliverables:**
-- [x] `router.py` correctly routing queries to all 5 modules (keyword-based approach)
+- [x] `router.py` correctly routing queries to all 5 modules + metrics explainer (keyword-based approach)
 - [x] Fallback to RAG Q&A for unclassified queries
+- [x] Greeting detection bypassing the router for casual messages
 
 ---
 
@@ -133,15 +136,19 @@
 
 | File | Responsibility |
 |------|---------------|
-| `backend/app/main.py` | FastAPI app with `POST /api/chat` endpoint, CORS, profile mapping, markdown response formatting |
-| `frontend/src/lib/api.ts` | Real `fetch()` call to `http://localhost:8000/api/chat` (replaces mock) |
+| `backend/app/main.py` | FastAPI app with `POST /api/chat` and `POST /api/chat/stream` endpoints, CORS, profile mapping, markdown response formatting, SSE streaming, greeting detection |
+| `backend/app/source_urls.py` | Mapping of dataset filenames to real internet URLs for structured source attribution |
+| `frontend/src/lib/api.ts` | Real `fetch()` calls to `http://localhost:8000/api/chat` and `/api/chat/stream` with SSE parsing |
 
 ### API Contract
 
 - **Request:** `POST /api/chat` with `{message, profile, history}`
-- **Response:** `{reply: "markdown string"}`
+- **Response:** `{reply: "markdown string", sources: [{name, type, url}]}`
+- **Request:** `POST /api/chat/stream` with `{message, profile, history}`
+- **Response:** SSE stream with events: `sources` (JSON array), `token` (text chunk), `reply` (full text for non-QA), `done`
 - Profile fields mapped: `secteur→sector`, `stade→stage`, `pays→country`, `mrr/burnRate/churn/cac/ltv→metrics`
 - Response formatted as French markdown (tables, lists, emojis) per intent type
+- Greeting messages (≤3 words matching common greetings) return a fixed French welcome without calling the router
 
 ### How to run
 
@@ -156,8 +163,11 @@ cd frontend && npm run dev
 **Deliverables:**
 - [x] FastAPI server with CORS on port 8000
 - [x] `POST /api/chat` endpoint calling `route()` and formatting markdown
-- [x] Frontend `api.ts` using real `fetch()` instead of mocks
+- [x] `POST /api/chat/stream` endpoint with SSE streaming for real-time token delivery
+- [x] Frontend `api.ts` using real `fetch()` and SSE stream parsing
 - [x] Health check endpoint `GET /health`
+- [x] Structured source attribution with clickable URLs (`source_urls.py`)
+- [x] Greeting detection to bypass router for casual messages
 
 ---
 
@@ -169,15 +179,34 @@ cd frontend && npm run dev
 
 | Section | Content |
 |---------|---------|
-| **Sidebar** | Startup profile form — sector (dropdown), stage (dropdown), country (dropdown), metrics (numeric inputs: MRR, burn rate, churn, CAC, LTV) |
-| **Main area** | Chat interface — message history (user + assistant), text input, formatted responses (scores, tables, lists) |
-| **State management** | Conversation history preserved across interactions |
+| **Sidebar** | Draggable/resizable sidebar with startup profile form (sector, stage, country, metrics), conversation history with hover menu, new conversation button |
+| **Main area** | Chat interface — message history (user + assistant), text input, formatted responses (scores, tables, lists), SSE streaming display |
+| **State management** | Multiple conversations preserved in local storage, conversation switching |
+
+### Components
+
+| Component | File | Description |
+|-----------|------|-------------|
+| Chat Layout | `chat-layout.tsx` | Main layout orchestrating sidebar + chat panel |
+| Chat Panel | `chat-panel.tsx` | Message display area with streaming support |
+| Chat Input | `chat-input.tsx` | User message input |
+| Message Bubble | `message-bubble.tsx` | Individual message rendering with markdown + sources |
+| Sidebar | `sidebar.tsx` | Draggable sidebar with conversation list + hover menu |
+| Profile Form | `profile-form.tsx` | Startup profile form (sector, stage, country, metrics) |
+| Guided Tour | `guided-tour.tsx` | Interactive onboarding tour for first-time users (React Joyride) |
+| Theme Toggle | `theme-toggle.tsx` | Dark/light mode toggle |
+| Theme Provider | `theme-provider.tsx` | Theme context provider |
+| Animated Grid | `animated-grid-pattern.tsx` | Decorative background pattern |
+| UI Components | `ui/` | Reusable primitives (button, card, dialog, input, select, badge, etc.) |
 
 **Deliverables:**
-- [x] Sidebar with startup profile form and conversation history
-- [x] Chat interface with message history and dark mode
-- [x] Formatted display of scores, tables, and lists
-- [x] State management with React 19
+- [x] Draggable/resizable sidebar with conversation history and hover menu
+- [x] Chat interface with SSE streaming, message history, and dark mode
+- [x] Formatted display of scores, tables, and lists with markdown rendering
+- [x] State management with React 19, multiple conversations in local storage
+- [x] Interactive guided tour for first-time users
+- [x] Structured source display with clickable URLs
+- [x] Conversation title truncation (4 words) in sidebar
 
 ---
 

@@ -28,10 +28,11 @@ La langue principale est le **français**.
 | Composant | Technologie |
 |-----------|-------------|
 | Backend | **Python 3.11+** |
-| LLM | **OpenAI API** (GPT-4 ou GPT-3.5-turbo) |
+| Serveur API | **FastAPI + uvicorn** (REST + SSE streaming) |
+| LLM | **OpenAI API** (GPT-3.5-turbo / GPT-4) |
 | Embeddings | **sentence-transformers** (`paraphrase-multilingual-MiniLM-L12-v2`) |
-| Base vectorielle | **ChromaDB** |
-| Interface | **Next.js** |
+| Base vectorielle | **ChromaDB** (persistant) |
+| Interface | **Next.js 16 + React 19 + Tailwind CSS 4** |
 | Pipeline RAG | **LangChain** |
 | Config | **python-dotenv** |
 
@@ -42,12 +43,14 @@ La langue principale est le **français**.
 ```
 tamwil-ai/
 ├── backend/
+│   ├── __init__.py
 │   ├── app/
 │   │   ├── __init__.py
-│   │   ├── main.py                 # Point d'entrée principal (FastAPI ou fonction main)
+│   │   ├── main.py                 # Serveur FastAPI (POST /api/chat, POST /api/chat/stream, GET /health)
 │   │   ├── config.py               # Chargement des clés API et paramètres (.env)
 │   │   ├── router.py               # Détection d'intention / Orchestrateur
 │   │   │                           # → Route vers le bon module selon la requête
+│   │   ├── source_urls.py          # Mapping fichiers dataset → URLs réelles pour attribution des sources
 │   │   ├── modules/
 │   │   │   ├── __init__.py
 │   │   │   ├── scoring.py          # Scoring de fundability (compare métriques aux benchmarks)
@@ -63,11 +66,11 @@ tamwil-ai/
 │   │   │   └── retriever.py        # Recherche par similarité (top-k)
 │   │   └── utils/
 │   │       ├── __init__.py
-│   │       ├── prompts.py          # Templates de prompts pour le LLM (en français)
-│   │       └── helpers.py          # Fonctions utilitaires
+│   │       └── data_loader.py      # Chargement et validation des données JSON/Markdown
 │   └── .env                        # Clés API (OPENAI_API_KEY, etc.)
 │
 ├── dataset/
+│   ├── DISCLAIMER.md                    # Avertissement sur les limites des données
 │   ├── investors/
 │   │   └── investors.json              # 41 profils d'investisseurs
 │   ├── grants/
@@ -87,9 +90,39 @@ tamwil-ai/
 │       ├── creation_entreprise_maroc.md  # Création d'entreprise au Maroc
 │       ├── fintech_maroc.md           # Réglementation fintech
 │       ├── fiscalite_startup.md       # Fiscalité des startups
-│       └── rgpd.md           # RGPD / protection des données au Maroc
+│       └── rgpd.md                    # RGPD / protection des données au Maroc
 │
-├── frontend/                       # Next.js frontend application
+├── docs/                           # Documentation du projet
+│   ├── PROJET_TAMWIL_AI.md
+│   ├── DEVELOPMENT_PLAN.md
+│   ├── DATASET_REPORT.md
+│   ├── RAPPORT_PFA.md
+│   └── Project Brief for AI Agent.md
+│
+├── frontend/                       # Next.js 16 + React 19 + Tailwind CSS 4
+│   ├── src/
+│   │   ├── app/                    # Pages Next.js (App Router)
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── components/             # Composants React
+│   │   │   ├── chat-layout.tsx     # Layout principal (sidebar + chat)
+│   │   │   ├── chat-panel.tsx      # Zone de messages avec streaming SSE
+│   │   │   ├── chat-input.tsx      # Input utilisateur
+│   │   │   ├── message-bubble.tsx  # Bulle de message (markdown + sources)
+│   │   │   ├── sidebar.tsx         # Sidebar draggable avec conversations
+│   │   │   ├── profile-form.tsx    # Formulaire profil startup
+│   │   │   ├── guided-tour.tsx     # Tour interactif pour nouveaux utilisateurs
+│   │   │   ├── theme-toggle.tsx    # Toggle dark/light mode
+│   │   │   ├── theme-provider.tsx  # Fournisseur de thème
+│   │   │   ├── animated-grid-pattern.tsx  # Pattern décoratif
+│   │   │   └── ui/                 # Composants UI réutilisables (button, card, dialog, etc.)
+│   │   └── lib/
+│   │       ├── api.ts              # Client API (REST + SSE streaming)
+│   │       ├── types.ts            # Interfaces TypeScript
+│   │       ├── constants.ts        # Constantes
+│   │       └── utils.ts            # Utilitaires
+│   ├── package.json
+│   └── tsconfig.json
 │
 ├── chroma_db/                      # Stockage ChromaDB (gitignored)
 ├── tests/
@@ -99,8 +132,8 @@ tamwil-ai/
 │   ├── test_matching_grants.py
 │   ├── test_router.py
 │   └── test_rag.py
-├── .gitignore
-├── README.md
+├── requirements.txt
+└── .gitignore
 
 ```
 
@@ -266,13 +299,13 @@ Le router détecte l'intention de l'utilisateur et dirige vers le bon module :
 |-------------------|---------------|---------------------|
 | Scoring | `scoring.py` | "score", "fundability", "prêt à lever", métriques fournies |
 | Diagnostic | `diagnostic.py` | "diagnostic", "analyser mes KPIs", "comment va ma startup" |
+| Metrics | `router.py` (_explain_metrics) | "expliquer les métriques", "c'est quoi les KPI", "c'est quoi MRR" |
 | Investisseurs | `matching_investors.py` | "investisseur", "VC", "business angel", "qui peut investir" |
 | Subventions | `matching_grants.py` | "subvention", "aide", "programme", "financement public" |
+| Greeting | `main.py` (_is_greeting) | "bonjour", "salut", "hello", "salam" (≤3 mots) |
 | Q&A général | `rag_qa.py` | Tout le reste (questions libres) |
 
-L'approche peut être :
-- **Keyword-based** (simple, rapide) : détecter des mots-clés
-- **LLM-based** (plus intelligent) : demander au LLM de classifier l'intention
+**Approche implémentée** : Keyword-based avec regex et pattern matching. Les greetings sont détectés avant le routeur dans `main.py`.
 
 ---
 
@@ -315,17 +348,23 @@ L'approche peut être :
 
 ## 🖥️ Frontend Next.js (`frontend/`)
 
-### Layout souhaité :
-- **Sidebar** : Formulaire pour saisir le profil startup
-  - Secteur (dropdown : fintech, healthtech, edtech, etc.)
-  - Stade (dropdown : pre-seed, seed, series-a)
-  - Pays (dropdown : Maroc, France, etc.)
-  - Métriques (inputs numériques : MRR, burn rate, churn, CAC, LTV)
+### Layout implémenté :
+- **Sidebar** (draggable/resizable) :
+  - Formulaire profil startup : secteur (dropdown), stade (dropdown), pays (dropdown), métriques (MRR, burn rate, churn, CAC, LTV)
+  - Liste des conversations avec menu hover (renommer, supprimer)
+  - Bouton nouvelle conversation
+  - Titres de conversation tronqués à 4 mots
 - **Zone principale** : Chat conversationnel
-  - Historique des messages (user + assistant)
-  - Input texte pour les questions
+  - Historique des messages (user + assistant) avec rendering Markdown
+  - SSE streaming pour affichage en temps réel des réponses Q&A
+  - Affichage structuré des sources avec URLs cliquables
   - Affichage formaté des réponses (scores, tableaux, listes)
-- **State management** : Conserver l'historique de conversation
+- **Fonctionnalités supplémentaires** :
+  - Dark/light mode toggle
+  - Guided tour interactif pour nouveaux utilisateurs (React Joyride)
+  - Animated grid pattern décoratif
+  - Multiple conversations en local storage
+- **State management** : React 19, conversations persistées en local storage
 
 ---
 

@@ -326,7 +326,7 @@ Le scoring de fundability est la fonctionnalité phare du projet. Il évalue la 
 
 ### 2.3 Modèle de données
 
-Le dataset a été constitué manuellement et contient environ **464 KB de données de qualité**, organisées comme suit :
+Le dataset a été constitué manuellement et contient environ **504 KB de données de qualité**, organisées comme suit :
 
 #### Données structurées (JSON)
 
@@ -476,8 +476,8 @@ regulations/*.md ────────→ Q&A conversationnel (RAG)
 | **Embeddings** | sentence-transformers (`paraphrase-multilingual-MiniLM-L12-v2`) | Gratuit, local, supporte le français, 384 dimensions |
 | **Base vectorielle** | ChromaDB | Simple, léger, persistant, parfait pour un dataset de cette taille |
 | **Pipeline RAG** | LangChain | Framework mature pour l'orchestration RAG |
-| **Serveur API** | FastAPI + uvicorn | Framework Python moderne, asynchrone, avec documentation auto-générée |
-| **Interface** | Next.js 16.1.6 + React 19 + Tailwind CSS 4 | Application web moderne avec chat conversationnel et dark mode |
+| **Serveur API** | FastAPI + uvicorn | Framework Python moderne, asynchrone, SSE streaming, documentation auto-générée |
+| **Interface** | Next.js 16 + React 19 + Tailwind CSS 4 | Application web moderne avec SSE streaming, chat conversationnel, dark mode, guided tour |
 | **Configuration** | python-dotenv | Gestion sécurisée des variables d'environnement |
 | **Tokenisation** | tiktoken | Comptage précis des tokens pour les appels LLM |
 
@@ -502,7 +502,7 @@ pytest>=7.0.0
 
 Le dataset a été construit **manuellement** pour garantir la qualité et la pertinence des données au contexte marocain et francophone. Aucune source automatisée n'a été utilisée.
 
-**Volume total** : ~521 KB de données structurées et non structurées.
+**Volume total** : ~504 KB de données structurées et non structurées.
 
 | Source | Format | Volume | Contenu |
 |--------|--------|--------|---------|
@@ -617,11 +617,13 @@ Le module `retriever.py` est le moteur de recherche du système :
 ```
 tamwil-ai/
 ├── backend/
+│   ├── __init__.py
 │   ├── app/
 │   │   ├── __init__.py
 │   │   ├── config.py                 # Configuration centralisée
-│   │   ├── main.py                   # Serveur FastAPI (POST /api/chat, GET /health)
+│   │   ├── main.py                   # Serveur FastAPI (POST /api/chat, POST /api/chat/stream, GET /health)
 │   │   ├── router.py                 # Orchestrateur / détection d'intention (regex + mots-clés)
+│   │   ├── source_urls.py            # Mapping fichiers dataset → URLs réelles pour attribution des sources
 │   │   ├── modules/                  # Modules métier
 │   │   │   ├── __init__.py
 │   │   │   ├── scoring.py            # Scoring de fundability
@@ -638,21 +640,27 @@ tamwil-ai/
 │   │   └── utils/
 │   │       ├── __init__.py
 │   │       └── data_loader.py        # Chargement et validation des données
-│   ├── __init__.py
 │   └── .env                          # Variables d'environnement
 ├── dataset/                          # Base de connaissances
+│   ├── DISCLAIMER.md                 # Avertissement sur les limites des données
 │   ├── investors/investors.json      # 41 profils d'investisseurs
 │   ├── grants/grants.json            # 25 programmes de subventions
 │   ├── metrics/metrics_reference.json # 18 KPIs avec benchmarks
 │   ├── faq/faq.json                  # 54 Q&A
 │   ├── fundraising_guide/            # 6 guides Markdown (~3 554 lignes)
 │   └── regulations/                  # 4 documents réglementaires (~1 817 lignes)
-├── chroma_db/                        # Base vectorielle persistante
+├── chroma_db/                        # Base vectorielle persistante (gitignored)
+├── docs/                             # Documentation du projet
+│   ├── PROJET_TAMWIL_AI.md           # Spécification du projet
+│   ├── DEVELOPMENT_PLAN.md           # Plan de développement
+│   ├── DATASET_REPORT.md             # Rapport détaillé du dataset
+│   ├── RAPPORT_PFA.md                # Rapport PFA complet
+│   └── Project Brief for AI Agent.md # Brief pour agents IA
 ├── frontend/                         # Interface Next.js (React 19 + Tailwind CSS 4)
 │   ├── src/
 │   │   ├── app/                      # Pages Next.js (App Router)
-│   │   ├── components/               # Composants React (chat, sidebar, profil)
-│   │   └── lib/                      # API client, types, constantes
+│   │   ├── components/               # Composants React (chat, sidebar, profil, guided-tour, theme)
+│   │   └── lib/                      # API client (REST + SSE), types, constantes
 │   ├── package.json
 │   └── tsconfig.json
 ├── tests/                            # Tests unitaires (pytest)
@@ -662,9 +670,7 @@ tamwil-ai/
 │   ├── test_matching_grants.py
 │   ├── test_router.py
 │   └── test_rag.py
-├── requirements.txt                  # Dépendances Python
-├── PROJET_TAMWIL_AI.md              # Spécification du projet
-└── DEVELOPMENT_PLAN.md              # Plan de développement
+└── requirements.txt                  # Dépendances Python
 ```
 
 ### 3.6 Règles de développement
@@ -731,7 +737,7 @@ Le moteur de recherche sémantique a été testé avec des requêtes en françai
 - Le dataset original et adapté au contexte marocain est un atout différenciateur
 
 **Limites identifiées :**
-- Le dataset reste relativement petit (~521 KB) et pourrait être enrichi avec davantage d'investisseurs et de subventions
+- Le dataset reste relativement petit (~504 KB) et pourrait être enrichi avec davantage d'investisseurs et de subventions
 - La gestion des erreurs peut être renforcée dans certains cas limites
 - Le LLM utilisé (GPT-3.5-turbo) pourrait être remplacé par un modèle plus performant (GPT-4)
 - Le CORS est limité à localhost — une configuration production est nécessaire pour le déploiement
@@ -748,17 +754,17 @@ Le projet Tamwil AI a permis de concevoir et d'implémenter un chatbot intellige
 
 **Réalisations principales :**
 
-1. **Constitution d'un dataset original** de ~521 KB couvrant l'écosystème startup marocain et francophone : 41 profils d'investisseurs, 25 programmes de subventions, 18 métriques financières, 54 Q&A, 6 guides de fundraising et 4 documents réglementaires.
+1. **Constitution d'un dataset original** de ~504 KB couvrant l'écosystème startup marocain et francophone : 41 profils d'investisseurs, 25 programmes de subventions, 18 métriques financières, 54 Q&A, 6 guides de fundraising et 4 documents réglementaires.
 
 2. **Implémentation complète du pipeline RAG** : ingestion des documents, chunking avec LangChain, embedding avec le modèle multilingue `paraphrase-multilingual-MiniLM-L12-v2` (384 dimensions), indexation dans ChromaDB, et recherche sémantique par similarité cosinus.
 
 3. **Implémentation des cinq modules métier** : scoring de fundability, diagnostic financier, matching investisseurs, matching subventions, et Q&A conversationnel RAG — tous fonctionnels et testés.
 
-4. **Développement de l'orchestrateur/router** : détection d'intention par regex et mots-clés, routage automatique vers le module approprié avec fallback vers le RAG Q&A.
+4. **Développement de l'orchestrateur/router** : détection d'intention par regex et mots-clés (scoring, diagnostic, metrics, investisseurs, subventions), routage automatique vers le module approprié avec fallback vers le RAG Q&A, détection de greetings pour les messages courts.
 
-5. **Mise en place du serveur FastAPI** : API REST avec endpoint `POST /api/chat` et `GET /health`, gestion CORS, formatage des réponses en Markdown.
+5. **Mise en place du serveur FastAPI** : API REST avec endpoints `POST /api/chat`, `POST /api/chat/stream` (SSE streaming) et `GET /health`, gestion CORS, détection de greetings, attribution structurée des sources avec URLs cliquables (`source_urls.py`), formatage des réponses en Markdown.
 
-6. **Construction de l'interface frontend Next.js** : application React 19 avec Tailwind CSS 4, sidebar avec historique de conversations, chat conversationnel avec dark mode, formulaire de profil startup, et connexion au backend FastAPI.
+6. **Construction de l'interface frontend Next.js** : application React 19 avec Tailwind CSS 4, sidebar draggable avec historique de conversations et menu hover, chat conversationnel avec SSE streaming et dark mode, formulaire de profil startup, guided tour interactif pour les nouveaux utilisateurs (React Joyride), affichage structuré des sources avec URLs cliquables, et connexion au backend FastAPI.
 
 7. **Tests unitaires** : 6 fichiers de tests couvrant tous les modules (scoring, diagnostic, matching investisseurs, matching subventions, router, RAG).
 

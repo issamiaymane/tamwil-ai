@@ -123,13 +123,19 @@ regulations/*.md ────────→ Q&A conversationnel (RAG)
 ```
 ┌─────────────────────────────────────────────────┐
 │                 Interface Web                    │
-│            (Next.js)                             │
+│      (Next.js 16 + React 19 + Tailwind CSS 4)   │
+└──────────────────┬──────────────────────────────┘
+                   │  SSE streaming / REST
+┌──────────────────▼──────────────────────────────┐
+│           Serveur API (FastAPI + uvicorn)         │
+│   POST /api/chat  ·  POST /api/chat/stream       │
+│   Greeting detection · Source URL resolution      │
 └──────────────────┬──────────────────────────────┘
                    │
 ┌──────────────────▼──────────────────────────────┐
 │              Orchestrateur / Router              │
-│   (détecte l'intention : scoring, matching,     │
-│    Q&A, diagnostic, subventions)                │
+│   (détecte l'intention : scoring, diagnostic,   │
+│    metrics, matching, subventions, Q&A)          │
 └──┬───────┬───────┬───────┬───────┬──────────────┘
    │       │       │       │       │
    ▼       ▼       ▼       ▼       ▼
@@ -158,12 +164,14 @@ regulations/*.md ────────→ Q&A conversationnel (RAG)
 
 | Composant | Technologie | Justification |
 |-----------|-------------|---------------|
-| Backend | **Python** | Écosystème IA/NLP riche |
-| LLM | **OpenAI API** (ou Mistral/Ollama en local) | Qualité de génération en français |
-| Embeddings | **sentence-transformers** (multilingual) | Gratuit, performant, supporte le français |
-| Base vectorielle | **ChromaDB** | Simple, léger, parfait pour un petit dataset |
-| Interface | **Next.js** | Application web moderne et performante |
+| Backend | **Python 3.11+** | Écosystème IA/NLP riche |
+| Serveur API | **FastAPI + uvicorn** | Framework Python moderne, asynchrone, SSE streaming |
+| LLM | **OpenAI API** (GPT-3.5-turbo / GPT-4) | Qualité de génération en français |
+| Embeddings | **sentence-transformers** (`paraphrase-multilingual-MiniLM-L12-v2`) | Gratuit, local, supporte le français, 384 dimensions |
+| Base vectorielle | **ChromaDB** | Simple, léger, persistant, parfait pour un petit dataset |
+| Interface | **Next.js 16 + React 19 + Tailwind CSS 4** | Application web moderne avec SSE streaming et dark mode |
 | Pipeline RAG | **LangChain** | Outils de découpage et orchestration RAG |
+| Config | **python-dotenv** | Gestion sécurisée des variables d'environnement |
 
 ## 9. Méthodologie RAG
 
