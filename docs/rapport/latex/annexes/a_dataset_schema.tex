@@ -1,0 +1,158 @@
+% ============================================================================
+% Annexe A — Schéma JSON du dataset
+% ============================================================================
+\chapter{Schéma JSON du dataset}
+\label{ann:dataset}
+
+Cette annexe regroupe les schémas des fichiers \ac{JSON} qui constituent la partie structurée du dataset de \tamwil{}. Les champs marqués \textit{(optionnel)} peuvent être absents~; les autres sont obligatoires et font l'objet d'une validation au chargement dans \code{data\_loader.py}.
+
+\section*{A.1~~Profil d'investisseur (\code{investors.json})}
+
+\begin{lstlisting}[caption={Schéma d'un profil d'investisseur.}]
+{
+  "id": "INV_001",
+  "name": "CDG Invest",
+  "type": "VC",
+  "description": "Filiale d'investissement de la CDG...",
+  "sectors": ["fintech", "healthtech", "edtech", "agritech"],
+  "stage": ["seed", "serie_a", "serie_b+"],
+  "ticket_min": 5000000,
+  "ticket_max": 100000000,
+  "currency": "MAD",
+  "geography": ["Maroc", "Afrique"],
+  "criteria": {
+    "description": "Startups a traction prouvee et equipe solide."
+  },
+  "portfolio_examples": ["Chari", "WafR"],
+  "contact": {
+    "website": "https://cdginvest.ma",
+    "linkedin": "https://linkedin.com/company/cdg-invest"
+  }
+}
+\end{lstlisting}
+
+\section*{A.2~~Programme de subvention (\code{grants.json})}
+
+\begin{lstlisting}[caption={Schéma d'un programme de subvention.}]
+{
+  "id": "GRANT_001",
+  "name": "Innov Start",
+  "country": "Maroc",
+  "organization": "Tamwilcom",
+  "type": "pret_honneur",
+  "amount_min": 50000,
+  "amount_max": 400000,
+  "currency": "MAD",
+  "eligibility": {
+    "stage": ["pre_seed", "seed"],
+    "sectors": ["tous secteurs innovants"],
+    "age_max_company": "5 ans",
+    "conditions": [
+      "Entreprise innovante",
+      "Siege social au Maroc"
+    ]
+  },
+  "deadline_type": "rolling"
+}
+\end{lstlisting}
+
+\section*{A.3~~Métrique de référence (\code{metrics\_reference.json})}
+
+\begin{lstlisting}[caption={Schéma d'une métrique de référence.}]
+{
+  "id": "MRR",
+  "name": "Monthly Recurring Revenue",
+  "name_fr": "Revenu Mensuel Recurrent",
+  "definition": "Revenu mensuel recurrent issu des abonnements.",
+  "formula": "Somme des revenus recurrents mensuels.",
+  "unit": "currency",
+  "weight_in_scoring": 0.15,
+  "benchmarks": {
+    "pre_seed": { "bad": "<500", "ok": "500-2000",
+                   "good": "2000-5000", "excellent": ">5000" },
+    "seed":     { "bad": "<2000", "ok": "2000-10000",
+                   "good": "10000-30000", "excellent": ">30000" }
+  },
+  "benchmarks_mad": {
+    "seed":     { "bad": "<20000", "ok": "20000-100000",
+                   "good": "100000-300000", "excellent": ">300000" }
+  },
+  "interpretation": "Mesure la traction commerciale recurrente.",
+  "improvement_tips": [
+    "Convertir les one-shots en abonnements",
+    "Augmenter le panier moyen via l'upsell"
+  ],
+  "related_metrics": ["ARR", "CHURN_RATE"]
+}
+\end{lstlisting}
+
+\section*{A.4~~FAQ (\code{faq.json})}
+
+\begin{lstlisting}[caption={Schéma d'une FAQ.}]
+{
+  "id": 1,
+  "categorie": "levee_de_fonds",
+  "question": "C'est quoi une levee de fonds ?",
+  "reponse": "Une levee de fonds consiste a...",
+  "tags": ["levee", "financement", "equity"],
+  "difficulte": "debutant",
+  "sources": [
+    "https://innovinvest.ma/",
+    "https://www.cdginvest.ma/"
+  ]
+}
+\end{lstlisting}
+
+\section*{A.5~~Composition détaillée du dataset}
+
+\begin{table}[H]
+\centering
+\caption{Composition détaillée du dataset par type d'acteur.}
+\small
+\begin{tabularx}{\textwidth}{@{}l c X@{}}
+\toprule
+\textbf{Type} & \textbf{Nombre} & \textbf{Exemples} \\
+\midrule
+Fonds \ac{VC}             & 26 & CDG Invest, 212 Founders, Partech Africa, TLcom Capital, Azur Innovation Fund \\
+Accélérateurs             & 6  & Y Combinator, Techstars, 500 Global, Flat6Labs, Plug and Play \\
+Fonds publics             & 3  & Mohammed~VI Fund, Tamwilcom, Innov Invest \\
+Corporate \ac{VC}         & 2  & UM6P Ventures, OCP Group \\
+Business Angels           & 2  & Kalys Ventures, Kima Ventures \\
+Growth funds              & 2  & SEAF Morocco, AfricInvest \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Guides de \textit{fundraising} disponibles en annexe du dataset.}
+\small
+\begin{tabularx}{\textwidth}{@{}l r X@{}}
+\toprule
+\textbf{Fichier} & \textbf{Lignes} & \textbf{Contenu} \\
+\midrule
+\code{types\_financement.md}   & 576 & 10 types~: \textit{love money}, \textit{bootstrapping}, \ac{BA}, \ac{VC} seed, série A, série B+, \textit{crowdfunding}, \ac{RBF}, prêts, subventions \\
+\code{pitch\_deck.md}          & 559 & Structure 12-20 \textit{slides}, métriques par stade, formats 3/7/20 min \\
+\code{etapes\_levee.md}        & 600 & 6 étapes~: préparation, prospection, \textit{due diligence}, \textit{term sheet}, \textit{closing}, post-\textit{closing} \\
+\code{term\_sheet.md}          & 647 & Valorisation, \textit{liquidation preference}, anti-dilution, \textit{vesting}, \ac{ESOP}, \textit{board}, \textit{red flags} \\
+\code{valorisation.md}         & 582 & 6 méthodes~: \textit{revenue multiples}, \ac{DCF}, \textit{scorecard}, Berkus, \textit{VC method}, \textit{risk factor summation} \\
+\code{erreurs\_courantes.md}   & 596 & 20 erreurs fatales avec \textit{benchmarks}, exemples et solutions \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Documents réglementaires disponibles en annexe du dataset.}
+\small
+\begin{tabularx}{\textwidth}{@{}l r X@{}}
+\toprule
+\textbf{Fichier} & \textbf{Lignes} & \textbf{Contenu} \\
+\midrule
+\code{creation\_entreprise\_maroc.md} & 456 & \ac{SARL} (Loi 5-96), SA (Loi 17-95), \ac{SAS} (Loi 19-20), auto-entrepreneur, CRI, \ac{CFC} \\
+\code{fintech\_maroc.md}              & 380 & \ac{BAM} (Loi 103-12), établissement de paiement, \textit{sandbox}, \textit{crowdfunding} (\ac{AMMC}), \ac{KYC} \\
+\code{fiscalite\_startup.md}          & 604 & IS 10-35~\% Maroc vs 25~\% France, \ac{CFC}, zones franches, \ac{JEI}, \ac{CIR}, conventions fiscales \\
+\code{rgpd.md}                        & 381 & \ac{RGPD} (UE 2016/679) vs Loi 09-08 (Maroc), \ac{CNDP} vs \ac{CNIL}, \ac{DPO}, sanctions \\
+\bottomrule
+\end{tabularx}
+\end{table}

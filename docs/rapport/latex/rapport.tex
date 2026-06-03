@@ -1,0 +1,82 @@
+% ============================================================================
+% Rapport de Projet de Fin d'Année
+% « Tamwil AI — Chatbot RAG de recommandation financière pour startups »
+%
+% Auteurs    : Aymane Issami, Houssam Kichchou
+% Encadrante : M^me Hafsa Khiyat
+% ENSAM Rabat — Filière INDIA — Année Universitaire 2025/2026
+%
+% Compilation : make  (pdflatex + bibtex + pdflatex x2)
+% ============================================================================
+
+\documentclass[12pt,a4paper,openany]{report}
+
+\input{preamble.tex}
+
+\begin{document}
+
+% ---------------------------------------------------------------------------
+% Page de garde
+% ---------------------------------------------------------------------------
+\input{titlepage.tex}
+
+% ---------------------------------------------------------------------------
+% Front matter — chaque section sur sa propre page
+% (remarque encadrante : « EN UNE PAGE, CHAQUE SECTION EST DANS SA PROPRE PAGE »)
+% ---------------------------------------------------------------------------
+\pagenumbering{roman}
+
+\input{frontmatter/dedicace.tex}
+\clearpage
+\input{frontmatter/remerciements.tex}
+\clearpage
+\input{frontmatter/resume.tex}
+\clearpage
+
+\renewcommand{\contentsname}{Table des matières}
+\tableofcontents
+\clearpage
+
+\listoffigures
+\clearpage
+
+\listoftables
+\clearpage
+
+\input{frontmatter/acronymes.tex}
+\clearpage
+
+% ---------------------------------------------------------------------------
+% Corps du rapport
+% ---------------------------------------------------------------------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{chapters/00_introduction.tex}
+\input{chapters/01_etat_de_lart.tex}
+\input{chapters/02_conception.tex}
+\input{chapters/03_realisation.tex}
+\input{chapters/04_tests.tex}
+\input{chapters/05_conclusion.tex}
+
+% ---------------------------------------------------------------------------
+% Bibliographie
+% ---------------------------------------------------------------------------
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliographie et webographie}
+\renewcommand{\bibname}{Bibliographie et webographie}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+
+% ---------------------------------------------------------------------------
+% Annexes
+% ---------------------------------------------------------------------------
+\appendix
+\input{annexes/a_dataset_schema.tex}
+\input{annexes/b_env_vars.tex}
+\input{annexes/c_api_reference.tex}
+\input{annexes/d_prompt_systeme.tex}
+
+\end{document}

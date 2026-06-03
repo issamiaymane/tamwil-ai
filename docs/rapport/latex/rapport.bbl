@@ -1,0 +1,132 @@
+\begin{thebibliography}{10}
+
+\bibitem{bkam}
+{Bank Al-Maghrib}.
+\newblock R{\'e}glementation bancaire et des {\'e}tablissements de paiement.
+\newblock \url{https://www.bkam.ma/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{brown2020gpt3}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan,
+  Prafulla Dhariwal, Arvind Neelakantan, et~al.
+\newblock Language models are few-shot learners.
+\newblock In {\em Advances in Neural Information Processing Systems 33 (NeurIPS
+  2020)}, 2020.
+
+\bibitem{cdginvest}
+{CDG Invest}.
+\newblock Capital-investissement et programme 212 founders.
+\newblock \url{https://www.cdginvest.ma/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{chromadb}
+{Chroma}.
+\newblock {Chroma DB} --- documentation.
+\newblock \url{https://docs.trychroma.com/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{cndp}
+{Commission Nationale de contr{\^o}le de la Protection des Donn{\'e}es}.
+\newblock Protection des donn{\'e}es {\`a} caract{\`e}re personnel au maroc.
+\newblock \url{https://www.cndp.ma/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{devlin2019bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock {BERT}: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock In {\em Proceedings of NAACL-HLT 2019}, 2019.
+
+\bibitem{innovinvest}
+{Innov Invest}.
+\newblock Programmes de financement de l'innovation au maroc.
+\newblock \url{https://innovinvest.ma/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{langchain}
+{LangChain}.
+\newblock {LangChain} --- documentation.
+\newblock \url{https://python.langchain.com/docs/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{lewis2020rag}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+  Karpukhin, Naman Goyal, Heinrich Kuttler, Mike Lewis, Wen-Tau Yih, Tim
+  Rocktaschel, Sebastian Riedel, and Douwe Kiela.
+\newblock Retrieval-augmented generation for knowledge-intensive {NLP} tasks.
+\newblock In {\em Advances in Neural Information Processing Systems 33 (NeurIPS
+  2020)}, 2020.
+
+\bibitem{marocpme}
+{Maroc PME}.
+\newblock Programmes d'appui aux petites et moyennes entreprises.
+\newblock \url{https://www.marocpme.gov.ma/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{reactdoc}
+{Meta Open Source}.
+\newblock {React} --- documentation.
+\newblock \url{https://react.dev/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{openaiapi}
+{OpenAI}.
+\newblock Openai {API} reference.
+\newblock \url{https://platform.openai.com/docs/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{partech2024}
+{Partech Africa}.
+\newblock Africa tech venture capital report.
+\newblock \url{https://partechpartners.com/}, 2024.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{fastapi}
+Sebasti{\'a}n Ram{\'i}rez.
+\newblock {FastAPI} --- documentation.
+\newblock \url{https://fastapi.tiangolo.com/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{sbert}
+Nils Reimers.
+\newblock Sentence-{Transformers} --- documentation.
+\newblock \url{https://www.sbert.net/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{reimers2019sbert}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-{BERT}: Sentence embeddings using siamese {BERT}-networks.
+\newblock In {\em Proceedings of EMNLP-IJCNLP 2019}, 2019.
+
+\bibitem{startupmaroc}
+{Startup Maroc}.
+\newblock L'{\'e}cosyst{\`e}me entrepreneurial marocain.
+\newblock \url{https://startupmaroc.org/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{tailwindcss}
+{Tailwind Labs}.
+\newblock {Tailwind CSS} --- documentation.
+\newblock \url{https://tailwindcss.com/docs/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{tamwilcom}
+{Tamwilcom}.
+\newblock Instruments de financement des entreprises.
+\newblock \url{https://www.tamwilcom.ma/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In {\em Advances in Neural Information Processing Systems 30 (NeurIPS
+  2017)}, 2017.
+
+\bibitem{nextjs}
+{Vercel}.
+\newblock {Next.js} --- documentation.
+\newblock \url{https://nextjs.org/docs/}, 2026.
+\newblock consulté le 20 avril 2026.
+
+\end{thebibliography}

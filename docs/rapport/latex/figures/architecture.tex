@@ -1,0 +1,79 @@
+% ============================================================================
+% figures/architecture.tex
+% Architecture globale — diagramme dessiné manuellement (coordonnées en cm).
+% Aucune génération automatique : chaque noeud est placé à la main.
+% ============================================================================
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize\sffamily,
+  every node/.style={align=center, rounded corners=2pt, inner sep=5pt},
+  layerband/.style={draw=black!15, fill=black!3, rounded corners=6pt},
+  ui/.style={draw=blue!40!black, fill=blue!10, thick, minimum width=3.6cm, minimum height=1.1cm},
+  back/.style={draw=green!50!black, fill=green!10, thick, minimum width=3.6cm, minimum height=1.1cm},
+  data/.style={draw=orange!60!black, fill=orange!15, thick, minimum width=3.6cm, minimum height=1.1cm},
+  ext/.style={draw=red!50!black, fill=red!8, thick, dashed, minimum width=2.6cm, minimum height=0.9cm},
+  mod/.style={draw=green!50!black, fill=green!5, thin, minimum width=2.0cm, minimum height=0.8cm},
+  arrow/.style={-Stealth, thick, gray!70!black},
+]
+
+% Bandeaux de couche (dessinés en arrière-plan)
+\begin{scope}[on background layer]
+  \node[layerband, minimum width=13cm, minimum height=1.8cm] (UIband) at (0, 5.0) {};
+  \node[layerband, minimum width=13cm, minimum height=3.6cm] (BEband) at (0, 1.6) {};
+  \node[layerband, minimum width=13cm, minimum height=1.8cm] (DATAband) at (0, -2.1) {};
+\end{scope}
+
+\node[anchor=west, font=\scriptsize\sffamily\itshape] at ([xshift=0.25cm] UIband.west) {Interface utilisateur};
+\node[anchor=west, font=\scriptsize\sffamily\itshape] at ([xshift=0.25cm, yshift=1.4cm] BEband.west) {Service applicatif};
+\node[anchor=west, font=\scriptsize\sffamily\itshape] at ([xshift=0.25cm] DATAband.west) {Couche de données};
+
+% Couche UI
+\node[ui] (front) at (0, 5.0) {\textbf{Next.js 16 + React 19}\\[-1pt]Chat SSE, sidebar, profil, dark mode};
+
+% Serveur FastAPI
+\node[back] (api) at (0, 2.9) {\textbf{Serveur FastAPI}\\[-1pt]\code{/api/chat} \textbullet{} \code{/api/chat/stream}};
+
+% Routeur
+\node[back, minimum width=6.8cm] (router) at (0, 1.5) {\textbf{Routeur d'intentions}\\[-1pt]mots-clés + regex \textbullet{} extraction profil};
+
+% 5 modules métier + 1 utilitaire
+\node[mod] (m1) at (-5.1, 0.1) {\textbf{Scoring}\\\scriptsize fundability};
+\node[mod] (m2) at (-3.05, 0.1) {\textbf{Diagnostic}\\\scriptsize KPI};
+\node[mod] (m3) at (-1.0, 0.1) {\textbf{Matching}\\\scriptsize investisseurs};
+\node[mod] (m4) at (1.05, 0.1) {\textbf{Matching}\\\scriptsize subventions};
+\node[mod] (m5) at (3.1, 0.1) {\textbf{Q\&A RAG}\\\scriptsize streaming};
+\node[mod, fill=green!2, dashed] (m6) at (5.15, 0.1) {\textit{Explication}\\\scriptsize métriques (routeur)};
+
+% Couche données
+\node[data] (chroma) at (-3.6, -2.1) {\textbf{ChromaDB persistant}\\[-1pt]\code{chroma\_db/} (9.4 MB)};
+\node[data] (json) at (0.2, -2.1) {\textbf{Dataset JSON}\\[-1pt]investisseurs, subventions, métriques, FAQ};
+\node[data] (md) at (4.1, -2.1) {\textbf{Guides \& régulations}\\[-1pt]10 documents Markdown};
+
+% API externe
+\node[ext] (openai) at (5.9, 2.9) {OpenAI API\\\scriptsize GPT-3.5-turbo};
+
+% Flèches
+\draw[arrow] (front) -- node[right, pos=0.5, font=\tiny] {HTTP / SSE} (api);
+\draw[arrow] (api) -- (router);
+\draw[arrow] (router.south west) -- (m1.north);
+\draw[arrow] (router.south) -- (m2.north);
+\draw[arrow] (router.south) -- (m3.north);
+\draw[arrow] (router.south) -- (m4.north);
+\draw[arrow] (router.south east) -- (m5.north);
+\draw[arrow, dashed] (router.east) to[bend left=30] (m6.north);
+
+\draw[arrow] (m5) -- (chroma);
+\draw[arrow] (m1) -- (json);
+\draw[arrow] (m2) -- (json);
+\draw[arrow] (m3) -- (json);
+\draw[arrow] (m4) -- (json);
+\draw[arrow, dashed] (m5.south east) -- (md.north);
+
+\draw[arrow, dashed] (m5.east) to[bend left=20] node[above, font=\tiny] {requête LLM} (openai.west);
+\draw[arrow, dashed] (openai.west) to[bend left=20] node[below, font=\tiny] {tokens} (m5.north east);
+
+\end{tikzpicture}
+\caption{Architecture globale de Tamwil~AI --- trois couches (interface Next.js, service FastAPI avec routeur et modules, données ChromaDB + fichiers). Les flèches en pointillé représentent les flux optionnels (API externe, module porté par le routeur).}
+\label{fig:architecture}
+\end{figure}

@@ -1,0 +1,93 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{Remerciements}{ii}{chapter*.1}%
+\contentsline {chapter}{Résumé}{iii}{chapter*.2}%
+\contentsline {chapter}{Abstract}{iv}{chapter*.3}%
+\contentsline {chapter}{Liste des acronymes}{ix}{chapter*.10}%
+\contentsline {chapter}{Introduction générale}{1}{chapter*.11}%
+\contentsline {chapter}{\numberline {1}Étude de l'existant et cadre théorique}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Écosystème du financement des startups}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Panorama et enjeux}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Acteurs du financement}{5}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Assistants conversationnels~: bref panorama}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}La technique Retrieval-Augmented Generation}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Principe}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Pipeline détaillé}{6}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Apports du RAG par rapport au \textit {fine-tuning}}{7}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Positionnement par rapport aux solutions existantes}{8}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Justification de l'approche hybride}{8}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Conception et architecture}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Architecture globale}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Modules fonctionnels}{10}{section.2.2}%
+\contentsline {paragraph}{Module 1 --- Scoring de \textit {fundability}.}{10}{section.2.2}%
+\contentsline {paragraph}{Module 2 --- Diagnostic financier.}{10}{Item.10}%
+\contentsline {paragraph}{Module 3 --- Matching investisseurs.}{10}{Item.10}%
+\contentsline {paragraph}{Module 4 --- Matching subventions.}{10}{Item.10}%
+\contentsline {paragraph}{Module 5 --- Q\&A conversationnel (\ac {RAG}).}{11}{Item.10}%
+\contentsline {paragraph}{Utilitaire --- Explication des métriques.}{11}{Item.10}%
+\contentsline {section}{\numberline {2.3}Modèle de données}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Pipeline RAG}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Mapping dataset $\to $ fonctionnalités}{12}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Réalisation et implémentation}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Environnement}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Stack technique}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Constitution du dataset}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Pipeline RAG}{14}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Configuration centralisée}{14}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Chargement des données}{15}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Ingestion et chunking}{15}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Modèle d'embedding}{15}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Base vectorielle et recherche}{15}{subsection.3.4.5}%
+\contentsline {section}{\numberline {3.5}Modules métier}{15}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Scoring de \textit {fundability}}{15}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Diagnostic financier}{16}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Matching investisseurs et subventions}{16}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Q\&A conversationnel}{16}{subsection.3.5.4}%
+\contentsline {paragraph}{Enrichissement de la requête par l'historique.}{16}{subsection.3.5.4}%
+\contentsline {paragraph}{Mode \textit {fallback}.}{16}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Backend FastAPI}{16}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Endpoints}{16}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Modèles Pydantic et normalisation du profil}{17}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Détection de \textit {greetings}}{17}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Routeur d'intentions}{17}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Streaming SSE}{18}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Attribution des sources et formatage}{18}{subsection.3.6.6}%
+\contentsline {section}{\numberline {3.7}Interface Next.js}{19}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Architecture des composants}{19}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Barre latérale et gestion de conversations}{19}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Chat et rendu Markdown}{19}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Formulaire de profil}{19}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Onboarding et thèmes}{19}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3.7.6}Gestion d'état et consommation du flux SSE}{20}{subsection.3.7.6}%
+\contentsline {section}{\numberline {3.8}Structure du projet}{20}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Règles de développement}{21}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Tests et résultats}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Scénarios fonctionnels}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Tests du pipeline RAG}{24}{section.4.2}%
+\contentsline {paragraph}{Ingestion.}{24}{section.4.2}%
+\contentsline {paragraph}{Chunking.}{24}{table.caption.55}%
+\contentsline {paragraph}{Embeddings.}{24}{table.caption.55}%
+\contentsline {paragraph}{Base vectorielle.}{25}{table.caption.55}%
+\contentsline {paragraph}{Retriever.}{25}{table.caption.55}%
+\contentsline {section}{\numberline {4.3}Tests unitaires}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Discussion et limites}{25}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Points forts}{25}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Limites identifiées}{26}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion générale et perspectives}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Bilan du projet}{27}{section.5.1}%
+\contentsline {paragraph}{Réalisations principales.}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Apports personnels}{27}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Perspectives d'amélioration}{28}{section.5.3}%
+\contentsline {paragraph}{Enrichissement du dataset.}{28}{section.5.3}%
+\contentsline {paragraph}{Classification d'intention par \ac {LLM}.}{28}{section.5.3}%
+\contentsline {paragraph}{Migration vers un modèle plus récent.}{28}{section.5.3}%
+\contentsline {paragraph}{Tests d'intégration \textit {end-to-end}.}{28}{section.5.3}%
+\contentsline {paragraph}{Évaluation du \textit {retrieval}.}{28}{section.5.3}%
+\contentsline {paragraph}{Authentification et persistance serveur.}{28}{section.5.3}%
+\contentsline {paragraph}{Déploiement.}{29}{section.5.3}%
+\contentsline {paragraph}{Fonctionnalités avancées.}{29}{section.5.3}%
+\contentsline {paragraph}{Multilinguisme étendu.}{29}{section.5.3}%
+\contentsline {chapter}{Bibliographie et webographie}{30}{section*.60}%
+\contentsline {chapter}{\numberline {A}Schéma JSON du dataset}{32}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Variables d'environnement}{35}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Référence API FastAPI}{36}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Prompt système du module Q\&A}{38}{appendix.D}%

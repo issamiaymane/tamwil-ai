@@ -1,0 +1,37 @@
+% ============================================================================
+% figures/rag_pipeline.tex
+% Pipeline RAG en 6 étapes. Layout linéaire, coordonnées manuelles.
+% ============================================================================
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize\sffamily,
+  every node/.style={align=center, rounded corners=3pt, inner sep=5pt},
+  pipebox/.style={draw=blue!40!black, fill=blue!8, thick, minimum width=2.7cm, minimum height=1.3cm},
+  arr/.style={-Stealth, thick, gray!70!black},
+]
+
+% Étapes (grille horizontale 3 x 2)
+\node[pipebox] (s1) at (0, 2) {\textbf{1.\ Ingestion}\\\scriptsize data\_loader.py\\\scriptsize 6 sources};
+\node[pipebox] (s2) at (3.4, 2) {\textbf{2.\ Chunking}\\\scriptsize Recursive splitter\\\scriptsize size 500 / overlap 50};
+\node[pipebox] (s3) at (6.8, 2) {\textbf{3.\ Embedding}\\\scriptsize MiniLM-L12-v2\\\scriptsize 384 dim., local};
+
+\node[pipebox] (s4) at (0, -0.3) {\textbf{4.\ Indexation}\\\scriptsize ChromaDB persistant\\\scriptsize 9.4 MB};
+\node[pipebox] (s5) at (3.4, -0.3) {\textbf{5.\ Retrieval}\\\scriptsize similarité cosinus\\\scriptsize top-$k$ ($k{=}5$)};
+\node[pipebox] (s6) at (6.8, -0.3) {\textbf{6.\ Generation}\\\scriptsize GPT-3.5-turbo\\\scriptsize SSE streaming};
+
+% Flèches
+\draw[arr] (s1) -- (s2);
+\draw[arr] (s2) -- (s3);
+\draw[arr] (s3.south) to[bend left=20] (s4.north);
+\draw[arr] (s4) -- (s5);
+\draw[arr] (s5) -- (s6);
+
+% Phase labels
+\node[font=\scriptsize\itshape, text=blue!40!black] at (-1.9, 2) {\rotatebox{90}{\textbf{Indexation}}};
+\node[font=\scriptsize\itshape, text=blue!40!black] at (-1.9, -0.3) {\rotatebox{90}{\textbf{Inférence}}};
+
+\end{tikzpicture}
+\caption{Pipeline RAG en six étapes. Les trois premières (ingestion, \textit{chunking}, \textit{embedding}) sont exécutées une fois lors de la construction de l'index ; les trois suivantes (indexation, \textit{retrieval}, génération) s'exécutent à chaque requête utilisateur.}
+\label{fig:rag_pipeline}
+\end{figure}

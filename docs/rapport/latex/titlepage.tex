@@ -1,0 +1,89 @@
+% ============================================================================
+% Page de garde — Tamwil AI
+% Remarque encadrante : « Ajouter les logos de l ensam »
+% Les deux images suivantes doivent exister dans images/ (PNG ou PDF).
+% À défaut, la commande \logoPlaceholder affiche une boîte grise de mêmes dimensions
+% pour que le document compile tant que les logos n'ont pas été déposés.
+% ============================================================================
+
+\newcommand{\logoPlaceholder}[2]{%
+  \fbox{\parbox[c][#2][c]{#1}{\centering\small\itshape Logo à déposer\\(\code{images/#2})}}%
+}
+
+\IfFileExists{images/logo_um5r.png}{%
+  \newcommand{\logoUM}{\includegraphics[height=2.2cm]{images/logo_um5r.png}}
+}{%
+  \IfFileExists{images/logo_um5r.pdf}{%
+    \newcommand{\logoUM}{\includegraphics[height=2.2cm]{images/logo_um5r.pdf}}
+  }{%
+    \newcommand{\logoUM}{\logoPlaceholder{3.2cm}{2.2cm}}
+  }
+}
+
+\IfFileExists{images/logo_ensam.png}{%
+  \newcommand{\logoENSAM}{\includegraphics[height=2.2cm]{images/logo_ensam.png}}
+}{%
+  \IfFileExists{images/logo_ensam.pdf}{%
+    \newcommand{\logoENSAM}{\includegraphics[height=2.2cm]{images/logo_ensam.pdf}}
+  }{%
+    \newcommand{\logoENSAM}{\logoPlaceholder{3.2cm}{2.2cm}}
+  }
+}
+
+\begin{titlepage}
+    \centering
+
+    % Bandeau supérieur : logos + institution
+    \begin{minipage}[c]{0.28\textwidth}
+        \centering \logoUM
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.40\textwidth}
+        \centering
+        {\small\textbf{Université Mohammed V de Rabat}}\\[0.15cm]
+        {\small\textbf{École Nationale Supérieure}}\\
+        {\small\textbf{d'Arts et Métiers — ENSAM Rabat}}\\[0.15cm]
+        {\footnotesize Filière Ingénierie Numérique en Data Science}\\
+        {\footnotesize et Intelligence Artificielle — 2\textsuperscript{ème} année}\\[0.15cm]
+        {\footnotesize Année Universitaire 2025/2026}
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.28\textwidth}
+        \centering \logoENSAM
+    \end{minipage}
+
+    \vspace{1.8cm}
+
+    \rule{\textwidth}{1.5pt}\\[0.4cm]
+    {\LARGE\textbf{Projet de Fin d'Année}}\\[0.8cm]
+    {\Huge\textbf{Tamwil AI}}\\[0.4cm]
+    {\Large Chatbot RAG de recommandation\\[0.2cm] financière pour startups}\\[0.4cm]
+    \rule{\textwidth}{1.5pt}
+
+    \vspace{1.2cm}
+    {\normalsize\itshape Un assistant conversationnel combinant\\[0.1cm]
+     Retrieval-Augmented Generation et règles métier\\[0.1cm]
+     au service de l'écosystème startup marocain et francophone}
+
+    \vspace{2cm}
+
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        {\large\textbf{Réalisé par :}}\\[0.4cm]
+        {\large Aymane \textsc{Issami}}\\[0.15cm]
+        {\large Houssam \textsc{Kichchou}}\\[0.3cm]
+        {\small\itshape Filière INDIA --- 2\textsuperscript{ème} année}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        {\large\textbf{Encadré par :}}\\[0.4cm]
+        {\large M\textsuperscript{me} Hafsa \textsc{Khiyat}}\\[0.4cm]
+        {\normalsize\textit{Professeurs responsables :}}\\[0.1cm]
+        {\normalsize M\textsuperscript{me} Amal \textsc{Tmiri}}\\[0.1cm]
+        {\normalsize M\textsuperscript{me} Soukaina \textsc{Bekkari}}
+    \end{minipage}
+
+    \vfill
+
+    \rule{0.5\textwidth}{0.4pt}\\[0.3cm]
+    {\small Soutenu publiquement le \underline{\hspace{3.5cm}}}
+
+\end{titlepage}

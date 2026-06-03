@@ -1,0 +1,25 @@
+\babel@toc {french}{}\relax 
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Les six étapes du pipeline \ac {RAG} de Tamwil~AI.}}{7}{table.caption.21}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Positionnement de \textbf {Tamwil AI}{} par rapport aux solutions existantes.}}{8}{table.caption.23}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Composition du dataset de Tamwil~AI.}}{11}{table.caption.28}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Mapping entre sources de données et fonctionnalités exposées.}}{12}{table.caption.29}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Environnement de développement.}}{13}{table.caption.30}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Stack technique et justifications.}}{14}{table.caption.31}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Endpoints exposés par le serveur FastAPI.}}{17}{table.caption.43}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Intentions reconnues par le routeur et déclencheurs typiques.}}{17}{table.caption.44}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Scénarios fonctionnels validés manuellement.}}{22}{table.caption.51}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Résultats de l'ingestion sur le dataset cible.}}{24}{table.caption.55}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Fichiers de tests unitaires et périmètre couvert.}}{25}{table.caption.56}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Composition détaillée du dataset par type d'acteur.}}{34}{table.caption.62}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Guides de \textit {fundraising} disponibles en annexe du dataset.}}{34}{table.caption.63}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Documents réglementaires disponibles en annexe du dataset.}}{34}{table.caption.67}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {B.1}{\ignorespaces Variables d'environnement et leur rôle.}}{35}{table.caption.79}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

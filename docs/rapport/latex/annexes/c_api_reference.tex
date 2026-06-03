@@ -1,0 +1,87 @@
+% ============================================================================
+% Annexe C — Référence API
+% ============================================================================
+\chapter{Référence API FastAPI}
+\label{ann:api}
+
+Cette annexe détaille le format d'entrée et de sortie des trois \textit{endpoints} exposés par le \textit{backend}. Une documentation interactive (\textit{Swagger}) est également disponible à l'adresse \code{/docs} une fois le serveur lancé.
+
+\section*{C.1~~Modèles Pydantic}
+
+\begin{lstlisting}[language=Python, caption={Modèles Pydantic d'entrée/sortie (extrait simplifié).}]
+class StartupProfile(BaseModel):
+    sector:    Optional[str] = None
+    stage:     Optional[str] = None
+    country:   Optional[str] = None
+    mrr:       Optional[float] = None
+    burnRate:  Optional[float] = None
+    churn:     Optional[float] = None
+    cac:       Optional[float] = None
+    ltv:       Optional[float] = None
+
+class HistoryMessage(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str
+
+class ChatRequest(BaseModel):
+    message: str
+    profile: Optional[StartupProfile] = None
+    history: Optional[list[HistoryMessage]] = None
+
+class SourceInfo(BaseModel):
+    name: str
+    type: str
+    url:  Optional[str] = None
+
+class ChatResponse(BaseModel):
+    reply:   str                  # reponse en Markdown
+    sources: list[SourceInfo] = []
+\end{lstlisting}
+
+\section*{C.2~~Endpoint synchrone \code{/api/chat}}
+
+\begin{lstlisting}[language=bash, caption={Exemple d'appel \code{curl} à \code{/api/chat}.}]
+curl -X POST http://localhost:8000/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "Quels investisseurs ciblent la fintech au Maroc ?",
+    "profile": {
+      "sector": "fintech",
+      "stage": "seed",
+      "country": "Maroc"
+    }
+  }'
+\end{lstlisting}
+
+\section*{C.3~~Endpoint \textit{streaming} \code{/api/chat/stream}}
+
+Le flux \ac{SSE} émet quatre types d'événements~:
+
+\begin{lstlisting}[caption={Exemple de flux \ac{SSE} émis par \code{/api/chat/stream}.}]
+event: sources
+data: [{"name": "CDG Invest", "type": "investor",
+        "url": "https://cdginvest.ma"}]
+
+event: token
+data: {"text": "Au "}
+
+event: token
+data: {"text": "Maroc, "}
+
+event: token
+data: {"text": "plusieurs "}
+
+...
+
+event: done
+data: {}
+\end{lstlisting}
+
+\section*{C.4~~Endpoint \code{/health}}
+
+Utilisé pour le \textit{health check}~:
+
+\begin{lstlisting}[language=bash]
+$ curl http://localhost:8000/health
+{"status": "ok"}
+\end{lstlisting}

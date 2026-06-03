@@ -1,0 +1,20 @@
+\babel@toc {french}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Planning prévisionnel et réel du projet Tamwil~AI, de février à avril 2026. Les phases 2 à 5 ont été réalisées sur cinq semaines (commits Git entre le 10 février et le 25 mars 2026), la phase 6 couvre la rédaction et l'itération avec l'encadrante jusqu'à la soutenance.}}{3}{figure.caption.18}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Pipeline RAG en six étapes. Les trois premières (ingestion, \textit {chunking}, \textit {embedding}) sont exécutées une fois lors de la construction de l'index ; les trois suivantes (indexation, \textit {retrieval}, génération) s'exécutent à chaque requête utilisateur.}}{7}{figure.caption.20}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Architecture globale de Tamwil~AI --- trois couches (interface Next.js, service FastAPI avec routeur et modules, données ChromaDB + fichiers). Les flèches en pointillé représentent les flux optionnels (API externe, module porté par le routeur).}}{9}{figure.caption.24}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de séquence d'un échange Q\&A en \textit {streaming}. Après la phase de \textit {retrieval} dans ChromaDB, le routeur relaie la requête au \ac {LLM} et retransmet chaque \textit {token} reçu à l'interface via un flux \ac {SSE}.}}{18}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \small (a) Mode sombre}}{20}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \small (b) Mode clair}}{20}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Interface d'accueil de Tamwil~AI en mode sombre et en mode clair. La barre latérale affiche l'historique des conversations~; la zone centrale présente un message de bienvenue et quatre cartes de suggestion (score de \textit {fundability}, recherche d'investisseurs, subventions, diagnostic financier).}}{20}{figure.caption.50}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Scénario~1 --- scoring de \textit {fundability}. Requête~: \textit {\@FB@og Quel est mon score~? MRR~: 8000, burn~: 15000, churn~: 5\%, stade seed \@FB@fg \relax }. Le module retourne un score pondéré de 42/100, une ventilation par métrique avec pastilles de niveau (\textit {ok}/\textit {bad}), une liste de faiblesses et un plan d'action en deux points.}}{23}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Scénario~3 --- matching investisseurs. Profil saisi~: \textit {fintech, seed, Maroc}. Le module identifie 41 investisseurs du dataset et restitue les cinq premiers (212~Founders, Azur Innovation Fund, Flat6Labs, Kalys Ventures, MITC Capital) avec \textit {ticket}, score de \textit {matching} (3/4 pour tous ici) et raisons détaillées.}}{23}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Scénario~6 --- Q\&A \ac {RAG}. Question~: \textit {\@FB@og Comment valoriser ma startup en pré-seed~? \@FB@fg \relax }. La réponse, générée en \textit {streaming}, présente cinq méthodes de valorisation tirées du guide de \textit {fundraising} du dataset. Les quatre pastilles numérotées en bas (\textit {pitch deck}, \textit {types financement}, \textit {term sheet}, \textit {etapes levee}) sont les sources cliquables attribuées par le moteur de \textit {retrieval}.}}{24}{figure.caption.54}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

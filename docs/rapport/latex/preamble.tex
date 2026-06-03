@@ -1,0 +1,185 @@
+% ============================================================================
+% Préambule — Rapport PFA « Tamwil AI »
+% Style adapté du rapport « voice-appointment-agent » (référence interne).
+% ============================================================================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{tcolorbox}
+\usepackage{pgfgantt}
+\usepackage{acronym}
+% Bibliographie : BibTeX classique (biber/biblatex non installés dans le pipeline cible).
+% Le fichier .bib est au format BibTeX standard ; \bibliographystyle + \bibliography sont
+% appelés depuis rapport.tex.
+
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds, calc, chains, decorations.pathreplacing}
+
+% ---------------------------- Mise en page ----------------------------------
+\geometry{a4paper, margin=2.5cm, headheight=15pt}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    urlcolor=blue!60!black,
+    citecolor=blue!60!black
+}
+
+% ---------------------------- Listings (code) -------------------------------
+\definecolor{codebg}{HTML}{F5F5F5}
+\definecolor{codegreen}{HTML}{28A745}
+\definecolor{codepurple}{HTML}{6F42C1}
+\definecolor{codegray}{HTML}{6A737D}
+\definecolor{codeblue}{HTML}{0366D6}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{codebg},
+    commentstyle=\color{codegray}\itshape,
+    keywordstyle=\color{codepurple}\bfseries,
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codegreen},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    rulecolor=\color{gray!30},
+    extendedchars=true,
+    inputencoding=utf8,
+    literate=%
+      {é}{{\'e}}1 {è}{{\`e}}1 {ê}{{\^e}}1 {ë}{{\"e}}1
+      {à}{{\`a}}1 {â}{{\^a}}1 {ä}{{\"a}}1
+      {î}{{\^i}}1 {ï}{{\"i}}1
+      {ô}{{\^o}}1 {ö}{{\"o}}1
+      {ù}{{\`u}}1 {û}{{\^u}}1 {ü}{{\"u}}1
+      {ç}{{\c c}}1 {Ç}{{\c C}}1
+      {É}{{\'E}}1 {È}{{\`E}}1 {À}{{\`A}}1
+}
+\lstset{style=mystyle}
+
+% ---------------------------- En-tête / pied --------------------------------
+% Année universitaire en pied de page (remarque encadrante : « Ann Univer en bas de la page »)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{Tamwil AI}
+\fancyfoot[L]{\footnotesize Année Universitaire 2025/2026}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\footnotesize Année Universitaire 2025/2026}%
+  \fancyfoot[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
+% ---------------------------- Titres chapitres ------------------------------
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{blue!60!black}}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+% ---------------------------- Légendes --------------------------------------
+\captionsetup{font=small, labelfont=bf, labelsep=period}
+
+% ---------------------------- Macros utiles ---------------------------------
+\newcommand{\tamwil}{\textbf{Tamwil AI}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+% Boîte d'appel colorée (réutilisée pour les encadrés clés)
+\newtcolorbox{callout}[1][]{colback=blue!5, colframe=blue!40!black, sharp corners,
+  boxrule=0.5pt, left=8pt, right=8pt, top=6pt, bottom=6pt, #1}
+\newtcolorbox{success}[1][]{colback=green!6, colframe=green!60!black, sharp corners,
+  boxrule=0.5pt, left=8pt, right=8pt, top=6pt, bottom=6pt, #1}
+\newtcolorbox{warn}[1][]{colback=orange!6, colframe=orange!70!black, sharp corners,
+  boxrule=0.5pt, left=8pt, right=8pt, top=6pt, bottom=6pt, #1}
+
+% Listes un peu plus compactes
+\setlist[itemize]{itemsep=2pt, topsep=3pt}
+\setlist[enumerate]{itemsep=2pt, topsep=3pt}
+
+% ---------------------------- Acronymes (prédéfinitions) --------------------
+% Ces définitions permettent d'utiliser \ac{...} n'importe où dans le document,
+% y compris dans le Résumé qui est rendu avant la Liste des acronymes.
+\acrodef{API}{Application Programming Interface}
+\acrodef{ARR}{Annual Recurring Revenue}
+\acrodef{BA}{Business Angel}
+\acrodef{BAM}{Bank Al-Maghrib}
+\acrodef{CAC}{Customer Acquisition Cost}
+\acrodef{CDG}{Caisse de D\'ep\^ot et de Gestion}
+\acrodef{CNDP}{Commission Nationale de contr\^ole de la protection des Donn\'ees \`a caract\`ere Personnel}
+\acrodef{CNIL}{Commission Nationale de l'Informatique et des Libert\'es}
+\acrodef{CORS}{Cross-Origin Resource Sharing}
+\acrodef{CPU}{Central Processing Unit}
+\acrodef{CRM}{Customer Relationship Management}
+\acrodef{CVC}{Corporate Venture Capital}
+\acrodef{DAU}{Daily Active Users}
+\acrodef{DCF}{Discounted Cash Flow}
+\acrodef{DPO}{Data Protection Officer}
+\acrodef{ESOP}{Employee Stock Option Plan}
+\acrodef{FAQ}{Foire Aux Questions}
+\acrodef{GMV}{Gross Merchandise Value}
+\acrodef{GPU}{Graphics Processing Unit}
+\acrodef{INDIA}{Ing\'enierie Num\'erique en Data Science et Intelligence Artificielle}
+\acrodef{JEI}{Jeune Entreprise Innovante}
+\acrodef{CFC}{Casablanca Finance City}
+\acrodef{CIR}{Cr\'edit d'Imp\^ot Recherche}
+\acrodef{AMMC}{Autorit\'e Marocaine du March\'e des Capitaux}
+\acrodef{JSON}{JavaScript Object Notation}
+\acrodef{KPI}{Key Performance Indicator}
+\acrodef{KYC}{Know Your Customer}
+\acrodef{LLM}{Large Language Model}
+\acrodef{LTV}{Lifetime Value}
+\acrodef{MAD}{Moroccan Dirham}
+\acrodef{MAU}{Monthly Active Users}
+\acrodef{MENA}{Middle East and North Africa}
+\acrodef{MRR}{Monthly Recurring Revenue}
+\acrodef{NLP}{Natural Language Processing}
+\acrodef{NLU}{Natural Language Understanding}
+\acrodef{NPS}{Net Promoter Score}
+\acrodef{NRR}{Net Revenue Retention}
+\acrodef{PDF}{Portable Document Format}
+\acrodef{PFA}{Projet de Fin d'Ann\'ee}
+\acrodef{PME}{Petite et Moyenne Entreprise}
+\acrodef{RAG}{Retrieval-Augmented Generation}
+\acrodef{RBF}{Revenue-Based Financing}
+\acrodef{REST}{Representational State Transfer}
+\acrodef{RGPD}{R\`eglement G\'en\'eral sur la Protection des Donn\'ees}
+\acrodef{SaaS}{Software as a Service}
+\acrodef{SARL}{Soci\'et\'e \`A Responsabilit\'e Limit\'ee}
+\acrodef{SAS}{Soci\'et\'e par Actions Simplifi\'ee}
+\acrodef{SSE}{Server-Sent Events}
+\acrodef{SVG}{Scalable Vector Graphics}
+\acrodef{TPV}{Total Payment Volume}
+\acrodef{URL}{Uniform Resource Locator}
+\acrodef{VC}{Venture Capital}
+\acrodef{WCAG}{Web Content Accessibility Guidelines}
+
+\endinput

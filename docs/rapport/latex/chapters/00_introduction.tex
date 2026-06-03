@@ -1,0 +1,45 @@
+% ============================================================================
+% Introduction générale
+% ============================================================================
+\chapter*{Introduction générale}
+\addcontentsline{toc}{chapter}{Introduction générale}
+\markboth{Introduction générale}{}
+
+\section*{Contexte}
+
+L'écosystème entrepreneurial du Maroc et de l'Afrique francophone connaît depuis quelques années une dynamique remarquable. Selon les rapports annuels de \textit{Partech Africa} et de la Banque mondiale, le volume de financement levé par les startups africaines a atteint des niveaux records, porté par la maturation d'un réseau local d'acteurs --- \ac{VC}, fonds publics, accélérateurs, \ac{BA}. Le Maroc, en particulier, se distingue par l'émergence de véhicules d'investissement structurants tels que \textit{CDG Invest}, \textit{212 Founders} ou le \textit{Mohammed VI Fund}, et par des dispositifs publics dédiés comme \textit{Innov Invest} ou \textit{FORSA}.
+
+Malgré cette dynamique, les fondateurs de startups restent confrontés à un obstacle pratique majeur~: \textbf{l'accès à une information financière structurée, actualisée et adaptée au contexte local} est difficile. Les questions concrètes qu'un entrepreneur se pose --- \og Quel financement est adapté à mon stade ?~\fg, \og Quels investisseurs ciblent mon secteur au Maroc ?~\fg, \og Suis-je prêt à lever des fonds ?~\fg, \og Quelles aides publiques puis-je mobiliser ?~\fg~--- n'ont pas aujourd'hui de réponse centralisée.
+
+L'information utile est en effet fragmentée entre sites officiels, rapports \ac{PDF}, articles de presse, profils \textit{LinkedIn} et réseaux informels. Elle est fréquemment rédigée en anglais, peu alignée sur le cadre juridique et fiscal marocain, et rarement comparative ou personnalisable.
+
+\section*{Problématique}
+
+Comment concevoir un système intelligent capable de \textbf{centraliser, structurer et personnaliser} l'accès à l'information financière pour les startups au Maroc et en Afrique francophone, en s'appuyant sur les avancées récentes en traitement du langage naturel et sur les grands modèles de langue, tout en garantissant la fiabilité des données restituées~?
+
+\section*{Objectifs}
+
+Le projet \tamwil{} poursuit six objectifs fonctionnels~:
+
+\begin{enumerate}
+  \item \textbf{Centraliser} une base de connaissances structurée sur l'écosystème startup marocain et francophone (investisseurs, subventions, indicateurs financiers, guides, régulations).
+  \item \textbf{Évaluer} la préparation d'une startup à la levée de fonds via un \textit{scoring} de \textit{fundability} pondéré.
+  \item \textbf{Recommander} les investisseurs et les subventions les plus pertinents en fonction du profil saisi.
+  \item \textbf{Diagnostiquer} la santé financière à partir des \ac{KPI} communiqués par l'utilisateur.
+  \item \textbf{Répondre} aux questions libres sur la finance startup en s'appuyant exclusivement sur la base documentaire, et en attribuant les sources.
+  \item \textbf{Communiquer} en français, langue principale des utilisateurs cibles.
+\end{enumerate}
+
+\section*{Méthodologie}
+
+La démarche adoptée combine trois axes. Le premier est une \textbf{étude comparée} des solutions existantes (\textit{ChatGPT}, \textit{Crunchbase}, \textit{Dealroom}, \textit{AngelList}) qui montre l'absence d'offre adaptée au contexte marocain et francophone~; elle justifie l'approche \ac{RAG}. Le deuxième axe est une \textbf{constitution manuelle de données} de qualité~: plutôt que de s'appuyer sur un \textit{scraping} automatisé peu fiable, nous avons rassemblé et validé à la main 41 profils d'investisseurs, 25 programmes de subventions, 18 \ac{KPI} de référence, 54 \ac{FAQ} et dix documents longs. Le troisième axe est un \textbf{développement itératif}, organisé en phases successives (dataset, pipeline \ac{RAG}, modules métier, \ac{API}, interface), avec écriture de tests unitaires dès la phase de modules.
+
+\section*{Planification du projet}
+
+Le projet s'est déroulé sur une période d'environ onze semaines, de début février à fin avril 2026. La figure~\ref{fig:gantt} présente le planning effectivement suivi, positionné à partir de l'historique \textit{Git} du dépôt. Le planning se structure en six phases successives~: cadrage, constitution du dataset, pipeline \ac{RAG}, modules métier, \ac{API} et interface, puis rédaction du rapport et préparation de la soutenance.
+
+\input{figures/gantt.tex}
+
+\section*{Plan du rapport}
+
+Le présent rapport est structuré en cinq chapitres. Le \textbf{chapitre~1} présente l'étude de l'existant, l'écosystème du financement des startups au Maroc et le cadre théorique autour du \ac{RAG}. Le \textbf{chapitre~2} expose la conception et l'architecture du système. Le \textbf{chapitre~3} détaille la réalisation technique du dataset, du pipeline, des modules métier, du \textit{backend} et de l'interface. Le \textbf{chapitre~4} rend compte des tests et des résultats obtenus. Le \textbf{chapitre~5} propose un bilan et des perspectives d'amélioration.

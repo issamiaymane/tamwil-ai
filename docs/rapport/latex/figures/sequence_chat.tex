@@ -1,0 +1,64 @@
+% ============================================================================
+% figures/sequence_chat.tex
+% Diagramme de séquence d'un échange Q&A en streaming.
+% Lifelines positionnées manuellement.
+% ============================================================================
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize\sffamily,
+  every node/.style={align=center, inner sep=3pt},
+  actor/.style={draw=black!40, fill=black!5, rounded corners=2pt, minimum width=2.2cm, minimum height=0.7cm},
+  lifeline/.style={dashed, gray!60},
+  msg/.style={-Stealth, thick, blue!40!black},
+  ret/.style={-Stealth, thick, dashed, green!50!black},
+]
+
+% Positions X des acteurs
+\def\ux{0}
+\def\nx{3}
+\def\fx{6}
+\def\rx{9}
+\def\cx{12}
+\def\ox{14.8}
+
+% Acteurs (tête)
+\node[actor] (U) at (\ux, 0) {\textbf{Utilisateur}};
+\node[actor] (N) at (\nx, 0) {\textbf{Next.js}};
+\node[actor] (F) at (\fx, 0) {\textbf{FastAPI}};
+\node[actor] (R) at (\rx, 0) {\textbf{Routeur}};
+\node[actor] (C) at (\cx, 0) {\textbf{ChromaDB}};
+\node[actor] (O) at (\ox, 0) {\textbf{OpenAI}};
+
+% Lifelines
+\foreach \x/\name in {\ux/U, \nx/N, \fx/F, \rx/R, \cx/C, \ox/O}
+  \draw[lifeline] (\x, -0.35) -- (\x, -8.5);
+
+% Pied d'acteurs
+\foreach \x/\name in {\ux/U, \nx/N, \fx/F, \rx/R, \cx/C, \ox/O}
+  \node[actor] at (\x, -8.7) {\textbf{\name}};
+
+% Échanges (de haut en bas)
+\draw[msg] (\ux, -0.9) -- node[above, font=\scriptsize] {question tapée} (\nx, -0.9);
+\draw[msg] (\nx, -1.6) -- node[above, font=\scriptsize] {POST /api/chat/stream} (\fx, -1.6);
+\draw[msg] (\fx, -2.3) -- node[above, font=\scriptsize] {détection intention} (\rx, -2.3);
+\draw[msg] (\rx, -3.0) -- node[above, font=\scriptsize] {recherche top-5} (\cx, -3.0);
+\draw[ret] (\cx, -3.6) -- node[above, font=\scriptsize] {5 chunks + métadonnées} (\rx, -3.6);
+\draw[msg] (\rx, -4.3) -- node[above, font=\scriptsize] {prompt + contexte} (\ox, -4.3);
+
+% Boucle streaming
+\draw[dotted, thick, gray] (\rx-0.5, -4.8) -- (\ox+0.5, -4.8);
+\node[anchor=west, font=\scriptsize\itshape] at (\ox+0.6, -4.8) {loop};
+
+\draw[ret] (\ox, -5.5) -- node[above, font=\scriptsize] {token} (\rx, -5.5);
+\draw[ret] (\rx, -6.2) -- node[above, font=\scriptsize] {SSE: event token} (\fx, -6.2);
+\draw[ret] (\fx, -6.8) -- node[above, font=\scriptsize] {chunk HTTP} (\nx, -6.8);
+\draw[ret] (\nx, -7.4) -- node[above, font=\scriptsize] {affichage incrémental} (\ux, -7.4);
+
+% Fin
+\draw[ret] (\ox, -8.0) -- node[above, font=\scriptsize] {done} (\rx, -8.0);
+
+\end{tikzpicture}
+\caption{Diagramme de séquence d'un échange Q\&A en \textit{streaming}. Après la phase de \textit{retrieval} dans ChromaDB, le routeur relaie la requête au \ac{LLM} et retransmet chaque \textit{token} reçu à l'interface via un flux \ac{SSE}.}
+\label{fig:sequence_chat}
+\end{figure}

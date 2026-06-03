@@ -1,0 +1,111 @@
+% ============================================================================
+% Chapitre 1 — Étude de l'existant et cadre théorique
+% ============================================================================
+\chapter{Étude de l'existant et cadre théorique}
+
+Ce chapitre replace le projet dans son contexte. Il présente d'abord l'écosystème du financement des startups au Maroc et en Afrique francophone, puis dresse un bref panorama des assistants conversationnels avant de détailler la technique \ac{RAG}, pierre angulaire de notre approche. Il conclut par un positionnement vis-à-vis des solutions existantes et par la justification de l'architecture hybride retenue.
+
+\section{Écosystème du financement des startups}
+
+\subsection{Panorama et enjeux}
+
+Le financement des startups constitue un enjeu crucial pour la transformation économique du Maroc et, plus largement, de l'Afrique francophone. Les rapports \textit{Africa Tech Venture Capital} de \textit{Partech Africa} font état d'une croissance soutenue des montants levés, d'une diversification des stades financés (du \textit{pre-seed} jusqu'au \textit{series~B+}) et d'une internationalisation des fonds présents sur le continent. En parallèle, les pouvoirs publics marocains ont structuré des dispositifs de soutien non dilutifs --- \textit{Innov Invest} porté par \textit{Tamwilcom}, \textit{FORSA}, programmes de \textit{Maroc PME} --- qui complètent les levées privées.
+
+Cette diversité est une richesse~: un entrepreneur peut, en principe, articuler plusieurs sources de financement au fil de la vie de son entreprise. Elle est aussi un facteur de complexité~: chaque classe d'acteurs répond à une logique propre, avec ses critères d'éligibilité, ses montants-types, sa géographie cible et son rythme d'instruction.
+
+\subsection{Acteurs du financement}
+
+Pour naviguer dans cette diversité, il est utile de distinguer les grandes catégories d'acteurs selon leur rôle dans le cycle de vie d'une startup. Chaque catégorie répond à un besoin spécifique --- amorçage, accélération, \textit{scale-up} --- et mobilise des instruments différents (\textit{equity}, dette, subvention, convertible). Les principaux acteurs sont les suivants~:
+
+\begin{itemize}
+  \item \textbf{Les fonds de capital-risque} (\ac{VC}) investissent en \textit{equity} dans des startups à fort potentiel de croissance, généralement à partir du \textit{seed} et jusqu'au \textit{series~B+}. Au Maroc, \textit{CDG Invest}, \textit{Azur Innovation Fund} et \textit{Outlierz Ventures} en sont des exemples emblématiques~; à l'échelle continentale, \textit{Partech Africa}, \textit{TLcom Capital} ou \textit{AfricInvest} jouent un rôle de premier plan.
+  \item \textbf{Les \textit{business angels}} (\ac{BA}) sont des investisseurs individuels qui apportent capital et mentorat lors des phases les plus amont. Leur apport relationnel est souvent aussi déterminant que leur apport financier.
+  \item \textbf{Les accélérateurs et incubateurs} --- \textit{212 Founders}, \textit{Flat6Labs}, \textit{Y Combinator}, \textit{Techstars} --- combinent un financement initial, un accompagnement opérationnel intensif et un accès à un réseau d'investisseurs pour la suite du parcours.
+  \item \textbf{Les fonds publics et para-publics} --- \textit{Tamwilcom}, \textit{Maroc PME}, \textit{Mohammed~VI Fund}, \textit{Innov Invest} --- offrent prêts d'honneur, garanties et co-investissements, avec un ciblage particulier sur les secteurs stratégiques nationaux (industrie, agritech, santé, numérique).
+  \item \textbf{Les subventions et concours} fournissent des financements non dilutifs destinés à couvrir des phases précises~: recherche et développement, création d'entreprise, amorçage commercial. Leur instruction est plus longue mais préserve la structure du capital.
+  \item \textbf{Les banques et établissements de paiement} proposent enfin des lignes de crédit, des cartes de paiement commerciales et, pour les fintech, des partenariats réglementés encadrés par \textit{Bank Al-Maghrib}.
+\end{itemize}
+
+Malgré la richesse de cette cartographie, l'information est fragmentée. Un fondateur doit naviguer entre plusieurs dizaines de sites, rapports et réseaux pour construire une vision cohérente de ses options~; cette friction est l'une des motivations centrales du présent projet.
+
+\section{Assistants conversationnels~: bref panorama}
+
+L'évolution des assistants conversationnels a connu quatre grandes étapes. Les \textbf{chatbots à règles} reposaient sur des arbres de décision et des mots-clés prédéfinis~; ils ne traitaient que les scénarios anticipés par leurs concepteurs. L'arrivée des \textbf{chatbots à classification par apprentissage} (\textit{Rasa}, \textit{Dialogflow}) a permis de mieux comprendre les intentions des utilisateurs via des modèles de \ac{NLU}. L'émergence des \textbf{grands modèles de langue} (\ac{LLM}) --- \textit{GPT}, \textit{Mistral}, \textit{Llama} --- a ensuite révolutionné le domaine en rendant possibles des réponses fluides et contextualisées, au prix toutefois d'un risque bien documenté~: les \textit{hallucinations}, c'est-à-dire la production de contenus plausibles mais factuellement erronés. Enfin, les \textbf{assistants \ac{RAG}}, introduits par Lewis et al.~\cite{lewis2020rag}, atténuent ce risque en contraignant le modèle à s'appuyer sur des documents récupérés dynamiquement.
+
+Pour un projet tel que \tamwil{}, où la précision factuelle prime --- un mauvais conseil peut coûter cher à un entrepreneur ---, l'approche \ac{RAG} s'impose naturellement.
+
+\section{La technique Retrieval-Augmented Generation}
+
+\subsection{Principe}
+
+Le \ac{RAG} fonctionne en deux temps. La phase de \textit{retrieval} convertit la question de l'utilisateur en un vecteur sémantique (\textit{embedding}) et la compare aux vecteurs de chunks préalablement indexés dans une base vectorielle~; elle retourne les $k$~passages les plus similaires. La phase de \textit{generation} injecte ces passages, accompagnés de la question originale, dans le \textit{prompt} du \ac{LLM}, qui formule alors une réponse ancrée sur ces extraits.
+
+\subsection{Pipeline détaillé}
+
+Dans une implémentation complète, le pipeline comporte six étapes distinctes, présentées à la figure~\ref{fig:rag_pipeline} et résumées dans le tableau~\ref{tab:rag_pipeline}.
+
+\input{figures/rag_pipeline.tex}
+
+\begin{table}[H]
+\centering
+\caption{Les six étapes du pipeline \ac{RAG} de Tamwil~AI.}
+\label{tab:rag_pipeline}
+\begin{tabularx}{\textwidth}{@{}l l X@{}}
+\toprule
+\textbf{Étape} & \textbf{Module} & \textbf{Rôle} \\
+\midrule
+1. Ingestion  & \code{data\_loader.py}, \code{ingest.py} & Lecture des fichiers \ac{JSON} et Markdown, conversion en objets \textit{LangChain}. \\
+2. Chunking   & \code{ingest.py} & Découpage en passages de 500 \textit{tokens} avec chevauchement de 50. \\
+3. Embedding  & \code{embeddings.py} & Vectorisation locale via \texttt{paraphrase-multilingual-MiniLM-L12-v2} (384 dim.). \\
+4. Indexation & \code{vectorstore.py} & Stockage dans ChromaDB persistant (\textit{backend} SQLite). \\
+5. Retrieval  & \code{retriever.py} & Recherche des top-$k$ chunks ($k = 5$) par similarité cosinus. \\
+6. Generation & \code{rag\_qa.py} & Appel au \ac{LLM} (GPT-3.5-turbo), génération \textit{streaming} via \ac{SSE}. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Apports du RAG par rapport au \textit{fine-tuning}}
+
+Le \ac{RAG} offre plusieurs avantages opérationnels par rapport à un \textit{fine-tuning} du modèle de base~:
+
+\begin{itemize}
+  \item \textbf{Traçabilité}~: chaque réponse peut citer les passages utilisés, ce qui permet à l'utilisateur de vérifier et, le cas échéant, de contester la réponse.
+  \item \textbf{Fraîcheur}~: enrichir la base de connaissances se limite à déposer de nouveaux fichiers et à réindexer~; il n'est pas nécessaire de ré-entraîner le modèle.
+  \item \textbf{Coût}~: ni entraînement ni stockage de poids spécifiques~; l'infrastructure d'inférence reste celle du fournisseur \ac{LLM}.
+  \item \textbf{Contrôle}~: en injectant uniquement des passages validés, on restreint l'espace de réponses plausibles et on réduit les hallucinations.
+\end{itemize}
+
+\section{Positionnement par rapport aux solutions existantes}
+
+Le tableau~\ref{tab:comparaison} positionne \tamwil{} par rapport aux principales solutions accessibles aujourd'hui à un fondateur marocain.
+
+\begin{table}[H]
+\centering
+\caption{Positionnement de \tamwil{} par rapport aux solutions existantes.}
+\label{tab:comparaison}
+\small
+\begin{tabularx}{\textwidth}{@{}l l l X X@{}}
+\toprule
+\textbf{Solution} & \textbf{Type} & \textbf{Langue} & \textbf{Personnalisation} & \textbf{Données locales (Maroc)} \\
+\midrule
+ChatGPT générique & \ac{LLM} seul     & multi            & aucune                       & non \\
+Crunchbase        & Base de données   & anglais          & filtres basiques             & limitée \\
+Dealroom          & Base de données   & anglais          & filtres avancés              & limitée \\
+AngelList         & Plateforme match  & anglais          & profil startup               & non \\
+\textbf{\tamwil{}} & \textbf{RAG + règles} & \textbf{français} & \textbf{scoring + matching} & \textbf{oui (41 inv., 25 subv.)} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Aucune solution existante ne combine simultanément~: un traitement en français, une couverture spécifique du contexte marocain et francophone, une personnalisation à partir des \ac{KPI} financiers, et la fluidité conversationnelle d'un \ac{LLM}. \tamwil{} se positionne précisément sur cette intersection.
+
+\section{Justification de l'approche hybride}
+
+Le projet adopte une architecture \textbf{hybride} qui combine deux paradigmes~:
+
+\begin{itemize}
+  \item \textbf{\ac{RAG} vectoriel pour les questions ouvertes}~: un utilisateur qui demande \og comment valoriser ma startup~? \fg{} obtient une réponse ancrée sur les guides de valorisation présents dans la base documentaire.
+  \item \textbf{Règles déterministes assistées par \ac{LLM} pour le \textit{scoring} et le \textit{matching}}~: les calculs de \textit{fundability}, les tris d'investisseurs et le filtrage des subventions reposent sur des règles explicites codées en Python, puis le \ac{LLM} formule le résultat en langage naturel.
+\end{itemize}
+
+La justification est pragmatique. Les données structurées --- \textit{tickets} d'investissement, critères d'éligibilité, \textit{benchmarks} de métriques --- exigent un traitement exact~: un \ac{RAG} pur risquerait d'approximer un intervalle numérique ou d'inventer un critère. Les règles garantissent la précision, tandis que le \ac{RAG} assure la fluidité sur les zones moins structurées du dataset. Ce couplage limite le périmètre d'intervention du \ac{LLM} aux tâches où il excelle (reformulation, contextualisation) et le tient à l'écart des décisions où il pourrait se tromper.

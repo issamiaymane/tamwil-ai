@@ -1,0 +1,105 @@
+% ============================================================================
+% Chapitre 2 — Conception et architecture
+% ============================================================================
+\chapter{Conception et architecture}
+
+Ce chapitre présente la conception du système Tamwil~AI. Il décrit d'abord l'architecture globale en trois couches, puis les modules fonctionnels qui composent le \textit{backend}, le modèle de données sous-jacent et le détail du pipeline \ac{RAG}. Il se conclut par le \textit{mapping} entre les sources de données et les fonctionnalités exposées à l'utilisateur.
+
+\section{Architecture globale}
+
+L'architecture de Tamwil~AI suit une conception modulaire en trois couches~: interface utilisateur, service applicatif, couche de données. La figure~\ref{fig:architecture} en donne une représentation synthétique.
+
+\input{figures/architecture.tex}
+
+La couche \textbf{interface} est une application web Next.js qui consomme l'\ac{API} du \textit{backend} en REST et en \ac{SSE}. La couche \textbf{service} est un serveur FastAPI qui expose un point d'entrée unique pour chaque requête utilisateur~; un \textit{routeur} d'intentions détermine quel module traite la demande et, le cas échéant, enrichit la requête avec les informations extraites du profil. La couche \textbf{données} regroupe la base vectorielle ChromaDB (persistée sur disque) et les fichiers \ac{JSON}/Markdown de référence.
+
+Seul un composant externe reste sollicité à chaque requête~\ac{RAG}~: l'API d'OpenAI, utilisée pour la génération de la réponse finale. Tout le reste --- embeddings, stockage, règles métier --- s'exécute localement sur la machine hôte.
+
+\section{Modules fonctionnels}
+
+Le \textit{backend} expose \textbf{cinq modules métier} et un utilitaire d'explication des métriques implémenté directement dans le routeur. Cette distinction entre modules (scoring, diagnostic, matching investisseurs, matching subventions, \ac{RAG} Q\&A) et utilitaires (explication métrique) reflète fidèlement l'organisation du dépôt~: seuls les cinq premiers correspondent à un fichier dédié dans \code{backend/app/modules/}~; l'explication de métriques, qui ne fait qu'extraire et reformuler des champs du fichier \code{metrics\_reference.json}, n'a pas été jugée suffisante pour justifier un module isolé.
+
+\paragraph{Module 1 --- Scoring de \textit{fundability}.} Fonctionnalité phare du projet~: elle évalue la préparation d'une startup à la levée de fonds.
+\begin{itemize}
+  \item \textbf{Entrée}~: profil startup (stade) + \ac{KPI} (\ac{MRR}, \textit{burn rate}, \textit{churn}, \ac{CAC}, \ac{LTV}\ldots).
+  \item \textbf{Données utilisées}~: \code{metrics\_reference.json} (\textit{benchmarks} pondérés par stade).
+  \item \textbf{Logique}~:
+  \begin{enumerate}
+    \item comparer chaque métrique au \textit{benchmark} du stade correspondant (\textit{bad}/\textit{ok}/\textit{good}/\textit{excellent})~;
+    \item calculer un score pondéré sur~100 en utilisant le champ \code{weight\_in\_scoring}~;
+    \item gérer spécifiquement les métriques inversées (\ac{CAC}, \textit{churn}, \textit{burn rate}, pour lesquelles \textit{plus bas} = meilleur)~;
+    \item identifier forces et faiblesses puis générer un plan d'action tiré des \code{improvement\_tips}.
+  \end{enumerate}
+  \item \textbf{Sortie}~: score sur 100, ventilation par métrique, axes d'amélioration et plan d'action.
+\end{itemize}
+
+\paragraph{Module 2 --- Diagnostic financier.} Analyse individuelle des \ac{KPI} fournis, puis génération d'un résumé global selon la distribution des niveaux constatés. Chaque métrique est restituée avec sa définition, sa formule, les \textit{benchmarks} du stade, une interprétation et jusqu'à trois conseils d'amélioration.
+
+\paragraph{Module 3 --- Matching investisseurs.} À partir du profil (secteur, stade, géographie, ticket recherché), le module calcule un score de \textit{matching} sur~4 (un point par critère satisfait), trie les investisseurs par score décroissant et retourne le \textit{top-5} accompagné des raisons du \textit{matching}, du portefeuille et des contacts.
+
+\paragraph{Module 4 --- Matching subventions.} Filtrage séquentiel par pays, stade, secteur (avec gestion d'un \textit{wildcard} \og tous secteurs \fg) et âge maximum de l'entreprise. Les subventions éligibles sont retournées avec le détail des conditions et, le cas échéant, la \textit{deadline} ou la mention \textit{rolling}.
+
+\paragraph{Module 5 --- Q\&A conversationnel (\ac{RAG}).} Chargé des questions ouvertes. Il enrichit la requête avec les deux derniers échanges, récupère les top-$k$ chunks depuis ChromaDB, puis construit un \textit{prompt} injecté dans le \ac{LLM} avec génération en \textit{streaming} \ac{SSE}. L'attribution des sources se fait via \code{source\_urls.py}.
+
+\paragraph{Utilitaire --- Explication des métriques.} Lorsqu'un message contient un terme de métrique (\ac{MRR}, \ac{CAC}, \textit{churn}\ldots), le routeur identifie les métriques mentionnées et restitue définition, formule, interprétation et \textit{benchmarks} à partir de \code{metrics\_reference.json}. Cette fonctionnalité n'est pas un module au sens fichier~: elle est portée par le routeur (fonction \code{\_explain\_metrics()}) et partage ses données avec les modules 1 et 2.
+
+\section{Modèle de données}
+
+Le dataset a été constitué manuellement pour garantir la pertinence des données au contexte marocain et francophone. Il est organisé selon deux familles~: des fichiers \ac{JSON} fortement structurés et des documents Markdown de long format. Le tableau~\ref{tab:dataset} en donne la composition.
+
+\begin{table}[H]
+\centering
+\caption{Composition du dataset de Tamwil~AI.}
+\label{tab:dataset}
+\begin{tabularx}{\textwidth}{@{}l l r X@{}}
+\toprule
+\textbf{Fichier / dossier} & \textbf{Format} & \textbf{Éléments} & \textbf{Contenu} \\
+\midrule
+\code{investors.json}            & JSON & 41 profils     & VC, BA, accélérateurs, fonds publics, CVC \\
+\code{grants.json}               & JSON & 25 programmes  & Subventions Maroc, France, International \\
+\code{metrics\_reference.json}   & JSON & 18 métriques   & \ac{KPI} avec \textit{benchmarks} globaux et MAD \\
+\code{faq.json}                  & JSON & 54 Q\&A        & 10 catégories (levée, métriques, aides, régulation\ldots) \\
+\code{fundraising\_guide/*.md}   & MD   & 6 guides       & Types de financement, pitch deck, term sheet\ldots \\
+\code{regulations/*.md}          & MD   & 4 documents    & Création d'entreprise, fintech, fiscalité, RGPD \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Les fichiers \ac{JSON} servent aux modules déterministes (\textit{scoring}, diagnostic, \textit{matching}) et alimentent également la base vectorielle pour le \ac{RAG}. Les documents Markdown ne sont utilisés que par le \ac{RAG}. La structure complète d'un profil investisseur, d'une subvention, d'une métrique et d'une \ac{FAQ} est donnée en annexe~\ref{ann:dataset}.
+
+\section{Pipeline RAG}
+
+Le pipeline \ac{RAG} de Tamwil~AI reprend exactement la structure à six étapes décrite au chapitre précédent (figure~\ref{fig:rag_pipeline}). Les choix techniques retenus à chaque étape sont les suivants~:
+
+\begin{itemize}
+  \item \textbf{Ingestion}~: six \textit{loaders} --- un par type de document --- construisent des objets \code{Document} \textit{LangChain} avec un champ \code{metadata} homogène (\code{source}, \code{type}, \code{categorie}).
+  \item \textbf{Chunking}~: \code{RecursiveCharacterTextSplitter} avec séparateurs hiérarchiques (\code{["\textbackslash{}n\#\# ", "\textbackslash{}n\#\#\# ", "\textbackslash{}n\textbackslash{}n", "\textbackslash{}n", ". ", " ", ""]}), \code{chunk\_size~=~500}, \code{overlap~=~50}.
+  \item \textbf{Embedding}~: \texttt{paraphrase-multilingual-MiniLM-L12-v2}, exécuté localement, 384 dimensions, support français natif.
+  \item \textbf{Indexation}~: ChromaDB en mode persistant, collection \code{tamwil\_knowledge\_base}, \textit{backend} SQLite. Taille mesurée après indexation~: environ 9,4~MB.
+  \item \textbf{Retrieval}~: recherche par similarité cosinus, $k = 5$ par défaut, filtrage optionnel par \code{filter\_type} pour restreindre la recherche à un type de document donné.
+  \item \textbf{Generation}~: appel au modèle OpenAI \textit{GPT-3.5-turbo} avec température 0,3 et mode \textit{streaming}~; si la clé \ac{API} est absente, un mode \textit{fallback} retourne directement les chunks récupérés.
+\end{itemize}
+
+\section{Mapping dataset \texorpdfstring{$\to$}{->} fonctionnalités}
+
+Chaque source alimente une ou plusieurs fonctionnalités, comme indiqué dans le tableau~\ref{tab:mapping}.
+
+\begin{table}[H]
+\centering
+\caption{Mapping entre sources de données et fonctionnalités exposées.}
+\label{tab:mapping}
+\begin{tabularx}{\textwidth}{@{}l X X@{}}
+\toprule
+\textbf{Fonctionnalité} & \textbf{JSON principal} & \textbf{Markdown (RAG)} \\
+\midrule
+Scoring                & \code{metrics\_reference.json}  & --- \\
+Diagnostic             & \code{metrics\_reference.json}  & --- \\
+Explication métriques  & \code{metrics\_reference.json}  & --- \\
+Matching investisseurs & \code{investors.json}           & --- \\
+Matching subventions   & \code{grants.json}              & --- \\
+Q\&A RAG               & \code{faq.json}                 & guides + régulations \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Cette séparation nette entre données structurées et données longues justifie \textit{a posteriori} l'approche hybride~: les premières sont consommées par des modules déterministes, les secondes par le pipeline \ac{RAG} qui en extrait les passages pertinents à chaque requête.

@@ -1,0 +1,61 @@
+% ============================================================================
+% Chapitre 5 — Conclusion générale et perspectives
+% ============================================================================
+\chapter{Conclusion générale et perspectives}
+
+\section{Bilan du projet}
+
+Le projet \tamwil{} a permis de concevoir, développer et valider un assistant conversationnel de recommandation financière pour les fondateurs de startups au Maroc et en Afrique francophone. En combinant une base de connaissances constituée manuellement et un pipeline \ac{RAG} adossé à un grand modèle de langue, le système répond de manière ancrée, traçable et en français à des questions qui, jusqu'ici, nécessitaient de naviguer entre plusieurs dizaines de sources disparates.
+
+\paragraph{Réalisations principales.}
+
+\begin{enumerate}
+  \item \textbf{Constitution d'un dataset original} couvrant l'écosystème startup marocain et francophone~: 41 profils d'investisseurs, 25 programmes de subventions, 18 indicateurs clés avec \textit{benchmarks} en \ac{MAD}, 54 \ac{FAQ}, 6 guides de \textit{fundraising} et 4 documents réglementaires.
+  \item \textbf{Implémentation complète du pipeline \ac{RAG}}~: ingestion, \textit{chunking}, \textit{embedding} local multilingue, indexation ChromaDB persistante, \textit{retrieval} par similarité cosinus et génération en \textit{streaming} \ac{SSE}.
+  \item \textbf{Développement de cinq modules métier}~: \textit{scoring} de \textit{fundability}, diagnostic financier, \textit{matching} investisseurs, \textit{matching} subventions, Q\&A \ac{RAG}, complétés d'un utilitaire d'explication des métriques porté par le routeur.
+  \item \textbf{Développement du routeur}~: détection d'intention par mots-clés et \textit{regex}, extraction automatique du stade, du secteur, du pays et des valeurs de \ac{KPI} depuis le message de l'utilisateur, \textit{fallback} \ac{RAG}, détection de \textit{greetings} pour épargner des appels \ac{API}.
+  \item \textbf{Mise en place du \textit{backend} FastAPI}~: \ac{API} \ac{REST} synchrone, \textit{streaming} \ac{SSE}, normalisation des profils \textit{camelCase} $\to$ \textit{snake\_case}, mode \textit{fallback} sans \ac{API} externe, attribution structurée des sources.
+  \item \textbf{Construction d'une interface Next.js moderne}~: application React~19 avec Tailwind CSS~4, barre latérale \textit{draggable} avec historique, chat \textit{streaming} avec rendu Markdown et attribution des sources, formulaire de profil, \textit{guided tour} interactif, \textit{dark mode}, \textit{responsive} mobile.
+  \item \textbf{Tests unitaires}~: six fichiers couvrant \textit{scoring}, diagnostic, \textit{matching} investisseurs, \textit{matching} subventions, routeur et pipeline \ac{RAG}.
+\end{enumerate}
+
+\section{Apports personnels}
+
+Ce projet nous a permis de développer et de consolider plusieurs compétences techniques et méthodologiques~:
+
+\begin{itemize}
+  \item \textbf{\ac{NLP} et grands modèles de langue}~: compréhension approfondie des \textit{embeddings}, de la technique \ac{RAG} et des limites actuelles des \ac{LLM} (hallucinations, coût, latence)~;
+  \item \textbf{Bases de données vectorielles}~: mise en pratique de ChromaDB et de ses modes d'exploitation (reconstruction vs.\ chargement)~;
+  \item \textbf{Développement \textit{backend}}~: conception d'une \ac{API} \ac{REST} moderne avec FastAPI, \textit{streaming} \ac{SSE}, gestion des modèles Pydantic, normalisation d'interfaces~;
+  \item \textbf{Développement \textit{frontend}}~: React~19, Next.js, Tailwind~CSS, gestion d'état avec \textit{hooks}, consommation de flux \ac{SSE} via \code{ReadableStream}~;
+  \item \textbf{Ingénierie logicielle}~: architecture modulaire, tests unitaires, configuration par variables d'environnement, gestion de version avec Git~;
+  \item \textbf{Écosystème Python IA}~: maîtrise de LangChain, \textit{sentence-transformers}, l'\ac{API} OpenAI~;
+  \item \textbf{Domaine métier}~: compréhension fine de l'écosystème de financement des startups au Maroc, des instruments publics et privés, et des indicateurs financiers de \textit{reporting}.
+\end{itemize}
+
+\section{Perspectives d'amélioration}
+
+Plusieurs axes de progression sont identifiés pour les versions ultérieures.
+
+\paragraph{Enrichissement du dataset.} Ajouter des investisseurs régionaux africains encore peu couverts, des subventions sectorielles (agritech, cleantech), et des contenus éducatifs additionnels (\og comment préparer sa \textit{due diligence} \fg, \og comment lire un \textit{term sheet} \fg). Ce travail doit rester manuel pour préserver la qualité.
+
+\paragraph{Classification d'intention par \ac{LLM}.} Remplacer le routeur à base de mots-clés et \textit{regex} par un classifieur \ac{LLM} léger, capable de gérer des formulations éloignées des patterns actuels. L'entraînement pourra se faire \textit{few-shot} sur une trentaine d'exemples, avec validation sur les scénarios fonctionnels.
+
+\paragraph{Migration vers un modèle plus récent.} Évaluer le passage à \textit{GPT-4o-mini} ou à un modèle équivalent pour améliorer la qualité de la génération en français~; comparer à un modèle local (\textit{Mistral 7B}, \textit{Llama 3}) quantisé afin de s'affranchir de la dépendance à un fournisseur \ac{API}.
+
+\paragraph{Tests d'intégration \textit{end-to-end}.} Automatiser un parcours complet (saisie de profil, question ouverte, vérification des sources) via \textit{Playwright} ou \textit{Cypress}, avec un \textit{mock} de l'\ac{API} \ac{LLM} pour éviter la variabilité.
+
+\paragraph{Évaluation du \textit{retrieval}.} Mettre en place une métrique quantitative --- \textit{recall@k} sur un jeu d'évaluation annoté manuellement --- pour objectiver la qualité du pipeline \ac{RAG} et comparer des variantes (taille de \textit{chunk}, nombre de résultats, filtrage par type).
+
+\paragraph{Authentification et persistance serveur.} Introduire une couche d'authentification légère (courriel / \textit{magic link}) et stocker les conversations côté serveur pour que l'utilisateur puisse les retrouver depuis n'importe quel appareil.
+
+\paragraph{Déploiement.} Mettre en ligne le \textit{backend} (Railway, \textit{AWS}, \textit{OVH}) et le \textit{frontend} (Vercel, \textit{Cloudflare Pages}), avec un \ac{CORS} adapté à la production et une politique de journalisation différenciée.
+
+\paragraph{Fonctionnalités avancées.} Simulateur de \textit{runway}, estimation de valorisation, calculateur de dilution, recommandation de type de financement. Ces briques peuvent être ajoutées sans restructuration majeure grâce à la modularité du \textit{backend}.
+
+\paragraph{Multilinguisme étendu.} Support de l'anglais pour les fondateurs non francophones d'Afrique, puis évaluation du support de la \textit{darija} --- défi non trivial, la \textit{darija} étant essentiellement parlée et peu standardisée à l'écrit.
+
+\vspace{0.3cm}
+\begin{success}
+Ces perspectives ne remettent pas en cause l'ossature actuelle de \tamwil{}~: elles en sont le prolongement naturel. Chaque axe peut être entrepris indépendamment des autres, ce qui offre une feuille de route modulaire pour les futures itérations du projet.
+\end{success}

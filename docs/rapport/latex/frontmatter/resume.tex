@@ -1,0 +1,35 @@
+\chapter*{Résumé}
+\addcontentsline{toc}{chapter}{Résumé}
+\thispagestyle{plain}
+
+Les fondateurs de startups au Maroc et en Afrique francophone font face à un manque d'information financière structurée et adaptée à leur contexte. Les réponses aux questions essentielles --- quel financement choisir, quels investisseurs cibler, suis-je prêt à lever des fonds --- sont dispersées, souvent en anglais et peu personnalisées.
+
+Ce projet, \textbf{Tamwil AI}, propose un assistant conversationnel fondé sur la technique \textit{Retrieval-Augmented Generation} (RAG). Le système combine une base de connaissances constituée manuellement (41 profils d'investisseurs, 25 programmes de subventions, 18 indicateurs clés de performance avec \textit{benchmarks} marocains, 54 questions-réponses et dix documents longs sur le financement et la réglementation) et un grand modèle de langue (GPT-3.5-turbo) pour produire des réponses contextuelles en français.
+
+L'architecture est volontairement hybride~: un pipeline RAG vectoriel (embeddings multilingues locaux, ChromaDB persistant) traite les questions ouvertes, tandis que des modules déterministes --- \textit{scoring} de \textit{fundability}, diagnostic financier, matching d'investisseurs et de subventions --- exploitent les données structurées selon des règles explicites. Un routeur à base de mots-clés et d'expressions régulières oriente chaque requête vers le module approprié.
+
+Le backend est développé en Python avec FastAPI et expose une API REST comprenant un flux \textit{Server-Sent Events} pour le \textit{streaming} de la génération. L'interface utilisateur repose sur Next.js~16, React~19 et Tailwind~CSS~4~; elle offre une expérience proche de celle des assistants conversationnels grand public (barre latérale avec historique, mode sombre, formulaire de profil, visite guidée pour les nouveaux utilisateurs).
+
+Le système a été validé par six scénarios fonctionnels et une batterie de tests unitaires couvrant tous les modules métier et le pipeline RAG. Les limites identifiées --- dataset à enrichir, détection d'intention par mots-clés à remplacer par une classification par LLM, persistance serveur de l'historique --- ouvrent la voie à des évolutions futures.
+
+\vspace{0.4cm}
+\textbf{Mots-clés~:} RAG, LLM, chatbot, financement de startup, ChromaDB, LangChain, \textit{embeddings} multilingues, FastAPI, Next.js, Maroc.
+
+\vspace{1.2cm}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\thispagestyle{plain}
+
+Startup founders in Morocco and French-speaking Africa face a structural lack of financial information tailored to their context. Answers to core questions --- which funding to choose, which investors to target, am I ready to raise --- are scattered, mostly in English, and rarely personalised.
+
+This project, \textbf{Tamwil AI}, proposes a conversational assistant based on the \emph{Retrieval-Augmented Generation} (RAG) technique. It combines a hand-curated knowledge base (41 investor profiles, 25 grant programmes, 18 startup KPIs with Moroccan benchmarks, 54 Q\&A, and ten long documents on fundraising and regulation) with a large language model (GPT-3.5-turbo) to produce contextual French answers.
+
+The architecture is deliberately hybrid: a vector RAG pipeline (multilingual local embeddings, persistent ChromaDB) handles open-ended questions, while deterministic modules --- fundability scoring, financial diagnosis, investor and grant matching --- operate on structured data through explicit rules. A keyword-and-regex router dispatches each query to the right module.
+
+The backend is a Python/FastAPI service exposing a REST API with a Server-Sent Events stream for token-level generation. The user interface is a Next.js~16 / React~19 / Tailwind~CSS~4 application, offering a modern chat experience (collapsible sidebar with conversation history, dark mode, startup profile form, guided tour).
+
+The system has been validated through six functional scenarios and a unit-test suite covering every business module and every stage of the RAG pipeline. The identified limits --- dataset size, keyword-based intent detection, client-side-only history --- are discussed as future work.
+
+\vspace{0.4cm}
+\textbf{Keywords:} RAG, LLM, chatbot, startup funding, ChromaDB, LangChain, multilingual embeddings, FastAPI, Next.js, Morocco.

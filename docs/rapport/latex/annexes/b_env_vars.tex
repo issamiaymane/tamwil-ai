@@ -1,0 +1,49 @@
+% ============================================================================
+% Annexe B — Variables d'environnement
+% ============================================================================
+\chapter{Variables d'environnement}
+\label{ann:env}
+
+Les variables d'environnement sont centralisées dans \code{backend/.env} et chargées par \code{config.py} via \code{python-dotenv}. Les valeurs par défaut en production sont indiquées dans la colonne \textit{Défaut}.
+
+\begin{lstlisting}[language=bash, caption={Fichier \code{.env} type (ne pas commiter les clés).}]
+# --- Cle API OpenAI ---
+OPENAI_API_KEY=sk-proj-XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# --- Modeles ---
+LLM_MODEL=gpt-3.5-turbo
+EMBEDDING_MODEL=paraphrase-multilingual-MiniLM-L12-v2
+
+# --- Stockage ---
+CHROMA_PERSIST_DIR=./chroma_db
+DATASET_DIR=./dataset
+
+# --- Parametres pipeline ---
+CHUNK_SIZE=500
+CHUNK_OVERLAP=50
+TOP_K=5
+\end{lstlisting}
+
+\begin{table}[H]
+\centering
+\caption{Variables d'environnement et leur rôle.}
+\small
+\begin{tabularx}{\textwidth}{@{}l l X@{}}
+\toprule
+\textbf{Variable} & \textbf{Défaut} & \textbf{Rôle} \\
+\midrule
+\code{OPENAI\_API\_KEY}     & ---                                            & clé \ac{API} OpenAI~; absence $\Rightarrow$ mode \textit{fallback} \\
+\code{LLM\_MODEL}           & \code{gpt-3.5-turbo}                          & identifiant du modèle de génération \\
+\code{EMBEDDING\_MODEL}     & \code{paraphrase-multilingual-MiniLM-L12-v2}  & modèle \textit{sentence-transformers} local \\
+\code{CHROMA\_PERSIST\_DIR} & \code{./chroma\_db}                           & répertoire de persistance ChromaDB \\
+\code{DATASET\_DIR}         & \code{./dataset}                              & racine du dataset \\
+\code{CHUNK\_SIZE}          & 500                                           & taille maximale d'un \textit{chunk} en \textit{tokens} \\
+\code{CHUNK\_OVERLAP}       & 50                                            & chevauchement entre deux \textit{chunks} consécutifs \\
+\code{TOP\_K}               & 5                                             & nombre de passages retournés par le \textit{retriever} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{warn}
+\textbf{Sécurité.} Le fichier \code{.env} doit rester hors du dépôt Git (listé dans \code{.gitignore}). Les clés \ac{API} présentes dans \code{OPENAI\_API\_KEY} sont strictement personnelles et ne doivent jamais être partagées ni incluses dans un \textit{screenshot} du rapport.
+\end{warn}
