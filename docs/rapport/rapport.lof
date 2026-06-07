@@ -13,6 +13,10 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Scénario~1 --- scoring de \textit {fundability}. Requête~: \textit {\@FB@og Quel est mon score~? MRR~: 8000, burn~: 15000, churn~: 5\%, stade seed \@FB@fg \relax }. Le module retourne un score pondéré de 42/100, une ventilation par métrique avec pastilles de niveau (\textit {ok}/\textit {bad}), une liste de faiblesses et un plan d'action en deux points.}}{23}{figure.caption.52}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Scénario~3 --- matching investisseurs. Profil saisi~: \textit {fintech, seed, Maroc}. Le module identifie 41 investisseurs du dataset et restitue les cinq premiers (212~Founders, Azur Innovation Fund, Flat6Labs, Kalys Ventures, MITC Capital) avec \textit {ticket}, score de \textit {matching} (3/4 pour tous ici) et raisons détaillées.}}{23}{figure.caption.53}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Scénario~6 --- Q\&A \ac {RAG}. Question~: \textit {\@FB@og Comment valoriser ma startup en pré-seed~? \@FB@fg \relax }. La réponse, générée en \textit {streaming}, présente cinq méthodes de valorisation tirées du guide de \textit {fundraising} du dataset. Les quatre pastilles numérotées en bas (\textit {pitch deck}, \textit {types financement}, \textit {term sheet}, \textit {etapes levee}) sont les sources cliquables attribuées par le moteur de \textit {retrieval}.}}{24}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Matrice de confusion du routeur d'intentions, évaluée sur 200 requêtes représentatives.}}{25}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Synthèse visuelle des métriques du routeur~: accuracy, F1-score moyen, erreurs totales et détail par classe.}}{27}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Recall@K du pipeline \ac {RAG} pour $K=1,3,5,10$.}}{30}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Distribution des latences de l'\ac {API} en \textit {streaming}, mesurée sur 100 requêtes.}}{32}{figure.caption.63}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

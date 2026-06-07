@@ -2,8 +2,8 @@
 \contentsline {chapter}{Remerciements}{ii}{chapter*.1}%
 \contentsline {chapter}{Résumé}{iii}{chapter*.2}%
 \contentsline {chapter}{Abstract}{iv}{chapter*.3}%
-\contentsline {chapter}{Liste des acronymes}{ix}{chapter*.10}%
-\contentsline {chapter}{Introduction générale}{1}{chapter*.11}%
+\contentsline {chapter}{Liste des acronymes}{x}{chapter*.11}%
+\contentsline {chapter}{Introduction générale}{1}{chapter*.12}%
 \contentsline {chapter}{\numberline {1}Étude de l'existant et cadre théorique}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Écosystème du financement des startups}{5}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Panorama et enjeux}{5}{subsection.1.1.1}%
@@ -62,32 +62,36 @@
 \contentsline {section}{\numberline {3.9}Règles de développement}{21}{section.3.9}%
 \contentsline {chapter}{\numberline {4}Tests et résultats}{22}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Scénarios fonctionnels}{22}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Tests du pipeline RAG}{24}{section.4.2}%
-\contentsline {paragraph}{Ingestion.}{24}{section.4.2}%
-\contentsline {paragraph}{Chunking.}{24}{table.caption.55}%
-\contentsline {paragraph}{Embeddings.}{24}{table.caption.55}%
-\contentsline {paragraph}{Base vectorielle.}{25}{table.caption.55}%
-\contentsline {paragraph}{Retriever.}{25}{table.caption.55}%
-\contentsline {section}{\numberline {4.3}Tests unitaires}{25}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Discussion et limites}{25}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Points forts}{25}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Limites identifiées}{26}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion générale et perspectives}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Bilan du projet}{27}{section.5.1}%
-\contentsline {paragraph}{Réalisations principales.}{27}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Apports personnels}{27}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Perspectives d'amélioration}{28}{section.5.3}%
-\contentsline {paragraph}{Enrichissement du dataset.}{28}{section.5.3}%
-\contentsline {paragraph}{Classification d'intention par \ac {LLM}.}{28}{section.5.3}%
-\contentsline {paragraph}{Migration vers un modèle plus récent.}{28}{section.5.3}%
-\contentsline {paragraph}{Tests d'intégration \textit {end-to-end}.}{28}{section.5.3}%
-\contentsline {paragraph}{Évaluation du \textit {retrieval}.}{28}{section.5.3}%
-\contentsline {paragraph}{Authentification et persistance serveur.}{28}{section.5.3}%
-\contentsline {paragraph}{Déploiement.}{29}{section.5.3}%
-\contentsline {paragraph}{Fonctionnalités avancées.}{29}{section.5.3}%
-\contentsline {paragraph}{Multilinguisme étendu.}{29}{section.5.3}%
-\contentsline {chapter}{Bibliographie et webographie}{30}{section*.60}%
-\contentsline {chapter}{\numberline {A}Schéma JSON du dataset}{32}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Variables d'environnement}{35}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Référence API FastAPI}{36}{appendix.C}%
-\contentsline {chapter}{\numberline {D}Prompt système du module Q\&A}{38}{appendix.D}%
+\contentsline {section}{\numberline {4.2}Validation du routeur d'intentions}{24}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Tests du pipeline RAG}{28}{section.4.3}%
+\contentsline {paragraph}{Ingestion.}{28}{section.4.3}%
+\contentsline {paragraph}{Chunking.}{28}{table.caption.59}%
+\contentsline {paragraph}{Embeddings.}{28}{table.caption.59}%
+\contentsline {paragraph}{Base vectorielle.}{28}{table.caption.59}%
+\contentsline {paragraph}{Retriever.}{28}{table.caption.59}%
+\contentsline {subsection}{\numberline {4.3.1}Optimisation de Recall@K}{28}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Performance de l'API de streaming}{30}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Choix de GPT-3.5}{32}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}Tests unitaires}{33}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Discussion et limites}{33}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Points forts}{33}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Limites identifiées}{34}{subsection.4.6.2}%
+\contentsline {chapter}{\numberline {5}Conclusion générale et perspectives}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Bilan du projet}{35}{section.5.1}%
+\contentsline {paragraph}{Réalisations principales.}{35}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Apports personnels}{35}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Perspectives d'amélioration}{36}{section.5.3}%
+\contentsline {paragraph}{Enrichissement du dataset.}{36}{section.5.3}%
+\contentsline {paragraph}{Classification d'intention par \ac {LLM}.}{36}{section.5.3}%
+\contentsline {paragraph}{Migration vers un modèle plus récent.}{36}{section.5.3}%
+\contentsline {paragraph}{Tests d'intégration \textit {end-to-end}.}{36}{section.5.3}%
+\contentsline {paragraph}{Évaluation du \textit {retrieval}.}{36}{section.5.3}%
+\contentsline {paragraph}{Authentification et persistance serveur.}{36}{section.5.3}%
+\contentsline {paragraph}{Déploiement.}{37}{section.5.3}%
+\contentsline {paragraph}{Fonctionnalités avancées.}{37}{section.5.3}%
+\contentsline {paragraph}{Multilinguisme étendu.}{37}{section.5.3}%
+\contentsline {chapter}{Bibliographie et webographie}{38}{section*.68}%
+\contentsline {chapter}{\numberline {A}Schéma JSON du dataset}{40}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Variables d'environnement}{43}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Référence API FastAPI}{44}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Prompt système du module Q\&A}{46}{appendix.D}%

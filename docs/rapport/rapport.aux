@@ -76,7 +76,12 @@
 \newlabel{acro:RAG}{{}{vii}{\listfigurename }{section*.8}{}}
 \acronymused{RAG}
 \acronymused{RAG}
-\@writefile{toc}{\contentsline {chapter}{Liste des acronymes}{ix}{chapter*.10}\protected@file@percent }
+\AC@undonewlabel{acro:API}
+\newlabel{acro:API}{{}{viii}{\listfigurename }{section*.9}{}}
+\acronymused{API}
+\acronymused{RAG}
+\acronymused{RAG}
+\@writefile{toc}{\contentsline {chapter}{Liste des acronymes}{x}{chapter*.11}\protected@file@percent }
 \newacro{API}[\AC@hyperlink{API}{API}]{Application Programming Interface}
 \newacro{ARR}[\AC@hyperlink{ARR}{ARR}]{Annual Recurring Revenue}
 \newacro{BA}[\AC@hyperlink{BA}{BA}]{Business Angel}
@@ -118,27 +123,25 @@
 \newacro{SSE}[\AC@hyperlink{SSE}{SSE}]{Server-Sent Events}
 \newacro{TPV}[\AC@hyperlink{TPV}{TPV}]{Total Payment Volume}
 \newacro{VC}[\AC@hyperlink{VC}{VC}]{Venture Capital}
-\@writefile{toc}{\contentsline {chapter}{Introduction générale}{1}{chapter*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Introduction générale}{1}{chapter*.12}\protected@file@percent }
 \AC@undonewlabel{acro:VC}
-\newlabel{acro:VC}{{}{1}{}{section*.12}{}}
+\newlabel{acro:VC}{{}{1}{}{section*.13}{}}
 \acronymused{VC}
 \AC@undonewlabel{acro:BA}
-\newlabel{acro:BA}{{}{1}{}{section*.13}{}}
+\newlabel{acro:BA}{{}{1}{}{section*.14}{}}
 \acronymused{BA}
 \AC@undonewlabel{acro:PDF}
-\newlabel{acro:PDF}{{}{1}{}{section*.14}{}}
+\newlabel{acro:PDF}{{}{1}{}{section*.15}{}}
 \acronymused{PDF}
 \AC@undonewlabel{acro:KPI}
-\newlabel{acro:KPI}{{4}{1}{}{section*.15}{}}
+\newlabel{acro:KPI}{{4}{1}{}{section*.16}{}}
 \acronymused{KPI}
 \acronymused{RAG}
 \acronymused{KPI}
 \AC@undonewlabel{acro:FAQ}
-\newlabel{acro:FAQ}{{}{2}{}{section*.16}{}}
+\newlabel{acro:FAQ}{{}{2}{}{section*.17}{}}
 \acronymused{FAQ}
 \acronymused{RAG}
-\AC@undonewlabel{acro:API}
-\newlabel{acro:API}{{}{2}{}{section*.17}{}}
 \acronymused{API}
 \acronymused{RAG}
 \acronymused{API}
@@ -380,6 +383,7 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \acronymused{RAG}
+\acronymused{API}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Scénarios fonctionnels}{22}{section.4.1}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Scénarios fonctionnels validés manuellement.}}{22}{table.caption.51}\protected@file@percent }
 \newlabel{tab:scenarios}{{4.1}{22}{Scénarios fonctionnels validés manuellement}{table.caption.51}{}}
@@ -392,44 +396,79 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Scénario~6 --- Q\&A \ac {RAG}. Question~: \textit  {\@FB@og  Comment valoriser ma startup en pré-seed~? \@FB@fg  \relax }. La réponse, générée en \textit  {streaming}, présente cinq méthodes de valorisation tirées du guide de \textit  {fundraising} du dataset. Les quatre pastilles numérotées en bas (\textit  {pitch deck}, \textit  {types financement}, \textit  {term sheet}, \textit  {etapes levee}) sont les sources cliquables attribuées par le moteur de \textit  {retrieval}.}}{24}{figure.caption.54}\protected@file@percent }
 \acronymused{RAG}
 \newlabel{fig:qa_rag}{{4.3}{24}{Scénario~6 --- Q\&A \ac {RAG}. Question~: \textit {\og Comment valoriser ma startup en pré-seed~? \fg }. La réponse, générée en \textit {streaming}, présente cinq méthodes de valorisation tirées du guide de \textit {fundraising} du dataset. Les quatre pastilles numérotées en bas (\textit {pitch deck}, \textit {types financement}, \textit {term sheet}, \textit {etapes levee}) sont les sources cliquables attribuées par le moteur de \textit {retrieval}}{figure.caption.54}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Tests du pipeline RAG}{24}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Ingestion.}{24}{section.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Résultats de l'ingestion sur le dataset cible.}}{24}{table.caption.55}\protected@file@percent }
-\newlabel{tab:ingestion}{{4.2}{24}{Résultats de l'ingestion sur le dataset cible}{table.caption.55}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Validation du routeur d'intentions}{24}{section.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Matrice de confusion du routeur d'intentions, évaluée sur 200 requêtes représentatives.}}{25}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:router_confusion}{{4.4}{25}{Matrice de confusion du routeur d'intentions, évaluée sur 200 requêtes représentatives}{figure.caption.55}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Synthèse de validation du routeur d'intentions.}}{26}{table.caption.56}\protected@file@percent }
+\newlabel{tab:router_validation}{{4.2}{26}{Synthèse de validation du routeur d'intentions}{table.caption.56}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Métriques de classification par classe pour le routeur.}}{26}{table.caption.57}\protected@file@percent }
+\newlabel{tab:router_metrics}{{4.3}{26}{Métriques de classification par classe pour le routeur}{table.caption.57}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Synthèse visuelle des métriques du routeur~: accuracy, F1-score moyen, erreurs totales et détail par classe.}}{27}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:router_metrics_pdf}{{4.5}{27}{Synthèse visuelle des métriques du routeur~: accuracy, F1-score moyen, erreurs totales et détail par classe}{figure.caption.58}{}}
+\acronymused{LLM}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Tests du pipeline RAG}{28}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Ingestion.}{28}{section.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Résultats de l'ingestion sur le dataset cible.}}{28}{table.caption.59}\protected@file@percent }
+\newlabel{tab:ingestion}{{4.4}{28}{Résultats de l'ingestion sur le dataset cible}{table.caption.59}{}}
 \acronymused{KPI}
 \acronymused{FAQ}
-\@writefile{toc}{\contentsline {paragraph}{Chunking.}{24}{table.caption.55}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Chunking.}{28}{table.caption.59}\protected@file@percent }
 \acronymused{LLM}
-\@writefile{toc}{\contentsline {paragraph}{Embeddings.}{24}{table.caption.55}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Base vectorielle.}{25}{table.caption.55}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Retriever.}{25}{table.caption.55}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Tests unitaires}{25}{section.4.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Fichiers de tests unitaires et périmètre couvert.}}{25}{table.caption.56}\protected@file@percent }
-\newlabel{tab:unit_tests}{{4.3}{25}{Fichiers de tests unitaires et périmètre couvert}{table.caption.56}{}}
+\@writefile{toc}{\contentsline {paragraph}{Embeddings.}{28}{table.caption.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Base vectorielle.}{28}{table.caption.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Retriever.}{28}{table.caption.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Optimisation de Recall@K}{28}{subsection.4.3.1}\protected@file@percent }
+\acronymused{LLM}
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Recall@K du pipeline \ac {RAG} sur la base ChromaDB.}}{29}{table.caption.60}\protected@file@percent }
+\acronymused{RAG}
+\newlabel{tab:recall_k}{{4.5}{29}{Recall@K du pipeline \ac {RAG} sur la base ChromaDB}{table.caption.60}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Recall@K du pipeline \ac {RAG} pour $K=1,3,5,10$.}}{30}{figure.caption.61}\protected@file@percent }
+\acronymused{RAG}
+\newlabel{fig:recall_k_pdf}{{4.6}{30}{Recall@K du pipeline \ac {RAG} pour $K=1,3,5,10$}{figure.caption.61}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Performance de l'API de streaming}{30}{section.4.4}\protected@file@percent }
+\acronymused{API}
+\acronymused{SSE}
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Distribution des latences mesurées sur 100 requêtes.}}{31}{table.caption.62}\protected@file@percent }
+\newlabel{tab:latency}{{4.6}{31}{Distribution des latences mesurées sur 100 requêtes}{table.caption.62}{}}
+\acronymused{RAG}
+\acronymused{LLM}
+\acronymused{SSE}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Distribution des latences de l'\ac {API} en \textit  {streaming}, mesurée sur 100 requêtes.}}{32}{figure.caption.63}\protected@file@percent }
+\acronymused{API}
+\newlabel{fig:latency_pdf}{{4.7}{32}{Distribution des latences de l'\ac {API} en \textit {streaming}, mesurée sur 100 requêtes}{figure.caption.63}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Choix de GPT-3.5}{32}{subsection.4.4.1}\protected@file@percent }
+\acronymused{API}
+\acronymused{GPU}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Tests unitaires}{33}{section.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces Fichiers de tests unitaires et périmètre couvert.}}{33}{table.caption.64}\protected@file@percent }
+\newlabel{tab:unit_tests}{{4.7}{33}{Fichiers de tests unitaires et périmètre couvert}{table.caption.64}{}}
 \acronymused{KPI}
 \acronymused{LLM}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Discussion et limites}{25}{section.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Points forts}{25}{subsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Discussion et limites}{33}{section.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Points forts}{33}{subsection.4.6.1}\protected@file@percent }
+\acronymused{RAG}
 \acronymused{RAG}
 \acronymused{API}
 \acronymused{SSE}
 \acronymused{API}
 \acronymused{API}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Limites identifiées}{26}{subsection.4.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Limites identifiées}{34}{subsection.4.6.2}\protected@file@percent }
 \acronymused{LLM}
 \acronymused{API}
 \acronymused{LLM}
 \AC@undonewlabel{acro:CORS}
-\newlabel{acro:CORS}{{4.4.2}{26}{Limites identifiées}{section*.57}{}}
+\newlabel{acro:CORS}{{4.6.2}{34}{Limites identifiées}{section*.65}{}}
 \acronymused{CORS}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion générale et perspectives}{27}{chapter.5}\protected@file@percent }
+\acronymused{RAG}
+\acronymused{API}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion générale et perspectives}{35}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Bilan du projet}{27}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Bilan du projet}{35}{section.5.1}\protected@file@percent }
 \acronymused{RAG}
-\@writefile{toc}{\contentsline {paragraph}{Réalisations principales.}{27}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Réalisations principales.}{35}{section.5.1}\protected@file@percent }
 \AC@undonewlabel{acro:MAD}
-\newlabel{acro:MAD}{{1}{27}{Réalisations principales}{section*.58}{}}
+\newlabel{acro:MAD}{{1}{35}{Réalisations principales}{section*.66}{}}
 \acronymused{MAD}
 \acronymused{FAQ}
 \acronymused{RAG}
@@ -440,12 +479,12 @@
 \acronymused{API}
 \acronymused{API}
 \AC@undonewlabel{acro:REST}
-\newlabel{acro:REST}{{5}{27}{Réalisations principales}{section*.59}{}}
+\newlabel{acro:REST}{{5}{35}{Réalisations principales}{section*.67}{}}
 \acronymused{REST}
 \acronymused{SSE}
 \acronymused{API}
 \acronymused{RAG}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Apports personnels}{27}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Apports personnels}{35}{section.5.2}\protected@file@percent }
 \acronymused{NLP}
 \acronymused{RAG}
 \acronymused{LLM}
@@ -454,23 +493,23 @@
 \acronymused{SSE}
 \acronymused{SSE}
 \acronymused{API}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Perspectives d'amélioration}{28}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Enrichissement du dataset.}{28}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Classification d'intention par \ac {LLM}.}{28}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Perspectives d'amélioration}{36}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Enrichissement du dataset.}{36}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Classification d'intention par \ac {LLM}.}{36}{section.5.3}\protected@file@percent }
 \acronymused{LLM}
 \acronymused{LLM}
-\@writefile{toc}{\contentsline {paragraph}{Migration vers un modèle plus récent.}{28}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Migration vers un modèle plus récent.}{36}{section.5.3}\protected@file@percent }
 \acronymused{API}
-\@writefile{toc}{\contentsline {paragraph}{Tests d'intégration \textit  {end-to-end}.}{28}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Tests d'intégration \textit  {end-to-end}.}{36}{section.5.3}\protected@file@percent }
 \acronymused{API}
 \acronymused{LLM}
-\@writefile{toc}{\contentsline {paragraph}{Évaluation du \textit  {retrieval}.}{28}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Évaluation du \textit  {retrieval}.}{36}{section.5.3}\protected@file@percent }
 \acronymused{RAG}
-\@writefile{toc}{\contentsline {paragraph}{Authentification et persistance serveur.}{28}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Déploiement.}{29}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Authentification et persistance serveur.}{36}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Déploiement.}{37}{section.5.3}\protected@file@percent }
 \acronymused{CORS}
-\@writefile{toc}{\contentsline {paragraph}{Fonctionnalités avancées.}{29}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Multilinguisme étendu.}{29}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Fonctionnalités avancées.}{37}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Multilinguisme étendu.}{37}{section.5.3}\protected@file@percent }
 \citation{*}
 \bibstyle{plain}
 \bibdata{references}
@@ -493,28 +532,28 @@
 \bibcite{startupmaroc}{17}
 \bibcite{tailwindcss}{18}
 \bibcite{tamwilcom}{19}
-\@writefile{toc}{\contentsline {chapter}{Bibliographie et webographie}{30}{section*.60}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliographie et webographie}{38}{section*.68}\protected@file@percent }
 \bibcite{vaswani2017attention}{20}
 \bibcite{nextjs}{21}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Schéma JSON du dataset}{32}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Schéma JSON du dataset}{40}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ann:dataset}{{A}{32}{Schéma JSON du dataset}{appendix.A}{}}
+\newlabel{ann:dataset}{{A}{40}{Schéma JSON du dataset}{appendix.A}{}}
 \acronymused{JSON}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.1}{\ignorespaces Schéma d'un profil d'investisseur.}}{32}{lstlisting.A.1}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.2}{\ignorespaces Schéma d'un programme de subvention.}}{32}{lstlisting.A.2}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.3}{\ignorespaces Schéma d'une métrique de référence.}}{33}{lstlisting.A.3}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.4}{\ignorespaces Schéma d'une FAQ.}}{33}{lstlisting.A.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Composition détaillée du dataset par type d'acteur.}}{34}{table.caption.62}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.1}{\ignorespaces Schéma d'un profil d'investisseur.}}{40}{lstlisting.A.1}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.2}{\ignorespaces Schéma d'un programme de subvention.}}{40}{lstlisting.A.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.3}{\ignorespaces Schéma d'une métrique de référence.}}{41}{lstlisting.A.3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.4}{\ignorespaces Schéma d'une FAQ.}}{41}{lstlisting.A.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Composition détaillée du dataset par type d'acteur.}}{42}{table.caption.70}\protected@file@percent }
 \acronymused{VC}
 \acronymused{VC}
-\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Guides de \textit  {fundraising} disponibles en annexe du dataset.}}{34}{table.caption.63}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Guides de \textit  {fundraising} disponibles en annexe du dataset.}}{42}{table.caption.71}\protected@file@percent }
 \acronymused{BA}
 \acronymused{VC}
 \acronymused{RBF}
 \acronymused{ESOP}
 \acronymused{DCF}
-\@writefile{lot}{\contentsline {table}{\numberline {A.3}{\ignorespaces Documents réglementaires disponibles en annexe du dataset.}}{34}{table.caption.67}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {A.3}{\ignorespaces Documents réglementaires disponibles en annexe du dataset.}}{42}{table.caption.75}\protected@file@percent }
 \acronymused{SARL}
 \acronymused{SAS}
 \acronymused{CFC}
@@ -528,28 +567,28 @@
 \acronymused{CNDP}
 \acronymused{CNIL}
 \acronymused{DPO}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Variables d'environnement}{35}{appendix.B}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Variables d'environnement}{43}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ann:env}{{B}{35}{Variables d'environnement}{appendix.B}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.1}{\ignorespaces Fichier \texttt  {.env} type (ne pas commiter les clés).}}{35}{lstlisting.B.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {B.1}{\ignorespaces Variables d'environnement et leur rôle.}}{35}{table.caption.79}\protected@file@percent }
+\newlabel{ann:env}{{B}{43}{Variables d'environnement}{appendix.B}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.1}{\ignorespaces Fichier \texttt  {.env} type (ne pas commiter les clés).}}{43}{lstlisting.B.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {B.1}{\ignorespaces Variables d'environnement et leur rôle.}}{43}{table.caption.87}\protected@file@percent }
 \acronymused{API}
 \acronymused{API}
-\@writefile{toc}{\contentsline {chapter}{\numberline {C}Référence API FastAPI}{36}{appendix.C}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Référence API FastAPI}{44}{appendix.C}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ann:api}{{C}{36}{Référence API FastAPI}{appendix.C}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {C.1}{\ignorespaces Modèles Pydantic d'entrée/sortie (extrait simplifié).}}{36}{lstlisting.C.1}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {C.2}{\ignorespaces Exemple d'appel \texttt  {curl} à \texttt  {/api/chat}.}}{36}{lstlisting.C.2}\protected@file@percent }
+\newlabel{ann:api}{{C}{44}{Référence API FastAPI}{appendix.C}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {C.1}{\ignorespaces Modèles Pydantic d'entrée/sortie (extrait simplifié).}}{44}{lstlisting.C.1}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {C.2}{\ignorespaces Exemple d'appel \texttt  {curl} à \texttt  {/api/chat}.}}{44}{lstlisting.C.2}\protected@file@percent }
 \acronymused{SSE}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {C.3}{\ignorespaces Exemple de flux \ac {SSE} émis par \texttt  {/api/chat/stream}.}}{37}{lstlisting.C.3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {C.3}{\ignorespaces Exemple de flux \ac {SSE} émis par \texttt  {/api/chat/stream}.}}{45}{lstlisting.C.3}\protected@file@percent }
 \acronymused{SSE}
-\@writefile{toc}{\contentsline {chapter}{\numberline {D}Prompt système du module Q\&A}{38}{appendix.D}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {D}Prompt système du module Q\&A}{46}{appendix.D}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ann:prompt}{{D}{38}{Prompt système du module Q\&A}{appendix.D}{}}
+\newlabel{ann:prompt}{{D}{46}{Prompt système du module Q\&A}{appendix.D}{}}
 \acronymused{RAG}
 \acronymused{LLM}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {D.1}{\ignorespaces \textit  {System prompt} du module Q\&A (extrait).}}{38}{lstlisting.D.1}\protected@file@percent }
-\gdef \@abspage@last{49}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {D.1}{\ignorespaces \textit  {System prompt} du module Q\&A (extrait).}}{46}{lstlisting.D.1}\protected@file@percent }
+\gdef \@abspage@last{58}

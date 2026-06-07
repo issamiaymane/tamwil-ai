@@ -12,14 +12,18 @@
 \contentsline {table}{\numberline {3.4}{\ignorespaces Intentions reconnues par le routeur et déclencheurs typiques.}}{17}{table.caption.44}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Scénarios fonctionnels validés manuellement.}}{22}{table.caption.51}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Résultats de l'ingestion sur le dataset cible.}}{24}{table.caption.55}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Fichiers de tests unitaires et périmètre couvert.}}{25}{table.caption.56}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Synthèse de validation du routeur d'intentions.}}{26}{table.caption.56}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Métriques de classification par classe pour le routeur.}}{26}{table.caption.57}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Résultats de l'ingestion sur le dataset cible.}}{28}{table.caption.59}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Recall@K du pipeline \ac {RAG} sur la base ChromaDB.}}{29}{table.caption.60}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Distribution des latences mesurées sur 100 requêtes.}}{31}{table.caption.62}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Fichiers de tests unitaires et périmètre couvert.}}{33}{table.caption.64}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Composition détaillée du dataset par type d'acteur.}}{34}{table.caption.62}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Guides de \textit {fundraising} disponibles en annexe du dataset.}}{34}{table.caption.63}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces Documents réglementaires disponibles en annexe du dataset.}}{34}{table.caption.67}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Composition détaillée du dataset par type d'acteur.}}{42}{table.caption.70}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Guides de \textit {fundraising} disponibles en annexe du dataset.}}{42}{table.caption.71}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Documents réglementaires disponibles en annexe du dataset.}}{42}{table.caption.75}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces Variables d'environnement et leur rôle.}}{35}{table.caption.79}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces Variables d'environnement et leur rôle.}}{43}{table.caption.87}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
